@@ -1,0 +1,36 @@
+@prefix : <https://purl.archive.org/domain/urwriters#> .
+@prefix cc: <http://web.resource.org/cc/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix oa: <http://www.w3.org/ns/oa#> .
+@prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix pim: <https://purl.archive.org/people-and-media#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix schema: <http://schema.org/> .
+@prefix urb: <https://purl.archive.org/domain/urbooks#> .
+@prefix urw: <https://purl.archive.org/domain/urwriters#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix frbr: <http://purl.org/vocab/frbr/core#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@base <https://purl.archive.org/domain/urwriters#> .
+
+urw:5678 a frbr:Expression;
+    prov:wasAttributedTo urw:1234;
+    urw:geographicalSubject urw:USA .
+
+urw:1234 a prov:Person;
+    rdfs:label 'Nora Keita Jemisin';
+    urw:authorTopic urb:USA .
+
+urb:goodreads-tags a fabio:Folksonomy;
+    urb:userGeneratedSubject urb:USA .
+    
+urb:USA a urb:Subject;
+    prov:wasDerivedFrom urb:goodreads .
+
+urb:goodreads schema:url "https://www.goodreads.com/genres/speculative-fiction"

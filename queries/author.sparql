@@ -1,0 +1,49 @@
+PREFIX fx: <http://sparql.xyz/facade-x/ns/>
+PREFIX xyz: <http://sparql.xyz/facade-x/data/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX urb: <http://purl.archive.org/urbooks#>
+PREFIX urw: <http://purl.archive.org/urwriters#>
+PREFIX schema: <http://schema.org/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#>
+PREFIX xml: <http://www.w3.org/XML/1998/namespace>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+
+CONSTRUCT {
+  ?writer a prov:Person;
+  	rdfs:label ?name;
+	  urw:gender ?wgender;
+	  dul:hasRole ?wrole;
+	  urw:yearOfBirth ?wyob;
+	  urw:countryOfBirth ?wcob .
+  ?sit a urw:BiographicalSituation;
+    dul:isSettingFor ?writer , ?wgender , ?wrole , ?wyob , ?wcob ;
+    prov:wasDerivedFrom ?source .
+  ?source schema:url ?url .
+
+} WHERE {
+  # Artists from the Tate Gallery open data!
+  SERVICE <x-sparql-anything:csv.headers=true,location=./data/author_data.csv> {
+    []  xyz:id ?id;
+	    xyz:name ?name;   
+  	  xyz:gender ?gender; 
+  	  xyz:role ?role;
+  	  xyz:yob ?yob;
+  	  xyz:cob ?cob ; 
+      xyz:situation ?situation;
+      xyz:url ?url ;
+      xyz:source ?src .
+  		
+  }
+  BIND (IRI(CONCAT(STR(urw:),"artist", ?id )) AS ?writer) .
+  BIND (IRI(CONCAT(STR(urw:), ?gender )) AS ?wgender) .
+  BIND (IRI(CONCAT(STR(urw:), ?role )) AS ?wrole) .
+  BIND (IRI(CONCAT(STR(urw:), ?yob )) AS ?wyob) .
+  BIND (IRI(CONCAT(STR(urw:), ?cob )) AS ?wcob) .
+  BIND (IRI(CONCAT(STR(urw:), ?situation )) AS ?sit) .
+  BIND (IRI(CONCAT(STR(urb:), ?src )) AS ?source) .
+}
+
+
+
