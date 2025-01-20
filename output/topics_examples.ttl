@@ -20,18 +20,18 @@
 @prefix fabio: <http://purl.org/spar/fabio/> .
 @base <https://purl.archive.org/domain/urwriters#> .
 
-urw:5678 a frbr:Expression;
-    prov:wasAttributedTo urw:1234;
+urw:5678 a frbr:Expression ;
+    prov:wasAttributedTo urw:1234 ;
     urw:geographicalSubject urw:USA .
 
-urw:1234 a prov:Person;
-    rdfs:label 'Nora Keita Jemisin';
+urw:1234 a prov:Person ;
+    rdfs:label "Nora Keita Jemisin" ;
     urw:authorTopic urb:USA .
 
-urb:goodreads-tags a fabio:Folksonomy;
+urb:goodreads-tags a fabio:Folksonomy ;
     urb:userGeneratedSubject urb:USA .
-    
-urb:USA a urb:Subject;
+
+urb:USA a urb:Subject ;
     prov:wasDerivedFrom urb:goodreads .
 
-urb:goodreads schema:url "https://www.goodreads.com/genres/speculative-fiction"
+urb:goodreads schema:url "https://www.goodreads.com/genres/speculative-fiction" .
