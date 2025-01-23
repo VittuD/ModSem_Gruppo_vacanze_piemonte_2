@@ -3,246 +3,178 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix prov: <https://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@base <http://www.semanticweb.org/enryc/ontologies/2025/0/untitled-ontology-36> .
+@prefix dbpedia: <https://dbpedia.org/ontology/> .
+@base <http://www.semanticweb.org/enryc/ontologies/2025/0/untitled-ontology-36#> .
 
 <http://www.semanticweb.org/enryc/ontologies/2025/0/untitled-ontology-36> rdf:type owl:Ontology .
 
-
 #################################################################
-#
 #    Datatypes
-#
 #################################################################
-
 
 ###  http://www.w3.org/2001/XMLSchema#date
-
 xsd:date rdf:type rdfs:Datatype .
 
 
-
-
-
 #################################################################
-#
 #    Object Properties
-#
 #################################################################
-
 
 ###  http://www.semanticweb.org/enryc/ontologies/2025/0/untitled-ontology-36#HaEdizione
-
 :HaEdizione rdf:type owl:ObjectProperty ;
-            
-            rdfs:range :Edizione ;
-            
-            rdfs:domain :Opera_Letteraria .
-
+            rdfs:domain :OperaLetteraria ;
+            rdfs:range :Edizione .
 
 
 ###  http://www.semanticweb.org/enryc/ontologies/2025/0/untitled-ontology-36#HaGenereLetterario
-
 :HaGenereLetterario rdf:type owl:ObjectProperty ;
-                    
-                    rdfs:range :Genere_letterario ;
-                    
-                    rdfs:domain :Opera_Letteraria .
-
+                    rdfs:domain :OperaLetteraria ;
+                    rdfs:range :GenereLetterario .
 
 
 ###  http://www.semanticweb.org/enryc/ontologies/2025/0/untitled-ontology-36#HaLingua
-
 :HaLingua rdf:type owl:ObjectProperty ;
-          
-          rdfs:range :Lingua ;
-          
-          rdfs:domain :Opera_Letteraria .
-
+          rdfs:domain :OperaLetteraria ;
+          rdfs:range :Lingua .
 
 
 ###  http://www.semanticweb.org/enryc/ontologies/2025/0/untitled-ontology-36#HaProvenienzaAutore
-
 :HaProvenienzaAutore rdf:type owl:ObjectProperty ;
-                     
-                     rdfs:domain :Opera_Letteraria ;
-                     
-                     rdfs:range :Provenienza_autore .
-
-
-
+                     rdfs:domain :OperaLetteraria ;
+                     rdfs:range :ProvenienzaAutore .
 
 
 #################################################################
-#
 #    Data properties
-#
 #################################################################
-
 
 ###  http://www.semanticweb.org/enryc/ontologies/2025/0/untitled-ontology-36#haDataPubblicazione
-
 :haDataPubblicazione rdf:type owl:DatatypeProperty ;
-                     
                      rdfs:domain :Edizione ;
-                     
                      rdfs:range xsd:date .
 
 
-
 ###  http://www.semanticweb.org/enryc/ontologies/2025/0/untitled-ontology-36#haNome
-
 :haNome rdf:type owl:DatatypeProperty ;
-        
         rdfs:domain :Edizione ;
-        
         rdfs:range xsd:string .
 
 
-
-
-
 #################################################################
-#
 #    Classes
-#
 #################################################################
+
+###  http://dbpedia.org/resource/List
+<http://dbpedia.org/resource/List> rdf:type owl:Class .
 
 
 ###  http://www.semanticweb.org/enryc/ontologies/2025/0/untitled-ontology-36#Argomento
-
 :Argomento rdf:type owl:Class .
 
 
-
 ###  http://www.semanticweb.org/enryc/ontologies/2025/0/untitled-ontology-36#Autore
-
 :Autore rdf:type owl:Class ;
-        
         rdfs:subClassOf :Persona .
 
 
+###  http://www.semanticweb.org/enryc/ontologies/2025/0/untitled-ontology-36#AutoreIndipendente
+:AutoreIndipendente rdf:type owl:Class ;
+                    rdfs:subClassOf :Autore .
+
+
+###  http://www.semanticweb.org/enryc/ontologies/2025/0/untitled-ontology-36#CasaEditrice
+:CasaEditrice rdf:type owl:Class ;
+              rdfs:subClassOf <http://www.w3.org/ns/prov#Organization> .
+
 
 ###  http://www.semanticweb.org/enryc/ontologies/2025/0/untitled-ontology-36#Editore
-
 :Editore rdf:type owl:Class ;
-         
          rdfs:subClassOf :Persona .
 
 
-
 ###  http://www.semanticweb.org/enryc/ontologies/2025/0/untitled-ontology-36#Edizione
-
 :Edizione rdf:type owl:Class .
 
 
-
-###  http://www.semanticweb.org/enryc/ontologies/2025/0/untitled-ontology-36#Genere_letterario
-
-:Genere_letterario rdf:type owl:Class .
-
+###  http://www.semanticweb.org/enryc/ontologies/2025/0/untitled-ontology-36#GenereLetterario
+:GenereLetterario rdf:type owl:Class .
 
 
 ###  http://www.semanticweb.org/enryc/ontologies/2025/0/untitled-ontology-36#Lingua
-
 :Lingua rdf:type owl:Class .
 
 
-
-###  http://www.semanticweb.org/enryc/ontologies/2025/0/untitled-ontology-36#Opera_Letteraria
-
-:Opera_Letteraria rdf:type owl:Class .
-
+###  http://www.semanticweb.org/enryc/ontologies/2025/0/untitled-ontology-36#OperaLetteraria
+:OperaLetteraria rdf:type owl:Class .
 
 
 ###  http://www.semanticweb.org/enryc/ontologies/2025/0/untitled-ontology-36#Persona
+:Persona rdf:type owl:Class ;
+         rdfs:subClassOf <http://www.w3.org/ns/prov#Agent> .
 
-:Persona rdf:type owl:Class .
 
-
-
-###  http://www.semanticweb.org/enryc/ontologies/2025/0/untitled-ontology-36#Provenienza_autore
-
-:Provenienza_autore rdf:type owl:Class .
-
+###  http://www.semanticweb.org/enryc/ontologies/2025/0/untitled-ontology-36#ProvenienzaAutore
+:ProvenienzaAutore rdf:type owl:Class .
 
 
 ###  http://www.semanticweb.org/enryc/ontologies/2025/0/untitled-ontology-36#Saga
+:Saga rdf:type owl:Class ;
+      rdfs:subClassOf <http://dbpedia.org/resource/List> .
 
-:Saga rdf:type owl:Class .
+
+###  http://www.w3.org/ns/prov#Agent
+<http://www.w3.org/ns/prov#Agent> rdf:type owl:Class .
 
 
-
+###  http://www.w3.org/ns/prov#Organization
+<http://www.w3.org/ns/prov#Organization> rdf:type owl:Class ;
+                                         rdfs:subClassOf <http://www.w3.org/ns/prov#Agent> .
 
 
 #################################################################
-#
 #    Individuals
-#
 #################################################################
-
 
 ###  http://www.semanticweb.org/enryc/ontologies/2025/0/untitled-ontology-36#Fermo_e_Lucia
-
-:Fermo_e_Lucia rdf:type :Edizione ,
-                        owl:NamedIndividual ;
-               
+:Fermo_e_Lucia rdf:type owl:NamedIndividual ,
+                        :Edizione ;
+               :HaLingua :Italiano ;
                :haDataPubblicazione "1827-01-01"^^xsd:date ;
-               
-               :haNome "Fermo e Lucia"^^xsd:string ;
-               
-               :HaLingua :Italiano .
-
+               :haNome "Fermo e Lucia" .
 
 
 ###  http://www.semanticweb.org/enryc/ontologies/2025/0/untitled-ontology-36#Fermo_e_Lucia_Opera
-
-:Fermo_e_Lucia_Opera rdf:type :Opera_Letteraria ,
-                              owl:NamedIndividual ;
-                     
+:Fermo_e_Lucia_Opera rdf:type owl:NamedIndividual ,
+                              :OperaLetteraria ;
                      :HaEdizione :Fermo_e_Lucia ,
                                  :I_Promessi_Sposi ;
-                     
-                     :HaProvenienzaAutore :Italiana ;
-                     
-                     :HaGenereLetterario :Romanzo_storico .
-
+                     :HaGenereLetterario :Romanzo_storico ;
+                     :HaProvenienzaAutore :Italiana .
 
 
 ###  http://www.semanticweb.org/enryc/ontologies/2025/0/untitled-ontology-36#I_Promessi_Sposi
-
-:I_Promessi_Sposi rdf:type :Edizione ,
-                           owl:NamedIndividual ;
-                  
+:I_Promessi_Sposi rdf:type owl:NamedIndividual ,
+                           :Edizione ;
+                  :HaLingua :Italiano ;
                   :haDataPubblicazione "1840-01-01"^^xsd:date ;
-                  
-                  :haNome "I Promessi Sposi"^^xsd:string ;
-                  
-                  :HaLingua :Italiano .
-
+                  :haNome "I Promessi Sposi" .
 
 
 ###  http://www.semanticweb.org/enryc/ontologies/2025/0/untitled-ontology-36#Italiana
-
-:Italiana rdf:type :Provenienza_autore ,
-                   owl:NamedIndividual .
-
+:Italiana rdf:type owl:NamedIndividual ,
+                   :ProvenienzaAutore .
 
 
 ###  http://www.semanticweb.org/enryc/ontologies/2025/0/untitled-ontology-36#Italiano
-
-:Italiano rdf:type :Lingua ,
-                   owl:NamedIndividual .
-
+:Italiano rdf:type owl:NamedIndividual ,
+                   :Lingua .
 
 
 ###  http://www.semanticweb.org/enryc/ontologies/2025/0/untitled-ontology-36#Romanzo_storico
-
-:Romanzo_storico rdf:type :Genere_letterario ,
-                          owl:NamedIndividual .
-
+:Romanzo_storico rdf:type owl:NamedIndividual ,
+                          :GenereLetterario .
 
 
-
-###  Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net
-
+###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi
