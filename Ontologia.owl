@@ -1,14 +1,56 @@
 @prefix : <http://www.semanticweb.org/enryc/ontologies/2025/0/untitled-ontology-36#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix prov: <https://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
 @prefix dbpedia: <https://dbpedia.org/ontology/> .
 @base <http://www.semanticweb.org/enryc/ontologies/2025/0/untitled-ontology-36#> .
 
-<http://www.semanticweb.org/enryc/ontologies/2025/0/untitled-ontology-36> rdf:type owl:Ontology .
+<http://www.semanticweb.org/enryc/ontologies/2025/0/untitled-ontology-36> rdf:type owl:Ontology ;
+                                                                           dc:creator "Davide Vitturini"@en ,
+                                                                                      "Enrico Chiesa"@en ;
+                                                                           dc:date "2025-01-29" ;
+                                                                           dc:description "Questa ontologia ha l'obiettivo di fornire una rappresentazione generale sulle principali tematiche trattate dalla letteratura, con il particolare obiettivo di rendere possibile il suggerimento di nuove da parte di esperti o amatori."@it ;
+                                                                           vann:preferredNamespacePrefix "lwt" ;
+                                                                           vann:preferredNamespaceUri "https://litetaryworktopics.com/litetaryworktopics2025#"@en ;
+                                                                           <http://web.resource.org/cc/license> "MIT" ;
+                                                                           rdfs:label "litetaryworktopics2025"@en .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/elements/1.1/creator
+dc:creator rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/date
+dc:date rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/description
+dc:description rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/title
+dc:title rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespacePrefix
+vann:preferredNamespacePrefix rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespaceUri
+vann:preferredNamespaceUri rdf:type owl:AnnotationProperty .
+
+
+###  http://web.resource.org/cc/license
+<http://web.resource.org/cc/license> rdf:type owl:AnnotationProperty .
+
 
 #################################################################
 #    Datatypes
