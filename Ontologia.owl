@@ -152,12 +152,6 @@ xsd:date rdf:type rdfs:Datatype .
 #################################################################
 
 
-###  http://www.semanticweb.org/enryc/ontologies/2025/0/untitled-ontology-36#HaPrimaEdizione
-
-:HaPrimaEdizione rdf:type owl:ObjectProperty .
-
-
-
 ###  http://www.semanticweb.org/enryc/ontologies/2025/0/untitled-ontology-36#ProvieneDa
 
 :ProvieneDa rdf:type owl:ObjectProperty ;
@@ -172,7 +166,9 @@ xsd:date rdf:type rdfs:Datatype .
 
 :appartieneACollana rdf:type owl:ObjectProperty ;
                     
-                    rdfs:range :CollanaEditoriale .
+                    rdfs:range :CollanaEditoriale ;
+                    
+                    rdfs:domain <https://litetaryworktopics.com/litetaryworktopics2025##OperaLetteraria> .
 
 
 
@@ -182,7 +178,9 @@ xsd:date rdf:type rdfs:Datatype .
                   
                   rdfs:range :Antologia ;
                   
-                  rdfs:subPropertyOf :appartieneACollana .
+                  rdfs:subPropertyOf :appartieneACollana ;
+                  
+                  rdfs:domain <https://litetaryworktopics.com/litetaryworktopics2025##OperaLetteraria> .
 
 
 
@@ -190,7 +188,9 @@ xsd:date rdf:type rdfs:Datatype .
 
 :parteDiSaga rdf:type owl:ObjectProperty ;
              
-             rdfs:range :Saga .
+             rdfs:range :Saga ;
+             
+             rdfs:domain <https://litetaryworktopics.com/litetaryworktopics2025##OperaLetteraria> .
 
 
 
@@ -200,7 +200,9 @@ xsd:date rdf:type rdfs:Datatype .
               
               rdfs:range :Serie ;
               
-              rdfs:subPropertyOf :appartieneACollana .
+              rdfs:subPropertyOf :appartieneACollana ;
+              
+              rdfs:domain <https://litetaryworktopics.com/litetaryworktopics2025##OperaLetteraria> .
 
 
 
@@ -517,38 +519,19 @@ xsd:date rdf:type rdfs:Datatype .
 #################################################################
 
 
-###  http://www.semanticweb.org/enryc/ontologies/2025/0/untitled-ontology-36#Antologia_Romantica
+###  http://www.semanticweb.org/enryc/ontologies/2025/0/untitled-ontology-36#Camera_dei_Segreti_opera
 
-:Antologia_Romantica rdf:type :Antologia ,
-                              owl:NamedIndividual ;
-                     
-                     :parteDiAntologia :OperaRomantica1 ,
-                                       :OperaRomantica2 ,
-                                       :OperaRomantica3 .
-
-
-
-###  http://www.semanticweb.org/enryc/ontologies/2025/0/untitled-ontology-36#EdizioneOpera1
-
-:EdizioneOpera1 rdf:type owl:NamedIndividual ;
-                
-                :HaLingua :Italiano .
-
-
-
-###  http://www.semanticweb.org/enryc/ontologies/2025/0/untitled-ontology-36#EdizioneOpera2
-
-:EdizioneOpera2 rdf:type owl:NamedIndividual ;
-                
-                :HaLingua :Italiano .
-
-
-
-###  http://www.semanticweb.org/enryc/ontologies/2025/0/untitled-ontology-36#EdizioneOpera3
-
-:EdizioneOpera3 rdf:type owl:NamedIndividual ;
-                
-                :HaLingua :Italiano .
+:Camera_dei_Segreti_opera rdf:type owl:NamedIndividual ;
+                          
+                          :parteDiSaga :Harry_Potter ;
+                          
+                          :HaProvenienzaAutore :Italiana ;
+                          
+                          :HaGenereLetterario :Romanzo ;
+                          
+                          <https://litetaryworktopics.com/litetaryworktopics2025##HaEdizione> :The_Chamber_of_Secrets ;
+                          
+                          :HaEdizione :The_Chamber_of_Secrets .
 
 
 
@@ -568,14 +551,29 @@ xsd:date rdf:type rdfs:Datatype .
 
 :Fermo_e_Lucia_Opera rdf:type owl:NamedIndividual ;
                      
-                     :parteDiAntologia :Antologia_Romantica ;
+                     <https://litetaryworktopics.com/litetaryworktopics2025##HaEdizione> :Fermo_e_Lucia ;
                      
                      :HaEdizione :Fermo_e_Lucia ,
                                  :I_Promessi_Sposi ;
                      
+                     <https://litetaryworktopics.com/litetaryworktopics2025##HaEdizione> :I_Promessi_Sposi ;
+                     
                      :HaProvenienzaAutore :Italiana ;
                      
+                     :parteDiAntologia :Letteratura_Italiana ;
+                     
                      :HaGenereLetterario :Romanzo_storico .
+
+
+
+###  http://www.semanticweb.org/enryc/ontologies/2025/0/untitled-ontology-36#Harry_Potter
+
+:Harry_Potter rdf:type :Saga ,
+                       owl:NamedIndividual ;
+              
+              :parteDiSaga :Camera_dei_Segreti_opera ,
+                           :Pietra_Filosofale_Opera ,
+                           :Prigioniero_di_Azkaban_Opera .
 
 
 
@@ -591,12 +589,6 @@ xsd:date rdf:type rdfs:Datatype .
 
 
 
-###  http://www.semanticweb.org/enryc/ontologies/2025/0/untitled-ontology-36#Italiana
-
-:Italiana rdf:type owl:NamedIndividual .
-
-
-
 ###  http://www.semanticweb.org/enryc/ontologies/2025/0/untitled-ontology-36#Italiano
 
 :Italiano rdf:type :Lingua ,
@@ -604,63 +596,54 @@ xsd:date rdf:type rdfs:Datatype .
 
 
 
-###  http://www.semanticweb.org/enryc/ontologies/2025/0/untitled-ontology-36#Opera1Saga
+###  http://www.semanticweb.org/enryc/ontologies/2025/0/untitled-ontology-36#La_Divina_Commedia_Opera
 
-:Opera1Saga rdf:type owl:NamedIndividual ;
-            
-            :HaEdizione :EdizioneOpera1 ;
-            
-            :HaProvenienzaAutore :Italiana ;
-            
-            :HaGenereLetterario :Romanzo ;
-            
-            :parteDiSaga :Saga_Dei_Sevizi .
+:La_Divina_Commedia_Opera rdf:type owl:NamedIndividual ;
+                          
+                          :parteDiAntologia :Letteratura_Italiana .
 
 
 
-###  http://www.semanticweb.org/enryc/ontologies/2025/0/untitled-ontology-36#Opera2Saga
+###  http://www.semanticweb.org/enryc/ontologies/2025/0/untitled-ontology-36#Letteratura_Italiana
 
-:Opera2Saga rdf:type owl:NamedIndividual ;
-            
-            :HaEdizione :EdizioneOpera2 ;
-            
-            :HaProvenienzaAutore :Italiana ;
-            
-            :HaGenereLetterario :Romanzo ;
-            
-            :parteDiSaga :Saga_Dei_Sevizi .
+:Letteratura_Italiana rdf:type :Antologia ,
+                               owl:NamedIndividual ;
+                      
+                      :parteDiAntologia :La_Divina_Commedia ,
+                                        :OperaRomantica2 ,
+                                        :OperaRomantica3 .
 
 
 
-###  http://www.semanticweb.org/enryc/ontologies/2025/0/untitled-ontology-36#Opera3Saga
+###  http://www.semanticweb.org/enryc/ontologies/2025/0/untitled-ontology-36#Pietra_Filosofale_Opera
 
-:Opera3Saga rdf:type owl:NamedIndividual ;
-            
-            :HaEdizione :EdizioneOpera3 ;
-            
-            :HaProvenienzaAutore :Italiana ;
-            
-            :HaGenereLetterario :Romanzo ;
-            
-            :parteDiSaga :Saga_Dei_Sevizi .
-
-
-
-###  http://www.semanticweb.org/enryc/ontologies/2025/0/untitled-ontology-36#OperaRomantica1
-
-:OperaRomantica1 rdf:type owl:NamedIndividual .
+:Pietra_Filosofale_Opera rdf:type owl:NamedIndividual ;
+                         
+                         :parteDiSaga :Harry_Potter ;
+                         
+                         :HaProvenienzaAutore :Italia ;
+                         
+                         :HaGenereLetterario :Romanzo ;
+                         
+                         :HaEdizione :The_Philosophers_Stone ;
+                         
+                         <https://litetaryworktopics.com/litetaryworktopics2025##HaEdizione> :The_Philosophers_Stone .
 
 
 
-###  http://www.semanticweb.org/enryc/ontologies/2025/0/untitled-ontology-36#OperaRomantica2
+###  http://www.semanticweb.org/enryc/ontologies/2025/0/untitled-ontology-36#Prigioniero_di_Azkaban_Opera
 
-:OperaRomantica2 rdf:type owl:NamedIndividual .
-
-
-
-###  http://www.semanticweb.org/enryc/ontologies/2025/0/untitled-ontology-36#OperaRomantica3
-
-:OperaRomantica3 rdf:type owl:NamedIndividual .
+:Prigioniero_di_Azkaban_Opera rdf:type owl:NamedIndividual ;
+                              
+                              :parteDiSaga :Harry_Potter ;
+                              
+                              :HaProvenienzaAutore :Italiana ;
+                              
+                              :HaGenereLetterario :Romanzo ;
+                              
+                              <https://litetaryworktopics.com/litetaryworktopics2025##HaEdizione> :The_Prisoner_of_Azkaban ;
+                              
+                              :HaEdizione :The_Prisoner_of_Azkaban .
 
 
 
@@ -676,14 +659,34 @@ xsd:date rdf:type rdfs:Datatype .
 
 
 
-###  http://www.semanticweb.org/enryc/ontologies/2025/0/untitled-ontology-36#Saga_Dei_Sevizi
+###  http://www.semanticweb.org/enryc/ontologies/2025/0/untitled-ontology-36#The_Chamber_of_Secrets
 
-:Saga_Dei_Sevizi rdf:type :Saga ,
-                          owl:NamedIndividual ;
-                 
-                 :parteDiSaga :Opera1Saga ,
-                              :Opera2Saga ,
-                              :Opera3Saga .
+:The_Chamber_of_Secrets rdf:type owl:NamedIndividual ;
+                        
+                        :HaLingua :Italiano .
+
+
+
+###  http://www.semanticweb.org/enryc/ontologies/2025/0/untitled-ontology-36#The_Philosophers_Stone
+
+:The_Philosophers_Stone rdf:type owl:NamedIndividual ;
+                        
+                        :HaLingua :Italiano .
+
+
+
+###  http://www.semanticweb.org/enryc/ontologies/2025/0/untitled-ontology-36#The_Prisoner_of_Azkaban
+
+:The_Prisoner_of_Azkaban rdf:type owl:NamedIndividual ;
+                         
+                         :HaLingua :Italiano .
+
+
+
+###  https://litetaryworktopics.com/litetaryworktopics2025#Italia
+
+<https://litetaryworktopics.com/litetaryworktopics2025#Italia> rdf:type :Nazione ,
+                                                                        owl:NamedIndividual .
 
 
 
