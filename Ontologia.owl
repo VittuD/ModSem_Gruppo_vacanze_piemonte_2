@@ -10,15 +10,15 @@
 @prefix dbpedia: <https://dbpedia.org/ontology/> .
 @base <http://www.semanticweb.org/enryc/ontologies/2025/0/untitled-ontology-36#> .
 
-<http://www.semanticweb.org/enryc/ontologies/2025/0/untitled-ontology-36> rdf:type owl:Ontology ;
-                                                                           dc:creator "Davide Vitturini"@en ,
-                                                                                      "Enrico Chiesa"@en ;
-                                                                           dc:date "2025-01-29" ;
-                                                                           dc:description "Questa ontologia ha l'obiettivo di fornire una rappresentazione generale sulle principali tematiche trattate dalla letteratura, con il particolare obiettivo di rendere possibile il suggerimento di nuove da parte di esperti o amatori."@it ;
-                                                                           vann:preferredNamespacePrefix "lwt" ;
-                                                                           vann:preferredNamespaceUri "https://litetaryworktopics.com/litetaryworktopics2025#"@en ;
-                                                                           <http://web.resource.org/cc/license> "MIT" ;
-                                                                           rdfs:label "litetaryworktopics2025"@en .
+<https://litetaryworktopics.com/litetaryworktopics2025#> rdf:type owl:Ontology ;
+                                                          dc:creator "Davide Vitturini"@en ,
+                                                                     "Enrico Chiesa"@en ;
+                                                          dc:date "2025-01-29" ;
+                                                          dc:description "Questa ontologia ha l'obiettivo di fornire una rappresentazione generale sulle principali tematiche trattate dalla letteratura, con il particolare obiettivo di rendere possibile il suggerimento di nuove da parte di esperti o amatori."@it ;
+                                                          vann:preferredNamespacePrefix "lwt" ;
+                                                          vann:preferredNamespaceUri "https://litetaryworktopics.com/litetaryworktopics2025#"@en ;
+                                                          <http://web.resource.org/cc/license> "MIT" ;
+                                                          rdfs:label "litetaryworktopics2025"@en .
 
 #################################################################
 #    Annotation properties
@@ -49,7 +49,8 @@ vann:preferredNamespaceUri rdf:type owl:AnnotationProperty .
 
 
 ###  http://web.resource.org/cc/license
-<http://web.resource.org/cc/license> rdf:type owl:AnnotationProperty .
+<http://web.resource.org/cc/license> rdf:type owl:AnnotationProperty ;
+                                     rdfs:comment "Una raccolta di Opere Letterarie pubblicate da un Editore con criteri comuni di Genere, Tema o Formato."@it .
 
 
 #################################################################
@@ -72,8 +73,7 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  http://www.semanticweb.org/enryc/ontologies/2025/0/untitled-ontology-36#HaGenereLetterario
 :HaGenereLetterario rdf:type owl:ObjectProperty ;
-                    rdfs:domain :OperaLetteraria ;
-                    rdfs:range :GenereLetterario .
+                    rdfs:domain :OperaLetteraria .
 
 
 ###  http://www.semanticweb.org/enryc/ontologies/2025/0/untitled-ontology-36#HaLingua
@@ -112,8 +112,10 @@ xsd:date rdf:type rdfs:Datatype .
 <http://dbpedia.org/resource/List> rdf:type owl:Class .
 
 
-###  http://www.semanticweb.org/enryc/ontologies/2025/0/untitled-ontology-36#Argomento
-:Argomento rdf:type owl:Class .
+###  http://www.semanticweb.org/enryc/ontologies/2025/0/untitled-ontology-36#Antologia
+:Antologia rdf:type owl:Class ;
+           rdfs:subClassOf :CollanaEditoriale ;
+           rdfs:comment "Una raccolta di brani scelti da opere diverse, organizzati per Tema, Periodo o Genere."@it .
 
 
 ###  http://www.semanticweb.org/enryc/ontologies/2025/0/untitled-ontology-36#Autore
@@ -131,6 +133,13 @@ xsd:date rdf:type rdfs:Datatype .
               rdfs:subClassOf <http://www.w3.org/ns/prov#Organization> .
 
 
+###  http://www.semanticweb.org/enryc/ontologies/2025/0/untitled-ontology-36#CollanaEditoriale
+:CollanaEditoriale rdf:type owl:Class ;
+                   rdfs:subClassOf <http://dbpedia.org/resource/List> ;
+                   rdfs:comment "Una raccolta di testi pubblicati da un editore con criteri comuni di genere, tema o formato."@it ;
+                   rdfs:label "CollanaEditoriale"@it .
+
+
 ###  http://www.semanticweb.org/enryc/ontologies/2025/0/untitled-ontology-36#Editore
 :Editore rdf:type owl:Class ;
          rdfs:subClassOf :Persona .
@@ -140,12 +149,32 @@ xsd:date rdf:type rdfs:Datatype .
 :Edizione rdf:type owl:Class .
 
 
-###  http://www.semanticweb.org/enryc/ontologies/2025/0/untitled-ontology-36#GenereLetterario
-:GenereLetterario rdf:type owl:Class .
+###  http://www.semanticweb.org/enryc/ontologies/2025/0/untitled-ontology-36#Genere
+:Genere rdf:type owl:Class .
 
 
 ###  http://www.semanticweb.org/enryc/ontologies/2025/0/untitled-ontology-36#Lingua
 :Lingua rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/enryc/ontologies/2025/0/untitled-ontology-36#Luogo
+:Luogo rdf:type owl:Class ;
+       rdfs:comment "Un Luogo, genericamente fisico o immaginario."@it ;
+       rdfs:label "Luogo"@it .
+
+
+###  http://www.semanticweb.org/enryc/ontologies/2025/0/untitled-ontology-36#LuogoFisico
+:LuogoFisico rdf:type owl:Class ;
+             rdfs:subClassOf :Luogo ;
+             rdfs:comment "Un Luogo Fisico rappresenta un Luogo fisicamente presente, tramite la denominazione corrente o passata."@it ;
+             rdfs:label "LuogoFisico"@it .
+
+
+###  http://www.semanticweb.org/enryc/ontologies/2025/0/untitled-ontology-36#Nazione
+:Nazione rdf:type owl:Class ;
+         rdfs:subClassOf :LuogoFisico ;
+         rdfs:comment "Un'entità nazionale nel presente o passato."@it ;
+         rdfs:label "Nazione"@it .
 
 
 ###  http://www.semanticweb.org/enryc/ontologies/2025/0/untitled-ontology-36#OperaLetteraria
@@ -163,7 +192,21 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  http://www.semanticweb.org/enryc/ontologies/2025/0/untitled-ontology-36#Saga
 :Saga rdf:type owl:Class ;
-      rdfs:subClassOf <http://dbpedia.org/resource/List> .
+      rdfs:subClassOf <http://dbpedia.org/resource/List> ;
+      rdfs:comment "Una narrazione estesa che segue personaggi o famiglie attraverso eventi o generazioni, spesso con una trama continuativa."@it ;
+      rdfs:label "Saga"@it .
+
+
+###  http://www.semanticweb.org/enryc/ontologies/2025/0/untitled-ontology-36#Serie
+:Serie rdf:type owl:Class ;
+       rdfs:subClassOf :CollanaEditoriale ;
+       rdfs:comment "Una sequenza di Opere Letterarie con Personaggi o Ambientazioni ricorrenti, ma trame generalmente autonome."@it .
+
+
+###  http://www.semanticweb.org/enryc/ontologies/2025/0/untitled-ontology-36#Tema
+:Tema rdf:type owl:Class ;
+      rdfs:comment "Materia trattata da un'Opera Letteraria."@it ;
+      rdfs:label "Tema"@it .
 
 
 ###  http://www.w3.org/ns/prov#Agent
@@ -215,8 +258,7 @@ xsd:date rdf:type rdfs:Datatype .
 
 
 ###  http://www.semanticweb.org/enryc/ontologies/2025/0/untitled-ontology-36#Romanzo_storico
-:Romanzo_storico rdf:type owl:NamedIndividual ,
-                          :GenereLetterario .
+:Romanzo_storico rdf:type owl:NamedIndividual .
 
 
 ###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi
