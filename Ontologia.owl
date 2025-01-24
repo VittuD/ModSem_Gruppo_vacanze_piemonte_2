@@ -103,6 +103,12 @@ xsd:date rdf:type rdfs:Datatype .
 :HaPrimaEdizione rdf:type owl:ObjectProperty .
 
 
+###  https://litetaryworktopics.com/litetaryworktopics2025#ProvieneDa
+:ProvieneDa rdf:type owl:ObjectProperty ;
+            rdfs:domain :Autore ;
+            rdfs:range :Nazione .
+
+
 ###  https://litetaryworktopics.com/litetaryworktopics2025#appartieneACollana
 :appartieneACollana rdf:type owl:ObjectProperty ;
                     rdfs:range :CollanaEditoriale .
@@ -260,10 +266,6 @@ xsd:date rdf:type rdfs:Datatype .
         rdfs:subClassOf <https://litetaryworktopics.com/litetaryworktopics2025##Edizione> .
 
 
-###  https://litetaryworktopics.com/litetaryworktopics2025#ProvenienzaAutore
-:ProvenienzaAutore rdf:type owl:Class .
-
-
 ###  https://litetaryworktopics.com/litetaryworktopics2025#Racconto
 :Racconto rdf:type owl:Class ;
           rdfs:subClassOf <https://litetaryworktopics.com/litetaryworktopics2025##Edizione> .
@@ -362,8 +364,7 @@ xsd:date rdf:type rdfs:Datatype .
 
 
 ###  https://litetaryworktopics.com/litetaryworktopics2025#Italiana
-:Italiana rdf:type owl:NamedIndividual ,
-                   :ProvenienzaAutore .
+:Italiana rdf:type owl:NamedIndividual .
 
 
 ###  https://litetaryworktopics.com/litetaryworktopics2025#Italiano
