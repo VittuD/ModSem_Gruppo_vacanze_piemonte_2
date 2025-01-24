@@ -8,126 +8,122 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix vann: <http://purl.org/vocab/vann/> .
 @prefix dbpedia: <https://dbpedia.org/ontology/> .
-@base <https://litetaryworktopics.com/litetaryworktopics2025#> .
+@base <http://www.semanticweb.org/enryc/ontologies/2025/0/untitled-ontology-36#> .
 
-<<<<<<< HEAD
-<https://litetaryworktopics.com/litetaryworktopics2025> rdf:type owl:Ontology ;
-                                                         dc:creator "Davide Vitturini"@en ,
-                                                                    "Enrico Chiesa"@en ;
-                                                         dc:date "2025-01-29" ;
-                                                         dc:description "Questa ontologia ha l'obiettivo di fornire una rappresentazione generale sulle principali tematiche trattate dalla letteratura, con il particolare obiettivo di rendere possibile il suggerimento di nuove da parte di esperti o amatori."@it ;
-                                                         vann:preferredNamespacePrefix "lwt" ;
-                                                         vann:preferredNamespaceUri "https://litetaryworktopics.com/litetaryworktopics2025"@en ;
-                                                         <http://web.resource.org/cc/license> "MIT" ;
-                                                         rdfs:label "litetaryworktopics2025"@en .
-=======
 <https://litetaryworktopics.com/litetaryworktopics2025#> rdf:type owl:Ontology ;
-                                                         
-                                                         rdfs:label "litetaryworktopics2025"@en ;
-                                                         
-                                                         dc:date "2025-01-29" ;
-                                                         
-                                                         dc:creator "Davide Vitturini"@en ;
-                                                         
-                                                         <http://web.resource.org/cc/license> "MIT" ;
-                                                         
-                                                         dc:creator "Enrico Chiesa"@en ;
-                                                         
-                                                         vann:preferredNamespaceUri "https://litetaryworktopics.com/litetaryworktopics2025#"@en ;
-                                                         
-                                                         dc:description "Questa ontologia ha l'obiettivo di fornire una rappresentazione generale sulle principali tematiche trattate dalla letteratura, con il particolare obiettivo di rendere possibile il suggerimento di nuove da parte di esperti o amatori."@it ;
-                                                         
-                                                         vann:preferredNamespacePrefix "lwt" .
-
->>>>>>> origin/HEAD
+                                                          dc:creator "Davide Vitturini"@en ,
+                                                                     "Enrico Chiesa"@en ;
+                                                          dc:date "2025-01-29" ;
+                                                          dc:description "Questa ontologia ha l'obiettivo di fornire una rappresentazione generale sulle principali tematiche trattate dalla letteratura, con il particolare obiettivo di rendere possibile il suggerimento di nuove da parte di esperti o amatori."@it ;
+                                                          vann:preferredNamespacePrefix "lwt" ;
+                                                          vann:preferredNamespaceUri "https://litetaryworktopics.com/litetaryworktopics2025#"@en ;
+                                                          <http://web.resource.org/cc/license> "MIT" ;
+                                                          rdfs:label "litetaryworktopics2025"@en .
 
 #################################################################
-#
 #    Annotation properties
-#
 #################################################################
-
 
 ###  http://purl.org/dc/elements/1.1/creator
-
 dc:creator rdf:type owl:AnnotationProperty .
 
 
-
 ###  http://purl.org/dc/elements/1.1/date
-
 dc:date rdf:type owl:AnnotationProperty .
 
 
-
 ###  http://purl.org/dc/elements/1.1/description
-
 dc:description rdf:type owl:AnnotationProperty .
 
 
-
 ###  http://purl.org/dc/elements/1.1/title
-
 dc:title rdf:type owl:AnnotationProperty .
 
 
-
 ###  http://purl.org/vocab/vann/preferredNamespacePrefix
-
 vann:preferredNamespacePrefix rdf:type owl:AnnotationProperty .
 
 
-
 ###  http://purl.org/vocab/vann/preferredNamespaceUri
-
 vann:preferredNamespaceUri rdf:type owl:AnnotationProperty .
 
 
-
 ###  http://web.resource.org/cc/license
-
 <http://web.resource.org/cc/license> rdf:type owl:AnnotationProperty ;
-                                     
                                      rdfs:comment "Una raccolta di Opere Letterarie pubblicate da un Editore con criteri comuni di Genere, Tema o Formato."@it .
 
 
-
-###  http://www.semanticweb.org/enryc/ontologies/2025/0/untitled-ontology-36#parteDiAntologia
-
-:parteDiAntologia rdf:type owl:AnnotationProperty .
+###  https://litetaryworktopics.com/litetaryworktopics2025#HaEdizione
+:HaEdizione rdf:type owl:AnnotationProperty .
 
 
-
-###  http://www.semanticweb.org/enryc/ontologies/2025/0/untitled-ontology-36#parteDiSaga
-
-:parteDiSaga rdf:type owl:AnnotationProperty .
+###  https://litetaryworktopics.com/litetaryworktopics2025#HaGenereLetterario
+:HaGenereLetterario rdf:type owl:AnnotationProperty .
 
 
+###  https://litetaryworktopics.com/litetaryworktopics2025#HaLingua
+:HaLingua rdf:type owl:AnnotationProperty .
 
+
+###  https://litetaryworktopics.com/litetaryworktopics2025#HaProvenienzaAutore
+:HaProvenienzaAutore rdf:type owl:AnnotationProperty .
+
+
+###  https://litetaryworktopics.com/litetaryworktopics2025#haDataPubblicazione
+:haDataPubblicazione rdf:type owl:AnnotationProperty .
+
+
+###  https://litetaryworktopics.com/litetaryworktopics2025#haNome
+:haNome rdf:type owl:AnnotationProperty .
+
+
+###  https://litetaryworktopics.com/litetaryworktopics2025#parteDiAntologia
+:parteDiAntologia rdf:type owl:AnnotationProperty ;
+                  rdfs:range :Antologia .
+
+
+###  https://litetaryworktopics.com/litetaryworktopics2025#parteDiSaga
+:parteDiSaga rdf:type owl:AnnotationProperty ;
+             rdfs:range :Saga .
 
 
 #################################################################
-#
 #    Datatypes
-#
 #################################################################
-
 
 ###  http://www.w3.org/2001/XMLSchema#date
-
 xsd:date rdf:type rdfs:Datatype .
 
 
-
-
-
 #################################################################
-#
 #    Object Properties
-#
 #################################################################
 
-<<<<<<< HEAD
+###  https://litetaryworktopics.com/litetaryworktopics2025#HaPrimaEdizione
+:HaPrimaEdizione rdf:type owl:ObjectProperty ;
+                 rdfs:range :Edizione .
+
+
+###  https://litetaryworktopics.com/litetaryworktopics2025#appartieneACollana
+:appartieneACollana rdf:type owl:ObjectProperty ;
+                    rdfs:range :CollanaEditoriale .
+
+
+###  https://litetaryworktopics.com/litetaryworktopics2025#parteDiAntologia
+:parteDiAntologia rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf :appartieneACollana .
+
+
+###  https://litetaryworktopics.com/litetaryworktopics2025#parteDiSaga
+:parteDiSaga rdf:type owl:ObjectProperty .
+
+
+###  https://litetaryworktopics.com/litetaryworktopics2025#parteDiSerie
+:parteDiSerie rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf :appartieneACollana ;
+              rdfs:range :Serie .
+
+
 ###  https://litetaryworktopics.com/litetaryworktopics2025##HaEdizione
 <https://litetaryworktopics.com/litetaryworktopics2025##HaEdizione> rdf:type owl:ObjectProperty ;
                                                                     rdfs:domain <https://litetaryworktopics.com/litetaryworktopics2025##OperaLetteraria> ;
@@ -141,118 +137,18 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  https://litetaryworktopics.com/litetaryworktopics2025##HaLingua
 <https://litetaryworktopics.com/litetaryworktopics2025##HaLingua> rdf:type owl:ObjectProperty ;
-                                                                  rdfs:domain <https://litetaryworktopics.com/litetaryworktopics2025##OperaLetteraria> ;
-                                                                  rdfs:range <https://litetaryworktopics.com/litetaryworktopics2025##Lingua> .
+                                                                  rdfs:domain <https://litetaryworktopics.com/litetaryworktopics2025##OperaLetteraria> .
 
 
 ###  https://litetaryworktopics.com/litetaryworktopics2025##HaProvenienzaAutore
 <https://litetaryworktopics.com/litetaryworktopics2025##HaProvenienzaAutore> rdf:type owl:ObjectProperty ;
-                                                                             rdfs:domain <https://litetaryworktopics.com/litetaryworktopics2025##OperaLetteraria> ;
-                                                                             rdfs:range <https://litetaryworktopics.com/litetaryworktopics2025##ProvenienzaAutore> .
-=======
-
-###  http://www.semanticweb.org/enryc/ontologies/2025/0/untitled-ontology-36#HaEdizione
-
-:HaEdizione rdf:type owl:ObjectProperty ;
-            
-            rdfs:range :Edizione ;
-            
-            rdfs:domain :OperaLetteraria .
-
-
-
-###  http://www.semanticweb.org/enryc/ontologies/2025/0/untitled-ontology-36#HaGenereLetterario
-
-:HaGenereLetterario rdf:type owl:ObjectProperty ;
-                    
-                    rdfs:domain :OperaLetteraria .
-
-
-
-###  http://www.semanticweb.org/enryc/ontologies/2025/0/untitled-ontology-36#HaLingua
-
-:HaLingua rdf:type owl:ObjectProperty ;
-          
-          rdfs:domain :Edizione ;
-          
-          rdfs:range :Lingua .
-
-
-
-###  http://www.semanticweb.org/enryc/ontologies/2025/0/untitled-ontology-36#HaProvenienzaAutore
-
-:HaProvenienzaAutore rdf:type owl:ObjectProperty ;
-                     
-                     rdfs:domain :OperaLetteraria ;
-                     
-                     rdfs:range :ProvenienzaAutore .
->>>>>>> origin/HEAD
-
-
-
-###  https://litetaryworktopics.com/litetaryworktopics2025#HaPrimaEdizione
-
-<https://litetaryworktopics.com/litetaryworktopics2025#HaPrimaEdizione> rdf:type owl:ObjectProperty ;
-                                                                        
-                                                                        rdfs:range :Edizione ;
-                                                                        
-                                                                        rdfs:domain :OperaLetteraria .
-
-
-
-###  https://litetaryworktopics.com/litetaryworktopics2025#appartieneACollana
-
-<https://litetaryworktopics.com/litetaryworktopics2025#appartieneACollana> rdf:type owl:ObjectProperty ;
-                                                                           
-                                                                           rdfs:range :CollanaEditoriale ;
-                                                                           
-                                                                           rdfs:domain :OperaLetteraria .
-
-
-
-###  https://litetaryworktopics.com/litetaryworktopics2025#parteDiAntologia
-
-<https://litetaryworktopics.com/litetaryworktopics2025#parteDiAntologia> rdf:type owl:ObjectProperty ;
-                                                                         
-                                                                         rdfs:range :Antologia ;
-                                                                         
-                                                                         rdfs:domain :OperaLetteraria ;
-                                                                         
-                                                                         rdfs:subPropertyOf <https://litetaryworktopics.com/litetaryworktopics2025#appartieneACollana> .
-
-
-
-###  https://litetaryworktopics.com/litetaryworktopics2025#parteDiSaga
-
-<https://litetaryworktopics.com/litetaryworktopics2025#parteDiSaga> rdf:type owl:ObjectProperty ;
-                                                                    
-                                                                    rdfs:domain :OperaLetteraria ;
-                                                                    
-                                                                    rdfs:range :Saga .
-
-
-
-###  https://litetaryworktopics.com/litetaryworktopics2025#parteDiSerie
-
-<https://litetaryworktopics.com/litetaryworktopics2025#parteDiSerie> rdf:type owl:ObjectProperty ;
-                                                                     
-                                                                     rdfs:domain :OperaLetteraria ;
-                                                                     
-                                                                     rdfs:range :Serie ;
-                                                                     
-                                                                     rdfs:subPropertyOf <https://litetaryworktopics.com/litetaryworktopics2025#appartieneACollana> .
-
-
-
+                                                                             rdfs:domain <https://litetaryworktopics.com/litetaryworktopics2025##OperaLetteraria> .
 
 
 #################################################################
-#
 #    Data properties
-#
 #################################################################
 
-<<<<<<< HEAD
 ###  https://litetaryworktopics.com/litetaryworktopics2025##haDataPubblicazione
 <https://litetaryworktopics.com/litetaryworktopics2025##haDataPubblicazione> rdf:type owl:DatatypeProperty ;
                                                                              rdfs:domain <https://litetaryworktopics.com/litetaryworktopics2025##Edizione> ;
@@ -263,222 +159,95 @@ xsd:date rdf:type rdfs:Datatype .
 <https://litetaryworktopics.com/litetaryworktopics2025##haNome> rdf:type owl:DatatypeProperty ;
                                                                 rdfs:domain <https://litetaryworktopics.com/litetaryworktopics2025##Edizione> ;
                                                                 rdfs:range xsd:string .
-=======
-
-###  http://www.semanticweb.org/enryc/ontologies/2025/0/untitled-ontology-36#haDataPubblicazione
-
-:haDataPubblicazione rdf:type owl:DatatypeProperty ;
-                     
-                     rdfs:domain :Edizione ;
-                     
-                     rdfs:range xsd:date .
-
-
-
-###  http://www.semanticweb.org/enryc/ontologies/2025/0/untitled-ontology-36#haNome
-
-:haNome rdf:type owl:DatatypeProperty ;
-        
-        rdfs:domain :Edizione ;
-        
-        rdfs:range xsd:string .
->>>>>>> origin/HEAD
-
-
-
 
 
 #################################################################
-#
 #    Classes
-#
 #################################################################
-
 
 ###  http://dbpedia.org/resource/List
-
 <http://dbpedia.org/resource/List> rdf:type owl:Class .
 
 
-<<<<<<< HEAD
-=======
-
-###  http://www.semanticweb.org/enryc/ontologies/2025/0/untitled-ontology-36#Antologia
-
-:Antologia rdf:type owl:Class ;
-           
-           rdfs:subClassOf :CollanaEditoriale ;
-           
-           rdfs:comment "Una raccolta di brani scelti da opere diverse, organizzati per Tema, Periodo o Genere."@it .
-
-
-
-###  http://www.semanticweb.org/enryc/ontologies/2025/0/untitled-ontology-36#Autore
-
-:Autore rdf:type owl:Class ;
-        
-        rdfs:subClassOf :Persona .
-
-
-
-###  http://www.semanticweb.org/enryc/ontologies/2025/0/untitled-ontology-36#AutoreIndipendente
-
-:AutoreIndipendente rdf:type owl:Class ;
-                    
-                    rdfs:subClassOf :Autore .
-
-
-
-###  http://www.semanticweb.org/enryc/ontologies/2025/0/untitled-ontology-36#CasaEditrice
-
-:CasaEditrice rdf:type owl:Class ;
-              
-              rdfs:subClassOf <http://www.w3.org/ns/prov#Organization> .
-
-
-
-###  http://www.semanticweb.org/enryc/ontologies/2025/0/untitled-ontology-36#CollanaEditoriale
-
-:CollanaEditoriale rdf:type owl:Class ;
-                   
-                   rdfs:label "CollanaEditoriale"@it ;
-                   
-                   rdfs:subClassOf <http://dbpedia.org/resource/List> ;
-                   
-                   rdfs:comment "Una raccolta di testi pubblicati da un editore con criteri comuni di genere, tema o formato."@it .
-
-
-
-###  http://www.semanticweb.org/enryc/ontologies/2025/0/untitled-ontology-36#Editore
-
-:Editore rdf:type owl:Class ;
-         
-         rdfs:subClassOf :Persona .
-
-
-
-###  http://www.semanticweb.org/enryc/ontologies/2025/0/untitled-ontology-36#Edizione
-
-:Edizione rdf:type owl:Class .
-
-
-
-###  http://www.semanticweb.org/enryc/ontologies/2025/0/untitled-ontology-36#Genere
-
-:Genere rdf:type owl:Class .
-
-
-
-###  http://www.semanticweb.org/enryc/ontologies/2025/0/untitled-ontology-36#Lingua
-
-:Lingua rdf:type owl:Class .
-
-
-
-###  http://www.semanticweb.org/enryc/ontologies/2025/0/untitled-ontology-36#Luogo
-
-:Luogo rdf:type owl:Class ;
-       
-       rdfs:label "Luogo"@it ;
-       
-       rdfs:comment "Un Luogo, genericamente fisico o immaginario."@it .
-
-
-
-###  http://www.semanticweb.org/enryc/ontologies/2025/0/untitled-ontology-36#LuogoFisico
-
-:LuogoFisico rdf:type owl:Class ;
-             
-             rdfs:label "LuogoFisico"@it ;
-             
-             rdfs:subClassOf :Luogo ;
-             
-             rdfs:comment "Un Luogo Fisico rappresenta un Luogo fisicamente presente, tramite la denominazione corrente o passata."@it .
-
-
-
-###  http://www.semanticweb.org/enryc/ontologies/2025/0/untitled-ontology-36#Nazione
-
-:Nazione rdf:type owl:Class ;
-         
-         rdfs:label "Nazione"@it ;
-         
-         rdfs:subClassOf :LuogoFisico ;
-         
-         rdfs:comment "Un'entità nazionale nel presente o passato."@it .
-
-
-
-###  http://www.semanticweb.org/enryc/ontologies/2025/0/untitled-ontology-36#OperaLetteraria
-
-:OperaLetteraria rdf:type owl:Class .
-
-
-
-###  http://www.semanticweb.org/enryc/ontologies/2025/0/untitled-ontology-36#Persona
-
-:Persona rdf:type owl:Class ;
-         
-         rdfs:subClassOf <http://www.w3.org/ns/prov#Agent> .
-
-
-
-###  http://www.semanticweb.org/enryc/ontologies/2025/0/untitled-ontology-36#ProvenienzaAutore
-
-:ProvenienzaAutore rdf:type owl:Class .
-
-
-
-###  http://www.semanticweb.org/enryc/ontologies/2025/0/untitled-ontology-36#Saga
-
-:Saga rdf:type owl:Class ;
-      
-      rdfs:label "Saga"@it ;
-      
-      rdfs:subClassOf <http://dbpedia.org/resource/List> ;
-      
-      rdfs:comment "Una narrazione estesa che segue personaggi o famiglie attraverso eventi o generazioni, spesso con una trama continuativa."@it .
-
-
-
-###  http://www.semanticweb.org/enryc/ontologies/2025/0/untitled-ontology-36#Serie
-
-:Serie rdf:type owl:Class ;
-       
-       rdfs:subClassOf :CollanaEditoriale ;
-       
-       rdfs:comment "Una sequenza di Opere Letterarie con Personaggi o Ambientazioni ricorrenti, ma trame generalmente autonome."@it .
-
-
-
-###  http://www.semanticweb.org/enryc/ontologies/2025/0/untitled-ontology-36#Tema
-
-:Tema rdf:type owl:Class ;
-      
-      rdfs:label "Tema"@it ;
-      
-      rdfs:comment "Materia trattata da un'Opera Letteraria."@it .
-
-
-
->>>>>>> origin/HEAD
 ###  http://www.w3.org/ns/prov#Agent
-
 <http://www.w3.org/ns/prov#Agent> rdf:type owl:Class .
 
 
-
 ###  http://www.w3.org/ns/prov#Organization
-
 <http://www.w3.org/ns/prov#Organization> rdf:type owl:Class ;
-                                         
                                          rdfs:subClassOf <http://www.w3.org/ns/prov#Agent> .
 
 
-<<<<<<< HEAD
+###  https://litetaryworktopics.com/litetaryworktopics2025#Antologia
+:Antologia rdf:type owl:Class ;
+           rdfs:subClassOf :CollanaEditoriale ;
+           rdfs:comment "Una raccolta di brani scelti da opere diverse, organizzati per Tema, Periodo o Genere."@it .
+
+
+###  https://litetaryworktopics.com/litetaryworktopics2025#Autore
+:Autore rdf:type owl:Class ;
+        rdfs:subClassOf :Persona .
+
+
+###  https://litetaryworktopics.com/litetaryworktopics2025#AutoreIndipendente
+:AutoreIndipendente rdf:type owl:Class ;
+                    rdfs:subClassOf :Autore .
+
+
 ###  https://litetaryworktopics.com/litetaryworktopics2025#Brano
 :Brano rdf:type owl:Class ;
        rdfs:subClassOf <https://litetaryworktopics.com/litetaryworktopics2025##Edizione> .
+
+
+###  https://litetaryworktopics.com/litetaryworktopics2025#CasaEditrice
+:CasaEditrice rdf:type owl:Class ;
+              rdfs:subClassOf <http://www.w3.org/ns/prov#Organization> .
+
+
+###  https://litetaryworktopics.com/litetaryworktopics2025#CollanaEditoriale
+:CollanaEditoriale rdf:type owl:Class ;
+                   rdfs:subClassOf <http://dbpedia.org/resource/List> ;
+                   rdfs:comment "Una raccolta di testi pubblicati da un editore con criteri comuni di genere, tema o formato."@it ;
+                   rdfs:label "CollanaEditoriale"@it .
+
+
+###  https://litetaryworktopics.com/litetaryworktopics2025#Editore
+:Editore rdf:type owl:Class ;
+         rdfs:subClassOf :Persona .
+
+
+###  https://litetaryworktopics.com/litetaryworktopics2025#Edizione
+:Edizione rdf:type owl:Class .
+
+
+###  https://litetaryworktopics.com/litetaryworktopics2025#Genere
+:Genere rdf:type owl:Class ;
+        rdfs:label "Genere"@it .
+
+
+###  https://litetaryworktopics.com/litetaryworktopics2025#Lingua
+:Lingua rdf:type owl:Class ;
+        rdfs:label "Lingua"@it .
+
+
+###  https://litetaryworktopics.com/litetaryworktopics2025#Luogo
+:Luogo rdf:type owl:Class ;
+       rdfs:comment "Un Luogo, genericamente fisico o immaginario."@it ;
+       rdfs:label "Luogo"@it .
+
+
+###  https://litetaryworktopics.com/litetaryworktopics2025#LuogoFisico
+:LuogoFisico rdf:type owl:Class ;
+             rdfs:subClassOf :Luogo ;
+             rdfs:comment "Un Luogo Fisico rappresenta un Luogo fisicamente presente, tramite la denominazione corrente o passata."@it ;
+             rdfs:label "LuogoFisico"@it .
+
+
+###  https://litetaryworktopics.com/litetaryworktopics2025#Nazione
+:Nazione rdf:type owl:Class ;
+         rdfs:subClassOf :LuogoFisico ;
+         rdfs:comment "Un'entità nazionale nel presente o passato."@it ;
+         rdfs:label "Nazione"@it .
 
 
 ###  https://litetaryworktopics.com/litetaryworktopics2025#OperaTeatrale
@@ -486,9 +255,18 @@ xsd:date rdf:type rdfs:Datatype .
                rdfs:subClassOf <https://litetaryworktopics.com/litetaryworktopics2025##Edizione> .
 
 
+###  https://litetaryworktopics.com/litetaryworktopics2025#Persona
+:Persona rdf:type owl:Class ;
+         rdfs:subClassOf <http://www.w3.org/ns/prov#Agent> .
+
+
 ###  https://litetaryworktopics.com/litetaryworktopics2025#Poesia
 :Poesia rdf:type owl:Class ;
         rdfs:subClassOf <https://litetaryworktopics.com/litetaryworktopics2025##Edizione> .
+
+
+###  https://litetaryworktopics.com/litetaryworktopics2025#ProvenienzaAutore
+:ProvenienzaAutore rdf:type owl:Class .
 
 
 ###  https://litetaryworktopics.com/litetaryworktopics2025#Racconto
@@ -501,42 +279,28 @@ xsd:date rdf:type rdfs:Datatype .
          rdfs:subClassOf <https://litetaryworktopics.com/litetaryworktopics2025##Edizione> .
 
 
+###  https://litetaryworktopics.com/litetaryworktopics2025#Saga
+:Saga rdf:type owl:Class ;
+      rdfs:subClassOf <http://dbpedia.org/resource/List> ;
+      rdfs:comment "Una narrazione estesa che segue personaggi o famiglie attraverso eventi o generazioni, spesso con una trama continuativa."@it ;
+      rdfs:label "Saga"@it .
+
+
 ###  https://litetaryworktopics.com/litetaryworktopics2025#Saggio
 :Saggio rdf:type owl:Class ;
         rdfs:subClassOf <https://litetaryworktopics.com/litetaryworktopics2025##Edizione> .
 
 
-###  https://litetaryworktopics.com/litetaryworktopics2025##Antologia
-<https://litetaryworktopics.com/litetaryworktopics2025##Antologia> rdf:type owl:Class ;
-                                                                   rdfs:subClassOf <https://litetaryworktopics.com/litetaryworktopics2025##CollanaEditoriale> ;
-                                                                   rdfs:comment "Una raccolta di brani scelti da opere diverse, organizzati per Tema, Periodo o Genere."@it .
+###  https://litetaryworktopics.com/litetaryworktopics2025#Serie
+:Serie rdf:type owl:Class ;
+       rdfs:subClassOf :CollanaEditoriale ;
+       rdfs:comment "Una sequenza di Opere Letterarie con Personaggi o Ambientazioni ricorrenti, ma trame generalmente autonome."@it .
 
 
-###  https://litetaryworktopics.com/litetaryworktopics2025##Autore
-<https://litetaryworktopics.com/litetaryworktopics2025##Autore> rdf:type owl:Class ;
-                                                                rdfs:subClassOf <https://litetaryworktopics.com/litetaryworktopics2025##Persona> .
-
-
-###  https://litetaryworktopics.com/litetaryworktopics2025##AutoreIndipendente
-<https://litetaryworktopics.com/litetaryworktopics2025##AutoreIndipendente> rdf:type owl:Class ;
-                                                                            rdfs:subClassOf <https://litetaryworktopics.com/litetaryworktopics2025##Autore> .
-
-
-###  https://litetaryworktopics.com/litetaryworktopics2025##CasaEditrice
-<https://litetaryworktopics.com/litetaryworktopics2025##CasaEditrice> rdf:type owl:Class ;
-                                                                      rdfs:subClassOf <http://www.w3.org/ns/prov#Organization> .
-
-
-###  https://litetaryworktopics.com/litetaryworktopics2025##CollanaEditoriale
-<https://litetaryworktopics.com/litetaryworktopics2025##CollanaEditoriale> rdf:type owl:Class ;
-                                                                           rdfs:subClassOf <http://dbpedia.org/resource/List> ;
-                                                                           rdfs:comment "Una raccolta di testi pubblicati da un editore con criteri comuni di genere, tema o formato."@it ;
-                                                                           rdfs:label "CollanaEditoriale"@it .
-
-
-###  https://litetaryworktopics.com/litetaryworktopics2025##Editore
-<https://litetaryworktopics.com/litetaryworktopics2025##Editore> rdf:type owl:Class ;
-                                                                 rdfs:subClassOf <https://litetaryworktopics.com/litetaryworktopics2025##Persona> .
+###  https://litetaryworktopics.com/litetaryworktopics2025#Tema
+:Tema rdf:type owl:Class ;
+      rdfs:comment "Materia trattata da un'Opera Letteraria."@it ;
+      rdfs:label "Tema"@it .
 
 
 ###  https://litetaryworktopics.com/litetaryworktopics2025##Edizione
@@ -546,286 +310,124 @@ xsd:date rdf:type rdfs:Datatype .
                                                                   rdfs:label "Edizione"@it .
 
 
-###  https://litetaryworktopics.com/litetaryworktopics2025##Genere
-<https://litetaryworktopics.com/litetaryworktopics2025##Genere> rdf:type owl:Class ;
-                                                                rdfs:label "Genere"@it .
-
-
-###  https://litetaryworktopics.com/litetaryworktopics2025##Lingua
-<https://litetaryworktopics.com/litetaryworktopics2025##Lingua> rdf:type owl:Class ;
-                                                                rdfs:label "Lingua"@it .
-
-
-###  https://litetaryworktopics.com/litetaryworktopics2025##Luogo
-<https://litetaryworktopics.com/litetaryworktopics2025##Luogo> rdf:type owl:Class ;
-                                                               rdfs:comment "Un Luogo, genericamente fisico o immaginario."@it ;
-                                                               rdfs:label "Luogo"@it .
-
-
-###  https://litetaryworktopics.com/litetaryworktopics2025##LuogoFisico
-<https://litetaryworktopics.com/litetaryworktopics2025##LuogoFisico> rdf:type owl:Class ;
-                                                                     rdfs:subClassOf <https://litetaryworktopics.com/litetaryworktopics2025##Luogo> ;
-                                                                     rdfs:comment "Un Luogo Fisico rappresenta un Luogo fisicamente presente, tramite la denominazione corrente o passata."@it ;
-                                                                     rdfs:label "LuogoFisico"@it .
-
-
-###  https://litetaryworktopics.com/litetaryworktopics2025##Nazione
-<https://litetaryworktopics.com/litetaryworktopics2025##Nazione> rdf:type owl:Class ;
-                                                                 rdfs:subClassOf <https://litetaryworktopics.com/litetaryworktopics2025##LuogoFisico> ;
-                                                                 rdfs:comment "Un'entità nazionale nel presente o passato."@it ;
-                                                                 rdfs:label "Nazione"@it .
-
-
 ###  https://litetaryworktopics.com/litetaryworktopics2025##OperaLetteraria
 <https://litetaryworktopics.com/litetaryworktopics2025##OperaLetteraria> rdf:type owl:Class ;
                                                                          rdfs:comment "L'entità concettuale di Opera Letteraria, include tutte le sue materializzazioni e Formati."@it ;
                                                                          rdfs:label "OperaLetteraria"@it .
 
 
-###  https://litetaryworktopics.com/litetaryworktopics2025##Persona
-<https://litetaryworktopics.com/litetaryworktopics2025##Persona> rdf:type owl:Class ;
-                                                                 rdfs:subClassOf <http://www.w3.org/ns/prov#Agent> .
-
-
-###  https://litetaryworktopics.com/litetaryworktopics2025##ProvenienzaAutore
-<https://litetaryworktopics.com/litetaryworktopics2025##ProvenienzaAutore> rdf:type owl:Class .
-
-
-###  https://litetaryworktopics.com/litetaryworktopics2025##Saga
-<https://litetaryworktopics.com/litetaryworktopics2025##Saga> rdf:type owl:Class ;
-                                                              rdfs:subClassOf <http://dbpedia.org/resource/List> ;
-                                                              rdfs:comment "Una narrazione estesa che segue personaggi o famiglie attraverso eventi o generazioni, spesso con una trama continuativa."@it ;
-                                                              rdfs:label "Saga"@it .
-
-
-###  https://litetaryworktopics.com/litetaryworktopics2025##Serie
-<https://litetaryworktopics.com/litetaryworktopics2025##Serie> rdf:type owl:Class ;
-                                                               rdfs:subClassOf <https://litetaryworktopics.com/litetaryworktopics2025##CollanaEditoriale> ;
-                                                               rdfs:comment "Una sequenza di Opere Letterarie con Personaggi o Ambientazioni ricorrenti, ma trame generalmente autonome."@it .
-
-
-###  https://litetaryworktopics.com/litetaryworktopics2025##Tema
-<https://litetaryworktopics.com/litetaryworktopics2025##Tema> rdf:type owl:Class ;
-                                                              rdfs:comment "Materia trattata da un'Opera Letteraria."@it ;
-                                                              rdfs:label "Tema"@it .
-
-=======
-
-
->>>>>>> origin/HEAD
-
 #################################################################
-#
 #    Individuals
-#
 #################################################################
 
-<<<<<<< HEAD
-###  https://litetaryworktopics.com/litetaryworktopics2025##Fermo_e_Lucia
-<https://litetaryworktopics.com/litetaryworktopics2025##Fermo_e_Lucia> rdf:type owl:NamedIndividual ,
-                                                                                <https://litetaryworktopics.com/litetaryworktopics2025##Edizione> ;
-                                                                       <https://litetaryworktopics.com/litetaryworktopics2025##HaLingua> <https://litetaryworktopics.com/litetaryworktopics2025##Italiano> ;
-                                                                       <https://litetaryworktopics.com/litetaryworktopics2025##haDataPubblicazione> "1827-01-01"^^xsd:date ;
-                                                                       <https://litetaryworktopics.com/litetaryworktopics2025##haNome> "Fermo e Lucia" .
-
-
-###  https://litetaryworktopics.com/litetaryworktopics2025##Fermo_e_Lucia_Opera
-<https://litetaryworktopics.com/litetaryworktopics2025##Fermo_e_Lucia_Opera> rdf:type owl:NamedIndividual ,
-                                                                                      <https://litetaryworktopics.com/litetaryworktopics2025##OperaLetteraria> ;
-                                                                             <https://litetaryworktopics.com/litetaryworktopics2025##HaEdizione> <https://litetaryworktopics.com/litetaryworktopics2025##Fermo_e_Lucia> ,
-                                                                                                                                                 <https://litetaryworktopics.com/litetaryworktopics2025##I_Promessi_Sposi> ;
-                                                                             <https://litetaryworktopics.com/litetaryworktopics2025##HaGenereLetterario> <https://litetaryworktopics.com/litetaryworktopics2025##Romanzo_storico> ;
-                                                                             <https://litetaryworktopics.com/litetaryworktopics2025##HaProvenienzaAutore> <https://litetaryworktopics.com/litetaryworktopics2025##Italiana> .
-
-
-###  https://litetaryworktopics.com/litetaryworktopics2025##I_Promessi_Sposi
-<https://litetaryworktopics.com/litetaryworktopics2025##I_Promessi_Sposi> rdf:type owl:NamedIndividual ,
-                                                                                   <https://litetaryworktopics.com/litetaryworktopics2025##Edizione> ;
-                                                                          <https://litetaryworktopics.com/litetaryworktopics2025##HaLingua> <https://litetaryworktopics.com/litetaryworktopics2025##Italiano> ;
-                                                                          <https://litetaryworktopics.com/litetaryworktopics2025##haDataPubblicazione> "1840-01-01"^^xsd:date ;
-                                                                          <https://litetaryworktopics.com/litetaryworktopics2025##haNome> "I Promessi Sposi" .
-
-
-###  https://litetaryworktopics.com/litetaryworktopics2025##Italiana
-<https://litetaryworktopics.com/litetaryworktopics2025##Italiana> rdf:type owl:NamedIndividual ,
-                                                                           <https://litetaryworktopics.com/litetaryworktopics2025##ProvenienzaAutore> .
-
-
-###  https://litetaryworktopics.com/litetaryworktopics2025##Italiano
-<https://litetaryworktopics.com/litetaryworktopics2025##Italiano> rdf:type owl:NamedIndividual ,
-                                                                           <https://litetaryworktopics.com/litetaryworktopics2025##Lingua> .
-
-
-###  https://litetaryworktopics.com/litetaryworktopics2025##Romanzo_storico
-<https://litetaryworktopics.com/litetaryworktopics2025##Romanzo_storico> rdf:type owl:NamedIndividual .
-=======
-
-###  http://www.semanticweb.org/enryc/ontologies/2025/0/untitled-ontology-36#Antologia_Romantica
-
-:Antologia_Romantica rdf:type :Antologia ,
-                              owl:NamedIndividual ;
-                     
+###  https://litetaryworktopics.com/litetaryworktopics2025#Antologia_Romantica
+:Antologia_Romantica rdf:type owl:NamedIndividual ,
+                              :Antologia ;
                      :parteDiAntologia :OperaRomantica1 ,
                                        :OperaRomantica2 ,
                                        :OperaRomantica3 .
 
 
-
-###  http://www.semanticweb.org/enryc/ontologies/2025/0/untitled-ontology-36#EdizioneOpera1
-
+###  https://litetaryworktopics.com/litetaryworktopics2025#EdizioneOpera1
 :EdizioneOpera1 rdf:type owl:NamedIndividual ;
-                
                 :HaLingua :Italiano .
 
 
-
-###  http://www.semanticweb.org/enryc/ontologies/2025/0/untitled-ontology-36#EdizioneOpera2
-
+###  https://litetaryworktopics.com/litetaryworktopics2025#EdizioneOpera2
 :EdizioneOpera2 rdf:type owl:NamedIndividual ;
-                
                 :HaLingua :Italiano .
 
 
-
-###  http://www.semanticweb.org/enryc/ontologies/2025/0/untitled-ontology-36#EdizioneOpera3
-
+###  https://litetaryworktopics.com/litetaryworktopics2025#EdizioneOpera3
 :EdizioneOpera3 rdf:type owl:NamedIndividual ;
-                
                 :HaLingua :Italiano .
 
 
-
-###  http://www.semanticweb.org/enryc/ontologies/2025/0/untitled-ontology-36#Fermo_e_Lucia
-
-:Fermo_e_Lucia rdf:type :Edizione ,
-                        owl:NamedIndividual ;
-               
+###  https://litetaryworktopics.com/litetaryworktopics2025#Fermo_e_Lucia
+:Fermo_e_Lucia rdf:type owl:NamedIndividual ,
+                        :Edizione ;
+               :HaLingua :Italiano ;
                :haDataPubblicazione "1827-01-01"^^xsd:date ;
-               
-               :haNome "Fermo e Lucia" ;
-               
-               :HaLingua :Italiano .
+               :haNome "Fermo e Lucia" .
 
 
-
-###  http://www.semanticweb.org/enryc/ontologies/2025/0/untitled-ontology-36#Fermo_e_Lucia_Opera
-
-:Fermo_e_Lucia_Opera rdf:type :OperaLetteraria ,
-                              owl:NamedIndividual ;
-                     
-                     <https://litetaryworktopics.com/litetaryworktopics2025#parteDiAntologia> :Antologia_Romantica ;
-                     
+###  https://litetaryworktopics.com/litetaryworktopics2025#Fermo_e_Lucia_Opera
+:Fermo_e_Lucia_Opera rdf:type owl:NamedIndividual ;
+                     :parteDiAntologia :Antologia_Romantica ;
                      :HaEdizione :Fermo_e_Lucia ,
                                  :I_Promessi_Sposi ;
-                     
-                     :HaProvenienzaAutore :Italiana ;
-                     
-                     :HaGenereLetterario :Romanzo_storico .
+                     :HaGenereLetterario :Romanzo_storico ;
+                     :HaProvenienzaAutore :Italiana .
 
 
-
-###  http://www.semanticweb.org/enryc/ontologies/2025/0/untitled-ontology-36#I_Promessi_Sposi
-
-:I_Promessi_Sposi rdf:type :Edizione ,
-                           owl:NamedIndividual ;
-                  
+###  https://litetaryworktopics.com/litetaryworktopics2025#I_Promessi_Sposi
+:I_Promessi_Sposi rdf:type owl:NamedIndividual ,
+                           :Edizione ;
+                  :HaLingua :Italiano ;
                   :haDataPubblicazione "1840-01-01"^^xsd:date ;
-                  
-                  :haNome "I Promessi Sposi" ;
-                  
-                  :HaLingua :Italiano .
+                  :haNome "I Promessi Sposi" .
 
 
-
-###  http://www.semanticweb.org/enryc/ontologies/2025/0/untitled-ontology-36#Italiana
-
-:Italiana rdf:type :ProvenienzaAutore ,
-                   owl:NamedIndividual .
+###  https://litetaryworktopics.com/litetaryworktopics2025#Italiana
+:Italiana rdf:type owl:NamedIndividual ,
+                   :ProvenienzaAutore .
 
 
-
-###  http://www.semanticweb.org/enryc/ontologies/2025/0/untitled-ontology-36#Italiano
-
-:Italiano rdf:type :Lingua ,
-                   owl:NamedIndividual .
+###  https://litetaryworktopics.com/litetaryworktopics2025#Italiano
+:Italiano rdf:type owl:NamedIndividual ,
+                   :Lingua .
 
 
-
-###  http://www.semanticweb.org/enryc/ontologies/2025/0/untitled-ontology-36#Opera1Saga
-
-:Opera1Saga rdf:type :OperaLetteraria ,
-                     owl:NamedIndividual ;
-            
+###  https://litetaryworktopics.com/litetaryworktopics2025#Opera1Saga
+:Opera1Saga rdf:type owl:NamedIndividual ;
+            :parteDiSaga :Saga_Dei_Sevizi ;
             :HaEdizione :EdizioneOpera1 ;
-            
-            :HaProvenienzaAutore :Italiana ;
-            
             :HaGenereLetterario :Romanzo ;
-            
+            :HaProvenienzaAutore :Italiana .
+
+
+###  https://litetaryworktopics.com/litetaryworktopics2025#Opera2Saga
+:Opera2Saga rdf:type owl:NamedIndividual ;
             :parteDiSaga :Saga_Dei_Sevizi ;
-            
-            <https://litetaryworktopics.com/litetaryworktopics2025#parteDiSaga> :Saga_Dei_Sevizi .
-
-
-
-###  http://www.semanticweb.org/enryc/ontologies/2025/0/untitled-ontology-36#Opera2Saga
-
-:Opera2Saga rdf:type :OperaLetteraria ,
-                     owl:NamedIndividual ;
-            
             :HaEdizione :EdizioneOpera2 ;
-            
-            :HaProvenienzaAutore :Italiana ;
-            
             :HaGenereLetterario :Romanzo ;
-            
-            <https://litetaryworktopics.com/litetaryworktopics2025#parteDiSaga> :Saga_Dei_Sevizi ;
-            
-            :parteDiSaga :Saga_Dei_Sevizi .
+            :HaProvenienzaAutore :Italiana .
 
 
-
-###  http://www.semanticweb.org/enryc/ontologies/2025/0/untitled-ontology-36#Opera3Saga
-
-:Opera3Saga rdf:type :OperaLetteraria ,
-                     owl:NamedIndividual ;
-            
-            :HaEdizione :EdizioneOpera3 ;
-            
-            :HaProvenienzaAutore :Italiana ;
-            
-            :HaGenereLetterario :Romanzo ;
-            
+###  https://litetaryworktopics.com/litetaryworktopics2025#Opera3Saga
+:Opera3Saga rdf:type owl:NamedIndividual ;
             :parteDiSaga :Saga_Dei_Sevizi ;
-            
-            <https://litetaryworktopics.com/litetaryworktopics2025#parteDiSaga> :Saga_Dei_Sevizi .
+            :HaEdizione :EdizioneOpera3 ;
+            :HaGenereLetterario :Romanzo ;
+            :HaProvenienzaAutore :Italiana .
 
 
+###  https://litetaryworktopics.com/litetaryworktopics2025#OperaRomantica1
+:OperaRomantica1 rdf:type owl:NamedIndividual .
 
-###  http://www.semanticweb.org/enryc/ontologies/2025/0/untitled-ontology-36#Romanzo
 
+###  https://litetaryworktopics.com/litetaryworktopics2025#OperaRomantica2
+:OperaRomantica2 rdf:type owl:NamedIndividual .
+
+
+###  https://litetaryworktopics.com/litetaryworktopics2025#OperaRomantica3
+:OperaRomantica3 rdf:type owl:NamedIndividual .
+
+
+###  https://litetaryworktopics.com/litetaryworktopics2025#Romanzo
 :Romanzo rdf:type owl:NamedIndividual .
 
 
-
-###  http://www.semanticweb.org/enryc/ontologies/2025/0/untitled-ontology-36#Romanzo_storico
-
+###  https://litetaryworktopics.com/litetaryworktopics2025#Romanzo_storico
 :Romanzo_storico rdf:type owl:NamedIndividual .
->>>>>>> origin/HEAD
 
 
-
-###  http://www.semanticweb.org/enryc/ontologies/2025/0/untitled-ontology-36#Saga_Dei_Sevizi
-
-:Saga_Dei_Sevizi rdf:type :Saga ,
-                          owl:NamedIndividual ;
-                 
+###  https://litetaryworktopics.com/litetaryworktopics2025#Saga_Dei_Sevizi
+:Saga_Dei_Sevizi rdf:type owl:NamedIndividual ,
+                          :Saga ;
                  :parteDiSaga :Opera1Saga ,
                               :Opera2Saga ,
                               :Opera3Saga .
 
 
-
-
-###  Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net
-
+###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi
