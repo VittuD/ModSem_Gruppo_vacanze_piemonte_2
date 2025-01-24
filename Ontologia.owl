@@ -100,8 +100,7 @@ xsd:date rdf:type rdfs:Datatype .
 #################################################################
 
 ###  https://litetaryworktopics.com/litetaryworktopics2025#HaPrimaEdizione
-:HaPrimaEdizione rdf:type owl:ObjectProperty ;
-                 rdfs:range :Edizione .
+:HaPrimaEdizione rdf:type owl:ObjectProperty .
 
 
 ###  https://litetaryworktopics.com/litetaryworktopics2025#appartieneACollana
@@ -214,10 +213,6 @@ xsd:date rdf:type rdfs:Datatype .
 ###  https://litetaryworktopics.com/litetaryworktopics2025#Editore
 :Editore rdf:type owl:Class ;
          rdfs:subClassOf :Persona .
-
-
-###  https://litetaryworktopics.com/litetaryworktopics2025#Edizione
-:Edizione rdf:type owl:Class .
 
 
 ###  https://litetaryworktopics.com/litetaryworktopics2025#Genere
@@ -344,8 +339,7 @@ xsd:date rdf:type rdfs:Datatype .
 
 
 ###  https://litetaryworktopics.com/litetaryworktopics2025#Fermo_e_Lucia
-:Fermo_e_Lucia rdf:type owl:NamedIndividual ,
-                        :Edizione ;
+:Fermo_e_Lucia rdf:type owl:NamedIndividual ;
                :HaLingua :Italiano ;
                :haDataPubblicazione "1827-01-01"^^xsd:date ;
                :haNome "Fermo e Lucia" .
@@ -361,8 +355,7 @@ xsd:date rdf:type rdfs:Datatype .
 
 
 ###  https://litetaryworktopics.com/litetaryworktopics2025#I_Promessi_Sposi
-:I_Promessi_Sposi rdf:type owl:NamedIndividual ,
-                           :Edizione ;
+:I_Promessi_Sposi rdf:type owl:NamedIndividual ;
                   :HaLingua :Italiano ;
                   :haDataPubblicazione "1840-01-01"^^xsd:date ;
                   :haNome "I Promessi Sposi" .
