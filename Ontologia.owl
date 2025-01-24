@@ -206,6 +206,94 @@ xsd:date rdf:type rdfs:Datatype .
 
 
 
+###  https://litetaryworktopics.com/litetaryworktopics2025#antologiaContieneOperaLetteraria
+
+<https://litetaryworktopics.com/litetaryworktopics2025#antologiaContieneOperaLetteraria> rdf:type owl:ObjectProperty ;
+                                                                                         
+                                                                                         rdfs:domain :Antologia ;
+                                                                                         
+                                                                                         owl:inverseOf :parteDiAntologia ;
+                                                                                         
+                                                                                         rdfs:subPropertyOf <https://litetaryworktopics.com/litetaryworktopics2025#collanaContieneOperaLetteraria> ;
+                                                                                         
+                                                                                         rdfs:range <https://litetaryworktopics.com/litetaryworktopics2025##OperaLetteraria> .
+
+
+
+###  https://litetaryworktopics.com/litetaryworktopics2025#collanaContieneOperaLetteraria
+
+<https://litetaryworktopics.com/litetaryworktopics2025#collanaContieneOperaLetteraria> rdf:type owl:ObjectProperty ;
+                                                                                       
+                                                                                       rdfs:domain :CollanaEditoriale ;
+                                                                                       
+                                                                                       owl:inverseOf :appartieneACollana ;
+                                                                                       
+                                                                                       rdfs:range <https://litetaryworktopics.com/litetaryworktopics2025##OperaLetteraria> .
+
+
+
+###  https://litetaryworktopics.com/litetaryworktopics2025#sagaContieneOperaLetteraria
+
+<https://litetaryworktopics.com/litetaryworktopics2025#sagaContieneOperaLetteraria> rdf:type owl:ObjectProperty ;
+                                                                                    
+                                                                                    rdfs:domain :Saga ;
+                                                                                    
+                                                                                    owl:inverseOf :parteDiSaga ;
+                                                                                    
+                                                                                    rdfs:range <https://litetaryworktopics.com/litetaryworktopics2025##OperaLetteraria> .
+
+
+
+###  https://litetaryworktopics.com/litetaryworktopics2025#serieContieneOperaLetterartia
+
+<https://litetaryworktopics.com/litetaryworktopics2025#serieContieneOperaLetterartia> rdf:type owl:ObjectProperty ;
+                                                                                      
+                                                                                      rdfs:domain :Serie ;
+                                                                                      
+                                                                                      owl:inverseOf :parteDiSerie ;
+                                                                                      
+                                                                                      rdfs:subPropertyOf <https://litetaryworktopics.com/litetaryworktopics2025#collanaContieneOperaLetteraria> ;
+                                                                                      
+                                                                                      rdfs:range <https://litetaryworktopics.com/litetaryworktopics2025##OperaLetteraria> .
+
+
+
+###  https://litetaryworktopics.com/litetaryworktopics2025#vieneUtilizzatoIn
+
+<https://litetaryworktopics.com/litetaryworktopics2025#vieneUtilizzatoIn> rdf:type owl:ObjectProperty ;
+                                                                          
+                                                                          rdfs:domain :Genere ;
+                                                                          
+                                                                          owl:inverseOf <https://litetaryworktopics.com/litetaryworktopics2025##HaGenereLetterario> ;
+                                                                          
+                                                                          rdfs:range <https://litetaryworktopics.com/litetaryworktopics2025##OperaLetteraria> .
+
+
+
+###  https://litetaryworktopics.com/litetaryworktopics2025#èUnEdizioneDi
+
+<https://litetaryworktopics.com/litetaryworktopics2025#èUnEdizioneDi> rdf:type owl:ObjectProperty ;
+                                                                      
+                                                                      rdfs:domain <https://litetaryworktopics.com/litetaryworktopics2025##Edizione> ;
+                                                                      
+                                                                      owl:inverseOf <https://litetaryworktopics.com/litetaryworktopics2025##HaEdizione> ;
+                                                                      
+                                                                      rdfs:range <https://litetaryworktopics.com/litetaryworktopics2025##OperaLetteraria> .
+
+
+
+###  https://litetaryworktopics.com/litetaryworktopics2025#èUtilizzata
+
+<https://litetaryworktopics.com/litetaryworktopics2025#èUtilizzata> rdf:type owl:ObjectProperty ;
+                                                                    
+                                                                    rdfs:domain :Lingua ;
+                                                                    
+                                                                    owl:inverseOf <https://litetaryworktopics.com/litetaryworktopics2025##HaLingua> ;
+                                                                    
+                                                                    rdfs:range <https://litetaryworktopics.com/litetaryworktopics2025##OperaLetteraria> .
+
+
+
 ###  https://litetaryworktopics.com/litetaryworktopics2025##HaEdizione
 
 <https://litetaryworktopics.com/litetaryworktopics2025##HaEdizione> rdf:type owl:ObjectProperty ;
@@ -562,6 +650,8 @@ xsd:date rdf:type rdfs:Datatype .
                      
                      :parteDiAntologia :Letteratura_Italiana ;
                      
+                     <https://litetaryworktopics.com/litetaryworktopics2025##HaGenereLetterario> :Romanzo_storico ;
+                     
                      :HaGenereLetterario :Romanzo_storico .
 
 
@@ -571,9 +661,16 @@ xsd:date rdf:type rdfs:Datatype .
 :Harry_Potter rdf:type :Saga ,
                        owl:NamedIndividual ;
               
-              :parteDiSaga :Camera_dei_Segreti_opera ,
-                           :Pietra_Filosofale_Opera ,
-                           :Prigioniero_di_Azkaban_Opera .
+              :parteDiSaga :Camera_dei_Segreti_opera ;
+              
+              <https://litetaryworktopics.com/litetaryworktopics2025#sagaContieneOperaLetteraria> :Camera_dei_Segreti_opera ,
+                                                                                                  :Pietra_Filosofale_Opera ;
+              
+              :parteDiSaga :Pietra_Filosofale_Opera ;
+              
+              <https://litetaryworktopics.com/litetaryworktopics2025#sagaContieneOperaLetteraria> :Prigioniero_di_Azkaban_Opera ;
+              
+              :parteDiSaga :Prigioniero_di_Azkaban_Opera .
 
 
 
@@ -647,12 +744,6 @@ xsd:date rdf:type rdfs:Datatype .
 
 
 
-###  http://www.semanticweb.org/enryc/ontologies/2025/0/untitled-ontology-36#Romanzo
-
-:Romanzo rdf:type owl:NamedIndividual .
-
-
-
 ###  http://www.semanticweb.org/enryc/ontologies/2025/0/untitled-ontology-36#Romanzo_storico
 
 :Romanzo_storico rdf:type owl:NamedIndividual .
@@ -683,10 +774,33 @@ xsd:date rdf:type rdfs:Datatype .
 
 
 
+###  https://litetaryworktopics.com/litetaryworktopics2025#English
+
+<https://litetaryworktopics.com/litetaryworktopics2025#English> rdf:type owl:NamedIndividual ;
+                                                                
+                                                                <https://litetaryworktopics.com/litetaryworktopics2025#èUtilizzata> :Camera_dei_Segreti_opera ,
+                                                                                                                                    :Pietra_Filosofale_Opera ,
+                                                                                                                                    :Prigioniero_di_Azkaban_Opera .
+
+
+
+###  https://litetaryworktopics.com/litetaryworktopics2025#Fantasy
+
+<https://litetaryworktopics.com/litetaryworktopics2025#Fantasy> rdf:type owl:NamedIndividual ;
+                                                                
+                                                                <https://litetaryworktopics.com/litetaryworktopics2025#vieneUtilizzatoIn> :Camera_dei_Segreti_opera ,
+                                                                                                                                          :Pietra_Filosofale_Opera ,
+                                                                                                                                          :Prigioniero_di_Azkaban_Opera .
+
+
+
 ###  https://litetaryworktopics.com/litetaryworktopics2025#Italia
 
 <https://litetaryworktopics.com/litetaryworktopics2025#Italia> rdf:type :Nazione ,
-                                                                        owl:NamedIndividual .
+                                                                        owl:NamedIndividual ;
+                                                               
+                                                               <https://litetaryworktopics.com/litetaryworktopics2025#èUtilizzata> :Fermo_e_Lucia_Opera ,
+                                                                                                                                   :La_Divina_Commedia_Opera .
 
 
 
