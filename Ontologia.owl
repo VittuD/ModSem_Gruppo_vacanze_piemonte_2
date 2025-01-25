@@ -1048,13 +1048,8 @@ xsd:date rdf:type rdfs:Datatype .
 
 
 [ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( :Pietra_Filosofale_Opera
-                        :Prigioniero_di_Azkaban_Opera
-                      )
-] .
-[ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( :Camera_dei_Segreti_opera
-                        :Prigioniero_di_Azkaban_Opera
+  owl:distinctMembers ( <https://litetaryworktopics.com/litetaryworktopics2025#Benjamin_Franklin>
+                        <https://litetaryworktopics.com/litetaryworktopics2025#J.K_Rowling>
                       )
 ] .
 [ rdf:type owl:AllDifferent ;
@@ -1063,8 +1058,78 @@ xsd:date rdf:type rdfs:Datatype .
                       )
 ] .
 [ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( <https://litetaryworktopics.com/litetaryworktopics2025#Benjamin_Franklin>
+                        <https://litetaryworktopics.com/litetaryworktopics2025#Bloomsbury_Publishing>
+                      )
+] .
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :The_Chamber_of_Secrets
+                        :The_Prisoner_of_Azkaban
+                      )
+] .
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :I_Promessi_Sposi
+                        :The_Chamber_of_Secrets
+                      )
+] .
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :Italiano
+                        <https://litetaryworktopics.com/litetaryworktopics2025#English>
+                      )
+] .
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :I_Promessi_Sposi
+                        :The_Philosophers_Stone
+                      )
+] .
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :Camera_dei_Segreti_opera
+                        :Pietra_Filosofale_Opera
+                      )
+] .
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :I_Promessi_Sposi
+                        <https://litetaryworktopics.com/litetaryworktopics2025#The_Autobiography_of_Benjamin_Franklin>
+                      )
+] .
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :The_Philosophers_Stone
+                        :The_Prisoner_of_Azkaban
+                      )
+] .
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :The_Chamber_of_Secrets
+                        :The_Philosophers_Stone
+                      )
+] .
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :Pietra_Filosofale_Opera
+                        :Prigioniero_di_Azkaban_Opera
+                      )
+] .
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :I_Promessi_Sposi
+                        :The_Prisoner_of_Azkaban
+                      )
+] .
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :Fermo_e_Lucia
+                        :The_Philosophers_Stone
+                      )
+] .
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :Camera_dei_Segreti_opera
+                        :Prigioniero_di_Azkaban_Opera
+                      )
+] .
+[ rdf:type owl:AllDifferent ;
   owl:distinctMembers ( :La_Divina_Commedia_Opera
                         :Pietra_Filosofale_Opera
+                      )
+] .
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :Fermo_e_Lucia
+                        <https://litetaryworktopics.com/litetaryworktopics2025#The_Autobiography_of_Benjamin_Franklin>
                       )
 ] .
 [ rdf:type owl:AllDifferent ;
@@ -1078,18 +1143,28 @@ xsd:date rdf:type rdfs:Datatype .
                       )
 ] .
 [ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :The_Chamber_of_Secrets
+                        <https://litetaryworktopics.com/litetaryworktopics2025#The_Autobiography_of_Benjamin_Franklin>
+                      )
+] .
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :Fermo_e_Lucia
+                        :The_Prisoner_of_Azkaban
+                      )
+] .
+[ rdf:type owl:AllDifferent ;
   owl:distinctMembers ( :Fermo_e_Lucia_Opera
                         :La_Divina_Commedia_Opera
                       )
 ] .
 [ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( :Italiano
-                        <https://litetaryworktopics.com/litetaryworktopics2025#English>
+  owl:distinctMembers ( :The_Philosophers_Stone
+                        <https://litetaryworktopics.com/litetaryworktopics2025#The_Autobiography_of_Benjamin_Franklin>
                       )
 ] .
 [ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( :Camera_dei_Segreti_opera
-                        :Pietra_Filosofale_Opera
+  owl:distinctMembers ( :Fermo_e_Lucia
+                        :The_Chamber_of_Secrets
                       )
 ] .
 [ rdf:type owl:AllDifferent ;
@@ -1098,8 +1173,18 @@ xsd:date rdf:type rdfs:Datatype .
                       )
 ] .
 [ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :Fermo_e_Lucia
+                        :I_Promessi_Sposi
+                      )
+] .
+[ rdf:type owl:AllDifferent ;
   owl:distinctMembers ( :La_Divina_Commedia_Opera
                         :Prigioniero_di_Azkaban_Opera
+                      )
+] .
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :The_Prisoner_of_Azkaban
+                        <https://litetaryworktopics.com/litetaryworktopics2025#The_Autobiography_of_Benjamin_Franklin>
                       )
 ] .
 
