@@ -203,8 +203,6 @@ xsd:date rdf:type rdfs:Datatype .
 :parteDiSerie rdf:type owl:FunctionalProperty ,
                        owl:ObjectProperty ;
               
-              rdfs:range :Serie ;
-              
               rdfs:subPropertyOf :appartieneACollana ;
               
               rdfs:domain <https://litetaryworktopics.com/litetaryworktopics2025##OperaLetteraria> .
@@ -217,11 +215,11 @@ xsd:date rdf:type rdfs:Datatype .
                                                                                          
                                                                                          rdfs:domain :Antologia ;
                                                                                          
+                                                                                         rdfs:range :Brano ;
+                                                                                         
                                                                                          owl:inverseOf :parteDiAntologia ;
                                                                                          
-                                                                                         rdfs:subPropertyOf <https://litetaryworktopics.com/litetaryworktopics2025#collanaContieneOperaLetteraria> ;
-                                                                                         
-                                                                                         rdfs:range <https://litetaryworktopics.com/litetaryworktopics2025##OperaLetteraria> .
+                                                                                         rdfs:subPropertyOf <https://litetaryworktopics.com/litetaryworktopics2025#collanaContieneOperaLetteraria> .
 
 
 
@@ -330,8 +328,6 @@ xsd:date rdf:type rdfs:Datatype .
 ###  https://litetaryworktopics.com/litetaryworktopics2025#serieContieneOperaLetterartia
 
 <https://litetaryworktopics.com/litetaryworktopics2025#serieContieneOperaLetterartia> rdf:type owl:ObjectProperty ;
-                                                                                      
-                                                                                      rdfs:domain :Serie ;
                                                                                       
                                                                                       owl:inverseOf :parteDiSerie ;
                                                                                       
@@ -566,9 +562,7 @@ xsd:date rdf:type rdfs:Datatype .
          rdfs:label """Editore
 """@it ;
          
-         rdfs:subClassOf :Persona ;
-         
-         rdfs:comment "Un editore è una persona che si occupa della pubblicazione e della distribuzione di opere letterarie, gestendo la produzione, la correzione, la promozione e la vendita dei libri."@it .
+         rdfs:subClassOf :Persona .
 
 
 
@@ -587,6 +581,12 @@ xsd:date rdf:type rdfs:Datatype .
 :Lingua rdf:type owl:Class ;
         
         rdfs:label "Lingua"@it ;
+        
+        owl:equivalentClass [ rdf:type owl:Class ;
+                              owl:oneOf ( :It
+                                          <https://litetaryworktopics.com/litetaryworktopics2025#En>
+                                        )
+                            ] ;
         
         rdfs:comment "Sistema linguistico utilizzato nell'opera letteraria, definendo l'idioma in cui il testo è scritto, come italiano, inglese, francese, ecc. Questo elemento permette di associare un'opera alla sua lingua di espressione."@it .
 
@@ -711,25 +711,6 @@ xsd:date rdf:type rdfs:Datatype .
         rdfs:subClassOf <https://litetaryworktopics.com/litetaryworktopics2025##OperaLetteraria> ;
         
         rdfs:comment "Il saggio è un'opera letteraria che esamina un argomento in modo critico, riflessivo e approfondito, utilizzando argomentazioni e prove per sostenere un punto di vista."@it .
-
-
-
-###  http://www.semanticweb.org/enryc/ontologies/2025/0/untitled-ontology-36#Serie
-
-:Serie rdf:type owl:Class ;
-       
-       rdfs:label """Serie
-"""@it ;
-       
-       owl:equivalentClass [ rdf:type owl:Restriction ;
-                             owl:onProperty <https://litetaryworktopics.com/litetaryworktopics2025#serieContieneOperaLetterartia> ;
-                             owl:onClass <https://litetaryworktopics.com/litetaryworktopics2025##OperaLetteraria> ;
-                             owl:minQualifiedCardinality "2"^^xsd:nonNegativeInteger
-                           ] ;
-       
-       rdfs:subClassOf :CollanaEditoriale ;
-       
-       rdfs:comment "Una sequenza di Opere Letterarie con Personaggi o Ambientazioni ricorrenti, ma trame generalmente autonome."@it .
 
 
 
@@ -923,15 +904,15 @@ Funziona solo se sono definiti con enumerazione
 
 
 
-###  http://www.semanticweb.org/enryc/ontologies/2025/0/untitled-ontology-36#Italiano
+###  http://www.semanticweb.org/enryc/ontologies/2025/0/untitled-ontology-36#It
 
-:Italiano rdf:type :Lingua ,
-                   owl:NamedIndividual ;
-          
-          <https://litetaryworktopics.com/litetaryworktopics2025#èUtilizzata> :Fermo_e_Lucia ,
-                                                                              :Fermo_e_Lucia_Opera ,
-                                                                              :I_Promessi_Sposi ,
-                                                                              :La_Divina_Commedia_Opera .
+:It rdf:type :Lingua ,
+             owl:NamedIndividual ;
+    
+    <https://litetaryworktopics.com/litetaryworktopics2025#èUtilizzata> :Fermo_e_Lucia ,
+                                                                        :Fermo_e_Lucia_Opera ,
+                                                                        :I_Promessi_Sposi ,
+                                                                        :La_Divina_Commedia_Opera .
 
 
 
@@ -1046,16 +1027,16 @@ Funziona solo se sono definiti con enumerazione
 
 
 
-###  https://litetaryworktopics.com/litetaryworktopics2025#English
+###  https://litetaryworktopics.com/litetaryworktopics2025#En
 
-<https://litetaryworktopics.com/litetaryworktopics2025#English> rdf:type owl:NamedIndividual ;
-                                                                
-                                                                <https://litetaryworktopics.com/litetaryworktopics2025#èUtilizzata> :Camera_dei_Segreti_opera ,
-                                                                                                                                    :Pietra_Filosofale_Opera ,
-                                                                                                                                    :Prigioniero_di_Azkaban_Opera ,
-                                                                                                                                    :The_Chamber_of_Secrets ,
-                                                                                                                                    :The_Philosophers_Stone ,
-                                                                                                                                    :The_Prisoner_of_Azkaban .
+<https://litetaryworktopics.com/litetaryworktopics2025#En> rdf:type owl:NamedIndividual ;
+                                                           
+                                                           <https://litetaryworktopics.com/litetaryworktopics2025#èUtilizzata> :Camera_dei_Segreti_opera ,
+                                                                                                                               :Pietra_Filosofale_Opera ,
+                                                                                                                               :Prigioniero_di_Azkaban_Opera ,
+                                                                                                                               :The_Chamber_of_Secrets ,
+                                                                                                                               :The_Philosophers_Stone ,
+                                                                                                                               :The_Prisoner_of_Azkaban .
 
 
 
@@ -1137,11 +1118,6 @@ Funziona solo se sono definiti con enumerazione
                       )
 ] .
 [ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( :Italiano
-                        <https://litetaryworktopics.com/litetaryworktopics2025#English>
-                      )
-] .
-[ rdf:type owl:AllDifferent ;
   owl:distinctMembers ( :I_Promessi_Sposi
                         :The_Philosophers_Stone
                       )
@@ -1172,13 +1148,13 @@ Funziona solo se sono definiti con enumerazione
                       )
 ] .
 [ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( :I_Promessi_Sposi
-                        :The_Prisoner_of_Azkaban
+  owl:distinctMembers ( :Fermo_e_Lucia
+                        :The_Philosophers_Stone
                       )
 ] .
 [ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( :Fermo_e_Lucia
-                        :The_Philosophers_Stone
+  owl:distinctMembers ( :I_Promessi_Sposi
+                        :The_Prisoner_of_Azkaban
                       )
 ] .
 [ rdf:type owl:AllDifferent ;
@@ -1227,6 +1203,11 @@ Funziona solo se sono definiti con enumerazione
                       )
 ] .
 [ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :It
+                        <https://litetaryworktopics.com/litetaryworktopics2025#En>
+                      )
+] .
+[ rdf:type owl:AllDifferent ;
   owl:distinctMembers ( :Fermo_e_Lucia
                         :The_Chamber_of_Secrets
                       )
@@ -1242,13 +1223,13 @@ Funziona solo se sono definiti con enumerazione
                       )
 ] .
 [ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( :La_Divina_Commedia_Opera
-                        :Prigioniero_di_Azkaban_Opera
+  owl:distinctMembers ( :The_Prisoner_of_Azkaban
+                        <https://litetaryworktopics.com/litetaryworktopics2025#The_Autobiography_of_Benjamin_Franklin>
                       )
 ] .
 [ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( :The_Prisoner_of_Azkaban
-                        <https://litetaryworktopics.com/litetaryworktopics2025#The_Autobiography_of_Benjamin_Franklin>
+  owl:distinctMembers ( :La_Divina_Commedia_Opera
+                        :Prigioniero_di_Azkaban_Opera
                       )
 ] .
 
