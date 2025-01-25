@@ -176,17 +176,6 @@ xsd:date rdf:type rdfs:Datatype .
 
 
 
-###  https://litetaryworktopics.com/litetaryworktopics2025#haCasaEditrice
-
-<https://litetaryworktopics.com/litetaryworktopics2025#haCasaEditrice> rdf:type owl:FunctionalProperty ,
-                                                                                owl:ObjectProperty ;
-                                                                       
-                                                                       rdfs:range :CasaEditrice ;
-                                                                       
-                                                                       rdfs:domain <https://litetaryworktopics.com/litetaryworktopics2025##Edizione> .
-
-
-
 ###  https://litetaryworktopics.com/litetaryworktopics2025#haEditore
 
 <https://litetaryworktopics.com/litetaryworktopics2025#haEditore> rdf:type owl:ObjectProperty ;
@@ -197,38 +186,13 @@ xsd:date rdf:type rdfs:Datatype .
 
 
 
-###  https://litetaryworktopics.com/litetaryworktopics2025#haEditoreIndipendente
+###  https://litetaryworktopics.com/litetaryworktopics2025#pubblica
 
-<https://litetaryworktopics.com/litetaryworktopics2025#haEditoreIndipendente> rdf:type owl:FunctionalProperty ,
-                                                                                       owl:ObjectProperty ;
-                                                                              
-                                                                              rdfs:range :Editore ;
-                                                                              
-                                                                              rdfs:domain <https://litetaryworktopics.com/litetaryworktopics2025##Edizione> .
-
-
-
-###  https://litetaryworktopics.com/litetaryworktopics2025#haPubblicato
-
-<https://litetaryworktopics.com/litetaryworktopics2025#haPubblicato> rdf:type owl:ObjectProperty ;
-                                                                     
-                                                                     rdfs:domain :CasaEditrice ;
-                                                                     
-                                                                     owl:inverseOf <https://litetaryworktopics.com/litetaryworktopics2025#haCasaEditrice> ;
-                                                                     
-                                                                     rdfs:range <https://litetaryworktopics.com/litetaryworktopics2025##Edizione> .
-
-
-
-###  https://litetaryworktopics.com/litetaryworktopics2025#haPubblicatoInModoIndipendente
-
-<https://litetaryworktopics.com/litetaryworktopics2025#haPubblicatoInModoIndipendente> rdf:type owl:ObjectProperty ;
-                                                                                       
-                                                                                       rdfs:domain :Editore ;
-                                                                                       
-                                                                                       owl:inverseOf <https://litetaryworktopics.com/litetaryworktopics2025#haEditoreIndipendente> ;
-                                                                                       
-                                                                                       rdfs:range <https://litetaryworktopics.com/litetaryworktopics2025##Edizione> .
+<https://litetaryworktopics.com/litetaryworktopics2025#pubblica> rdf:type owl:ObjectProperty ;
+                                                                 
+                                                                 owl:inverseOf <https://litetaryworktopics.com/litetaryworktopics2025#èStatoPubblicatoDa> ;
+                                                                 
+                                                                 rdfs:range <https://litetaryworktopics.com/litetaryworktopics2025##Edizione> .
 
 
 
@@ -241,16 +205,6 @@ xsd:date rdf:type rdfs:Datatype .
                                                                                   rdfs:domain :Editore ;
                                                                                   
                                                                                   owl:inverseOf <https://litetaryworktopics.com/litetaryworktopics2025#haEditore> .
-
-
-
-###  https://litetaryworktopics.com/litetaryworktopics2025#sagaContieneOperaLetteraria
-
-<https://litetaryworktopics.com/litetaryworktopics2025#sagaContieneOperaLetteraria> rdf:type owl:ObjectProperty ;
-                                                                                    
-                                                                                    rdfs:domain :Saga ;
-                                                                                    
-                                                                                    rdfs:range <https://litetaryworktopics.com/litetaryworktopics2025##OperaLetteraria> .
 
 
 
@@ -273,6 +227,15 @@ xsd:date rdf:type rdfs:Datatype .
                                                                   rdfs:domain :Autore ;
                                                                   
                                                                   rdfs:range <https://litetaryworktopics.com/litetaryworktopics2025##OperaLetteraria> .
+
+
+
+###  https://litetaryworktopics.com/litetaryworktopics2025#èStatoPubblicatoDa
+
+<https://litetaryworktopics.com/litetaryworktopics2025#èStatoPubblicatoDa> rdf:type owl:FunctionalProperty ,
+                                                                                    owl:ObjectProperty ;
+                                                                           
+                                                                           rdfs:domain <https://litetaryworktopics.com/litetaryworktopics2025##Edizione> .
 
 
 
@@ -407,9 +370,10 @@ xsd:date rdf:type rdfs:Datatype .
                     rdfs:label """AutoreIndipendente
 """@it ;
                     
-                    owl:equivalentClass [ rdf:type owl:Restriction ;
-                                          owl:onProperty <https://litetaryworktopics.com/litetaryworktopics2025#haPubblicatoInModoIndipendente> ;
-                                          owl:someValuesFrom <https://litetaryworktopics.com/litetaryworktopics2025##Edizione>
+                    owl:equivalentClass [ rdf:type owl:Class ;
+                                          owl:intersectionOf ( :Editore
+                                                               :Persona
+                                                             )
                                         ] ;
                     
                     rdfs:subClassOf :Autore ;
@@ -423,6 +387,15 @@ xsd:date rdf:type rdfs:Datatype .
 :CasaEditrice rdf:type owl:Class ;
               
               rdfs:label "CasaEditrice"@it ;
+              
+              owl:equivalentClass [ rdf:type owl:Class ;
+                                    owl:intersectionOf ( <http://www.w3.org/ns/prov#Organization>
+                                                         [ rdf:type owl:Restriction ;
+                                                           owl:onProperty <https://litetaryworktopics.com/litetaryworktopics2025#pubblica> ;
+                                                           owl:someValuesFrom <https://litetaryworktopics.com/litetaryworktopics2025##Edizione>
+                                                         ]
+                                                       )
+                                  ] ;
               
               rdfs:subClassOf <http://www.w3.org/ns/prov#Organization> ;
               
@@ -448,6 +421,15 @@ xsd:date rdf:type rdfs:Datatype .
          
          rdfs:label """Editore
 """@it ;
+         
+         owl:equivalentClass [ rdf:type owl:Class ;
+                               owl:intersectionOf ( :Persona
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <https://litetaryworktopics.com/litetaryworktopics2025#pubblica> ;
+                                                      owl:someValuesFrom <https://litetaryworktopics.com/litetaryworktopics2025##Edizione>
+                                                    ]
+                                                  )
+                             ] ;
          
          rdfs:subClassOf :Persona .
 
@@ -544,7 +526,9 @@ xsd:date rdf:type rdfs:Datatype .
         rdfs:label """Poesia
 """@it ;
         
-        rdfs:subClassOf <https://litetaryworktopics.com/litetaryworktopics2025##OperaLetteraria> .
+        rdfs:subClassOf <https://litetaryworktopics.com/litetaryworktopics2025##OperaLetteraria> ;
+        
+        rdfs:comment "Forma di espressione letteraria che utilizza il linguaggio in modo artistico, spesso caratterizzata da metrica, ritmo e rime."@it .
 
 
 
@@ -632,13 +616,17 @@ xsd:date rdf:type rdfs:Datatype .
 
 <https://litetaryworktopics.com/litetaryworktopics2025#Canzoniere> rdf:type owl:Class ;
                                                                    
+                                                                   rdfs:label "Canzoniere"@it ;
+                                                                   
                                                                    owl:equivalentClass [ rdf:type owl:Restriction ;
                                                                                          owl:onProperty <https://litetaryworktopics.com/litetaryworktopics2025#contiene> ;
                                                                                          owl:onClass :Poesia ;
                                                                                          owl:minQualifiedCardinality "2"^^xsd:nonNegativeInteger
                                                                                        ] ;
                                                                    
-                                                                   rdfs:subClassOf :CollanaEditoriale .
+                                                                   rdfs:subClassOf :CollanaEditoriale ;
+                                                                   
+                                                                   rdfs:comment "Una raccolta di poesie che appartengono alla categoria \"Poesia\". Ogni elemento della collezione è un'istanza di \"Poesia\"."@it .
 
 
 
@@ -678,13 +666,17 @@ xsd:date rdf:type rdfs:Datatype .
 
 <https://litetaryworktopics.com/litetaryworktopics2025#RaccoltaDISaggi> rdf:type owl:Class ;
                                                                         
+                                                                        rdfs:label "RaccoltaDiSaggi"@it ;
+                                                                        
                                                                         owl:equivalentClass [ rdf:type owl:Restriction ;
                                                                                               owl:onProperty <https://litetaryworktopics.com/litetaryworktopics2025#contiene> ;
                                                                                               owl:onClass :Saggio ;
                                                                                               owl:minQualifiedCardinality "2"^^xsd:nonNegativeInteger
                                                                                             ] ;
                                                                         
-                                                                        rdfs:subClassOf :CollanaEditoriale .
+                                                                        rdfs:subClassOf :CollanaEditoriale ;
+                                                                        
+                                                                        rdfs:comment "Una raccolta di saggi che appartengono alla categoria \"Saggio\". Ogni elemento della collezione è un'istanza di \"Saggio\"."@it .
 
 
 
@@ -692,13 +684,18 @@ xsd:date rdf:type rdfs:Datatype .
 
 <https://litetaryworktopics.com/litetaryworktopics2025#RaccoltaDiRacconti> rdf:type owl:Class ;
                                                                            
+                                                                           rdfs:label "RaccoltaDiRacconti"@it ;
+                                                                           
                                                                            owl:equivalentClass [ rdf:type owl:Restriction ;
                                                                                                  owl:onProperty <https://litetaryworktopics.com/litetaryworktopics2025#contiene> ;
                                                                                                  owl:onClass :Racconto ;
                                                                                                  owl:minQualifiedCardinality "2"^^xsd:nonNegativeInteger
                                                                                                ] ;
                                                                            
-                                                                           rdfs:subClassOf :CollanaEditoriale .
+                                                                           rdfs:subClassOf :CollanaEditoriale ;
+                                                                           
+                                                                           rdfs:comment """ Una raccolta di racconti che appartengono alla categoria \"Racconto\". Ogni elemento della collezione è un'istanza di \"Racconto\".
+"""@it .
 
 
 
@@ -706,13 +703,18 @@ xsd:date rdf:type rdfs:Datatype .
 
 <https://litetaryworktopics.com/litetaryworktopics2025#RaccoltaTeatrale> rdf:type owl:Class ;
                                                                          
+                                                                         rdfs:label """RaccoltaTeatrale
+"""@it ;
+                                                                         
                                                                          owl:equivalentClass [ rdf:type owl:Restriction ;
                                                                                                owl:onProperty <https://litetaryworktopics.com/litetaryworktopics2025#contiene> ;
                                                                                                owl:onClass :OperaTeatrale ;
                                                                                                owl:minQualifiedCardinality "2"^^xsd:nonNegativeInteger
                                                                                              ] ;
                                                                          
-                                                                         rdfs:subClassOf :CollanaEditoriale .
+                                                                         rdfs:subClassOf :CollanaEditoriale ;
+                                                                         
+                                                                         rdfs:comment "Una raccolta di opere teatrali che appartengono alla categoria \"OperaTeatrale\". Ogni elemento della collezione è un'istanza di \"OperaTeatrale\""@it .
 
 
 
@@ -720,13 +722,17 @@ xsd:date rdf:type rdfs:Datatype .
 
 <https://litetaryworktopics.com/litetaryworktopics2025#SerieDiRomanzi> rdf:type owl:Class ;
                                                                        
+                                                                       rdfs:label "SerieDiRomanzi"@it ;
+                                                                       
                                                                        owl:equivalentClass [ rdf:type owl:Restriction ;
                                                                                              owl:onProperty <https://litetaryworktopics.com/litetaryworktopics2025#contiene> ;
                                                                                              owl:onClass :Romanzo ;
                                                                                              owl:minQualifiedCardinality "2"^^xsd:nonNegativeInteger
                                                                                            ] ;
                                                                        
-                                                                       rdfs:subClassOf :CollanaEditoriale .
+                                                                       rdfs:subClassOf :CollanaEditoriale ;
+                                                                       
+                                                                       rdfs:comment "Una raccolta di romanzi che appartengono alla categoria \"Romanzo\". Ogni elemento della collezione è un'istanza di \"Romanzo\""@it .
 
 
 
@@ -981,11 +987,12 @@ Funziona solo se sono definiti con enumerazione
 
 ###  https://litetaryworktopics.com/litetaryworktopics2025#Bloomsbury_Publishing
 
-<https://litetaryworktopics.com/litetaryworktopics2025#Bloomsbury_Publishing> rdf:type owl:NamedIndividual ;
+<https://litetaryworktopics.com/litetaryworktopics2025#Bloomsbury_Publishing> rdf:type :CasaEditrice ,
+                                                                                       owl:NamedIndividual ;
                                                                               
-                                                                              <https://litetaryworktopics.com/litetaryworktopics2025#haPubblicato> :The_Chamber_of_Secrets ,
-                                                                                                                                                   :The_Philosophers_Stone ,
-                                                                                                                                                   :The_Prisoner_of_Azkaban .
+                                                                              <https://litetaryworktopics.com/litetaryworktopics2025#pubblica> :The_Chamber_of_Secrets ,
+                                                                                                                                               :The_Philosophers_Stone ,
+                                                                                                                                               :The_Prisoner_of_Azkaban .
 
 
 
@@ -1029,19 +1036,19 @@ Funziona solo se sono definiti con enumerazione
 
 
 
+###  https://litetaryworktopics.com/litetaryworktopics2025#Opera_The_Autobiography_of_Benjamin_Franklin
+
+<https://litetaryworktopics.com/litetaryworktopics2025#Opera_The_Autobiography_of_Benjamin_Franklin> rdf:type owl:NamedIndividual ;
+                                                                                                     
+                                                                                                     <https://litetaryworktopics.com/litetaryworktopics2025#èStatoPubblicatoDa> <https://litetaryworktopics.com/litetaryworktopics2025#Benjamin_Franklin> .
+
+
+
 ###  https://litetaryworktopics.com/litetaryworktopics2025#The_Autobiography_of_Benjamin_Franklin
 
 <https://litetaryworktopics.com/litetaryworktopics2025#The_Autobiography_of_Benjamin_Franklin> rdf:type owl:NamedIndividual ;
                                                                                                
-                                                                                               <https://litetaryworktopics.com/litetaryworktopics2025#haEditoreIndipendente> <https://litetaryworktopics.com/litetaryworktopics2025#Benjamin_Franklin> ;
-                                                                                               
-                                                                                               <https://litetaryworktopics.com/litetaryworktopics2025#èUnEdizioneDi> <https://litetaryworktopics.com/litetaryworktopics2025#The_Autobiography_of_Benjamin_Franklin_Opera> .
-
-
-
-###  https://litetaryworktopics.com/litetaryworktopics2025#The_Autobiography_of_Benjamin_Franklin_Opera
-
-<https://litetaryworktopics.com/litetaryworktopics2025#The_Autobiography_of_Benjamin_Franklin_Opera> rdf:type owl:NamedIndividual .
+                                                                                               <https://litetaryworktopics.com/litetaryworktopics2025#èUnEdizioneDi> <https://litetaryworktopics.com/litetaryworktopics2025#Opera_The_Autobiography_of_Benjamin_Franklin> .
 
 
 
@@ -1055,13 +1062,13 @@ Funziona solo se sono definiti con enumerazione
 
 
 [ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( :Fermo_e_Lucia
-                        :I_Promessi_Sposi
+  owl:distinctMembers ( :Opera_Camera_dei_Segreti
+                        :Opera_Prigioniero_di_Azkaban
                       )
 ] .
 [ rdf:type owl:AllDifferent ;
   owl:distinctMembers ( :Opera_Camera_dei_Segreti
-                        :Opera_Prigioniero_di_Azkaban
+                        <https://litetaryworktopics.com/litetaryworktopics2025#Opera_The_Autobiography_of_Benjamin_Franklin>
                       )
 ] .
 [ rdf:type owl:AllDifferent ;
@@ -1070,18 +1077,8 @@ Funziona solo se sono definiti con enumerazione
                       )
 ] .
 [ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( :It
-                        <https://litetaryworktopics.com/litetaryworktopics2025#En>
-                      )
-] .
-[ rdf:type owl:AllDifferent ;
   owl:distinctMembers ( :I_Promessi_Sposi
                         :The_Philosophers_Stone
-                      )
-] .
-[ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( <https://litetaryworktopics.com/litetaryworktopics2025#Benjamin_Franklin>
-                        <https://litetaryworktopics.com/litetaryworktopics2025#J.K_Rowling>
                       )
 ] .
 [ rdf:type owl:AllDifferent ;
@@ -1106,22 +1103,7 @@ Funziona solo se sono definiti con enumerazione
 ] .
 [ rdf:type owl:AllDifferent ;
   owl:distinctMembers ( :Opera_Camera_dei_Segreti
-                        :Opera_Pietra_Filosofale
-                      )
-] .
-[ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( :The_Philosophers_Stone
-                        <https://litetaryworktopics.com/litetaryworktopics2025#The_Autobiography_of_Benjamin_Franklin>
-                      )
-] .
-[ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( :Opera_Camera_dei_Segreti
                         :Opera_La_Divina_Commedia
-                      )
-] .
-[ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( :Fermo_e_Lucia
-                        :The_Philosophers_Stone
                       )
 ] .
 [ rdf:type owl:AllDifferent ;
@@ -1135,11 +1117,6 @@ Funziona solo se sono definiti con enumerazione
                       )
 ] .
 [ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( :Fermo_e_Lucia
-                        <https://litetaryworktopics.com/litetaryworktopics2025#The_Autobiography_of_Benjamin_Franklin>
-                      )
-] .
-[ rdf:type owl:AllDifferent ;
   owl:distinctMembers ( :The_Chamber_of_Secrets
                         :The_Philosophers_Stone
                       )
@@ -1147,16 +1124,6 @@ Funziona solo se sono definiti con enumerazione
 [ rdf:type owl:AllDifferent ;
   owl:distinctMembers ( :Opera_La_Divina_Commedia
                         :Opera_Prigioniero_di_Azkaban
-                      )
-] .
-[ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( :The_Prisoner_of_Azkaban
-                        <https://litetaryworktopics.com/litetaryworktopics2025#The_Autobiography_of_Benjamin_Franklin>
-                      )
-] .
-[ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( :Opera_La_Divina_Commedia
-                        :Opera_Pietra_Filosofale
                       )
 ] .
 [ rdf:type owl:AllDifferent ;
@@ -1180,6 +1147,61 @@ Funziona solo se sono definiti con enumerazione
                       )
 ] .
 [ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :Fermo_e_Lucia
+                        :I_Promessi_Sposi
+                      )
+] .
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :Opera_Pietra_Filosofale
+                        <https://litetaryworktopics.com/litetaryworktopics2025#Opera_The_Autobiography_of_Benjamin_Franklin>
+                      )
+] .
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :It
+                        <https://litetaryworktopics.com/litetaryworktopics2025#En>
+                      )
+] .
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( <https://litetaryworktopics.com/litetaryworktopics2025#Benjamin_Franklin>
+                        <https://litetaryworktopics.com/litetaryworktopics2025#J.K_Rowling>
+                      )
+] .
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :Opera_Camera_dei_Segreti
+                        :Opera_Pietra_Filosofale
+                      )
+] .
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :The_Philosophers_Stone
+                        <https://litetaryworktopics.com/litetaryworktopics2025#The_Autobiography_of_Benjamin_Franklin>
+                      )
+] .
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :Fermo_e_Lucia
+                        :The_Philosophers_Stone
+                      )
+] .
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :Opera_La_Divina_Commedia
+                        <https://litetaryworktopics.com/litetaryworktopics2025#Opera_The_Autobiography_of_Benjamin_Franklin>
+                      )
+] .
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :Fermo_e_Lucia
+                        <https://litetaryworktopics.com/litetaryworktopics2025#The_Autobiography_of_Benjamin_Franklin>
+                      )
+] .
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :The_Prisoner_of_Azkaban
+                        <https://litetaryworktopics.com/litetaryworktopics2025#The_Autobiography_of_Benjamin_Franklin>
+                      )
+] .
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :Opera_La_Divina_Commedia
+                        :Opera_Pietra_Filosofale
+                      )
+] .
+[ rdf:type owl:AllDifferent ;
   owl:distinctMembers ( :Opera_Camera_dei_Segreti
                         :Opera_Fermo_e_Lucia
                       )
@@ -1190,8 +1212,18 @@ Funziona solo se sono definiti con enumerazione
                       )
 ] .
 [ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :Opera_Fermo_e_Lucia
+                        <https://litetaryworktopics.com/litetaryworktopics2025#Opera_The_Autobiography_of_Benjamin_Franklin>
+                      )
+] .
+[ rdf:type owl:AllDifferent ;
   owl:distinctMembers ( :Fermo_e_Lucia
                         :The_Chamber_of_Secrets
+                      )
+] .
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :Opera_Prigioniero_di_Azkaban
+                        <https://litetaryworktopics.com/litetaryworktopics2025#Opera_The_Autobiography_of_Benjamin_Franklin>
                       )
 ] .
 [ rdf:type owl:AllDifferent ;
