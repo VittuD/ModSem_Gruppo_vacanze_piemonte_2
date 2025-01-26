@@ -1,0 +1,19 @@
+@prefix dc:   <http://purl.org/dc/elements/1.1/> .
+@prefix fx:   <http://sparql.xyz/facade-x/ns/> .
+@prefix lwt:  <https://litetaryworktopics.com/litetaryworktopics2025#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xyz:  <http://sparql.xyz/facade-x/data/> .
+
+<http://example.org/book/52357>
+        a                        lwt:OperaLetteraria ;
+        rdfs:seeAlso             "https://www.goodreads.com/book/show/52357.Beowulf" ;
+        dc:title                 "Beowulf" ;
+        lwt:HaEdizione           "0393320979" ;
+        lwt:HaGenereLetterario   "Poetry|Fiction|Fantasy|Classics|Mythology|School|Literature|Read For School|High School|Historical Fiction" ;
+        lwt:HaLingua             "English" ;
+        lwt:HaProvenienzaAutore  "Seamus Heaney" , "Denmark|Geatland (Sweden)|Sweden" ;
+        lwt:haDataPubblicazione  "2001-02-18" ;
+        lwt:haEditore            "W.W. Norton & Company" ;
+        lwt:haPagine             "259" ;
+        lwt:parteDiAntologia     "Hugo Award (WINNER)|Locus Award (NOMINEE)|World Fantasy Award (NOMINEE)|ALTA National Translation Award (NOMINEE)" ;
+        lwt:èScrittoDa           "Unknown" .

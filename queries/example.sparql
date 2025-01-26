@@ -1,0 +1,43 @@
+PREFIX fx: <http://sparql.xyz/facade-x/ns/>
+PREFIX xyz: <http://sparql.xyz/facade-x/data/>
+PREFIX lwt: <https://litetaryworktopics.com/litetaryworktopics2025#>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+CONSTRUCT {
+  ?book a lwt:OperaLetteraria ;
+        dc:title ?title ;
+        lwt:èScrittoDa ?author ;
+        lwt:haEditore ?publisher ;
+        lwt:haDataPubblicazione ?publicationDate ;
+        lwt:HaEdizione ?isbn ;
+        lwt:HaLingua ?language ;
+        lwt:HaGenereLetterario ?genres ;
+        lwt:haPagine ?pageCount ;
+        lwt:parteDiAntologia ?awards ;
+        lwt:HaProvenienzaAutore ?translator ;
+        lwt:HaProvenienzaAutore ?places ;
+        rdfs:seeAlso ?webURL .
+}
+WHERE {
+  SERVICE <x-sparql-anything:csv.headers=true,location=Beowulf.csv> {
+    [] xyz:ID ?id ;
+       xyz:Title ?title ;
+       xyz:Author ?author ;
+       xyz:Publisher ?publisher ;
+       xyz:PublicationDate ?publicationDate ;
+       xyz:ISBN ?isbn ;
+       xyz:Language ?language ;
+       xyz:Genres ?genres ;
+       xyz:PageCount ?pageCount ;
+       xyz:Awards ?awards ;
+       xyz:Translator ?translator ;
+       xyz:Places ?places ;
+       xyz:WebURL ?webURL .
+  }
+  BIND(IRI(CONCAT("http://example.org/book/", ?id)) AS ?book)
+  BIND(IRI(CONCAT("http://example.org/author/", ?author)) AS ?authorIRI)
+  BIND(IRI(CONCAT("http://example.org/publisher/", ?publisher)) AS ?publisherIRI)
+  BIND(IRI(CONCAT("http://example.org/translator/", ?translator)) AS ?translatorIRI)
+  BIND(IRI(CONCAT("http://example.org/place/", ?places)) AS ?placesIRI)
+}
