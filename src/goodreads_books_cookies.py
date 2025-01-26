@@ -27,8 +27,6 @@ async def fetch_page(session, url):
         async with session.get(url) as response:
             if response.status == 200:
                 html_content = await response.text()
-                with open("full_text_debug.html", "w") as debug_file:
-                    debug_file.write(html_content)
                 return html_content
             else:
                 print(f"Failed to fetch {url}: {response.status}")
@@ -54,9 +52,6 @@ async def extract_book_details(session, topic, book_url):
     try:
         script = soup.find('script', {'id': '__NEXT_DATA__'})
         script_json = json.loads(script.string)
-
-        with open("apolloState_debug.json", "w") as debug_file:
-            json.dump(script_json['props']['pageProps']['apolloState'], debug_file, indent=4)
             
         # Extract keys from apolloState    
         apolloStateKeys = list(script_json['props']['pageProps']['apolloState'].keys())
@@ -68,13 +63,14 @@ async def extract_book_details(session, topic, book_url):
         # For each contributor key, remove it if not present in script_json['props']['pageProps']['apolloState'][book_key] (serch as text)
         book_key_strin = script_json['props']['pageProps']['apolloState'][book_key].__str__()
         contributor_keys = [key for key in contributor_keys if key in book_key_strin]
-
+        # The relevant keys are the book_key, work_key, series_keys and contributor_keys
         relevant_keys = [book_key, work_key] + series_keys + contributor_keys
 
         # Extract book details (every key )
         book_details = {}
         for key in relevant_keys:
             book_details[key] = script_json['props']['pageProps']['apolloState'][key]
+            book_details['Topic'] = topic
 
         stripped_title = book_details[book_key]['titleComplete'].replace(" ", "_")
 
@@ -106,10 +102,6 @@ async def main():
         ]
         
         results = await tqdm.gather(*tasks, desc="Processing books")
-        all_data = [res for res in results if res]
-
-    df = pd.DataFrame(all_data)
-    df.to_csv('goodreads_book_details.csv', index=False)
 
 if __name__ == "__main__":
     asyncio.run(main())
