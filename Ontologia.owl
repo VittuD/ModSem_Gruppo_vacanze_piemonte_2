@@ -106,6 +106,17 @@ xsd:date rdf:type rdfs:Datatype .
 #    Object Properties
 #################################################################
 
+###  https://litetaryworktopics.com/litetaryworktopics2025#HaProvenienza
+:HaProvenienza rdf:type owl:ObjectProperty ,
+                        owl:FunctionalProperty ;
+               rdfs:domain [ rdf:type owl:Class ;
+                             owl:unionOf ( <http://www.w3.org/ns/prov#Agent>
+                                           <http://www.w3.org/ns/prov#Organization>
+                                         )
+                           ] ;
+               rdfs:range :Nazione .
+
+
 ###  https://litetaryworktopics.com/litetaryworktopics2025#appartieneA
 :appartieneA rdf:type owl:ObjectProperty ;
              owl:inverseOf :contiene .
@@ -132,6 +143,12 @@ xsd:date rdf:type rdfs:Datatype .
 :haTema rdf:type owl:ObjectProperty ;
         rdfs:domain <https://litetaryworktopics.com/litetaryworktopics2025##OperaLetteraria> ;
         rdfs:range :Tema .
+
+
+###  https://litetaryworktopics.com/litetaryworktopics2025#haTraduttore
+:haTraduttore rdf:type owl:ObjectProperty ;
+              rdfs:domain <https://litetaryworktopics.com/litetaryworktopics2025##Edizione> ;
+              rdfs:range :Traduttore .
 
 
 ###  https://litetaryworktopics.com/litetaryworktopics2025#pubblica
@@ -223,20 +240,9 @@ xsd:date rdf:type rdfs:Datatype .
                                                                   rdfs:range :Lingua .
 
 
-###  https://litetaryworktopics.com/litetaryworktopics2025##HaProvenienzaAutore
-<https://litetaryworktopics.com/litetaryworktopics2025##HaProvenienzaAutore> rdf:type owl:ObjectProperty ,
-                                                                                      owl:FunctionalProperty ;
-                                                                             rdfs:domain <https://litetaryworktopics.com/litetaryworktopics2025##OperaLetteraria> ;
-                                                                             rdfs:range :Nazione .
-
-
 #################################################################
 #    Data properties
 #################################################################
-
-###  http://purl.org/dc/elements/1.1/contributor
-dc:contributor rdf:type owl:DatatypeProperty .
-
 
 ###  http://purl.org/dc/elements/1.1/date
 dc:date rdf:type owl:DatatypeProperty .
@@ -246,28 +252,34 @@ dc:date rdf:type owl:DatatypeProperty .
 dc:title rdf:type owl:DatatypeProperty .
 
 
+###  https://litetaryworktopics.com/litetaryworktopics2025#haDataPubblicazione
+:haDataPubblicazione rdf:type owl:DatatypeProperty ;
+                     rdfs:domain <https://litetaryworktopics.com/litetaryworktopics2025##Edizione> ;
+                     rdfs:range xsd:date .
+
+
+###  https://litetaryworktopics.com/litetaryworktopics2025#haISBN
+:haISBN rdf:type owl:DatatypeProperty ;
+        rdfs:domain <https://litetaryworktopics.com/litetaryworktopics2025##Edizione> ;
+        rdfs:range xsd:nonPositiveInteger .
+
+
+###  https://litetaryworktopics.com/litetaryworktopics2025#haNome
+:haNome rdf:type owl:DatatypeProperty ;
+        rdfs:domain [ rdf:type owl:Class ;
+                      owl:unionOf ( <http://www.w3.org/ns/prov#Agent>
+                                    <http://www.w3.org/ns/prov#Organization>
+                                    :ListaDiOpereLetterarie
+                                    <https://litetaryworktopics.com/litetaryworktopics2025##Edizione>
+                                  )
+                    ] ;
+        rdfs:range xsd:string .
+
+
 ###  https://litetaryworktopics.com/litetaryworktopics2025#haPagine
 :haPagine rdf:type owl:DatatypeProperty ;
           rdfs:domain <https://litetaryworktopics.com/litetaryworktopics2025##Edizione> ;
           rdfs:range xsd:integer .
-
-
-###  https://litetaryworktopics.com/litetaryworktopics2025##haDataPubblicazione
-<https://litetaryworktopics.com/litetaryworktopics2025##haDataPubblicazione> rdf:type owl:DatatypeProperty ;
-                                                                             rdfs:domain <https://litetaryworktopics.com/litetaryworktopics2025##Edizione> ;
-                                                                             rdfs:range xsd:date .
-
-
-###  https://litetaryworktopics.com/litetaryworktopics2025##haNome
-<https://litetaryworktopics.com/litetaryworktopics2025##haNome> rdf:type owl:DatatypeProperty ;
-                                                                rdfs:domain [ rdf:type owl:Class ;
-                                                                              owl:unionOf ( <http://www.w3.org/ns/prov#Agent>
-                                                                                            <http://www.w3.org/ns/prov#Organization>
-                                                                                            :ListaDiOpereLetterarie
-                                                                                            <https://litetaryworktopics.com/litetaryworktopics2025##Edizione>
-                                                                                          )
-                                                                            ] ;
-                                                                rdfs:range xsd:string .
 
 
 #################################################################
@@ -540,6 +552,11 @@ dc:title rdf:type owl:DatatypeProperty .
                 rdfs:label "SerieDiRomanzi"@it .
 
 
+###  https://litetaryworktopics.com/litetaryworktopics2025#Traduttore
+:Traduttore rdf:type owl:Class ;
+            rdfs:subClassOf :Persona .
+
+
 ###  https://litetaryworktopics.com/litetaryworktopics2025#Trilogia
 :Trilogia rdf:type owl:Class ;
           owl:equivalentClass [ rdf:type owl:Restriction ;
@@ -660,7 +677,6 @@ Funziona solo se sono definiti con enumerazione
                      :HaEdizione :Fermo_e_Lucia ,
                                  :I_Promessi_Sposi ;
                      :HaGenereLetterario :Romanzo_storico ;
-                     :HaProvenienzaAutore :Italiana ;
                      :parteDiAntologia :Letteratura_Italiana .
 
 
@@ -705,7 +721,7 @@ Funziona solo se sono definiti con enumerazione
                         owl:differentFrom :The_Philosophers_Stone ,
                                           :The_Prisoner_of_Azkaban ,
                                           :The_Autobiography_of_Benjamin_Franklin ;
-                        <https://litetaryworktopics.com/litetaryworktopics2025##haDataPubblicazione> "2 luglio 1998" ;
+                        :haDataPubblicazione "2 luglio 1998" ;
                         :HaLingua :Italiano .
 
 
@@ -713,15 +729,24 @@ Funziona solo se sono definiti con enumerazione
 :The_Philosophers_Stone rdf:type owl:NamedIndividual ;
                         owl:differentFrom :The_Prisoner_of_Azkaban ,
                                           :The_Autobiography_of_Benjamin_Franklin ;
-                        <https://litetaryworktopics.com/litetaryworktopics2025##haDataPubblicazione> "26 giugno 1997" ;
+                        :haDataPubblicazione "26 giugno 1997" ;
                         :HaLingua :Italiano .
 
 
 ###  http://www.semanticweb.org/enryc/ontologies/2025/0/untitled-ontology-36#The_Prisoner_of_Azkaban
 :The_Prisoner_of_Azkaban rdf:type owl:NamedIndividual ;
                          owl:differentFrom :The_Autobiography_of_Benjamin_Franklin ;
-                         <https://litetaryworktopics.com/litetaryworktopics2025##haDataPubblicazione> "8 luglio 1999" ;
+                         :haDataPubblicazione "8 luglio 1999" ;
                          :HaLingua :Italiano .
+
+
+###  https://litetaryworktopics.com/litetaryworktopics2025#Alessandro_Manzoni
+:Alessandro_Manzoni rdf:type owl:NamedIndividual ,
+                             :Autore ;
+                    :HaProvenienza :Italia ;
+                    :èAutoreDi :Fermo_e_Lucia ,
+                               :I_Promessi_Sposi ,
+                               :Opera_Fermo_e_Lucia .
 
 
 ###  https://litetaryworktopics.com/litetaryworktopics2025#Benjamin_Franklin
