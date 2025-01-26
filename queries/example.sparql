@@ -8,7 +8,7 @@ CONSTRUCT {
   ?book a lwt:OperaLetteraria ;
         dc:title ?title ;
         lwt:èScrittoDa ?author ;
-        lwt:haEditore ?publisher ;
+        lwt:haEditore ?publisherIRI ;
         lwt:haDataPubblicazione ?publicationDate ;
         lwt:HaEdizione ?isbn ;
         lwt:HaLingua ?language ;
@@ -17,10 +17,14 @@ CONSTRUCT {
         lwt:parteDiAntologia ?awards ;
         lwt:HaProvenienzaAutore ?translator ;
         lwt:HaProvenienzaAutore ?places ;
-        rdfs:seeAlso ?webURL .
+        rdfs:seeAlso ?webURL ;
+        lwt:pubblica ?rating .
+
+  ?publisherIRI a lwt:CasaEditrice ;
+                lwt:haNome ?publisher .
 }
 WHERE {
-  SERVICE <x-sparql-anything:csv.headers=true,location=Beowulf.csv> {
+  SERVICE <x-sparql-anything:csv.headers=true,location=example.csv> {
     [] xyz:ID ?id ;
        xyz:Title ?title ;
        xyz:Author ?author ;
@@ -33,11 +37,13 @@ WHERE {
        xyz:Awards ?awards ;
        xyz:Translator ?translator ;
        xyz:Places ?places ;
-       xyz:WebURL ?webURL .
+       xyz:WebURL ?webURL ;
+       xyz:Rating ?rating .
   }
-  BIND(IRI(CONCAT("http://example.org/book/", ?id)) AS ?book)
-  BIND(IRI(CONCAT("http://example.org/author/", ?author)) AS ?authorIRI)
-  BIND(IRI(CONCAT("http://example.org/publisher/", ?publisher)) AS ?publisherIRI)
-  BIND(IRI(CONCAT("http://example.org/translator/", ?translator)) AS ?translatorIRI)
-  BIND(IRI(CONCAT("http://example.org/place/", ?places)) AS ?placesIRI)
+
+  # Generate unique IRIs aligned with the lwt namespace
+  BIND(IRI(CONCAT("https://litetaryworktopics.com/litetaryworktopics2025#", "book_", ?id)) AS ?book)
+  
+  # Generate a unique IRI for the publisher by hashing the publisher name
+  BIND(IRI(CONCAT("https://litetaryworktopics.com/litetaryworktopics2025#", "CasaEditrice_", MD5(?publisher))) AS ?publisherIRI)
 }

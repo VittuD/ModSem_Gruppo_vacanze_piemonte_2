@@ -128,6 +128,12 @@ xsd:date rdf:type rdfs:Datatype .
            rdfs:range :Editore .
 
 
+###  https://litetaryworktopics.com/litetaryworktopics2025#haTema
+:haTema rdf:type owl:ObjectProperty ;
+        rdfs:domain <https://litetaryworktopics.com/litetaryworktopics2025##OperaLetteraria> ;
+        rdfs:range :Tema .
+
+
 ###  https://litetaryworktopics.com/litetaryworktopics2025#pubblica
 :pubblica rdf:type owl:ObjectProperty ;
           owl:inverseOf :èStatoPubblicatoDa ;
@@ -157,19 +163,32 @@ xsd:date rdf:type rdfs:Datatype .
 :èAutoreDi rdf:type owl:ObjectProperty ;
            owl:inverseOf :èScrittoDa ;
            rdfs:domain :Autore ;
-           rdfs:range <https://litetaryworktopics.com/litetaryworktopics2025##OperaLetteraria> .
+           rdfs:range [ rdf:type owl:Class ;
+                        owl:unionOf ( <https://litetaryworktopics.com/litetaryworktopics2025##Edizione>
+                                      <https://litetaryworktopics.com/litetaryworktopics2025##OperaLetteraria>
+                                    )
+                      ] .
 
 
 ###  https://litetaryworktopics.com/litetaryworktopics2025#èScrittoDa
 :èScrittoDa rdf:type owl:ObjectProperty ;
-            rdfs:domain <https://litetaryworktopics.com/litetaryworktopics2025##OperaLetteraria> ;
+            rdfs:domain [ rdf:type owl:Class ;
+                          owl:unionOf ( <https://litetaryworktopics.com/litetaryworktopics2025##Edizione>
+                                        <https://litetaryworktopics.com/litetaryworktopics2025##OperaLetteraria>
+                                      )
+                        ] ;
             rdfs:range :Autore .
 
 
 ###  https://litetaryworktopics.com/litetaryworktopics2025#èStatoPubblicatoDa
 :èStatoPubblicatoDa rdf:type owl:ObjectProperty ,
                              owl:FunctionalProperty ;
-                    rdfs:domain <https://litetaryworktopics.com/litetaryworktopics2025##Edizione> .
+                    rdfs:domain <https://litetaryworktopics.com/litetaryworktopics2025##Edizione> ;
+                    rdfs:range [ rdf:type owl:Class ;
+                                 owl:unionOf ( :AutoreIndipendente
+                                               :Editore
+                                             )
+                               ] .
 
 
 ###  https://litetaryworktopics.com/litetaryworktopics2025#èUnEdizioneDi
@@ -241,7 +260,13 @@ dc:title rdf:type owl:DatatypeProperty .
 
 ###  https://litetaryworktopics.com/litetaryworktopics2025##haNome
 <https://litetaryworktopics.com/litetaryworktopics2025##haNome> rdf:type owl:DatatypeProperty ;
-                                                                rdfs:domain <https://litetaryworktopics.com/litetaryworktopics2025##Edizione> ;
+                                                                rdfs:domain [ rdf:type owl:Class ;
+                                                                              owl:unionOf ( <http://www.w3.org/ns/prov#Agent>
+                                                                                            <http://www.w3.org/ns/prov#Organization>
+                                                                                            :ListaDiOpereLetterarie
+                                                                                            <https://litetaryworktopics.com/litetaryworktopics2025##Edizione>
+                                                                                          )
+                                                                            ] ;
                                                                 rdfs:range xsd:string .
 
 
@@ -267,8 +292,13 @@ dc:title rdf:type owl:DatatypeProperty .
 ###  http://www.semanticweb.org/enryc/ontologies/2025/0/untitled-ontology-36#AutoreIndipendente
 :AutoreIndipendente rdf:type owl:Class ;
                     owl:equivalentClass [ owl:intersectionOf ( :Autore
+                                                               :Editore
                                                                [ rdf:type owl:Restriction ;
                                                                  owl:onProperty :pubblica ;
+                                                                 owl:someValuesFrom <https://litetaryworktopics.com/litetaryworktopics2025##Edizione>
+                                                               ]
+                                                               [ rdf:type owl:Restriction ;
+                                                                 owl:onProperty :èAutoreDi ;
                                                                  owl:someValuesFrom <https://litetaryworktopics.com/litetaryworktopics2025##Edizione>
                                                                ]
                                                              ) ;
