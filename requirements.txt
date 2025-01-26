@@ -1,6 +1,7 @@
-asyncio
 aiohttp
+asyncio
 bs4
 pandas
-tqdm
 pyppeteer
+pysparql_anything
+tqdm
