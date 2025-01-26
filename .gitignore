@@ -1,2 +1,3 @@
 src/book_details/*
 !src/book_details/.gitkeep
+src/cookies.json
