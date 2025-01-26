@@ -24,7 +24,7 @@ CONSTRUCT {
 
 } WHERE {
   # Artists from the Tate Gallery open data!
-  SERVICE <x-sparql-anything:csv.headers=true,location=./data/author_data.csv> {
+  SERVICE <x-sparql-anything:csv.headers=true,location=work_topics.csv> {
     []  xyz:id ?id;
 	    xyz:name ?name;   
   	  xyz:gender ?gender; 
