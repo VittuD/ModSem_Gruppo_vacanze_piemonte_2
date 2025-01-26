@@ -1,0 +1,6 @@
+asyncio
+aiohttp
+bs4
+pandas
+tqdm
+pyppeteer
