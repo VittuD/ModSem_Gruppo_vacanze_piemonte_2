@@ -1,1 +1,2 @@
-src/book_details/
+src/book_details/*
+!src/book_details/.gitkeep
