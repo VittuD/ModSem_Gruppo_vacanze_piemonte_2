@@ -1,0 +1,1 @@
+### TODO take as input the book.json and process it to retain useful information for the ontology
