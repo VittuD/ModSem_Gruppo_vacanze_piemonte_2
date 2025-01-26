@@ -4,20 +4,29 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xyz:  <http://sparql.xyz/facade-x/data/> .
 
-lwt:CasaEditrice_9bb04a0dfd7baa7998d62ce930fdab0e
+lwt:author_88183b946cc5f0e8c96b2e66e1c74a7e
+        a           lwt:Autore ;
+        lwt:haNome  "Unknown" .
+
+lwt:translator_5cb0a9d5ab9503b95f991f38d3e4b8ce
+        a           lwt:Traduttore ;
+        lwt:haNome  "Seamus Heaney" .
+
+lwt:casaEditrice_9bb04a0dfd7baa7998d62ce930fdab0e
         a           lwt:CasaEditrice ;
         lwt:haNome  "W.W. Norton & Company" .
 
-lwt:book_52357  a                lwt:OperaLetteraria ;
+lwt:opera_52357  a               lwt:OperaLetteraria ;
         rdfs:seeAlso             "https://www.goodreads.com/book/show/52357.Beowulf" ;
         dc:title                 "Beowulf" ;
         lwt:HaEdizione           "0393320979" ;
-        lwt:HaGenereLetterario   "Poetry|Fiction|Fantasy|Classics|Mythology|School|Literature|Read For School|High School|Historical Fiction" ;
+        lwt:HaGenereLetterario   lwt:genereLetterario_8b916d36464e14d404b3ea9ac573aaa6 ;
         lwt:HaLingua             "English" ;
-        lwt:HaProvenienzaAutore  "Seamus Heaney" , "Denmark|Geatland (Sweden)|Sweden" ;
         lwt:haDataPubblicazione  "2001-02-18" ;
-        lwt:haEditore            lwt:CasaEditrice_9bb04a0dfd7baa7998d62ce930fdab0e ;
+        lwt:haEditore            lwt:casaEditrice_9bb04a0dfd7baa7998d62ce930fdab0e ;
         lwt:haPagine             "259" ;
-        lwt:parteDiAntologia     "Hugo Award (WINNER)|Locus Award (NOMINEE)|World Fantasy Award (NOMINEE)|ALTA National Translation Award (NOMINEE)" ;
-        lwt:pubblica             "3.49" ;
-        lwt:èScrittoDa           "Unknown" .
+        lwt:haTraduttore         lwt:translator_5cb0a9d5ab9503b95f991f38d3e4b8ce ;
+        lwt:èScrittoDa           lwt:author_88183b946cc5f0e8c96b2e66e1c74a7e .
+
+lwt:genereLetterario_8b916d36464e14d404b3ea9ac573aaa6
+        a       lwt:GenereLetterario .

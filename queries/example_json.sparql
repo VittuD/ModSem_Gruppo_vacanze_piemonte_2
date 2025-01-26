@@ -5,33 +5,27 @@ PREFIX dc: <http://purl.org/dc/elements/1.1/>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
 CONSTRUCT {
-
-  ?publisherIRI a lwt:CasaEditrice ;
-                lwt:haNome ?publisher .
-
-  ?translatorIRI a lwt:Traduttore ;
-                 lwt:haNome ?translator .
-
-  ?authorIRI a lwt:Autore ;
-             lwt:haNome ?author .
-
-  ?genreIRI a lwt:GenereLetterario .
-
   ?opera a lwt:OperaLetteraria ;
         dc:title ?title ;
-        lwt:èScrittoDa ?authorIRI ;
+        lwt:èScrittoDa ?author ;
         lwt:haEditore ?publisherIRI ;
         lwt:haDataPubblicazione ?publicationDate ;
         lwt:HaEdizione ?isbn ;
         lwt:HaLingua ?language ;
-        lwt:HaGenereLetterario ?genreIRI ;
+        lwt:HaGenereLetterario ?genres ;
         lwt:haPagine ?pageCount ;
-        lwt:haTraduttore ?translatorIRI ;
-        rdfs:seeAlso ?webURL .
+        lwt:parteDiAntologia ?awards ;
+        lwt:HaProvenienzaAutore ?translator ;
+        lwt:HaProvenienzaAutore ?places ;
+        rdfs:seeAlso ?webURL ;
+        lwt:pubblica ?rating .
+
+  ?publisherIRI a lwt:CasaEditrice ;
+                lwt:haNome ?publisher .
 
 }
 WHERE {
-  SERVICE <x-sparql-anything:csv.headers=true,location=example.csv> {
+  SERVICE <x-sparql-anything:csv.headers=true,location=example.json> {
     [] xyz:ID ?id ;
        xyz:Title ?title ;
        xyz:Author ?author ;
@@ -47,12 +41,13 @@ WHERE {
        xyz:WebURL ?webURL ;
        xyz:Rating ?rating .
   }
-  
-  # Generate a unique IRI for the individuals by hashing the name
-  BIND(IRI(CONCAT("https://litetaryworktopics.com/litetaryworktopics2025#", "casaEditrice_", MD5(?publisher))) AS ?publisherIRI)
-  BIND(IRI(CONCAT("https://litetaryworktopics.com/litetaryworktopics2025#", "translator_", MD5(?translator))) AS ?translatorIRI)
-  BIND(IRI(CONCAT("https://litetaryworktopics.com/litetaryworktopics2025#", "author_", MD5(?author))) AS ?authorIRI)
-  # Maybe we could directly use the genre name as IRI TODO find out if it's correct
-  BIND(IRI(CONCAT("https://litetaryworktopics.com/litetaryworktopics2025#", "genereLetterario_", MD5(?genres))) AS ?genreIRI)
+
+  # Generate unique IRIs aligned with the lwt namespace
   BIND(IRI(CONCAT("https://litetaryworktopics.com/litetaryworktopics2025#", "opera_", ?id)) AS ?opera)
+  
+  # Generate a unique IRI for the publisher by hashing the publisher name
+  BIND(IRI(CONCAT("https://litetaryworktopics.com/litetaryworktopics2025#", "casaEditrice_", MD5(?publisher))) AS ?publisherIRI)
+
+  # Generate a unique IRI for the translator by hashing the translator name
+  BIND(IRI(CONCAT("https://litetaryworktopics.com/litetaryworktopics2025#", "translator_", MD5(?translator))) AS ?translatorIRI)
 }

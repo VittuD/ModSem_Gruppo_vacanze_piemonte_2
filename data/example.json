@@ -1,0 +1,497 @@
+{
+    "Book:kca://book/amzn1.gr.book.v1.r3qg1S-wGTRpD4QEd8KDkA": {
+        "id": "kca://book/amzn1.gr.book.v1.r3qg1S-wGTRpD4QEd8KDkA",
+        "__typename": "Book",
+        "legacyId": 52357,
+        "webUrl": "https://www.goodreads.com/book/show/52357.Beowulf",
+        "title": "Beowulf",
+        "titleComplete": "Beowulf",
+        "description": "Composed toward the end of the first millennium, Beowulf is the elegiac narrative of the adventures of Beowulf, a Scandinavian hero who saves the Danes from the seemingly invincible monster Grendel and, later, from Grendel's mother. He then returns to his own country and dies in old age in a vivid fight against a dragon. The poem is about encountering the monstrous, defeating it, and then having to live on in the exhausted aftermath. In the contours of this story, at once remote and uncannily familiar at the beginning of the twenty-first century, Nobel laureate Seamus Heaney finds a resonance that summons power to the poetry from deep beneath its surface. Drawn to what he has called the \"four-squareness of the utterance\" in Beowulf and its immense emotional credibility, Heaney gives these epic qualities new and convincing reality for the contemporary reader.",
+        "description({\"stripped\":true})": "Composed toward the end of the first millennium, Beowulf is the elegiac narrative of the adventures of Beowulf, a Scandinavian hero who saves the Danes from the seemingly invincible monster Grendel and, later, from Grendel's mother. He then returns to his own country and dies in old age in a vivid fight against a dragon. The poem is about encountering the monstrous, defeating it, and then having to live on in the exhausted aftermath. In the contours of this story, at once remote and uncannily familiar at the beginning of the twenty-first century, Nobel laureate Seamus Heaney finds a resonance that summons power to the poetry from deep beneath its surface. Drawn to what he has called the \"four-squareness of the utterance\" in Beowulf and its immense emotional credibility, Heaney gives these epic qualities new and convincing reality for the contemporary reader.",
+        "primaryContributorEdge": {
+            "__typename": "BookContributorEdge",
+            "node": {
+                "__ref": "Contributor:kca://author/amzn1.gr.author.v1.B4roX4Ddpe41dPxRuEiFdg"
+            },
+            "role": "Author"
+        },
+        "secondaryContributorEdges": [
+            {
+                "__typename": "BookContributorEdge",
+                "node": {
+                    "__ref": "Contributor:kca://author/amzn1.gr.author.v1.RJogbzTJ6src4vvjdTdgkw"
+                },
+                "role": "Translator"
+            }
+        ],
+        "imageUrl": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1327878125i/52357.jpg",
+        "bookSeries": [],
+        "bookGenres": [
+            {
+                "__typename": "BookGenre",
+                "genre": {
+                    "__typename": "Genre",
+                    "name": "Poetry",
+                    "webUrl": "https://www.goodreads.com/genres/poetry"
+                }
+            },
+            {
+                "__typename": "BookGenre",
+                "genre": {
+                    "__typename": "Genre",
+                    "name": "Fiction",
+                    "webUrl": "https://www.goodreads.com/genres/fiction"
+                }
+            },
+            {
+                "__typename": "BookGenre",
+                "genre": {
+                    "__typename": "Genre",
+                    "name": "Fantasy",
+                    "webUrl": "https://www.goodreads.com/genres/fantasy"
+                }
+            },
+            {
+                "__typename": "BookGenre",
+                "genre": {
+                    "__typename": "Genre",
+                    "name": "Classics",
+                    "webUrl": "https://www.goodreads.com/genres/classics"
+                }
+            },
+            {
+                "__typename": "BookGenre",
+                "genre": {
+                    "__typename": "Genre",
+                    "name": "Mythology",
+                    "webUrl": "https://www.goodreads.com/genres/mythology"
+                }
+            },
+            {
+                "__typename": "BookGenre",
+                "genre": {
+                    "__typename": "Genre",
+                    "name": "School",
+                    "webUrl": "https://www.goodreads.com/genres/school"
+                }
+            },
+            {
+                "__typename": "BookGenre",
+                "genre": {
+                    "__typename": "Genre",
+                    "name": "Literature",
+                    "webUrl": "https://www.goodreads.com/genres/literature"
+                }
+            },
+            {
+                "__typename": "BookGenre",
+                "genre": {
+                    "__typename": "Genre",
+                    "name": "Read For School",
+                    "webUrl": "https://www.goodreads.com/genres/read-for-school"
+                }
+            },
+            {
+                "__typename": "BookGenre",
+                "genre": {
+                    "__typename": "Genre",
+                    "name": "High School",
+                    "webUrl": "https://www.goodreads.com/genres/high-school"
+                }
+            },
+            {
+                "__typename": "BookGenre",
+                "genre": {
+                    "__typename": "Genre",
+                    "name": "Historical Fiction",
+                    "webUrl": "https://www.goodreads.com/genres/historical-fiction"
+                }
+            }
+        ],
+        "details": {
+            "__typename": "BookDetails",
+            "asin": "0393320979",
+            "format": "Paperback",
+            "numPages": 259,
+            "publicationTime": 982396800000,
+            "publisher": "W.W. Norton & Company",
+            "isbn": "0393320979",
+            "isbn13": "9780393320978",
+            "language": {
+                "__typename": "Language",
+                "name": "English"
+            }
+        },
+        "work": {
+            "__ref": "Work:kca://work/amzn1.gr.work.v1.yXUoESWfl1jgphjjdQ0cUQ"
+        },
+        "reviewEditUrl": "https://www.goodreads.com/review/edit/52357",
+        "featureFlags": {
+            "__typename": "FeatureFlags",
+            "hideAds": false,
+            "noIndex": false,
+            "noReviews": false,
+            "noNewRatings": false,
+            "noNewTextReviews": false
+        },
+        "viewerShelving": {
+            "__ref": "Shelving:kca://profile:goodreads/A42GDSWE30V7|kca://book/amzn1.gr.book.v1.r3qg1S-wGTRpD4QEd8KDkA"
+        },
+        "links({})": {
+            "__typename": "BookLinks",
+            "primaryAffiliateLink": {
+                "__typename": "BookLink",
+                "name": "InMondadori",
+                "url": "https://www.mondadoristore.it/search/?tpr=10&g=0393320979",
+                "ref": null
+            },
+            "secondaryAffiliateLinks": [
+                {
+                    "__typename": "BookLink",
+                    "name": "AbeBooks",
+                    "url": "http://affiliates.abebooks.com/c/64613/77416/2029?u=http%3A%2F%2Fwww.abebooks.it%2Fservlet%2FSearchResults%3Fisbn%3D0393320979%26sts%3Dt",
+                    "ref": null
+                },
+                {
+                    "__typename": "BookLink",
+                    "name": "Amazon IT",
+                    "url": "http://www.amazon.it/gp/product/0393320979/ref=x_gr_bb_amazon?ie=UTF8&tag=x_gr_w_bb_it-21&linkCode=ur2&camp=3370&creative=23322",
+                    "ref": "x_gr_bb_amazon"
+                }
+            ],
+            "libraryLinks": [],
+            "overflowPageUrl": "https://www.goodreads.com/book/52357.Beowulf/get_a_copy",
+            "seriesLink": null
+        }
+    },
+    "Work:kca://work/amzn1.gr.work.v1.yXUoESWfl1jgphjjdQ0cUQ": {
+        "id": "kca://work/amzn1.gr.work.v1.yXUoESWfl1jgphjjdQ0cUQ",
+        "__typename": "Work",
+        "legacyId": 189503,
+        "bestBook": {
+            "__ref": "Book:kca://book/amzn1.gr.book.v1.r3qg1S-wGTRpD4QEd8KDkA"
+        },
+        "choiceAwards": [],
+        "details": {
+            "__typename": "WorkDetails",
+            "webUrl": "https://www.goodreads.com/work/189503-beowulf-a-prose-translation",
+            "shelvesUrl": "https://www.goodreads.com/work/shelves/189503-beowulf-a-prose-translation",
+            "publicationTime": -30610195200000,
+            "originalTitle": "Beowulf. A Prose Translation",
+            "awardsWon": [
+                {
+                    "__typename": "Award",
+                    "name": "Hugo Award",
+                    "webUrl": "https://www.goodreads.com/award/show/9-hugo-award",
+                    "awardedAt": 1609488000000,
+                    "category": "Best Related Work",
+                    "designation": "WINNER"
+                },
+                {
+                    "__typename": "Award",
+                    "name": "Locus Award",
+                    "webUrl": "https://www.goodreads.com/award/show/46-locus-award",
+                    "awardedAt": 1609488000000,
+                    "category": "Best Horror Novel",
+                    "designation": "NOMINEE"
+                },
+                {
+                    "__typename": "Award",
+                    "name": "World Fantasy Award",
+                    "webUrl": "https://www.goodreads.com/award/show/100-world-fantasy-award",
+                    "awardedAt": 1609488000000,
+                    "category": "Special Award: Professional",
+                    "designation": "NOMINEE"
+                },
+                {
+                    "__typename": "Award",
+                    "name": "ALTA National Translation Award",
+                    "webUrl": "https://www.goodreads.com/award/show/19943-alta-national-translation-award",
+                    "awardedAt": 1609488000000,
+                    "category": "Poetry",
+                    "designation": "NOMINEE"
+                }
+            ],
+            "places": [
+                {
+                    "__typename": "Places",
+                    "name": "Denmark",
+                    "countryName": null,
+                    "webUrl": "https://www.goodreads.com/places/72-denmark",
+                    "year": null
+                },
+                {
+                    "__typename": "Places",
+                    "name": "Geatland",
+                    "countryName": "Sweden",
+                    "webUrl": "https://www.goodreads.com/places/3010-geatland",
+                    "year": null
+                },
+                {
+                    "__typename": "Places",
+                    "name": "Sweden",
+                    "countryName": null,
+                    "webUrl": "https://www.goodreads.com/places/48-sweden",
+                    "year": null
+                }
+            ],
+            "characters": [
+                {
+                    "__typename": "Character",
+                    "name": "Beowulf",
+                    "webUrl": "https://www.goodreads.com/characters/4679-beowulf"
+                },
+                {
+                    "__typename": "Character",
+                    "name": "Grendel",
+                    "webUrl": "https://www.goodreads.com/characters/4680-grendel"
+                },
+                {
+                    "__typename": "Character",
+                    "name": "Onela",
+                    "webUrl": "https://www.goodreads.com/characters/45913-onela"
+                },
+                {
+                    "__typename": "Character",
+                    "name": "Unferth",
+                    "webUrl": "https://www.goodreads.com/characters/45914-unferth"
+                },
+                {
+                    "__typename": "Character",
+                    "name": "Breca",
+                    "webUrl": "https://www.goodreads.com/characters/45915-breca"
+                },
+                {
+                    "__typename": "Character",
+                    "name": "Wiglaf",
+                    "webUrl": "https://www.goodreads.com/characters/96223-wiglaf"
+                },
+                {
+                    "__typename": "Character",
+                    "name": "Wealhtheow",
+                    "webUrl": "https://www.goodreads.com/characters/96225-wealhtheow"
+                },
+                {
+                    "__typename": "Character",
+                    "name": "Hrothgar",
+                    "webUrl": "https://www.goodreads.com/characters/1024156-hrothgar"
+                }
+            ]
+        },
+        "stats": {
+            "__typename": "BookOrWorkStats",
+            "averageRating": 3.49,
+            "ratingsCount": 330264,
+            "ratingsCountDist": [
+                19739,
+                41935,
+                99006,
+                94931,
+                74653
+            ],
+            "textReviewsCount": 12252,
+            "textReviewsLanguageCounts": [
+                {
+                    "__typename": "TextReviewLanguageCount",
+                    "count": 11461,
+                    "isoLanguageCode": "en"
+                },
+                {
+                    "__typename": "TextReviewLanguageCount",
+                    "count": 101,
+                    "isoLanguageCode": "es"
+                },
+                {
+                    "__typename": "TextReviewLanguageCount",
+                    "count": 31,
+                    "isoLanguageCode": "it"
+                },
+                {
+                    "__typename": "TextReviewLanguageCount",
+                    "count": 11,
+                    "isoLanguageCode": "de"
+                },
+                {
+                    "__typename": "TextReviewLanguageCount",
+                    "count": 21,
+                    "isoLanguageCode": "tr"
+                },
+                {
+                    "__typename": "TextReviewLanguageCount",
+                    "count": 16,
+                    "isoLanguageCode": "ru"
+                },
+                {
+                    "__typename": "TextReviewLanguageCount",
+                    "count": 5,
+                    "isoLanguageCode": "da"
+                },
+                {
+                    "__typename": "TextReviewLanguageCount",
+                    "count": 12,
+                    "isoLanguageCode": "pt"
+                },
+                {
+                    "__typename": "TextReviewLanguageCount",
+                    "count": 8,
+                    "isoLanguageCode": "fi"
+                },
+                {
+                    "__typename": "TextReviewLanguageCount",
+                    "count": 14,
+                    "isoLanguageCode": "pl"
+                },
+                {
+                    "__typename": "TextReviewLanguageCount",
+                    "count": 1,
+                    "isoLanguageCode": "vi"
+                },
+                {
+                    "__typename": "TextReviewLanguageCount",
+                    "count": 4,
+                    "isoLanguageCode": "ka"
+                },
+                {
+                    "__typename": "TextReviewLanguageCount",
+                    "count": 8,
+                    "isoLanguageCode": "nl"
+                },
+                {
+                    "__typename": "TextReviewLanguageCount",
+                    "count": 2,
+                    "isoLanguageCode": "cs"
+                },
+                {
+                    "__typename": "TextReviewLanguageCount",
+                    "count": 4,
+                    "isoLanguageCode": "sv"
+                },
+                {
+                    "__typename": "TextReviewLanguageCount",
+                    "count": 8,
+                    "isoLanguageCode": "fa"
+                },
+                {
+                    "__typename": "TextReviewLanguageCount",
+                    "count": 3,
+                    "isoLanguageCode": "bn"
+                },
+                {
+                    "__typename": "TextReviewLanguageCount",
+                    "count": 3,
+                    "isoLanguageCode": "ro"
+                },
+                {
+                    "__typename": "TextReviewLanguageCount",
+                    "count": 5,
+                    "isoLanguageCode": "uk"
+                },
+                {
+                    "__typename": "TextReviewLanguageCount",
+                    "count": 7,
+                    "isoLanguageCode": "ar"
+                },
+                {
+                    "__typename": "TextReviewLanguageCount",
+                    "count": 1,
+                    "isoLanguageCode": "sl"
+                },
+                {
+                    "__typename": "TextReviewLanguageCount",
+                    "count": 2,
+                    "isoLanguageCode": "is"
+                },
+                {
+                    "__typename": "TextReviewLanguageCount",
+                    "count": 1,
+                    "isoLanguageCode": "zh"
+                },
+                {
+                    "__typename": "TextReviewLanguageCount",
+                    "count": 3,
+                    "isoLanguageCode": "no"
+                },
+                {
+                    "__typename": "TextReviewLanguageCount",
+                    "count": 8,
+                    "isoLanguageCode": "fr"
+                },
+                {
+                    "__typename": "TextReviewLanguageCount",
+                    "count": 2,
+                    "isoLanguageCode": "lt"
+                },
+                {
+                    "__typename": "TextReviewLanguageCount",
+                    "count": 2,
+                    "isoLanguageCode": "id"
+                },
+                {
+                    "__typename": "TextReviewLanguageCount",
+                    "count": 1,
+                    "isoLanguageCode": "hu"
+                },
+                {
+                    "__typename": "TextReviewLanguageCount",
+                    "count": 1,
+                    "isoLanguageCode": "tl"
+                }
+            ]
+        },
+        "quotes({\"pagination\":{\"limit\":1}})": {
+            "__typename": "ResourceQuotesConnection",
+            "webUrl": "https://www.goodreads.com/work/quotes/189503",
+            "totalCount": 111
+        },
+        "questions({\"pagination\":{\"limit\":1}})": {
+            "__typename": "ResourceQuestionsConnection",
+            "totalCount": 13,
+            "webUrl": "https://www.goodreads.com/book/52357/questions"
+        },
+        "topics({\"pagination\":{\"limit\":1}})": {
+            "__typename": "ResourceTopicsConnection",
+            "webUrl": "https://www.goodreads.com/topic/list_book/52357",
+            "totalCount": 83
+        },
+        "viewerShelvings": [],
+        "viewerShelvingsUrl": "/review/user_works/189503",
+        "featuredKNH": {
+            "__typename": "FeaturedKNHCollectionConnection",
+            "totalCount": 0,
+            "edges": []
+        },
+        "giveaways": null,
+        "editions": {
+            "__typename": "BooksConnection",
+            "webUrl": "https://www.goodreads.com/work/editions/189503"
+        }
+    },
+    "Contributor:kca://author/amzn1.gr.author.v1.B4roX4Ddpe41dPxRuEiFdg": {
+        "id": "kca://author/amzn1.gr.author.v1.B4roX4Ddpe41dPxRuEiFdg",
+        "__typename": "Contributor",
+        "legacyId": 4699102,
+        "name": "Unknown",
+        "description": "Books can be attributed to \"Unknown\" when the author or editor (as applicable) is not known and cannot be discovered. If at all possible, list at least one actual author or editor for a book instead of using \"Unknown\".<br /><br />Books whose authorship is purposefully withheld should be attributed instead to Anonymous.",
+        "isGrAuthor": false,
+        "works": {
+            "__typename": "ContributorWorksConnection",
+            "totalCount": 469453
+        },
+        "profileImageUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/nophoto/user/u_700x933.png",
+        "webUrl": "https://www.goodreads.com/author/show/4699102.Unknown",
+        "user": null,
+        "viewerIsFollowing": null,
+        "followers": {
+            "__typename": "ContributorFollowersConnection",
+            "totalCount": 3142
+        }
+    },
+    "Contributor:kca://author/amzn1.gr.author.v1.RJogbzTJ6src4vvjdTdgkw": {
+        "id": "kca://author/amzn1.gr.author.v1.RJogbzTJ6src4vvjdTdgkw",
+        "__typename": "Contributor",
+        "name": "Seamus Heaney",
+        "webUrl": "https://www.goodreads.com/author/show/29574.Seamus_Heaney",
+        "isGrAuthor": false
+    },
+    "Topic": "10th-century"
+}
