@@ -147,6 +147,7 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  https://litetaryworktopics.com/litetaryworktopics2025#haTraduttore
 :haTraduttore rdf:type owl:ObjectProperty ;
+              owl:inverseOf :èTradottoDa ;
               rdfs:domain <https://litetaryworktopics.com/litetaryworktopics2025##Edizione> ;
               rdfs:range :Traduttore .
 
@@ -206,6 +207,12 @@ xsd:date rdf:type rdfs:Datatype .
                                                :Editore
                                              )
                                ] .
+
+
+###  https://litetaryworktopics.com/litetaryworktopics2025#èTradottoDa
+:èTradottoDa rdf:type owl:ObjectProperty ;
+             rdfs:domain <https://litetaryworktopics.com/litetaryworktopics2025##Edizione> ;
+             rdfs:range :Traduttore .
 
 
 ###  https://litetaryworktopics.com/litetaryworktopics2025#èUnEdizioneDi
