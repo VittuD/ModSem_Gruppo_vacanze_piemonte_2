@@ -1,11 +1,13 @@
 @prefix : <http://www.semanticweb.org/enryc/ontologies/2025/0/untitled-ontology-36#> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix geo: <https://www.w3.org/2003/01/geo/wgs84_pos#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix prov: <https://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix vann: <http://purl.org/vocab/vann/> .
 @prefix dbpedia: <https://dbpedia.org/ontology/> .
 @base <http://www.semanticweb.org/enryc/ontologies/2025/0/untitled-ontology-36#> .
@@ -49,8 +51,7 @@ vann:preferredNamespaceUri rdf:type owl:AnnotationProperty .
 
 
 ###  http://web.resource.org/cc/license
-<http://web.resource.org/cc/license> rdf:type owl:AnnotationProperty ;
-                                     rdfs:comment "Una raccolta di Opere Letterarie pubblicate da un Editore con criteri comuni di Genere, Tema o Formato."@it .
+<http://web.resource.org/cc/license> rdf:type owl:AnnotationProperty .
 
 
 ###  http://www.semanticweb.org/enryc/ontologies/2025/0/untitled-ontology-36#HaEdizione
@@ -85,6 +86,14 @@ vann:preferredNamespaceUri rdf:type owl:AnnotationProperty .
 :parteDiSaga rdf:type owl:AnnotationProperty .
 
 
+###  http://www.w3.org/2004/02/skos/core#broadMatch
+skos:broadMatch rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#exactMatch
+skos:exactMatch rdf:type owl:AnnotationProperty .
+
+
 #################################################################
 #    Datatypes
 #################################################################
@@ -114,7 +123,7 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  https://litetaryworktopics.com/litetaryworktopics2025#haEditore
 :haEditore rdf:type owl:ObjectProperty ;
-           owl:inverseOf :pubblicaPerLaCasaEditrice ;
+           owl:inverseOf :pubblicaPerCasaEditrice ;
            rdfs:domain :CasaEditrice ;
            rdfs:range :Editore .
 
@@ -122,13 +131,19 @@ xsd:date rdf:type rdfs:Datatype .
 ###  https://litetaryworktopics.com/litetaryworktopics2025#pubblica
 :pubblica rdf:type owl:ObjectProperty ;
           owl:inverseOf :èStatoPubblicatoDa ;
+          rdfs:domain [ rdf:type owl:Class ;
+                        owl:unionOf ( :AutoreIndipendente
+                                      :Editore
+                                    )
+                      ] ;
           rdfs:range <https://litetaryworktopics.com/litetaryworktopics2025##Edizione> .
 
 
-###  https://litetaryworktopics.com/litetaryworktopics2025#pubblicaPerLaCasaEditrice
-:pubblicaPerLaCasaEditrice rdf:type owl:ObjectProperty ;
-                           rdfs:domain :Editore ;
-                           rdfs:range :CasaEditrice .
+###  https://litetaryworktopics.com/litetaryworktopics2025#pubblicaPerCasaEditrice
+:pubblicaPerCasaEditrice rdf:type owl:ObjectProperty ;
+                         rdfs:subPropertyOf :pubblica ;
+                         rdfs:domain :Editore ;
+                         rdfs:range :CasaEditrice .
 
 
 ###  https://litetaryworktopics.com/litetaryworktopics2025#vieneUtilizzatoIn
@@ -140,8 +155,15 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  https://litetaryworktopics.com/litetaryworktopics2025#èAutoreDi
 :èAutoreDi rdf:type owl:ObjectProperty ;
+           owl:inverseOf :èScrittoDa ;
            rdfs:domain :Autore ;
            rdfs:range <https://litetaryworktopics.com/litetaryworktopics2025##OperaLetteraria> .
+
+
+###  https://litetaryworktopics.com/litetaryworktopics2025#èScrittoDa
+:èScrittoDa rdf:type owl:ObjectProperty ;
+            rdfs:domain <https://litetaryworktopics.com/litetaryworktopics2025##OperaLetteraria> ;
+            rdfs:range :Autore .
 
 
 ###  https://litetaryworktopics.com/litetaryworktopics2025#èStatoPubblicatoDa
@@ -244,8 +266,11 @@ dc:title rdf:type owl:DatatypeProperty .
 
 ###  http://www.semanticweb.org/enryc/ontologies/2025/0/untitled-ontology-36#AutoreIndipendente
 :AutoreIndipendente rdf:type owl:Class ;
-                    owl:equivalentClass [ owl:intersectionOf ( :Editore
-                                                               :Persona
+                    owl:equivalentClass [ owl:intersectionOf ( :Autore
+                                                               [ rdf:type owl:Restriction ;
+                                                                 owl:onProperty :pubblica ;
+                                                                 owl:someValuesFrom <https://litetaryworktopics.com/litetaryworktopics2025##Edizione>
+                                                               ]
                                                              ) ;
                                           rdf:type owl:Class
                                         ] ;
@@ -259,8 +284,11 @@ dc:title rdf:type owl:DatatypeProperty .
 :CasaEditrice rdf:type owl:Class ;
               owl:equivalentClass [ owl:intersectionOf ( <http://www.w3.org/ns/prov#Organization>
                                                          [ rdf:type owl:Restriction ;
-                                                           owl:onProperty :pubblica ;
-                                                           owl:someValuesFrom <https://litetaryworktopics.com/litetaryworktopics2025##Edizione>
+                                                           owl:onProperty :pubblicaPerCasaEditrice ;
+                                                           owl:someValuesFrom [ rdf:type owl:Restriction ;
+                                                                                owl:onProperty :pubblica ;
+                                                                                owl:someValuesFrom <https://litetaryworktopics.com/litetaryworktopics2025##Edizione>
+                                                                              ]
                                                          ]
                                                        ) ;
                                     rdf:type owl:Class
