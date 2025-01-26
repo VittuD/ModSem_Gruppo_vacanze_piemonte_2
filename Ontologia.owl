@@ -8,1232 +8,716 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix vann: <http://purl.org/vocab/vann/> .
 @prefix dbpedia: <https://dbpedia.org/ontology/> .
-@base <https://litetaryworktopics.com/litetaryworktopics2025#> .
+@base <http://www.semanticweb.org/enryc/ontologies/2025/0/untitled-ontology-36#> .
 
 <https://litetaryworktopics.com/litetaryworktopics2025#> rdf:type owl:Ontology ;
-                                                         
-                                                         rdfs:label "litetaryworktopics2025"@en ;
-                                                         
-                                                         dc:date "2025-01-29" ;
-                                                         
-                                                         dc:creator "Davide Vitturini"@en ;
-                                                         
-                                                         <http://web.resource.org/cc/license> "MIT" ;
-                                                         
-                                                         dc:creator "Enrico Chiesa"@en ;
-                                                         
-                                                         vann:preferredNamespaceUri "https://litetaryworktopics.com/litetaryworktopics2025#"@en ;
-                                                         
-                                                         dc:description "Questa ontologia ha l'obiettivo di fornire una rappresentazione generale sulle principali tematiche trattate dalla letteratura, con il particolare obiettivo di rendere possibile il suggerimento di nuove da parte di esperti o amatori."@it ;
-                                                         
-                                                         vann:preferredNamespacePrefix "lwt" .
-
+                                                          dc:creator "Davide Vitturini"@en ,
+                                                                     "Enrico Chiesa"@en ;
+                                                          dc:date "2025-01-29" ;
+                                                          dc:description "Questa ontologia ha l'obiettivo di fornire una rappresentazione generale sulle principali tematiche trattate dalla letteratura, con il particolare obiettivo di rendere possibile il suggerimento di nuove da parte di esperti o amatori."@it ;
+                                                          vann:preferredNamespacePrefix "lwt" ;
+                                                          vann:preferredNamespaceUri "https://litetaryworktopics.com/litetaryworktopics2025#"@en ;
+                                                          <http://web.resource.org/cc/license> "MIT" ;
+                                                          rdfs:label "litetaryworktopics2025"@en .
 
 #################################################################
-#
 #    Annotation properties
-#
 #################################################################
-
 
 ###  http://purl.org/dc/elements/1.1/creator
-
 dc:creator rdf:type owl:AnnotationProperty .
 
 
-
 ###  http://purl.org/dc/elements/1.1/date
-
 dc:date rdf:type owl:AnnotationProperty .
 
 
-
 ###  http://purl.org/dc/elements/1.1/description
-
 dc:description rdf:type owl:AnnotationProperty .
 
 
-
 ###  http://purl.org/dc/elements/1.1/title
-
 dc:title rdf:type owl:AnnotationProperty .
 
 
-
 ###  http://purl.org/vocab/vann/preferredNamespacePrefix
-
 vann:preferredNamespacePrefix rdf:type owl:AnnotationProperty .
 
 
-
 ###  http://purl.org/vocab/vann/preferredNamespaceUri
-
 vann:preferredNamespaceUri rdf:type owl:AnnotationProperty .
 
 
-
 ###  http://web.resource.org/cc/license
-
 <http://web.resource.org/cc/license> rdf:type owl:AnnotationProperty ;
-                                     
                                      rdfs:comment "Una raccolta di Opere Letterarie pubblicate da un Editore con criteri comuni di Genere, Tema o Formato."@it .
 
 
-
 ###  http://www.semanticweb.org/enryc/ontologies/2025/0/untitled-ontology-36#HaEdizione
-
 :HaEdizione rdf:type owl:AnnotationProperty .
 
 
-
 ###  http://www.semanticweb.org/enryc/ontologies/2025/0/untitled-ontology-36#HaGenereLetterario
-
 :HaGenereLetterario rdf:type owl:AnnotationProperty .
 
 
-
 ###  http://www.semanticweb.org/enryc/ontologies/2025/0/untitled-ontology-36#HaLingua
-
 :HaLingua rdf:type owl:AnnotationProperty .
 
 
-
 ###  http://www.semanticweb.org/enryc/ontologies/2025/0/untitled-ontology-36#HaProvenienzaAutore
-
 :HaProvenienzaAutore rdf:type owl:AnnotationProperty .
 
 
-
 ###  http://www.semanticweb.org/enryc/ontologies/2025/0/untitled-ontology-36#haDataPubblicazione
-
 :haDataPubblicazione rdf:type owl:AnnotationProperty .
 
 
-
 ###  http://www.semanticweb.org/enryc/ontologies/2025/0/untitled-ontology-36#haNome
-
 :haNome rdf:type owl:AnnotationProperty .
 
 
-
 ###  http://www.semanticweb.org/enryc/ontologies/2025/0/untitled-ontology-36#parteDiAntologia
-
 :parteDiAntologia rdf:type owl:AnnotationProperty .
 
 
-
 ###  http://www.semanticweb.org/enryc/ontologies/2025/0/untitled-ontology-36#parteDiSaga
-
 :parteDiSaga rdf:type owl:AnnotationProperty .
 
 
-
-
-
 #################################################################
-#
 #    Datatypes
-#
 #################################################################
-
 
 ###  http://www.w3.org/2001/XMLSchema#date
-
 xsd:date rdf:type rdfs:Datatype .
 
 
-
-
-
 #################################################################
-#
 #    Object Properties
-#
 #################################################################
-
 
 ###  https://litetaryworktopics.com/litetaryworktopics2025#appartieneA
-
-<https://litetaryworktopics.com/litetaryworktopics2025#appartieneA> rdf:type owl:ObjectProperty ;
-                                                                    
-                                                                    owl:inverseOf <https://litetaryworktopics.com/litetaryworktopics2025#contiene> .
-
+:appartieneA rdf:type owl:ObjectProperty ;
+             owl:inverseOf :contiene .
 
 
 ###  https://litetaryworktopics.com/litetaryworktopics2025#contiene
-
-<https://litetaryworktopics.com/litetaryworktopics2025#contiene> rdf:type owl:ObjectProperty .
-
+:contiene rdf:type owl:ObjectProperty .
 
 
 ###  https://litetaryworktopics.com/litetaryworktopics2025#haAutore
-
-<https://litetaryworktopics.com/litetaryworktopics2025#haAutore> rdf:type owl:ObjectProperty ;
-                                                                 
-                                                                 rdfs:domain :Autore ;
-                                                                 
-                                                                 rdfs:range <https://litetaryworktopics.com/litetaryworktopics2025##OperaLetteraria> .
-
+:haAutore rdf:type owl:ObjectProperty ;
+          rdfs:domain :Autore ;
+          rdfs:range <https://litetaryworktopics.com/litetaryworktopics2025##OperaLetteraria> .
 
 
 ###  https://litetaryworktopics.com/litetaryworktopics2025#haEditore
-
-<https://litetaryworktopics.com/litetaryworktopics2025#haEditore> rdf:type owl:ObjectProperty ;
-                                                                  
-                                                                  rdfs:domain :CasaEditrice ;
-                                                                  
-                                                                  rdfs:range :Editore .
-
+:haEditore rdf:type owl:ObjectProperty ;
+           owl:inverseOf :pubblicaPerLaCasaEditrice ;
+           rdfs:domain :CasaEditrice ;
+           rdfs:range :Editore .
 
 
 ###  https://litetaryworktopics.com/litetaryworktopics2025#pubblica
-
-<https://litetaryworktopics.com/litetaryworktopics2025#pubblica> rdf:type owl:ObjectProperty ;
-                                                                 
-                                                                 owl:inverseOf <https://litetaryworktopics.com/litetaryworktopics2025#èStatoPubblicatoDa> ;
-                                                                 
-                                                                 rdfs:range <https://litetaryworktopics.com/litetaryworktopics2025##Edizione> .
-
+:pubblica rdf:type owl:ObjectProperty ;
+          owl:inverseOf :èStatoPubblicatoDa ;
+          rdfs:range <https://litetaryworktopics.com/litetaryworktopics2025##Edizione> .
 
 
 ###  https://litetaryworktopics.com/litetaryworktopics2025#pubblicaPerLaCasaEditrice
-
-<https://litetaryworktopics.com/litetaryworktopics2025#pubblicaPerLaCasaEditrice> rdf:type owl:ObjectProperty ;
-                                                                                  
-                                                                                  rdfs:range :CasaEditrice ;
-                                                                                  
-                                                                                  rdfs:domain :Editore ;
-                                                                                  
-                                                                                  owl:inverseOf <https://litetaryworktopics.com/litetaryworktopics2025#haEditore> .
-
+:pubblicaPerLaCasaEditrice rdf:type owl:ObjectProperty ;
+                           rdfs:domain :Editore ;
+                           rdfs:range :CasaEditrice .
 
 
 ###  https://litetaryworktopics.com/litetaryworktopics2025#vieneUtilizzatoIn
-
-<https://litetaryworktopics.com/litetaryworktopics2025#vieneUtilizzatoIn> rdf:type owl:ObjectProperty ;
-                                                                          
-                                                                          rdfs:domain :Genere ;
-                                                                          
-                                                                          owl:inverseOf <https://litetaryworktopics.com/litetaryworktopics2025##HaGenereLetterario> ;
-                                                                          
-                                                                          rdfs:range <https://litetaryworktopics.com/litetaryworktopics2025##OperaLetteraria> .
-
+:vieneUtilizzatoIn rdf:type owl:ObjectProperty ;
+                   owl:inverseOf <https://litetaryworktopics.com/litetaryworktopics2025##HaGenereLetterario> ;
+                   rdfs:domain :Genere ;
+                   rdfs:range <https://litetaryworktopics.com/litetaryworktopics2025##OperaLetteraria> .
 
 
 ###  https://litetaryworktopics.com/litetaryworktopics2025#èAutoreDi
-
-<https://litetaryworktopics.com/litetaryworktopics2025#èAutoreDi> rdf:type owl:ObjectProperty ;
-                                                                  
-                                                                  rdfs:domain :Autore ;
-                                                                  
-                                                                  rdfs:range <https://litetaryworktopics.com/litetaryworktopics2025##OperaLetteraria> .
-
+:èAutoreDi rdf:type owl:ObjectProperty ;
+           rdfs:domain :Autore ;
+           rdfs:range <https://litetaryworktopics.com/litetaryworktopics2025##OperaLetteraria> .
 
 
 ###  https://litetaryworktopics.com/litetaryworktopics2025#èStatoPubblicatoDa
-
-<https://litetaryworktopics.com/litetaryworktopics2025#èStatoPubblicatoDa> rdf:type owl:FunctionalProperty ,
-                                                                                    owl:ObjectProperty ;
-                                                                           
-                                                                           rdfs:domain <https://litetaryworktopics.com/litetaryworktopics2025##Edizione> .
-
+:èStatoPubblicatoDa rdf:type owl:ObjectProperty ,
+                             owl:FunctionalProperty ;
+                    rdfs:domain <https://litetaryworktopics.com/litetaryworktopics2025##Edizione> .
 
 
 ###  https://litetaryworktopics.com/litetaryworktopics2025#èUnEdizioneDi
-
-<https://litetaryworktopics.com/litetaryworktopics2025#èUnEdizioneDi> rdf:type owl:FunctionalProperty ,
-                                                                               owl:ObjectProperty ;
-                                                                      
-                                                                      rdfs:domain <https://litetaryworktopics.com/litetaryworktopics2025##Edizione> ;
-                                                                      
-                                                                      rdfs:range <https://litetaryworktopics.com/litetaryworktopics2025##OperaLetteraria> .
-
+:èUnEdizioneDi rdf:type owl:ObjectProperty ;
+               owl:inverseOf <https://litetaryworktopics.com/litetaryworktopics2025##HaEdizione> ;
+               rdf:type owl:FunctionalProperty ;
+               rdfs:domain <https://litetaryworktopics.com/litetaryworktopics2025##Edizione> ;
+               rdfs:range <https://litetaryworktopics.com/litetaryworktopics2025##OperaLetteraria> .
 
 
 ###  https://litetaryworktopics.com/litetaryworktopics2025#èUtilizzata
-
-<https://litetaryworktopics.com/litetaryworktopics2025#èUtilizzata> rdf:type owl:ObjectProperty ;
-                                                                    
-                                                                    rdfs:domain :Lingua ;
-                                                                    
-                                                                    owl:inverseOf <https://litetaryworktopics.com/litetaryworktopics2025##HaLingua> .
-
+:èUtilizzata rdf:type owl:ObjectProperty ;
+             owl:inverseOf <https://litetaryworktopics.com/litetaryworktopics2025##HaLingua> ;
+             rdfs:domain :Lingua .
 
 
 ###  https://litetaryworktopics.com/litetaryworktopics2025##HaEdizione
-
 <https://litetaryworktopics.com/litetaryworktopics2025##HaEdizione> rdf:type owl:ObjectProperty ;
-                                                                    
-                                                                    owl:inverseOf <https://litetaryworktopics.com/litetaryworktopics2025#èUnEdizioneDi> ;
-                                                                    
-                                                                    rdfs:range <https://litetaryworktopics.com/litetaryworktopics2025##Edizione> ;
-                                                                    
-                                                                    rdfs:domain <https://litetaryworktopics.com/litetaryworktopics2025##OperaLetteraria> .
-
+                                                                    rdfs:domain <https://litetaryworktopics.com/litetaryworktopics2025##OperaLetteraria> ;
+                                                                    rdfs:range <https://litetaryworktopics.com/litetaryworktopics2025##Edizione> .
 
 
 ###  https://litetaryworktopics.com/litetaryworktopics2025##HaGenereLetterario
-
-<https://litetaryworktopics.com/litetaryworktopics2025##HaGenereLetterario> rdf:type owl:FunctionalProperty ,
-                                                                                     owl:ObjectProperty ;
-                                                                            
+<https://litetaryworktopics.com/litetaryworktopics2025##HaGenereLetterario> rdf:type owl:ObjectProperty ,
+                                                                                     owl:FunctionalProperty ;
                                                                             rdfs:domain <https://litetaryworktopics.com/litetaryworktopics2025##OperaLetteraria> .
 
 
-
 ###  https://litetaryworktopics.com/litetaryworktopics2025##HaLingua
-
-<https://litetaryworktopics.com/litetaryworktopics2025##HaLingua> rdf:type owl:FunctionalProperty ,
-                                                                           owl:ObjectProperty ;
-                                                                  
+<https://litetaryworktopics.com/litetaryworktopics2025##HaLingua> rdf:type owl:ObjectProperty ,
+                                                                           owl:FunctionalProperty ;
                                                                   rdfs:range :Lingua .
 
 
-
 ###  https://litetaryworktopics.com/litetaryworktopics2025##HaProvenienzaAutore
-
-<https://litetaryworktopics.com/litetaryworktopics2025##HaProvenienzaAutore> rdf:type owl:FunctionalProperty ,
-                                                                                      owl:ObjectProperty ;
-                                                                             
-                                                                             rdfs:range :Nazione ;
-                                                                             
-                                                                             rdfs:domain <https://litetaryworktopics.com/litetaryworktopics2025##OperaLetteraria> .
-
-
-
+<https://litetaryworktopics.com/litetaryworktopics2025##HaProvenienzaAutore> rdf:type owl:ObjectProperty ,
+                                                                                      owl:FunctionalProperty ;
+                                                                             rdfs:domain <https://litetaryworktopics.com/litetaryworktopics2025##OperaLetteraria> ;
+                                                                             rdfs:range :Nazione .
 
 
 #################################################################
-#
 #    Data properties
-#
 #################################################################
+
+###  http://purl.org/dc/elements/1.1/contributor
+dc:contributor rdf:type owl:DatatypeProperty .
+
+
+###  http://purl.org/dc/elements/1.1/date
+dc:date rdf:type owl:DatatypeProperty .
+
+
+###  http://purl.org/dc/elements/1.1/title
+dc:title rdf:type owl:DatatypeProperty .
+
+
+###  https://litetaryworktopics.com/litetaryworktopics2025#haPagine
+:haPagine rdf:type owl:DatatypeProperty ;
+          rdfs:domain <https://litetaryworktopics.com/litetaryworktopics2025##Edizione> ;
+          rdfs:range xsd:integer .
 
 
 ###  https://litetaryworktopics.com/litetaryworktopics2025##haDataPubblicazione
-
 <https://litetaryworktopics.com/litetaryworktopics2025##haDataPubblicazione> rdf:type owl:DatatypeProperty ;
-                                                                             
-                                                                             rdfs:range xsd:date ;
-                                                                             
-                                                                             rdfs:domain <https://litetaryworktopics.com/litetaryworktopics2025##Edizione> .
-
+                                                                             rdfs:domain <https://litetaryworktopics.com/litetaryworktopics2025##Edizione> ;
+                                                                             rdfs:range xsd:date .
 
 
 ###  https://litetaryworktopics.com/litetaryworktopics2025##haNome
-
 <https://litetaryworktopics.com/litetaryworktopics2025##haNome> rdf:type owl:DatatypeProperty ;
-                                                                
-                                                                rdfs:range xsd:string ;
-                                                                
-                                                                rdfs:domain <https://litetaryworktopics.com/litetaryworktopics2025##Edizione> .
-
-
-
+                                                                rdfs:domain <https://litetaryworktopics.com/litetaryworktopics2025##Edizione> ;
+                                                                rdfs:range xsd:string .
 
 
 #################################################################
-#
 #    Classes
-#
 #################################################################
-
 
 ###  http://dbpedia.org/resource/List
-
 <http://dbpedia.org/resource/List> rdf:type owl:Class ;
-                                   
+                                   rdfs:comment "Una lista è una raccolta di elementi, che può contenere oggetti o entità con caratteristiche simili o correlate, come una serie di libri, opere o altri elementi definiti da un tema comune."@it ;
                                    rdfs:label """List
-"""@it ;
-                                   
-                                   rdfs:comment "Una lista è una raccolta di elementi, che può contenere oggetti o entità con caratteristiche simili o correlate, come una serie di libri, opere o altri elementi definiti da un tema comune."@it .
-
+"""@it .
 
 
 ###  http://www.semanticweb.org/enryc/ontologies/2025/0/untitled-ontology-36#Autore
-
 :Autore rdf:type owl:Class ;
-        
-        rdfs:label """Autore
-"""@it ;
-        
         rdfs:subClassOf :Persona ;
-        
-        rdfs:comment "Un autore è una persona che scrive un'opera letteraria, scientifica o artistica, ed è responsabile della creazione e dell'originalità del contenuto dell'opera."@it .
-
+        rdfs:comment "Un autore è una persona che scrive un'opera letteraria, scientifica o artistica, ed è responsabile della creazione e dell'originalità del contenuto dell'opera."@it ;
+        rdfs:label """Autore
+"""@it .
 
 
 ###  http://www.semanticweb.org/enryc/ontologies/2025/0/untitled-ontology-36#AutoreIndipendente
-
 :AutoreIndipendente rdf:type owl:Class ;
-                    
-                    rdfs:label """AutoreIndipendente
-"""@it ;
-                    
-                    owl:equivalentClass [ rdf:type owl:Class ;
-                                          owl:intersectionOf ( :Editore
+                    owl:equivalentClass [ owl:intersectionOf ( :Editore
                                                                :Persona
-                                                             )
+                                                             ) ;
+                                          rdf:type owl:Class
                                         ] ;
-                    
                     rdfs:subClassOf :Autore ;
-                    
-                    rdfs:comment "Un autore indipendente è uno scrittore che pubblica e distribuisce le proprie opere senza l'intermediazione di una casa editrice tradizionale, gestendo autonomamente l'intero processo editoriale e promozionale. Questo approccio consente maggiore libertà creativa e guadagni diretti."@it .
-
+                    rdfs:comment "Un autore indipendente è uno scrittore che pubblica e distribuisce le proprie opere senza l'intermediazione di una casa editrice tradizionale, gestendo autonomamente l'intero processo editoriale e promozionale. Questo approccio consente maggiore libertà creativa e guadagni diretti."@it ;
+                    rdfs:label """AutoreIndipendente
+"""@it .
 
 
 ###  http://www.semanticweb.org/enryc/ontologies/2025/0/untitled-ontology-36#CasaEditrice
-
 :CasaEditrice rdf:type owl:Class ;
-              
-              rdfs:label "CasaEditrice"@it ;
-              
-              owl:equivalentClass [ rdf:type owl:Class ;
-                                    owl:intersectionOf ( <http://www.w3.org/ns/prov#Organization>
+              owl:equivalentClass [ owl:intersectionOf ( <http://www.w3.org/ns/prov#Organization>
                                                          [ rdf:type owl:Restriction ;
-                                                           owl:onProperty <https://litetaryworktopics.com/litetaryworktopics2025#pubblica> ;
+                                                           owl:onProperty :pubblica ;
                                                            owl:someValuesFrom <https://litetaryworktopics.com/litetaryworktopics2025##Edizione>
                                                          ]
-                                                       )
+                                                       ) ;
+                                    rdf:type owl:Class
                                   ] ;
-              
               rdfs:subClassOf <http://www.w3.org/ns/prov#Organization> ;
-              
-              rdfs:comment "Una casa editrice è un'organizzazione che si occupa della pubblicazione e distribuzione di opere letterarie, scientifiche o artistiche, curando la produzione, la stampa e la diffusione dei libri."@it .
-
+              rdfs:comment "Una casa editrice è un'organizzazione che si occupa della pubblicazione e distribuzione di opere letterarie, scientifiche o artistiche, curando la produzione, la stampa e la diffusione dei libri."@it ;
+              rdfs:label "CasaEditrice"@it .
 
 
 ###  http://www.semanticweb.org/enryc/ontologies/2025/0/untitled-ontology-36#CollanaEditoriale
-
 :CollanaEditoriale rdf:type owl:Class ;
-                   
-                   rdfs:label "CollanaEditoriale"@it ;
-                   
-                   rdfs:subClassOf <https://litetaryworktopics.com/litetaryworktopics2025#ListaDiOpereLetterarie> ;
-                   
-                   rdfs:comment "Una raccolta di testi pubblicati da un editore con criteri comuni di genere, tema o formato."@it .
-
+                   rdfs:subClassOf :ListaDiOpereLetterarie ;
+                   rdfs:comment "Una raccolta di testi pubblicati da un editore con criteri comuni di genere, tema o formato."@it ;
+                   rdfs:label "CollanaEditoriale"@it .
 
 
 ###  http://www.semanticweb.org/enryc/ontologies/2025/0/untitled-ontology-36#Editore
-
 :Editore rdf:type owl:Class ;
-         
-         rdfs:label """Editore
-"""@it ;
-         
-         owl:equivalentClass [ rdf:type owl:Class ;
-                               owl:intersectionOf ( :Persona
+         owl:equivalentClass [ owl:intersectionOf ( :Persona
                                                     [ rdf:type owl:Restriction ;
-                                                      owl:onProperty <https://litetaryworktopics.com/litetaryworktopics2025#pubblica> ;
+                                                      owl:onProperty :pubblica ;
                                                       owl:someValuesFrom <https://litetaryworktopics.com/litetaryworktopics2025##Edizione>
                                                     ]
-                                                  )
+                                                  ) ;
+                               rdf:type owl:Class
                              ] ;
-         
-         rdfs:subClassOf :Persona .
-
+         rdfs:subClassOf :Persona ;
+         rdfs:label """Editore
+"""@it .
 
 
 ###  http://www.semanticweb.org/enryc/ontologies/2025/0/untitled-ontology-36#Genere
-
 :Genere rdf:type owl:Class ;
-        
-        rdfs:label "Genere"@it ;
-        
-        rdfs:comment "Il genere di un'opera letteraria è una categoria che raggruppa libri con caratteristiche tematiche o stilistiche simili, come ad esempio fantasy, giallo, romance, storia, horror, ecc. Ogni genere aiuta a identificare il tono, il contenuto e lo stile dell'opera."@it .
-
+        rdfs:comment "Il genere di un'opera letteraria è una categoria che raggruppa libri con caratteristiche tematiche o stilistiche simili, come ad esempio fantasy, giallo, romance, storia, horror, ecc. Ogni genere aiuta a identificare il tono, il contenuto e lo stile dell'opera."@it ;
+        rdfs:label "Genere"@it .
 
 
 ###  http://www.semanticweb.org/enryc/ontologies/2025/0/untitled-ontology-36#Lingua
-
 :Lingua rdf:type owl:Class ;
-        
-        rdfs:label "Lingua"@it ;
-        
         owl:equivalentClass [ rdf:type owl:Class ;
                               owl:oneOf ( :It
-                                          <https://litetaryworktopics.com/litetaryworktopics2025#En>
+                                          :En
                                         )
                             ] ;
-        
-        rdfs:comment "Sistema linguistico utilizzato nell'opera letteraria, definendo l'idioma in cui il testo è scritto, come italiano, inglese, francese, ecc. Questo elemento permette di associare un'opera alla sua lingua di espressione."@it .
-
+        rdfs:comment "Sistema linguistico utilizzato nell'opera letteraria, definendo l'idioma in cui il testo è scritto, come italiano, inglese, francese, ecc. Questo elemento permette di associare un'opera alla sua lingua di espressione."@it ;
+        rdfs:label "Lingua"@it .
 
 
 ###  http://www.semanticweb.org/enryc/ontologies/2025/0/untitled-ontology-36#Luogo
-
 :Luogo rdf:type owl:Class ;
-       
-       rdfs:label "Luogo"@it ;
-       
-       rdfs:comment "Un Luogo, genericamente fisico o immaginario."@it .
-
+       rdfs:comment "Un Luogo, genericamente fisico o immaginario."@it ;
+       rdfs:label "Luogo"@it .
 
 
 ###  http://www.semanticweb.org/enryc/ontologies/2025/0/untitled-ontology-36#LuogoFisico
-
 :LuogoFisico rdf:type owl:Class ;
-             
-             rdfs:label "LuogoFisico"@it ;
-             
              rdfs:subClassOf :Luogo ;
-             
-             rdfs:comment "Un Luogo Fisico rappresenta un Luogo fisicamente presente, tramite la denominazione corrente o passata."@it .
-
+             rdfs:comment "Un Luogo Fisico rappresenta un Luogo fisicamente presente, tramite la denominazione corrente o passata."@it ;
+             rdfs:label "LuogoFisico"@it .
 
 
 ###  http://www.semanticweb.org/enryc/ontologies/2025/0/untitled-ontology-36#Nazione
-
 :Nazione rdf:type owl:Class ;
-         
-         rdfs:label "Nazione"@it ;
-         
          rdfs:subClassOf :LuogoFisico ;
-         
-         rdfs:comment "Un'entità nazionale nel presente o passato."@it .
-
+         rdfs:comment "Un'entità nazionale nel presente o passato."@it ;
+         rdfs:label "Nazione"@it .
 
 
 ###  http://www.semanticweb.org/enryc/ontologies/2025/0/untitled-ontology-36#OperaTeatrale
-
 :OperaTeatrale rdf:type owl:Class ;
-               
-               rdfs:label "Operateatrale"@it ;
-               
                rdfs:subClassOf <https://litetaryworktopics.com/litetaryworktopics2025##OperaLetteraria> ;
-               
-               rdfs:comment "Un'opera teatrale è una forma di opera letteraria scritta per essere rappresentata su un palcoscenico, con personaggi che parlano e interagiscono tra loro secondo una trama."@it .
-
+               rdfs:comment "Un'opera teatrale è una forma di opera letteraria scritta per essere rappresentata su un palcoscenico, con personaggi che parlano e interagiscono tra loro secondo una trama."@it ;
+               rdfs:label "Operateatrale"@it .
 
 
 ###  http://www.semanticweb.org/enryc/ontologies/2025/0/untitled-ontology-36#Persona
-
 :Persona rdf:type owl:Class ;
-         
-         rdfs:label "Persona"@it ;
-         
          rdfs:subClassOf <http://www.w3.org/ns/prov#Agent> ;
-         
-         rdfs:comment "Una persona è un individuo umano che svolge un ruolo all'interno di un contesto sociale o professionale, come autore, editore, o altro."@it .
-
+         rdfs:comment "Una persona è un individuo umano che svolge un ruolo all'interno di un contesto sociale o professionale, come autore, editore, o altro."@it ;
+         rdfs:label "Persona"@it .
 
 
 ###  http://www.semanticweb.org/enryc/ontologies/2025/0/untitled-ontology-36#Poesia
-
 :Poesia rdf:type owl:Class ;
-        
-        rdfs:label """Poesia
-"""@it ;
-        
         rdfs:subClassOf <https://litetaryworktopics.com/litetaryworktopics2025##OperaLetteraria> ;
-        
-        rdfs:comment "Forma di espressione letteraria che utilizza il linguaggio in modo artistico, spesso caratterizzata da metrica, ritmo e rime."@it .
-
+        rdfs:comment "Forma di espressione letteraria che utilizza il linguaggio in modo artistico, spesso caratterizzata da metrica, ritmo e rime."@it ;
+        rdfs:label """Poesia
+"""@it .
 
 
 ###  http://www.semanticweb.org/enryc/ontologies/2025/0/untitled-ontology-36#Racconto
-
 :Racconto rdf:type owl:Class ;
-          
-          rdfs:label "Racconto"@it ;
-          
           rdfs:subClassOf <https://litetaryworktopics.com/litetaryworktopics2025##OperaLetteraria> ;
-          
-          rdfs:comment "Il racconto è un'opera narrativa breve che si concentra su un singolo evento o tema, con un numero limitato di personaggi e uno sviluppo conciso della trama."@it .
-
+          rdfs:comment "Il racconto è un'opera narrativa breve che si concentra su un singolo evento o tema, con un numero limitato di personaggi e uno sviluppo conciso della trama."@it ;
+          rdfs:label "Racconto"@it .
 
 
 ###  http://www.semanticweb.org/enryc/ontologies/2025/0/untitled-ontology-36#Romanzo
-
 :Romanzo rdf:type owl:Class ;
-         
-         rdfs:label "Romanzo"@it ;
-         
          rdfs:subClassOf <https://litetaryworktopics.com/litetaryworktopics2025##OperaLetteraria> ;
-         
-         rdfs:comment "Il romanzo è un'opera letteraria di narrativa lunga, che sviluppa una trama complessa e approfondisce la caratterizzazione dei personaggi attraverso eventi e situazioni."@it .
-
+         rdfs:comment "Il romanzo è un'opera letteraria di narrativa lunga, che sviluppa una trama complessa e approfondisce la caratterizzazione dei personaggi attraverso eventi e situazioni."@it ;
+         rdfs:label "Romanzo"@it .
 
 
 ###  http://www.semanticweb.org/enryc/ontologies/2025/0/untitled-ontology-36#Saga
-
 :Saga rdf:type owl:Class ;
-      
-      rdfs:label "Saga"@it ;
-      
-      rdfs:subClassOf <https://litetaryworktopics.com/litetaryworktopics2025#ListaDiOpereLetterarie> ;
-      
-      rdfs:comment "Una narrazione estesa che segue personaggi o famiglie attraverso eventi o generazioni, spesso con una trama continuativa."@it .
-
+      rdfs:subClassOf :ListaDiOpereLetterarie ;
+      rdfs:comment "Una narrazione estesa che segue personaggi o famiglie attraverso eventi o generazioni, spesso con una trama continuativa."@it ;
+      rdfs:label "Saga"@it .
 
 
 ###  http://www.semanticweb.org/enryc/ontologies/2025/0/untitled-ontology-36#Saggio
-
 :Saggio rdf:type owl:Class ;
-        
-        rdfs:label "Saggio"@it ;
-        
         rdfs:subClassOf <https://litetaryworktopics.com/litetaryworktopics2025##OperaLetteraria> ;
-        
-        rdfs:comment "Il saggio è un'opera letteraria che esamina un argomento in modo critico, riflessivo e approfondito, utilizzando argomentazioni e prove per sostenere un punto di vista."@it .
-
+        rdfs:comment "Il saggio è un'opera letteraria che esamina un argomento in modo critico, riflessivo e approfondito, utilizzando argomentazioni e prove per sostenere un punto di vista."@it ;
+        rdfs:label "Saggio"@it .
 
 
 ###  http://www.semanticweb.org/enryc/ontologies/2025/0/untitled-ontology-36#Tema
-
 :Tema rdf:type owl:Class ;
-      
-      rdfs:label "Tema"@it ;
-      
-      rdfs:comment "Materia trattata da un'Opera Letteraria."@it .
-
+      rdfs:comment "Materia trattata da un'Opera Letteraria."@it ;
+      rdfs:label "Tema"@it .
 
 
 ###  http://www.w3.org/ns/prov#Agent
-
 <http://www.w3.org/ns/prov#Agent> rdf:type owl:Class ;
-                                  
-                                  rdfs:label "Agent"@it ;
-                                  
-                                  rdfs:comment "Un agente è un'entità che ha un ruolo attivo in un contesto sociale o lavorativo. Può essere un'organizzazione o una persona che svolge attività specifiche come creare, pubblicare o distribuire opere."@it .
-
+                                  rdfs:comment "Un agente è un'entità che ha un ruolo attivo in un contesto sociale o lavorativo. Può essere un'organizzazione o una persona che svolge attività specifiche come creare, pubblicare o distribuire opere."@it ;
+                                  rdfs:label "Agent"@it .
 
 
 ###  http://www.w3.org/ns/prov#Organization
-
 <http://www.w3.org/ns/prov#Organization> rdf:type owl:Class ;
-                                         
-                                         rdfs:label "Organization"@it ;
-                                         
                                          rdfs:subClassOf <http://www.w3.org/ns/prov#Agent> ;
-                                         
-                                         rdfs:comment "Un'organizzazione è un'entità strutturata che agisce come un singolo soggetto, come una casa editrice, un'impresa o un ente, ed è composta da persone che operano insieme per raggiungere obiettivi comuni."@it .
-
+                                         rdfs:comment "Un'organizzazione è un'entità strutturata che agisce come un singolo soggetto, come una casa editrice, un'impresa o un ente, ed è composta da persone che operano insieme per raggiungere obiettivi comuni."@it ;
+                                         rdfs:label "Organization"@it .
 
 
 ###  https://litetaryworktopics.com/litetaryworktopics2025#Canzoniere
-
-<https://litetaryworktopics.com/litetaryworktopics2025#Canzoniere> rdf:type owl:Class ;
-                                                                   
-                                                                   rdfs:label "Canzoniere"@it ;
-                                                                   
-                                                                   owl:equivalentClass [ rdf:type owl:Restriction ;
-                                                                                         owl:onProperty <https://litetaryworktopics.com/litetaryworktopics2025#contiene> ;
-                                                                                         owl:onClass :Poesia ;
-                                                                                         owl:minQualifiedCardinality "2"^^xsd:nonNegativeInteger
-                                                                                       ] ;
-                                                                   
-                                                                   rdfs:subClassOf :CollanaEditoriale ;
-                                                                   
-                                                                   rdfs:comment "Una raccolta di poesie che appartengono alla categoria \"Poesia\". Ogni elemento della collezione è un'istanza di \"Poesia\"."@it .
-
+:Canzoniere rdf:type owl:Class ;
+            owl:equivalentClass [ rdf:type owl:Restriction ;
+                                  owl:onProperty :contiene ;
+                                  owl:minQualifiedCardinality "2"^^xsd:nonNegativeInteger ;
+                                  owl:onClass :Poesia
+                                ] ;
+            rdfs:subClassOf :CollanaEditoriale ;
+            rdfs:comment "Una raccolta di poesie che appartengono alla categoria \"Poesia\". Ogni elemento della collezione è un'istanza di \"Poesia\"."@it ;
+            rdfs:label "Canzoniere"@it .
 
 
 ###  https://litetaryworktopics.com/litetaryworktopics2025#GrandeSaga
-
-<https://litetaryworktopics.com/litetaryworktopics2025#GrandeSaga> rdf:type owl:Class ;
-                                                                   
-                                                                   rdfs:label """GrandeSaga
-"""@it ;
-                                                                   
-                                                                   owl:equivalentClass [ rdf:type owl:Restriction ;
-                                                                                         owl:onProperty <https://litetaryworktopics.com/litetaryworktopics2025#contiene> ;
-                                                                                         owl:onClass <https://litetaryworktopics.com/litetaryworktopics2025##OperaLetteraria> ;
-                                                                                         owl:minQualifiedCardinality "3"^^xsd:nonNegativeInteger
-                                                                                       ] ;
-                                                                   
-                                                                   rdfs:subClassOf :Saga ;
-                                                                   
-                                                                   rdfs:comment "Una grande saga è una narrazione estesa e complessa che si sviluppa su molteplici opere letterarie, spesso seguendo diversi gruppi di personaggi o intere famiglie, con una trama che si estende su generazioni o eventi di ampia portata."@it .
-
+:GrandeSaga rdf:type owl:Class ;
+            owl:equivalentClass [ rdf:type owl:Restriction ;
+                                  owl:onProperty :contiene ;
+                                  owl:minQualifiedCardinality "3"^^xsd:nonNegativeInteger ;
+                                  owl:onClass <https://litetaryworktopics.com/litetaryworktopics2025##OperaLetteraria>
+                                ] ;
+            rdfs:subClassOf :Saga ;
+            rdfs:comment "Una grande saga è una narrazione estesa e complessa che si sviluppa su molteplici opere letterarie, spesso seguendo diversi gruppi di personaggi o intere famiglie, con una trama che si estende su generazioni o eventi di ampia portata."@it ;
+            rdfs:label """GrandeSaga
+"""@it .
 
 
 ###  https://litetaryworktopics.com/litetaryworktopics2025#ListaDiOpereLetterarie
-
-<https://litetaryworktopics.com/litetaryworktopics2025#ListaDiOpereLetterarie> rdf:type owl:Class ;
-                                                                               
-                                                                               owl:equivalentClass [ rdf:type owl:Restriction ;
-                                                                                                     owl:onProperty <https://litetaryworktopics.com/litetaryworktopics2025#contiene> ;
-                                                                                                     owl:someValuesFrom <https://litetaryworktopics.com/litetaryworktopics2025##OperaLetteraria>
-                                                                                                   ] ;
-                                                                               
-                                                                               rdfs:subClassOf <http://dbpedia.org/resource/List> .
-
+:ListaDiOpereLetterarie rdf:type owl:Class ;
+                        owl:equivalentClass [ rdf:type owl:Restriction ;
+                                              owl:onProperty :contiene ;
+                                              owl:someValuesFrom <https://litetaryworktopics.com/litetaryworktopics2025##OperaLetteraria>
+                                            ] ;
+                        rdfs:subClassOf <http://dbpedia.org/resource/List> .
 
 
 ###  https://litetaryworktopics.com/litetaryworktopics2025#RaccoltaDISaggi
-
-<https://litetaryworktopics.com/litetaryworktopics2025#RaccoltaDISaggi> rdf:type owl:Class ;
-                                                                        
-                                                                        rdfs:label "RaccoltaDiSaggi"@it ;
-                                                                        
-                                                                        owl:equivalentClass [ rdf:type owl:Restriction ;
-                                                                                              owl:onProperty <https://litetaryworktopics.com/litetaryworktopics2025#contiene> ;
-                                                                                              owl:onClass :Saggio ;
-                                                                                              owl:minQualifiedCardinality "2"^^xsd:nonNegativeInteger
-                                                                                            ] ;
-                                                                        
-                                                                        rdfs:subClassOf :CollanaEditoriale ;
-                                                                        
-                                                                        rdfs:comment "Una raccolta di saggi che appartengono alla categoria \"Saggio\". Ogni elemento della collezione è un'istanza di \"Saggio\"."@it .
-
+:RaccoltaDISaggi rdf:type owl:Class ;
+                 owl:equivalentClass [ rdf:type owl:Restriction ;
+                                       owl:onProperty :contiene ;
+                                       owl:minQualifiedCardinality "2"^^xsd:nonNegativeInteger ;
+                                       owl:onClass :Saggio
+                                     ] ;
+                 rdfs:subClassOf :CollanaEditoriale ;
+                 rdfs:comment "Una raccolta di saggi che appartengono alla categoria \"Saggio\". Ogni elemento della collezione è un'istanza di \"Saggio\"."@it ;
+                 rdfs:label "RaccoltaDiSaggi"@it .
 
 
 ###  https://litetaryworktopics.com/litetaryworktopics2025#RaccoltaDiRacconti
-
-<https://litetaryworktopics.com/litetaryworktopics2025#RaccoltaDiRacconti> rdf:type owl:Class ;
-                                                                           
-                                                                           rdfs:label "RaccoltaDiRacconti"@it ;
-                                                                           
-                                                                           owl:equivalentClass [ rdf:type owl:Restriction ;
-                                                                                                 owl:onProperty <https://litetaryworktopics.com/litetaryworktopics2025#contiene> ;
-                                                                                                 owl:onClass :Racconto ;
-                                                                                                 owl:minQualifiedCardinality "2"^^xsd:nonNegativeInteger
-                                                                                               ] ;
-                                                                           
-                                                                           rdfs:subClassOf :CollanaEditoriale ;
-                                                                           
-                                                                           rdfs:comment """ Una raccolta di racconti che appartengono alla categoria \"Racconto\". Ogni elemento della collezione è un'istanza di \"Racconto\".
-"""@it .
-
+:RaccoltaDiRacconti rdf:type owl:Class ;
+                    owl:equivalentClass [ rdf:type owl:Restriction ;
+                                          owl:onProperty :contiene ;
+                                          owl:minQualifiedCardinality "2"^^xsd:nonNegativeInteger ;
+                                          owl:onClass :Racconto
+                                        ] ;
+                    rdfs:subClassOf :CollanaEditoriale ;
+                    rdfs:comment """ Una raccolta di racconti che appartengono alla categoria \"Racconto\". Ogni elemento della collezione è un'istanza di \"Racconto\".
+"""@it ;
+                    rdfs:label "RaccoltaDiRacconti"@it .
 
 
 ###  https://litetaryworktopics.com/litetaryworktopics2025#RaccoltaTeatrale
-
-<https://litetaryworktopics.com/litetaryworktopics2025#RaccoltaTeatrale> rdf:type owl:Class ;
-                                                                         
-                                                                         rdfs:label """RaccoltaTeatrale
-"""@it ;
-                                                                         
-                                                                         owl:equivalentClass [ rdf:type owl:Restriction ;
-                                                                                               owl:onProperty <https://litetaryworktopics.com/litetaryworktopics2025#contiene> ;
-                                                                                               owl:onClass :OperaTeatrale ;
-                                                                                               owl:minQualifiedCardinality "2"^^xsd:nonNegativeInteger
-                                                                                             ] ;
-                                                                         
-                                                                         rdfs:subClassOf :CollanaEditoriale ;
-                                                                         
-                                                                         rdfs:comment "Una raccolta di opere teatrali che appartengono alla categoria \"OperaTeatrale\". Ogni elemento della collezione è un'istanza di \"OperaTeatrale\""@it .
-
-
-
-###  https://litetaryworktopics.com/litetaryworktopics2025#SerieDiRomanzi
-
-<https://litetaryworktopics.com/litetaryworktopics2025#SerieDiRomanzi> rdf:type owl:Class ;
-                                                                       
-                                                                       rdfs:label "SerieDiRomanzi"@it ;
-                                                                       
-                                                                       owl:equivalentClass [ rdf:type owl:Restriction ;
-                                                                                             owl:onProperty <https://litetaryworktopics.com/litetaryworktopics2025#contiene> ;
-                                                                                             owl:onClass :Romanzo ;
-                                                                                             owl:minQualifiedCardinality "2"^^xsd:nonNegativeInteger
-                                                                                           ] ;
-                                                                       
-                                                                       rdfs:subClassOf :CollanaEditoriale ;
-                                                                       
-                                                                       rdfs:comment "Una raccolta di romanzi che appartengono alla categoria \"Romanzo\". Ogni elemento della collezione è un'istanza di \"Romanzo\""@it .
-
-
-
-###  https://litetaryworktopics.com/litetaryworktopics2025#Trilogia
-
-<https://litetaryworktopics.com/litetaryworktopics2025#Trilogia> rdf:type owl:Class ;
-                                                                 
-                                                                 rdfs:label """Trilogia
-
-
-"""@it ;
-                                                                 
-                                                                 owl:equivalentClass [ rdf:type owl:Restriction ;
-                                                                                       owl:onProperty <https://litetaryworktopics.com/litetaryworktopics2025#contiene> ;
-                                                                                       owl:onClass <https://litetaryworktopics.com/litetaryworktopics2025##OperaLetteraria> ;
-                                                                                       owl:qualifiedCardinality "3"^^xsd:nonNegativeInteger
-                                                                                     ] ;
-                                                                 
-                                                                 rdfs:subClassOf :Saga ;
-                                                                 
-                                                                 rdfs:comment """Una trilogia è una saga composta da tre opere letterarie che si sviluppano attraverso una trama continuativa, generalmente seguendo lo stesso gruppo di personaggi o un arco narrativo unico.
-
-
-Funziona solo se sono definiti con enumerazione 
+:RaccoltaTeatrale rdf:type owl:Class ;
+                  owl:equivalentClass [ rdf:type owl:Restriction ;
+                                        owl:onProperty :contiene ;
+                                        owl:minQualifiedCardinality "2"^^xsd:nonNegativeInteger ;
+                                        owl:onClass :OperaTeatrale
+                                      ] ;
+                  rdfs:subClassOf :CollanaEditoriale ;
+                  rdfs:comment "Una raccolta di opere teatrali che appartengono alla categoria \"OperaTeatrale\". Ogni elemento della collezione è un'istanza di \"OperaTeatrale\""@it ;
+                  rdfs:label """RaccoltaTeatrale
 """@it .
 
 
+###  https://litetaryworktopics.com/litetaryworktopics2025#SerieDiRomanzi
+:SerieDiRomanzi rdf:type owl:Class ;
+                owl:equivalentClass [ rdf:type owl:Restriction ;
+                                      owl:onProperty :contiene ;
+                                      owl:minQualifiedCardinality "2"^^xsd:nonNegativeInteger ;
+                                      owl:onClass :Romanzo
+                                    ] ;
+                rdfs:subClassOf :CollanaEditoriale ;
+                rdfs:comment "Una raccolta di romanzi che appartengono alla categoria \"Romanzo\". Ogni elemento della collezione è un'istanza di \"Romanzo\""@it ;
+                rdfs:label "SerieDiRomanzi"@it .
+
+
+###  https://litetaryworktopics.com/litetaryworktopics2025#Trilogia
+:Trilogia rdf:type owl:Class ;
+          owl:equivalentClass [ rdf:type owl:Restriction ;
+                                owl:onProperty :contiene ;
+                                owl:qualifiedCardinality "3"^^xsd:nonNegativeInteger ;
+                                owl:onClass <https://litetaryworktopics.com/litetaryworktopics2025##OperaLetteraria>
+                              ] ;
+          rdfs:subClassOf :Saga ;
+          rdfs:comment """Una trilogia è una saga composta da tre opere letterarie che si sviluppano attraverso una trama continuativa, generalmente seguendo lo stesso gruppo di personaggi o un arco narrativo unico.
+
+
+Funziona solo se sono definiti con enumerazione 
+"""@it ;
+          rdfs:label """Trilogia
+
+
+"""@it .
+
 
 ###  https://litetaryworktopics.com/litetaryworktopics2025##Edizione
-
 <https://litetaryworktopics.com/litetaryworktopics2025##Edizione> rdf:type owl:Class ;
-                                                                  
-                                                                  rdfs:label "Edizione"@it ;
-                                                                  
                                                                   owl:equivalentClass [ rdf:type owl:Restriction ;
-                                                                                        owl:onProperty <https://litetaryworktopics.com/litetaryworktopics2025#èUnEdizioneDi> ;
+                                                                                        owl:onProperty :èUnEdizioneDi ;
                                                                                         owl:someValuesFrom <https://litetaryworktopics.com/litetaryworktopics2025##OperaLetteraria>
                                                                                       ] ;
-                                                                  
-                                                                  rdfs:comment "Un'entità che rappresenta una specifica pubblicazione di un'opera letteraria."@it .
-
+                                                                  rdfs:comment "Un'entità che rappresenta una specifica pubblicazione di un'opera letteraria."@it ;
+                                                                  rdfs:label "Edizione"@it .
 
 
 ###  https://litetaryworktopics.com/litetaryworktopics2025##OperaLetteraria
-
 <https://litetaryworktopics.com/litetaryworktopics2025##OperaLetteraria> rdf:type owl:Class ;
-                                                                         
-                                                                         rdfs:label "OperaLetteraria"@it ;
-                                                                         
-                                                                         rdfs:comment "L'entità concettuale di Opera Letteraria, include tutte le sue materializzazioni e Formati."@it .
-
-
-
+                                                                         rdfs:comment "L'entità concettuale di Opera Letteraria, include tutte le sue materializzazioni e Formati."@it ;
+                                                                         rdfs:label "OperaLetteraria"@it .
 
 
 #################################################################
-#
 #    Individuals
-#
 #################################################################
-
 
 ###  http://www.semanticweb.org/enryc/ontologies/2025/0/untitled-ontology-36#Fermo_e_Lucia
-
 :Fermo_e_Lucia rdf:type owl:NamedIndividual ;
-               
+               owl:differentFrom :I_Promessi_Sposi ,
+                                 :The_Chamber_of_Secrets ,
+                                 :The_Philosophers_Stone ,
+                                 :The_Prisoner_of_Azkaban ,
+                                 :The_Autobiography_of_Benjamin_Franklin ;
+               :HaLingua :Italiano ;
                :haDataPubblicazione "1827-01-01"^^xsd:date ;
-               
-               :haNome "Fermo e Lucia" ;
-               
-               :HaLingua :Italiano .
-
+               :haNome "Fermo e Lucia" .
 
 
 ###  http://www.semanticweb.org/enryc/ontologies/2025/0/untitled-ontology-36#Harry_Potter
-
 :Harry_Potter rdf:type owl:NamedIndividual ;
-              
-              :parteDiSaga :Camera_dei_Segreti_opera ;
-              
-              <https://litetaryworktopics.com/litetaryworktopics2025#contiene> :Opera_Fermo_e_Lucia ,
-                                                                               :Opera_La_Divina_Commedia ,
-                                                                               :Opera_Prigioniero_di_Azkaban ;
-              
-              :parteDiSaga :Pietra_Filosofale_Opera ,
+              owl:differentFrom :Letteratura_Italiana ;
+              :contiene :Opera_Fermo_e_Lucia ,
+                        :Opera_La_Divina_Commedia ,
+                        :Opera_Prigioniero_di_Azkaban ;
+              :parteDiSaga :Camera_dei_Segreti_opera ,
+                           :Pietra_Filosofale_Opera ,
                            :Prigioniero_di_Azkaban_Opera .
 
 
-
 ###  http://www.semanticweb.org/enryc/ontologies/2025/0/untitled-ontology-36#I_Promessi_Sposi
-
 :I_Promessi_Sposi rdf:type owl:NamedIndividual ;
-                  
+                  owl:differentFrom :The_Chamber_of_Secrets ,
+                                    :The_Philosophers_Stone ,
+                                    :The_Prisoner_of_Azkaban ,
+                                    :The_Autobiography_of_Benjamin_Franklin ;
+                  :HaLingua :Italiano ;
                   :haDataPubblicazione "1840-01-01"^^xsd:date ;
-                  
-                  :haNome "I Promessi Sposi" ;
-                  
-                  :HaLingua :Italiano .
-
+                  :haNome "I Promessi Sposi" .
 
 
 ###  http://www.semanticweb.org/enryc/ontologies/2025/0/untitled-ontology-36#It
-
-:It rdf:type :Lingua ,
-             owl:NamedIndividual ;
-    
-    <https://litetaryworktopics.com/litetaryworktopics2025#èUtilizzata> :Fermo_e_Lucia ,
-                                                                        :I_Promessi_Sposi ,
-                                                                        :Opera_Fermo_e_Lucia ,
-                                                                        :Opera_La_Divina_Commedia .
-
+:It rdf:type owl:NamedIndividual ,
+             :Lingua ;
+    owl:differentFrom :En ;
+    :èUtilizzata :Fermo_e_Lucia ,
+                 :I_Promessi_Sposi ,
+                 :Opera_Fermo_e_Lucia ,
+                 :Opera_La_Divina_Commedia .
 
 
 ###  http://www.semanticweb.org/enryc/ontologies/2025/0/untitled-ontology-36#Letteratura_Italiana
-
 :Letteratura_Italiana rdf:type owl:NamedIndividual ;
-                      
+                      :contiene :Opera_Fermo_e_Lucia ,
+                                :Opera_La_Divina_Commedia ;
                       :parteDiAntologia :La_Divina_Commedia ,
                                         :OperaRomantica2 ,
-                                        :OperaRomantica3 ;
-                      
-                      <https://litetaryworktopics.com/litetaryworktopics2025#contiene> :Opera_Fermo_e_Lucia ,
-                                                                                       :Opera_La_Divina_Commedia .
-
+                                        :OperaRomantica3 .
 
 
 ###  http://www.semanticweb.org/enryc/ontologies/2025/0/untitled-ontology-36#Opera_Camera_dei_Segreti
-
-:Opera_Camera_dei_Segreti rdf:type :Romanzo ,
-                                   owl:NamedIndividual ;
-                          
-                          :parteDiSaga :Harry_Potter ;
-                          
-                          :HaProvenienzaAutore :Italiana ;
-                          
-                          :HaGenereLetterario :Romanzo ;
-                          
+:Opera_Camera_dei_Segreti rdf:type owl:NamedIndividual ,
+                                   :Romanzo ;
+                          owl:differentFrom :Opera_Fermo_e_Lucia ,
+                                            :Opera_La_Divina_Commedia ,
+                                            :Opera_Pietra_Filosofale ,
+                                            :Opera_Prigioniero_di_Azkaban ,
+                                            :Opera_The_Autobiography_of_Benjamin_Franklin ;
+                          <https://litetaryworktopics.com/litetaryworktopics2025##HaEdizione> :The_Chamber_of_Secrets ;
                           :HaEdizione :The_Chamber_of_Secrets ;
-                          
-                          <https://litetaryworktopics.com/litetaryworktopics2025##HaEdizione> :The_Chamber_of_Secrets .
-
+                          :HaGenereLetterario :Romanzo ;
+                          :HaProvenienzaAutore :Italiana ;
+                          :parteDiSaga :Harry_Potter .
 
 
 ###  http://www.semanticweb.org/enryc/ontologies/2025/0/untitled-ontology-36#Opera_Fermo_e_Lucia
-
-:Opera_Fermo_e_Lucia rdf:type :Romanzo ,
-                              owl:NamedIndividual ;
-                     
-                     <https://litetaryworktopics.com/litetaryworktopics2025##HaEdizione> :Fermo_e_Lucia ;
-                     
+:Opera_Fermo_e_Lucia rdf:type owl:NamedIndividual ,
+                              :Romanzo ;
+                     owl:differentFrom :Opera_La_Divina_Commedia ,
+                                       :Opera_Pietra_Filosofale ,
+                                       :Opera_Prigioniero_di_Azkaban ,
+                                       :Opera_The_Autobiography_of_Benjamin_Franklin ;
+                     <https://litetaryworktopics.com/litetaryworktopics2025##HaEdizione> :Fermo_e_Lucia ,
+                                                                                         :I_Promessi_Sposi ;
+                     <https://litetaryworktopics.com/litetaryworktopics2025##HaGenereLetterario> :Romanzo_storico ;
                      :HaEdizione :Fermo_e_Lucia ,
                                  :I_Promessi_Sposi ;
-                     
-                     <https://litetaryworktopics.com/litetaryworktopics2025##HaEdizione> :I_Promessi_Sposi ;
-                     
-                     :HaProvenienzaAutore :Italiana ;
-                     
-                     :parteDiAntologia :Letteratura_Italiana ;
-                     
                      :HaGenereLetterario :Romanzo_storico ;
-                     
-                     <https://litetaryworktopics.com/litetaryworktopics2025##HaGenereLetterario> :Romanzo_storico .
-
+                     :HaProvenienzaAutore :Italiana ;
+                     :parteDiAntologia :Letteratura_Italiana .
 
 
 ###  http://www.semanticweb.org/enryc/ontologies/2025/0/untitled-ontology-36#Opera_La_Divina_Commedia
-
-:Opera_La_Divina_Commedia rdf:type :Poesia ,
-                                   owl:NamedIndividual ;
-                          
+:Opera_La_Divina_Commedia rdf:type owl:NamedIndividual ,
+                                   :Poesia ;
+                          owl:differentFrom :Opera_Pietra_Filosofale ,
+                                            :Opera_Prigioniero_di_Azkaban ,
+                                            :Opera_The_Autobiography_of_Benjamin_Franklin ;
                           :parteDiAntologia :Letteratura_Italiana .
 
 
-
 ###  http://www.semanticweb.org/enryc/ontologies/2025/0/untitled-ontology-36#Opera_Pietra_Filosofale
-
-:Opera_Pietra_Filosofale rdf:type :Romanzo ,
-                                  owl:NamedIndividual ;
-                         
-                         :parteDiSaga :Harry_Potter ;
-                         
-                         :HaProvenienzaAutore :Italia ;
-                         
-                         :HaGenereLetterario :Romanzo ;
-                         
+:Opera_Pietra_Filosofale rdf:type owl:NamedIndividual ,
+                                  :Romanzo ;
+                         owl:differentFrom :Opera_Prigioniero_di_Azkaban ,
+                                           :Opera_The_Autobiography_of_Benjamin_Franklin ;
+                         <https://litetaryworktopics.com/litetaryworktopics2025##HaEdizione> :The_Philosophers_Stone ;
                          :HaEdizione :The_Philosophers_Stone ;
-                         
-                         <https://litetaryworktopics.com/litetaryworktopics2025##HaEdizione> :The_Philosophers_Stone .
-
+                         :HaGenereLetterario :Romanzo ;
+                         :HaProvenienzaAutore :Italia ;
+                         :parteDiSaga :Harry_Potter .
 
 
 ###  http://www.semanticweb.org/enryc/ontologies/2025/0/untitled-ontology-36#Opera_Prigioniero_di_Azkaban
-
-:Opera_Prigioniero_di_Azkaban rdf:type :Romanzo ,
-                                       owl:NamedIndividual ;
-                              
-                              :parteDiSaga :Harry_Potter ;
-                              
-                              :HaProvenienzaAutore :Italiana ;
-                              
-                              :HaGenereLetterario :Romanzo ;
-                              
+:Opera_Prigioniero_di_Azkaban rdf:type owl:NamedIndividual ,
+                                       :Romanzo ;
+                              owl:differentFrom :Opera_The_Autobiography_of_Benjamin_Franklin ;
+                              <https://litetaryworktopics.com/litetaryworktopics2025##HaEdizione> :The_Prisoner_of_Azkaban ;
                               :HaEdizione :The_Prisoner_of_Azkaban ;
-                              
-                              <https://litetaryworktopics.com/litetaryworktopics2025##HaEdizione> :The_Prisoner_of_Azkaban .
-
+                              :HaGenereLetterario :Romanzo ;
+                              :HaProvenienzaAutore :Italiana ;
+                              :parteDiSaga :Harry_Potter .
 
 
 ###  http://www.semanticweb.org/enryc/ontologies/2025/0/untitled-ontology-36#Romanzo_storico
-
 :Romanzo_storico rdf:type owl:NamedIndividual .
 
 
-
 ###  http://www.semanticweb.org/enryc/ontologies/2025/0/untitled-ontology-36#The_Chamber_of_Secrets
-
 :The_Chamber_of_Secrets rdf:type owl:NamedIndividual ;
-                        
+                        owl:differentFrom :The_Philosophers_Stone ,
+                                          :The_Prisoner_of_Azkaban ,
+                                          :The_Autobiography_of_Benjamin_Franklin ;
                         <https://litetaryworktopics.com/litetaryworktopics2025##haDataPubblicazione> "2 luglio 1998" ;
-                        
                         :HaLingua :Italiano .
-
 
 
 ###  http://www.semanticweb.org/enryc/ontologies/2025/0/untitled-ontology-36#The_Philosophers_Stone
-
 :The_Philosophers_Stone rdf:type owl:NamedIndividual ;
-                        
+                        owl:differentFrom :The_Prisoner_of_Azkaban ,
+                                          :The_Autobiography_of_Benjamin_Franklin ;
                         <https://litetaryworktopics.com/litetaryworktopics2025##haDataPubblicazione> "26 giugno 1997" ;
-                        
                         :HaLingua :Italiano .
 
 
-
 ###  http://www.semanticweb.org/enryc/ontologies/2025/0/untitled-ontology-36#The_Prisoner_of_Azkaban
-
 :The_Prisoner_of_Azkaban rdf:type owl:NamedIndividual ;
-                         
+                         owl:differentFrom :The_Autobiography_of_Benjamin_Franklin ;
                          <https://litetaryworktopics.com/litetaryworktopics2025##haDataPubblicazione> "8 luglio 1999" ;
-                         
                          :HaLingua :Italiano .
 
 
-
 ###  https://litetaryworktopics.com/litetaryworktopics2025#Benjamin_Franklin
-
-<https://litetaryworktopics.com/litetaryworktopics2025#Benjamin_Franklin> rdf:type owl:NamedIndividual ;
-                                                                          
-                                                                          <https://litetaryworktopics.com/litetaryworktopics2025#èAutoreDi> <https://litetaryworktopics.com/litetaryworktopics2025#The_Autobiography_of_Benjamin_Franklin> .
-
+:Benjamin_Franklin rdf:type owl:NamedIndividual ;
+                   owl:differentFrom :Bloomsbury_Publishing ,
+                                     :J.K_Rowling ;
+                   :èAutoreDi :The_Autobiography_of_Benjamin_Franklin .
 
 
 ###  https://litetaryworktopics.com/litetaryworktopics2025#Bloomsbury_Publishing
-
-<https://litetaryworktopics.com/litetaryworktopics2025#Bloomsbury_Publishing> rdf:type :CasaEditrice ,
-                                                                                       owl:NamedIndividual ;
-                                                                              
-                                                                              <https://litetaryworktopics.com/litetaryworktopics2025#pubblica> :The_Chamber_of_Secrets ,
-                                                                                                                                               :The_Philosophers_Stone ,
-                                                                                                                                               :The_Prisoner_of_Azkaban .
-
+:Bloomsbury_Publishing rdf:type owl:NamedIndividual ,
+                                :CasaEditrice ;
+                       :pubblica :The_Chamber_of_Secrets ,
+                                 :The_Philosophers_Stone ,
+                                 :The_Prisoner_of_Azkaban .
 
 
 ###  https://litetaryworktopics.com/litetaryworktopics2025#En
-
-<https://litetaryworktopics.com/litetaryworktopics2025#En> rdf:type owl:NamedIndividual ;
-                                                           
-                                                           <https://litetaryworktopics.com/litetaryworktopics2025#èUtilizzata> :Opera_Camera_dei_Segreti ,
-                                                                                                                               :Opera_Pietra_Filosofale ,
-                                                                                                                               :Opera_Prigioniero_di_Azkaban ,
-                                                                                                                               :The_Chamber_of_Secrets ,
-                                                                                                                               :The_Philosophers_Stone ,
-                                                                                                                               :The_Prisoner_of_Azkaban .
-
+:En rdf:type owl:NamedIndividual ;
+    :èUtilizzata :Opera_Camera_dei_Segreti ,
+                 :Opera_Pietra_Filosofale ,
+                 :Opera_Prigioniero_di_Azkaban ,
+                 :The_Chamber_of_Secrets ,
+                 :The_Philosophers_Stone ,
+                 :The_Prisoner_of_Azkaban .
 
 
 ###  https://litetaryworktopics.com/litetaryworktopics2025#Fantasy
-
-<https://litetaryworktopics.com/litetaryworktopics2025#Fantasy> rdf:type owl:NamedIndividual ;
-                                                                
-                                                                <https://litetaryworktopics.com/litetaryworktopics2025#vieneUtilizzatoIn> :Opera_Camera_dei_Segreti ,
-                                                                                                                                          :Opera_Pietra_Filosofale ,
-                                                                                                                                          :Opera_Prigioniero_di_Azkaban .
-
+:Fantasy rdf:type owl:NamedIndividual ;
+         :vieneUtilizzatoIn :Opera_Camera_dei_Segreti ,
+                            :Opera_Pietra_Filosofale ,
+                            :Opera_Prigioniero_di_Azkaban .
 
 
 ###  https://litetaryworktopics.com/litetaryworktopics2025#Italia
-
-<https://litetaryworktopics.com/litetaryworktopics2025#Italia> rdf:type :Nazione ,
-                                                                        owl:NamedIndividual .
-
+:Italia rdf:type owl:NamedIndividual ,
+                 :Nazione .
 
 
 ###  https://litetaryworktopics.com/litetaryworktopics2025#J.K_Rowling
-
-<https://litetaryworktopics.com/litetaryworktopics2025#J.K_Rowling> rdf:type owl:NamedIndividual ;
-                                                                    
-                                                                    <https://litetaryworktopics.com/litetaryworktopics2025#èAutoreDi> :Opera_Camera_dei_Segreti ,
-                                                                                                                                      :Opera_Pietra_Filosofale ,
-                                                                                                                                      :Opera_Prigioniero_di_Azkaban .
-
+:J.K_Rowling rdf:type owl:NamedIndividual ;
+             :èAutoreDi :Opera_Camera_dei_Segreti ,
+                        :Opera_Pietra_Filosofale ,
+                        :Opera_Prigioniero_di_Azkaban .
 
 
 ###  https://litetaryworktopics.com/litetaryworktopics2025#Opera_The_Autobiography_of_Benjamin_Franklin
-
-<https://litetaryworktopics.com/litetaryworktopics2025#Opera_The_Autobiography_of_Benjamin_Franklin> rdf:type owl:NamedIndividual ;
-                                                                                                     
-                                                                                                     <https://litetaryworktopics.com/litetaryworktopics2025#èStatoPubblicatoDa> <https://litetaryworktopics.com/litetaryworktopics2025#Benjamin_Franklin> .
-
+:Opera_The_Autobiography_of_Benjamin_Franklin rdf:type owl:NamedIndividual ;
+                                              :èStatoPubblicatoDa :Benjamin_Franklin .
 
 
 ###  https://litetaryworktopics.com/litetaryworktopics2025#The_Autobiography_of_Benjamin_Franklin
-
-<https://litetaryworktopics.com/litetaryworktopics2025#The_Autobiography_of_Benjamin_Franklin> rdf:type owl:NamedIndividual ;
-                                                                                               
-                                                                                               <https://litetaryworktopics.com/litetaryworktopics2025#èUnEdizioneDi> <https://litetaryworktopics.com/litetaryworktopics2025#Opera_The_Autobiography_of_Benjamin_Franklin> .
+:The_Autobiography_of_Benjamin_Franklin rdf:type owl:NamedIndividual ;
+                                        :èUnEdizioneDi :Opera_The_Autobiography_of_Benjamin_Franklin .
 
 
-
-
-
-#################################################################
-#
-#    General axioms
-#
-#################################################################
-
-
-[ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( :Opera_Camera_dei_Segreti
-                        :Opera_Prigioniero_di_Azkaban
-                      )
-] .
-[ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( :Opera_Camera_dei_Segreti
-                        <https://litetaryworktopics.com/litetaryworktopics2025#Opera_The_Autobiography_of_Benjamin_Franklin>
-                      )
-] .
-[ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( :Fermo_e_Lucia
-                        :The_Prisoner_of_Azkaban
-                      )
-] .
-[ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( :I_Promessi_Sposi
-                        :The_Philosophers_Stone
-                      )
-] .
-[ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( :Opera_Fermo_e_Lucia
-                        :Opera_La_Divina_Commedia
-                      )
-] .
-[ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( :Harry_Potter
-                        :Letteratura_Italiana
-                      )
-] .
-[ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( :The_Chamber_of_Secrets
-                        :The_Prisoner_of_Azkaban
-                      )
-] .
-[ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( :Opera_Fermo_e_Lucia
-                        :Opera_Prigioniero_di_Azkaban
-                      )
-] .
-[ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( :Opera_Camera_dei_Segreti
-                        :Opera_La_Divina_Commedia
-                      )
-] .
-[ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( :The_Chamber_of_Secrets
-                        <https://litetaryworktopics.com/litetaryworktopics2025#The_Autobiography_of_Benjamin_Franklin>
-                      )
-] .
-[ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( :I_Promessi_Sposi
-                        <https://litetaryworktopics.com/litetaryworktopics2025#The_Autobiography_of_Benjamin_Franklin>
-                      )
-] .
-[ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( :The_Chamber_of_Secrets
-                        :The_Philosophers_Stone
-                      )
-] .
-[ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( :Opera_La_Divina_Commedia
-                        :Opera_Prigioniero_di_Azkaban
-                      )
-] .
-[ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( :Opera_Pietra_Filosofale
-                        :Opera_Prigioniero_di_Azkaban
-                      )
-] .
-[ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( <https://litetaryworktopics.com/litetaryworktopics2025#Benjamin_Franklin>
-                        <https://litetaryworktopics.com/litetaryworktopics2025#Bloomsbury_Publishing>
-                      )
-] .
-[ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( :Opera_Fermo_e_Lucia
-                        :Opera_Pietra_Filosofale
-                      )
-] .
-[ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( :I_Promessi_Sposi
-                        :The_Chamber_of_Secrets
-                      )
-] .
-[ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( :Fermo_e_Lucia
-                        :I_Promessi_Sposi
-                      )
-] .
-[ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( :Opera_Pietra_Filosofale
-                        <https://litetaryworktopics.com/litetaryworktopics2025#Opera_The_Autobiography_of_Benjamin_Franklin>
-                      )
-] .
-[ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( :It
-                        <https://litetaryworktopics.com/litetaryworktopics2025#En>
-                      )
-] .
-[ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( <https://litetaryworktopics.com/litetaryworktopics2025#Benjamin_Franklin>
-                        <https://litetaryworktopics.com/litetaryworktopics2025#J.K_Rowling>
-                      )
-] .
-[ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( :Opera_Camera_dei_Segreti
-                        :Opera_Pietra_Filosofale
-                      )
-] .
-[ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( :The_Philosophers_Stone
-                        <https://litetaryworktopics.com/litetaryworktopics2025#The_Autobiography_of_Benjamin_Franklin>
-                      )
-] .
-[ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( :Fermo_e_Lucia
-                        :The_Philosophers_Stone
-                      )
-] .
-[ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( :Opera_La_Divina_Commedia
-                        <https://litetaryworktopics.com/litetaryworktopics2025#Opera_The_Autobiography_of_Benjamin_Franklin>
-                      )
-] .
-[ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( :Fermo_e_Lucia
-                        <https://litetaryworktopics.com/litetaryworktopics2025#The_Autobiography_of_Benjamin_Franklin>
-                      )
-] .
-[ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( :The_Prisoner_of_Azkaban
-                        <https://litetaryworktopics.com/litetaryworktopics2025#The_Autobiography_of_Benjamin_Franklin>
-                      )
-] .
-[ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( :Opera_La_Divina_Commedia
-                        :Opera_Pietra_Filosofale
-                      )
-] .
-[ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( :Opera_Camera_dei_Segreti
-                        :Opera_Fermo_e_Lucia
-                      )
-] .
-[ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( :I_Promessi_Sposi
-                        :The_Prisoner_of_Azkaban
-                      )
-] .
-[ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( :Opera_Fermo_e_Lucia
-                        <https://litetaryworktopics.com/litetaryworktopics2025#Opera_The_Autobiography_of_Benjamin_Franklin>
-                      )
-] .
-[ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( :Fermo_e_Lucia
-                        :The_Chamber_of_Secrets
-                      )
-] .
-[ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( :Opera_Prigioniero_di_Azkaban
-                        <https://litetaryworktopics.com/litetaryworktopics2025#Opera_The_Autobiography_of_Benjamin_Franklin>
-                      )
-] .
-[ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( :The_Philosophers_Stone
-                        :The_Prisoner_of_Azkaban
-                      )
-] .
-
-
-
-
-###  Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net
-
+###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi
