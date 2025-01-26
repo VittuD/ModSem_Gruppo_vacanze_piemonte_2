@@ -6,6 +6,9 @@ from tqdm.asyncio import tqdm
 import json
 import os
 
+# Note: cookies.json is a file containing the cookies from a logged-in Goodreads session, you can get it from your browser
+#       with extensions like EditThisCookie or similar. (Pls, don't share your cookies with anyone, they might take a bite!)
+
 # Change the directory to the desired working directory
 os.chdir("/workspaces/ModSem_Gruppo_vacanze_piemonte_2/src")
 
