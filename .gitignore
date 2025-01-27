@@ -1,3 +1,4 @@
 src/book_details/*
+!src/book_details/book_details.zip
 !src/book_details/.gitkeep
 src/cookies.json
