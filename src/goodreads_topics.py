@@ -4,6 +4,7 @@ import pandas as pd
 
 # Base URL for topics
 base_url = "https://www.goodreads.com/topics/list?page="
+suffix = ''
 
 # List to store extracted data
 data = []
@@ -15,7 +16,7 @@ headers = {
 
 # Loop through all 14 pages
 for page in range(1, 15):
-    url = f"{base_url}{page}"
+    url = f"{base_url}{page}{suffix}"
     response = requests.get(url, headers=headers)
     if response.status_code == 200:
         soup = BeautifulSoup(response.text, 'html.parser')
@@ -28,14 +29,14 @@ for page in range(1, 15):
             book_count = int(book_count.replace(" books", "").replace(",", ""))
             data.append((topic_name, book_count))
     else:
-        print(f"Failed to fetch page {page}, got code {response.status_code}")
+        print(f"Failed to fetch page {page} ({url}), got code {response.status_code}")
 
 # Create a DataFrame
 columns = ['Topic', 'Book Count']
 df = pd.DataFrame(data, columns=columns)
 
 # Order by book count
-df = df.sort_values(by='Book Count')
+df = df.sort_values(by='Topic')
 
 # Save to CSV
 df.to_csv('goodreads_topics.csv', index=False)
