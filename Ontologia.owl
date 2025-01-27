@@ -644,7 +644,10 @@ dc:title rdf:type owl:DatatypeProperty ;
                                                   )
                              ] ;
          
-         rdfs:subClassOf :Persona .
+         rdfs:subClassOf :Persona ;
+         
+         rdfs:comment """Persona che ha pubblicato un Edizione
+"""@it .
 
 
 
@@ -907,7 +910,11 @@ dc:title rdf:type owl:DatatypeProperty ;
 
 :Traduttore rdf:type owl:Class ;
             
-            rdfs:subClassOf :Persona .
+            rdfs:label "Traduttore"@it ;
+            
+            rdfs:subClassOf :Persona ;
+            
+            rdfs:comment "Persona che si è occupata della traduzione di un opera letterararia"@it .
 
 
 
@@ -958,11 +965,39 @@ Funziona solo se sono definiti con enumerazione
 
 
 
+###  https://litetaryworktopics.com/litetaryworktopics2025#Personaggio
+
+<https://litetaryworktopics.com/litetaryworktopics2025#Personaggio> rdf:type owl:Class ;
+                                                                    
+                                                                    rdfs:label "Personaggio"@it ;
+                                                                    
+                                                                    rdfs:subClassOf <http://www.w3.org/ns/prov#Agent> ;
+                                                                    
+                                                                    rdfs:comment " Una persona, creatura magica o entità"@it .
+
+
+
 ###  https://litetaryworktopics.com/litetaryworktopics2025#PersonaggioLibro
 
 <https://litetaryworktopics.com/litetaryworktopics2025#PersonaggioLibro> rdf:type owl:Class ;
                                                                          
-                                                                         rdfs:subClassOf <http://www.w3.org/ns/prov#Agent> .
+                                                                         rdfs:label "PersonaggioLibro"@it ;
+                                                                         
+                                                                         owl:equivalentClass [ rdf:type owl:Restriction ;
+                                                                                               owl:onProperty :appartieneA ;
+                                                                                               owl:someValuesFrom [ rdf:type owl:Class ;
+                                                                                                                    owl:intersectionOf ( <https://litetaryworktopics.com/litetaryworktopics2025##OperaLetteraria>
+                                                                                                                                         [ rdf:type owl:Restriction ;
+                                                                                                                                           owl:onProperty :contiene ;
+                                                                                                                                           owl:someValuesFrom owl:Thing
+                                                                                                                                         ]
+                                                                                                                                       )
+                                                                                                                  ]
+                                                                                             ] ;
+                                                                         
+                                                                         rdfs:subClassOf <https://litetaryworktopics.com/litetaryworktopics2025#Personaggio> ;
+                                                                         
+                                                                         rdfs:comment " Una persona, creatura magica o entità che appare specificatamente ad un opera letteraria"@it .
 
 
 
@@ -1062,8 +1097,8 @@ Funziona solo se sono definiti con enumerazione
               
               :parteDiSaga :Camera_dei_Segreti_opera ;
               
-              :contiene :Opera_Fermo_e_Lucia ,
-                        :Opera_La_Divina_Commedia ,
+              :contiene :Opera_Camera_dei_Segreti ,
+                        :Opera_Pietra_Filosofale ,
                         :Opera_Prigioniero_di_Azkaban ;
               
               :parteDiSaga :Pietra_Filosofale_Opera ,
@@ -1130,7 +1165,9 @@ Funziona solo se sono definiti con enumerazione
                           
                           :HaEdizione :The_Chamber_of_Secrets ;
                           
-                          <https://litetaryworktopics.com/litetaryworktopics2025##HaEdizione> :The_Chamber_of_Secrets .
+                          <https://litetaryworktopics.com/litetaryworktopics2025##HaEdizione> :The_Chamber_of_Secrets ;
+                          
+                          :contiene <https://litetaryworktopics.com/litetaryworktopics2025#Harry_James_Potter> .
 
 
 
@@ -1182,7 +1219,9 @@ Funziona solo se sono definiti con enumerazione
                          
                          :HaEdizione :The_Philosophers_Stone ;
                          
-                         <https://litetaryworktopics.com/litetaryworktopics2025##HaEdizione> :The_Philosophers_Stone .
+                         <https://litetaryworktopics.com/litetaryworktopics2025##HaEdizione> :The_Philosophers_Stone ;
+                         
+                         :contiene <https://litetaryworktopics.com/litetaryworktopics2025#Harry_James_Potter> .
 
 
 
@@ -1201,7 +1240,9 @@ Funziona solo se sono definiti con enumerazione
                               
                               :HaEdizione :The_Prisoner_of_Azkaban ;
                               
-                              <https://litetaryworktopics.com/litetaryworktopics2025##HaEdizione> :The_Prisoner_of_Azkaban .
+                              <https://litetaryworktopics.com/litetaryworktopics2025##HaEdizione> :The_Prisoner_of_Azkaban ;
+                              
+                              :contiene <https://litetaryworktopics.com/litetaryworktopics2025#Harry_James_Potter> .
 
 
 
@@ -1263,6 +1304,12 @@ Funziona solo se sono definiti con enumerazione
 
 
 
+###  https://litetaryworktopics.com/litetaryworktopics2025#Harry_James_Potter
+
+<https://litetaryworktopics.com/litetaryworktopics2025#Harry_James_Potter> rdf:type owl:NamedIndividual .
+
+
+
 
 
 #################################################################
@@ -1283,6 +1330,16 @@ Funziona solo se sono definiti con enumerazione
                       )
 ] .
 [ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :Opera_Pietra_Filosofale
+                        <https://litetaryworktopics.com/litetaryworktopics2025#Harry_James_Potter>
+                      )
+] .
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :Opera_Camera_dei_Segreti
+                        <https://litetaryworktopics.com/litetaryworktopics2025#Harry_James_Potter>
+                      )
+] .
+[ rdf:type owl:AllDifferent ;
   owl:distinctMembers ( :I_Promessi_Sposi
                         :The_Prisoner_of_Azkaban
                       )
@@ -1293,8 +1350,18 @@ Funziona solo se sono definiti con enumerazione
                       )
 ] .
 [ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :Harry_Potter
+                        :Opera_Pietra_Filosofale
+                      )
+] .
+[ rdf:type owl:AllDifferent ;
   owl:distinctMembers ( :Opera_Prigioniero_di_Azkaban
                         :Opera_The_Autobiography_of_Benjamin_Franklin
+                      )
+] .
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :The_Autobiography_of_Benjamin_Franklin
+                        :The_Prisoner_of_Azkaban
                       )
 ] .
 [ rdf:type owl:AllDifferent ;
@@ -1303,8 +1370,8 @@ Funziona solo se sono definiti con enumerazione
                       )
 ] .
 [ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( :The_Autobiography_of_Benjamin_Franklin
-                        :The_Prisoner_of_Azkaban
+  owl:distinctMembers ( :Alessandro_Manzoni
+                        :Bloomsbury_Publishing
                       )
 ] .
 [ rdf:type owl:AllDifferent ;
@@ -1333,13 +1400,13 @@ Funziona solo se sono definiti con enumerazione
                       )
 ] .
 [ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( :The_Autobiography_of_Benjamin_Franklin
-                        :The_Chamber_of_Secrets
+  owl:distinctMembers ( :Opera_Camera_dei_Segreti
+                        :Opera_Prigioniero_di_Azkaban
                       )
 ] .
 [ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( :Opera_Camera_dei_Segreti
-                        :Opera_Prigioniero_di_Azkaban
+  owl:distinctMembers ( :The_Autobiography_of_Benjamin_Franklin
+                        :The_Chamber_of_Secrets
                       )
 ] .
 [ rdf:type owl:AllDifferent ;
@@ -1360,6 +1427,11 @@ Funziona solo se sono definiti con enumerazione
 [ rdf:type owl:AllDifferent ;
   owl:distinctMembers ( :Fermo_e_Lucia
                         :I_Promessi_Sposi
+                      )
+] .
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :Alessandro_Manzoni
+                        :J.K_Rowling
                       )
 ] .
 [ rdf:type owl:AllDifferent ;
@@ -1388,6 +1460,11 @@ Funziona solo se sono definiti con enumerazione
                       )
 ] .
 [ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :Alessandro_Manzoni
+                        :Benjamin_Franklin
+                      )
+] .
+[ rdf:type owl:AllDifferent ;
   owl:distinctMembers ( :Fermo_e_Lucia
                         :The_Chamber_of_Secrets
                       )
@@ -1395,6 +1472,16 @@ Funziona solo se sono definiti con enumerazione
 [ rdf:type owl:AllDifferent ;
   owl:distinctMembers ( :The_Chamber_of_Secrets
                         :The_Prisoner_of_Azkaban
+                      )
+] .
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :Harry_Potter
+                        :Opera_Camera_dei_Segreti
+                      )
+] .
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :Opera_Prigioniero_di_Azkaban
+                        <https://litetaryworktopics.com/litetaryworktopics2025#Harry_James_Potter>
                       )
 ] .
 [ rdf:type owl:AllDifferent ;
@@ -1410,6 +1497,16 @@ Funziona solo se sono definiti con enumerazione
 [ rdf:type owl:AllDifferent ;
   owl:distinctMembers ( :Opera_Pietra_Filosofale
                         :Opera_Prigioniero_di_Azkaban
+                      )
+] .
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :Harry_Potter
+                        :Opera_Prigioniero_di_Azkaban
+                      )
+] .
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :Bloomsbury_Publishing
+                        :J.K_Rowling
                       )
 ] .
 [ rdf:type owl:AllDifferent ;
@@ -1430,6 +1527,11 @@ Funziona solo se sono definiti con enumerazione
 [ rdf:type owl:AllDifferent ;
   owl:distinctMembers ( :Opera_La_Divina_Commedia
                         :Opera_Pietra_Filosofale
+                      )
+] .
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :Harry_Potter
+                        <https://litetaryworktopics.com/litetaryworktopics2025#Harry_James_Potter>
                       )
 ] .
 [ rdf:type owl:AllDifferent ;
