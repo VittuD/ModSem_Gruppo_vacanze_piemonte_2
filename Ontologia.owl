@@ -1055,6 +1055,8 @@ Funziona solo se sono definiti con enumerazione
 :BacchetteMagiche rdf:type :Tema ,
                            owl:NamedIndividual ;
                   
+                  :haNome "Bacchette Magiche"^^xsd:string ;
+                  
                   :VieneUtilizzatoIn :Opera_Camera_dei_Segreti ,
                                      :Opera_Pietra_Filosofale ,
                                      :Opera_Prigioniero_di_Azkaban .
@@ -1385,6 +1387,7 @@ Funziona solo se sono definiti con enumerazione
                                                                  :haNome "Amicizia"^^xsd:string ;
                                                                  
                                                                  :VieneUtilizzatoIn :Opera_Camera_dei_Segreti ,
+                                                                                    :Opera_Fermo_e_Lucia ,
                                                                                     :Opera_Pietra_Filosofale ,
                                                                                     :Opera_Prigioniero_di_Azkaban .
 
@@ -1410,13 +1413,13 @@ Funziona solo se sono definiti con enumerazione
                       )
 ] .
 [ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( :Opera_Camera_dei_Segreti
-                        :Opera_La_Divina_Commedia
+  owl:distinctMembers ( :I_Promessi_Sposi
+                        :The_Chamber_of_Secrets
                       )
 ] .
 [ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( :I_Promessi_Sposi
-                        :The_Chamber_of_Secrets
+  owl:distinctMembers ( :Opera_Camera_dei_Segreti
+                        :Opera_La_Divina_Commedia
                       )
 ] .
 [ rdf:type owl:AllDifferent ;
@@ -1470,13 +1473,13 @@ Funziona solo se sono definiti con enumerazione
                       )
 ] .
 [ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( :The_Philosophers_Stone
-                        :The_Prisoner_of_Azkaban
+  owl:distinctMembers ( :Opera_Fermo_e_Lucia
+                        :Opera_The_Autobiography_of_Benjamin_Franklin
                       )
 ] .
 [ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( :Opera_Fermo_e_Lucia
-                        :Opera_The_Autobiography_of_Benjamin_Franklin
+  owl:distinctMembers ( :The_Philosophers_Stone
+                        :The_Prisoner_of_Azkaban
                       )
 ] .
 [ rdf:type owl:AllDifferent ;
@@ -1600,13 +1603,13 @@ Funziona solo se sono definiti con enumerazione
                       )
 ] .
 [ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( :Opera_La_Divina_Commedia
-                        :Opera_The_Autobiography_of_Benjamin_Franklin
+  owl:distinctMembers ( :I_Promessi_Sposi
+                        :The_Prisoner_of_Azkaban
                       )
 ] .
 [ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( :I_Promessi_Sposi
-                        :The_Prisoner_of_Azkaban
+  owl:distinctMembers ( :Opera_La_Divina_Commedia
+                        :Opera_The_Autobiography_of_Benjamin_Franklin
                       )
 ] .
 [ rdf:type owl:AllDifferent ;
