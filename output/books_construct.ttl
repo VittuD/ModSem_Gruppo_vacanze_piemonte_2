@@ -35,6 +35,7 @@ lwt:Michael_Crichton  rdf:type  lwt:Autore ;
 lwt:The_Arabian_Nights
         rdf:type                   lwt:Edizione ;
         dc:Title                   "The Arabian Nights" ;
+        lwt:EdizioneDi             lwt:ألف_ليلة_وليلة ;
         lwt:HaContributoDi         lwt:A.S._Byatt ;
         lwt:HaDataPubblicazione    "2004-06-01" ;
         lwt:HaEditore              "Modern Library" ;
@@ -43,16 +44,23 @@ lwt:The_Arabian_Nights
         lwt:ScrittoDa              lwt:Anonymous ;
         lwt:VieneClassificatoCome  lwt:classic_literature , lwt:classics , lwt:fairy_tales , lwt:short_stories , lwt:literature , lwt:folklore , lwt:adventure , lwt:fiction , lwt:mythology , lwt:fantasy .
 
+lwt:伊勢物語  rdf:type      lwt:OperaLetteraria ;
+        lwt:HaEdizione  lwt:The_Tales_of_Ise ;
+        lwt:HaNome      "伊勢物語" .
+
 lwt:mythology  rdf:type  lwt:Tema ;
         lwt:HaNome  "mythology" .
 
 <https://litetaryworktopics.com/litetaryworktopics2025#The_Ink_Dark_Moon:_Love_Poems_by_Ono_no_Komachi_and_Izumi_Shikibu,_Women_of_the_Ancient_Court_of_Japan>
-        rdf:type                   lwt:Edizione ;
+        rdf:type                   lwt:Edizione , lwt:OperaLetteraria ;
         dc:Title                   "The Ink Dark Moon: Love Poems by Ono no Komachi and Izumi Shikibu, Women of the Ancient Court of Japan" ;
+        lwt:EdizioneDi             <https://litetaryworktopics.com/litetaryworktopics2025#The_Ink_Dark_Moon:_Love_Poems_by_Ono_no_Komachi_and_Izumi_Shikibu,_Women_of_the_Ancient_Court_of_Japan> ;
         lwt:HaContributoDi         lwt:Izumi_Shikibu ;
         lwt:HaDataPubblicazione    "1990-10-03" ;
         lwt:HaEditore              "Vintage" ;
+        lwt:HaEdizione             <https://litetaryworktopics.com/litetaryworktopics2025#The_Ink_Dark_Moon:_Love_Poems_by_Ono_no_Komachi_and_Izumi_Shikibu,_Women_of_the_Ancient_Court_of_Japan> ;
         lwt:HaLingua               "English" ;
+        lwt:HaNome                 "The Ink Dark Moon: Love Poems by Ono no Komachi and Izumi Shikibu, Women of the Ancient Court of Japan" ;
         lwt:HaNumeroPagine         "212"^^<http://www.w3.org/2001/XMLSchema#int> ;
         lwt:ScrittoDa              lwt:Ono_no_Komachi ;
         lwt:VieneClassificatoCome  lwt:history , lwt:asia , lwt:japan , lwt:literature , lwt:japanese_literature , lwt:classics , lwt:anthologies , lwt:poetry , lwt:love , lwt:romance .
@@ -61,6 +69,7 @@ lwt:The_Unbroken_Line_of_the_Moon
         rdf:type                   lwt:Edizione ;
         dc:Title                   "The Unbroken Line of the Moon" ;
         lwt:AppartieneA            <https://litetaryworktopics.com/litetaryworktopics2025#kca://series/amzn1.gr.series.v1.1pX-aKwU1qSvSt93oNnd4w> , <https://litetaryworktopics.com/litetaryworktopics2025#kca://series/amzn1.gr.series.v1.5qKO5nBeSAoFHt6qR40tVA> ;
+        lwt:EdizioneDi             lwt:Sigrid_:_sagan_om_Valhalla_ ;
         lwt:HaContributoDi         lwt:Tara_Chace ;
         lwt:HaDataPubblicazione    "2016-10-01" ;
         lwt:HaEditore              "Amazon Crossing" ;
@@ -72,6 +81,7 @@ lwt:The_Unbroken_Line_of_the_Moon
 <https://litetaryworktopics.com/litetaryworktopics2025#The_Abbot's_Tale>
         rdf:type                   lwt:Edizione ;
         dc:Title                   "The Abbot's Tale" ;
+        lwt:EdizioneDi             lwt: ;
         lwt:HaDataPubblicazione    "2018-05-01" ;
         lwt:HaEditore              "Pegasus Books" ;
         lwt:HaLingua               "English" ;
@@ -79,22 +89,28 @@ lwt:The_Unbroken_Line_of_the_Moon
         lwt:ScrittoDa              lwt:Conn_Iggulden ;
         lwt:VieneClassificatoCome  lwt:novels , lwt:historical , lwt:adult , lwt:war , lwt:british_literature , lwt:10th_century , lwt:historical_fiction , lwt:medieval , lwt:audiobook , lwt:fiction .
 
-lwt:The_Flame_Bearer  rdf:type     lwt:Edizione ;
+lwt:The_Flame_Bearer  rdf:type     lwt:Edizione , lwt:OperaLetteraria ;
         dc:Title                   "The Flame Bearer" ;
         lwt:AppartieneA            <https://litetaryworktopics.com/litetaryworktopics2025#kca://series/amzn1.gr.series.v1._wedZzHR7zE0Lx56fNmudA> ;
+        lwt:EdizioneDi             lwt:The_Flame_Bearer ;
         lwt:HaDataPubblicazione    "2016-10-06" ;
         lwt:HaEditore              "HARPER COLLINS" ;
+        lwt:HaEdizione             lwt:The_Flame_Bearer ;
         lwt:HaLingua               "English" ;
+        lwt:HaNome                 "The Flame Bearer" ;
         lwt:HaNumeroPagine         "284"^^<http://www.w3.org/2001/XMLSchema#int> ;
         lwt:ScrittoDa              lwt:Bernard_Cornwell ;
         lwt:VieneClassificatoCome  lwt:medieval , lwt:adventure , lwt:historical , lwt:fantasy , lwt:fiction , lwt:audiobook , lwt:novels , lwt:war , lwt:historical_fiction , lwt:british_literature .
 
-lwt:War_Lord  rdf:type             lwt:Edizione ;
+lwt:War_Lord  rdf:type             lwt:Edizione , lwt:OperaLetteraria ;
         dc:Title                   "War Lord" ;
         lwt:AppartieneA            <https://litetaryworktopics.com/litetaryworktopics2025#kca://series/amzn1.gr.series.v1._wedZzHR7zE0Lx56fNmudA> ;
+        lwt:EdizioneDi             lwt:War_Lord ;
         lwt:HaDataPubblicazione    "2020-10-15" ;
         lwt:HaEditore              "HarperCollins" ;
+        lwt:HaEdizione             lwt:War_Lord ;
         lwt:HaLingua               "English" ;
+        lwt:HaNome                 "War Lord" ;
         lwt:HaNumeroPagine         "333"^^<http://www.w3.org/2001/XMLSchema#int> ;
         lwt:ScrittoDa              lwt:Bernard_Cornwell ;
         lwt:VieneClassificatoCome  lwt:war , lwt:action , lwt:adventure , lwt:medieval , lwt:british_literature , lwt:fantasy , lwt:fiction , lwt:historical_fiction , lwt:historical , lwt:audiobook .
@@ -113,6 +129,11 @@ lwt:british_literature
 lwt:thriller  rdf:type  lwt:Tema ;
         lwt:HaNome  "thriller" .
 
+lwt:Sigrid_:_sagan_om_Valhalla_
+        rdf:type        lwt:OperaLetteraria ;
+        lwt:HaEdizione  lwt:The_Unbroken_Line_of_the_Moon ;
+        lwt:HaNome      "Sigrid : sagan om Valhalla " .
+
 lwt:action  rdf:type  lwt:Tema ;
         lwt:HaNome  "action" .
 
@@ -129,6 +150,10 @@ lwt:love  rdf:type  lwt:Genere ;
 lwt:retellings  rdf:type  lwt:Tema ;
         lwt:HaNome  "retellings" .
 
+lwt:ألف_ليلة_وليلة  rdf:type  lwt:OperaLetteraria ;
+        lwt:HaEdizione  lwt:The_Arabian_Nights ;
+        lwt:HaNome      "ألف ليلة وليلة" .
+
 lwt:amazon  rdf:type  lwt:Tema ;
         lwt:HaNome  "amazon" .
 
@@ -136,11 +161,14 @@ lwt:Shauna_Lawless  rdf:type  lwt:Autore ;
         lwt:HaNome  "Shauna Lawless" .
 
 lwt:The_Weaver_and_the_Witch_Queen
-        rdf:type                   lwt:Edizione ;
+        rdf:type                   lwt:OperaLetteraria , lwt:Edizione ;
         dc:Title                   "The Weaver and the Witch Queen" ;
+        lwt:EdizioneDi             lwt:The_Weaver_and_the_Witch_Queen ;
         lwt:HaDataPubblicazione    "2023-07-25" ;
         lwt:HaEditore              "Ace" ;
+        lwt:HaEdizione             lwt:The_Weaver_and_the_Witch_Queen ;
         lwt:HaLingua               "English" ;
+        lwt:HaNome                 "The Weaver and the Witch Queen" ;
         lwt:HaNumeroPagine         "424"^^<http://www.w3.org/2001/XMLSchema#int> ;
         lwt:ScrittoDa              lwt:Genevieve_Gornichec ;
         lwt:VieneClassificatoCome  lwt:historical_fantasy , lwt:fiction , lwt:mythology , lwt:witches , lwt:fantasy , lwt:historical_fiction , lwt:adult , lwt:historical , lwt:audiobook , lwt:retellings .
@@ -151,18 +179,22 @@ lwt:literature  rdf:type  lwt:Tema ;
 lwt:folklore  rdf:type  lwt:Tema ;
         lwt:HaNome  "folklore" .
 
-lwt:The_Pagan_Lord  rdf:type       lwt:Edizione ;
+lwt:The_Pagan_Lord  rdf:type       lwt:Edizione , lwt:OperaLetteraria ;
         dc:Title                   "The Pagan Lord" ;
         lwt:AppartieneA            <https://litetaryworktopics.com/litetaryworktopics2025#kca://series/amzn1.gr.series.v1._wedZzHR7zE0Lx56fNmudA> ;
+        lwt:EdizioneDi             lwt:The_Pagan_Lord ;
         lwt:HaDataPubblicazione    "2013-09-26" ;
         lwt:HaEditore              "Harper Collins" ;
+        lwt:HaEdizione             lwt:The_Pagan_Lord ;
         lwt:HaLingua               "English" ;
+        lwt:HaNome                 "The Pagan Lord" ;
         lwt:HaNumeroPagine         "303"^^<http://www.w3.org/2001/XMLSchema#int> ;
         lwt:ScrittoDa              lwt:Bernard_Cornwell ;
         lwt:VieneClassificatoCome  lwt:historical_fiction , lwt:adventure , lwt:fiction , lwt:british_literature , lwt:fantasy , lwt:war , lwt:medieval , lwt:historical , lwt:audiobook , lwt:action .
 
 lwt:Beowulf  rdf:type              lwt:Edizione ;
         dc:Title                   "Beowulf" ;
+        lwt:EdizioneDi             lwt:Beowulf._A_Prose_Translation ;
         lwt:HaContributoDi         lwt:Seamus_Heaney ;
         lwt:HaDataPubblicazione    "2001-02-17" ;
         lwt:HaEditore              "W.W. Norton & Company" ;
@@ -171,6 +203,11 @@ lwt:Beowulf  rdf:type              lwt:Edizione ;
         lwt:ScrittoDa              lwt:Unknown ;
         lwt:VieneClassificatoCome  lwt:literature , lwt:mythology , lwt:poetry , lwt:classics , lwt:historical_fiction , lwt:school , lwt:high_school , lwt:fantasy , lwt:fiction , lwt:read_for_school .
 
+lwt:Beowulf._A_Prose_Translation
+        rdf:type        lwt:OperaLetteraria ;
+        lwt:HaEdizione  lwt:Beowulf ;
+        lwt:HaNome      "Beowulf. A Prose Translation" .
+
 lwt:historical_romance
         rdf:type    lwt:Tema ;
         lwt:HaNome  "historical romance" .
@@ -178,12 +215,15 @@ lwt:historical_romance
 lwt:memoir  rdf:type  lwt:Tema ;
         lwt:HaNome  "memoir" .
 
-lwt:Avalon  rdf:type               lwt:Edizione ;
+lwt:Avalon  rdf:type               lwt:Edizione , lwt:OperaLetteraria ;
         dc:Title                   "Avalon" ;
+        lwt:EdizioneDi             lwt:Avalon ;
         lwt:HaContributoDi         lwt:Philippa_Gregory ;
         lwt:HaDataPubblicazione    "2006-05-01" ;
         lwt:HaEditore              "Chicago Review Press" ;
+        lwt:HaEdizione             lwt:Avalon ;
         lwt:HaLingua               "English" ;
+        lwt:HaNome                 "Avalon" ;
         lwt:HaNumeroPagine         "440"^^<http://www.w3.org/2001/XMLSchema#int> ;
         lwt:ScrittoDa              lwt:Anya_Seton ;
         lwt:VieneClassificatoCome  lwt:medieval , lwt:romance , lwt:fiction , lwt:british_literature , lwt:arthurian , lwt:historical_fiction , lwt:historical_romance , lwt:fantasy , lwt:historical , lwt:classics .
@@ -194,6 +234,7 @@ lwt:Philippa_Gregory  rdf:type  lwt:Persona ;
 
 lwt:The_Tales_of_Ise  rdf:type     lwt:Edizione ;
         dc:Title                   "The Tales of Ise" ;
+        lwt:EdizioneDi             lwt:伊勢物語 ;
         lwt:HaContributoDi         lwt:H._Jay_Harris ;
         lwt:HaDataPubblicazione    "1972-01-01" ;
         lwt:HaEditore              "Tuttle Publishing" ;
@@ -291,11 +332,14 @@ lwt:short_stories  rdf:type  lwt:Tema ;
         lwt:HaNome  "short stories" .
 
 lwt:Eaters_of_the_Dead
-        rdf:type                   lwt:Edizione ;
+        rdf:type                   lwt:Edizione , lwt:OperaLetteraria ;
         dc:Title                   "Eaters of the Dead" ;
+        lwt:EdizioneDi             lwt:Eaters_of_the_Dead ;
         lwt:HaDataPubblicazione    "2006-01-01" ;
         lwt:HaEditore              "Avon Books" ;
+        lwt:HaEdizione             lwt:Eaters_of_the_Dead ;
         lwt:HaLingua               "English" ;
+        lwt:HaNome                 "Eaters of the Dead" ;
         lwt:HaNumeroPagine         "304"^^<http://www.w3.org/2001/XMLSchema#int> ;
         lwt:ScrittoDa              lwt:Michael_Crichton ;
         lwt:VieneClassificatoCome  lwt:horror , lwt:fiction , lwt:thriller , lwt:fantasy , lwt:historical , lwt:science_fiction , lwt:mythology , lwt:novels , lwt:historical_fiction , lwt:adventure .
@@ -308,12 +352,15 @@ lwt:H._Jay_Harris  rdf:type  lwt:Persona ;
         lwt:HaRuolo  "Translator" .
 
 lwt:The_Evening_and_the_Morning
-        rdf:type                   lwt:Edizione ;
+        rdf:type                   lwt:OperaLetteraria , lwt:Edizione ;
         dc:Title                   "The Evening and the Morning" ;
         lwt:AppartieneA            <https://litetaryworktopics.com/litetaryworktopics2025#kca://series/amzn1.gr.series.v1.qgqLmU5OAQDt0jayLbSGBw> ;
+        lwt:EdizioneDi             lwt:The_Evening_and_the_Morning ;
         lwt:HaDataPubblicazione    "2020-09-15" ;
         lwt:HaEditore              "Viking" ;
+        lwt:HaEdizione             lwt:The_Evening_and_the_Morning ;
         lwt:HaLingua               "English" ;
+        lwt:HaNome                 "The Evening and the Morning" ;
         lwt:HaNumeroPagine         "913"^^<http://www.w3.org/2001/XMLSchema#int> ;
         lwt:ScrittoDa              lwt:Ken_Follett ;
         lwt:VieneClassificatoCome  lwt:romance , lwt:historical , lwt:adult , lwt:audiobook , lwt:fiction , lwt:british_literature , lwt:medieval , lwt:adventure , lwt:fantasy , lwt:historical_fiction .
@@ -344,6 +391,7 @@ lwt:The_Children_of_Gods_and_Fighting_Men
         rdf:type                   lwt:Edizione ;
         dc:Title                   "The Children of Gods and Fighting Men" ;
         lwt:AppartieneA            <https://litetaryworktopics.com/litetaryworktopics2025#kca://series/amzn1.gr.series.v3.X06FNO2HyMlDyAJM> ;
+        lwt:EdizioneDi             lwt: ;
         lwt:HaDataPubblicazione    "2022-09-01" ;
         lwt:HaEditore              "Head of Zeus" ;
         lwt:HaLingua               "English" ;
@@ -371,12 +419,15 @@ lwt:read_for_school  rdf:type  lwt:Tema ;
         lwt:HaNome  "read for school" .
 
 lwt:Warriors_of_the_Storm
-        rdf:type                   lwt:Edizione ;
+        rdf:type                   lwt:Edizione , lwt:OperaLetteraria ;
         dc:Title                   "Warriors of the Storm" ;
         lwt:AppartieneA            <https://litetaryworktopics.com/litetaryworktopics2025#kca://series/amzn1.gr.series.v1._wedZzHR7zE0Lx56fNmudA> ;
+        lwt:EdizioneDi             lwt:Warriors_of_the_Storm ;
         lwt:HaDataPubblicazione    "2015-10-08" ;
         lwt:HaEditore              "HarperCollins" ;
+        lwt:HaEdizione             lwt:Warriors_of_the_Storm ;
         lwt:HaLingua               "English" ;
+        lwt:HaNome                 "Warriors of the Storm" ;
         lwt:HaNumeroPagine         "298"^^<http://www.w3.org/2001/XMLSchema#int> ;
         lwt:ScrittoDa              lwt:Bernard_Cornwell ;
         lwt:VieneClassificatoCome  lwt:novels , lwt:adventure , lwt:medieval , lwt:historical , lwt:audiobook , lwt:war , lwt:fantasy , lwt:historical_fiction , lwt:fiction , lwt:british_literature .
@@ -387,12 +438,15 @@ lwt:history  rdf:type  lwt:Tema ;
 lwt:school  rdf:type  lwt:Tema ;
         lwt:HaNome  "school" .
 
-lwt:The_Last_Kingdom  rdf:type     lwt:Edizione ;
+lwt:The_Last_Kingdom  rdf:type     lwt:Edizione , lwt:OperaLetteraria ;
         dc:Title                   "The Last Kingdom" ;
         lwt:AppartieneA            <https://litetaryworktopics.com/litetaryworktopics2025#kca://series/amzn1.gr.series.v1._wedZzHR7zE0Lx56fNmudA> ;
+        lwt:EdizioneDi             lwt:The_Last_Kingdom ;
         lwt:HaDataPubblicazione    "2006-01-01" ;
         lwt:HaEditore              "HarperCollins" ;
+        lwt:HaEdizione             lwt:The_Last_Kingdom ;
         lwt:HaLingua               "English" ;
+        lwt:HaNome                 "The Last Kingdom" ;
         lwt:HaNumeroPagine         "333"^^<http://www.w3.org/2001/XMLSchema#int> ;
         lwt:ScrittoDa              lwt:Bernard_Cornwell ;
         lwt:VieneClassificatoCome  lwt:fiction , lwt:adult , lwt:historical_fiction , lwt:historical , lwt:war , lwt:adventure , lwt:medieval , lwt:british_literature , lwt:audiobook , lwt:fantasy .
@@ -405,6 +459,10 @@ lwt:biography  rdf:type  lwt:Tema ;
 
 lwt:10th_century  rdf:type  lwt:Tema ;
         lwt:HaNome  "10th century" .
+
+lwt:    rdf:type        lwt:OperaLetteraria ;
+        lwt:HaEdizione  lwt:The_Children_of_Gods_and_Fighting_Men , <https://litetaryworktopics.com/litetaryworktopics2025#The_Abbot's_Tale> ;
+        lwt:HaNome      "" .
 
 lwt:Seamus_Heaney  rdf:type  lwt:Persona ;
         lwt:HaNome   "Seamus Heaney" ;

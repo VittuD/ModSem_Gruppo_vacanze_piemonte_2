@@ -11,6 +11,12 @@ CONSTRUCT {
     ?bookMyNs a lwt:Edizione .
     ?bookMyNs dc:Title ?title .
     ?bookMyNs lwt:ScrittoDa ?primaryContributorMyNs .
+    ?bookMyNs lwt:EdizioneDi ?workMyNs .
+
+    # Work (OperaLetteraria) details
+    ?workMyNs a lwt:OperaLetteraria .
+    ?workMyNs lwt:HaNome ?workName .
+    ?workMyNs lwt:HaEdizione ?bookMyNs .
     
     # Primary contributor details
     ?primaryContributorMyNs a lwt:Autore .
@@ -47,6 +53,10 @@ CONSTRUCT {
         ?book xyz:title ?title .
         BIND (IRI(CONCAT("https://litetaryworktopics.com/litetaryworktopics2025#", REPLACE(?title, " ", "_", "i"))) AS ?bookMyNs)
         
+        # Extract the work (OperaLetteraria)
+        ?book xyz:work_name ?workName .
+        BIND (IRI(CONCAT("https://litetaryworktopics.com/litetaryworktopics2025#", REPLACE(?workName, " ", "_", "i"))) AS ?workMyNs)
+
         # Extract primary contributor (author) information
         ?book xyz:primaryContributorEdge_name ?primaryContributorName .
         BIND (IRI(CONCAT("https://litetaryworktopics.com/litetaryworktopics2025#", REPLACE(?primaryContributorName, " ", "_", "i"))) AS ?primaryContributorMyNs)
