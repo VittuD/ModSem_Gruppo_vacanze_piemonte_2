@@ -1,3 +1,4 @@
+@prefix : <http://www.semanticweb.org/owl/owlapi/turtle#> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix geo: <https://www.w3.org/2003/01/geo/wgs84_pos#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
@@ -79,31 +80,31 @@ vann:preferredNamespaceUri rdf:type owl:AnnotationProperty .
 
 
 
-###  https://litetaryworktopics.com/litetaryworktopics2025#HaEdizione
+###  http://www.semanticweb.org/owl/owlapi/turtle#HaEdizione
 
 :HaEdizione rdf:type owl:AnnotationProperty .
 
 
 
-###  https://litetaryworktopics.com/litetaryworktopics2025#HaGenereLetterario
+###  http://www.semanticweb.org/owl/owlapi/turtle#HaGenereLetterario
 
 :HaGenereLetterario rdf:type owl:AnnotationProperty .
 
 
 
-###  https://litetaryworktopics.com/litetaryworktopics2025#HaLingua
+###  http://www.semanticweb.org/owl/owlapi/turtle#HaLingua
 
 :HaLingua rdf:type owl:AnnotationProperty .
 
 
 
-###  https://litetaryworktopics.com/litetaryworktopics2025#HaProvenienzaAutore
+###  http://www.semanticweb.org/owl/owlapi/turtle#HaProvenienzaAutore
 
 :HaProvenienzaAutore rdf:type owl:AnnotationProperty .
 
 
 
-###  https://litetaryworktopics.com/litetaryworktopics2025#haDataPubblicazione
+###  http://www.semanticweb.org/owl/owlapi/turtle#haDataPubblicazione
 
 :haDataPubblicazione rdf:type owl:AnnotationProperty ;
                      
@@ -111,7 +112,7 @@ vann:preferredNamespaceUri rdf:type owl:AnnotationProperty .
 
 
 
-###  https://litetaryworktopics.com/litetaryworktopics2025#haNome
+###  http://www.semanticweb.org/owl/owlapi/turtle#haNome
 
 :haNome rdf:type owl:AnnotationProperty ;
         
@@ -119,13 +120,13 @@ vann:preferredNamespaceUri rdf:type owl:AnnotationProperty .
 
 
 
-###  https://litetaryworktopics.com/litetaryworktopics2025#parteDiAntologia
+###  http://www.semanticweb.org/owl/owlapi/turtle#parteDiAntologia
 
 :parteDiAntologia rdf:type owl:AnnotationProperty .
 
 
 
-###  https://litetaryworktopics.com/litetaryworktopics2025#parteDiSaga
+###  http://www.semanticweb.org/owl/owlapi/turtle#parteDiSaga
 
 :parteDiSaga rdf:type owl:AnnotationProperty .
 
@@ -167,7 +168,7 @@ xsd:date rdf:type rdfs:Datatype .
 #################################################################
 
 
-###  https://litetaryworktopics.com/litetaryworktopics2025#HaProvenienza
+###  http://www.semanticweb.org/owl/owlapi/turtle#HaProvenienza
 
 :HaProvenienza rdf:type owl:FunctionalProperty ,
                         owl:ObjectProperty ;
@@ -182,7 +183,7 @@ xsd:date rdf:type rdfs:Datatype .
 
 
 
-###  https://litetaryworktopics.com/litetaryworktopics2025#appartieneA
+###  http://www.semanticweb.org/owl/owlapi/turtle#appartieneA
 
 :appartieneA rdf:type owl:ObjectProperty ;
              
@@ -190,13 +191,23 @@ xsd:date rdf:type rdfs:Datatype .
 
 
 
-###  https://litetaryworktopics.com/litetaryworktopics2025#contiene
+###  http://www.semanticweb.org/owl/owlapi/turtle#contiene
 
 :contiene rdf:type owl:ObjectProperty .
 
 
 
-###  https://litetaryworktopics.com/litetaryworktopics2025#haAutore
+###  http://www.semanticweb.org/owl/owlapi/turtle#contribuisceA
+
+:contribuisceA rdf:type owl:ObjectProperty ;
+               
+               rdfs:range :Collaboratore ;
+               
+               rdfs:domain <https://litetaryworktopics.com/litetaryworktopics2025##Edizione> .
+
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#haAutore
 
 :haAutore rdf:type owl:ObjectProperty ;
           
@@ -206,7 +217,19 @@ xsd:date rdf:type rdfs:Datatype .
 
 
 
-###  https://litetaryworktopics.com/litetaryworktopics2025#haEditore
+###  http://www.semanticweb.org/owl/owlapi/turtle#haCollaboratori
+
+:haCollaboratori rdf:type owl:ObjectProperty ;
+                 
+                 rdfs:range :Collaboratore ;
+                 
+                 owl:inverseOf :contribuisceA ;
+                 
+                 rdfs:domain <https://litetaryworktopics.com/litetaryworktopics2025##Edizione> .
+
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#haEditore
 
 :haEditore rdf:type owl:ObjectProperty ;
            
@@ -218,7 +241,7 @@ xsd:date rdf:type rdfs:Datatype .
 
 
 
-###  https://litetaryworktopics.com/litetaryworktopics2025#haTema
+###  http://www.semanticweb.org/owl/owlapi/turtle#haTema
 
 :haTema rdf:type owl:ObjectProperty ;
         
@@ -228,19 +251,7 @@ xsd:date rdf:type rdfs:Datatype .
 
 
 
-###  https://litetaryworktopics.com/litetaryworktopics2025#haTraduttore
-
-:haTraduttore rdf:type owl:ObjectProperty ;
-              
-              rdfs:range :Traduttore ;
-              
-              owl:inverseOf :èTradottoDa ;
-              
-              rdfs:domain <https://litetaryworktopics.com/litetaryworktopics2025##Edizione> .
-
-
-
-###  https://litetaryworktopics.com/litetaryworktopics2025#lavoraPerCasaEditrice
+###  http://www.semanticweb.org/owl/owlapi/turtle#lavoraPerCasaEditrice
 
 :lavoraPerCasaEditrice rdf:type owl:ObjectProperty ;
                        
@@ -250,7 +261,7 @@ xsd:date rdf:type rdfs:Datatype .
 
 
 
-###  https://litetaryworktopics.com/litetaryworktopics2025#pubblica
+###  http://www.semanticweb.org/owl/owlapi/turtle#pubblica
 
 :pubblica rdf:type owl:ObjectProperty ;
           
@@ -266,7 +277,7 @@ xsd:date rdf:type rdfs:Datatype .
 
 
 
-###  https://litetaryworktopics.com/litetaryworktopics2025#vieneUtilizzatoIn
+###  http://www.semanticweb.org/owl/owlapi/turtle#vieneUtilizzatoIn
 
 :vieneUtilizzatoIn rdf:type owl:ObjectProperty ;
                    
@@ -278,7 +289,7 @@ xsd:date rdf:type rdfs:Datatype .
 
 
 
-###  https://litetaryworktopics.com/litetaryworktopics2025#èAutoreDi
+###  http://www.semanticweb.org/owl/owlapi/turtle#èAutoreDi
 
 :èAutoreDi rdf:type owl:ObjectProperty ;
            
@@ -294,7 +305,7 @@ xsd:date rdf:type rdfs:Datatype .
 
 
 
-###  https://litetaryworktopics.com/litetaryworktopics2025#èScrittoDa
+###  http://www.semanticweb.org/owl/owlapi/turtle#èScrittoDa
 
 :èScrittoDa rdf:type owl:ObjectProperty ;
             
@@ -308,7 +319,7 @@ xsd:date rdf:type rdfs:Datatype .
 
 
 
-###  https://litetaryworktopics.com/litetaryworktopics2025#èStatoPubblicatoDa
+###  http://www.semanticweb.org/owl/owlapi/turtle#èStatoPubblicatoDa
 
 :èStatoPubblicatoDa rdf:type owl:FunctionalProperty ,
                              owl:ObjectProperty ;
@@ -323,17 +334,7 @@ xsd:date rdf:type rdfs:Datatype .
 
 
 
-###  https://litetaryworktopics.com/litetaryworktopics2025#èTradottoDa
-
-:èTradottoDa rdf:type owl:ObjectProperty ;
-             
-             rdfs:range :Traduttore ;
-             
-             rdfs:domain <https://litetaryworktopics.com/litetaryworktopics2025##Edizione> .
-
-
-
-###  https://litetaryworktopics.com/litetaryworktopics2025#èUnEdizioneDi
+###  http://www.semanticweb.org/owl/owlapi/turtle#èUnEdizioneDi
 
 :èUnEdizioneDi rdf:type owl:FunctionalProperty ,
                         owl:ObjectProperty ;
@@ -346,11 +347,9 @@ xsd:date rdf:type rdfs:Datatype .
 
 
 
-###  https://litetaryworktopics.com/litetaryworktopics2025#èUtilizzata
+###  http://www.semanticweb.org/owl/owlapi/turtle#èUtilizzata
 
 :èUtilizzata rdf:type owl:ObjectProperty ;
-             
-             rdfs:domain :Lingua ;
              
              owl:inverseOf <https://litetaryworktopics.com/litetaryworktopics2025##HaLingua> .
 
@@ -428,9 +427,7 @@ xsd:date rdf:type rdfs:Datatype .
 ###  https://litetaryworktopics.com/litetaryworktopics2025##HaLingua
 
 <https://litetaryworktopics.com/litetaryworktopics2025##HaLingua> rdf:type owl:FunctionalProperty ,
-                                                                           owl:ObjectProperty ;
-                                                                  
-                                                                  rdfs:range :Lingua .
+                                                                           owl:ObjectProperty .
 
 
 
@@ -459,7 +456,7 @@ dc:title rdf:type owl:DatatypeProperty ;
 
 
 
-###  https://litetaryworktopics.com/litetaryworktopics2025#haDataPubblicazione
+###  http://www.semanticweb.org/owl/owlapi/turtle#haDataPubblicazione
 
 :haDataPubblicazione rdf:type owl:DatatypeProperty ;
                      
@@ -467,7 +464,7 @@ dc:title rdf:type owl:DatatypeProperty ;
 
 
 
-###  https://litetaryworktopics.com/litetaryworktopics2025#haISBN
+###  http://www.semanticweb.org/owl/owlapi/turtle#haISBN
 
 :haISBN rdf:type owl:DatatypeProperty ;
         
@@ -477,7 +474,7 @@ dc:title rdf:type owl:DatatypeProperty ;
 
 
 
-###  https://litetaryworktopics.com/litetaryworktopics2025#haNome
+###  http://www.semanticweb.org/owl/owlapi/turtle#haNome
 
 :haNome rdf:type owl:DatatypeProperty ;
         
@@ -485,7 +482,7 @@ dc:title rdf:type owl:DatatypeProperty ;
 
 
 
-###  https://litetaryworktopics.com/litetaryworktopics2025#haPagine
+###  http://www.semanticweb.org/owl/owlapi/turtle#haPagine
 
 :haPagine rdf:type owl:DatatypeProperty ;
           
@@ -531,7 +528,7 @@ dc:title rdf:type owl:DatatypeProperty ;
 
 
 
-###  https://litetaryworktopics.com/litetaryworktopics2025#Autore
+###  http://www.semanticweb.org/owl/owlapi/turtle#Autore
 
 :Autore rdf:type owl:Class ;
         
@@ -549,7 +546,7 @@ dc:title rdf:type owl:DatatypeProperty ;
 
 
 
-###  https://litetaryworktopics.com/litetaryworktopics2025#AutoreIndipendente
+###  http://www.semanticweb.org/owl/owlapi/turtle#AutoreIndipendente
 
 :AutoreIndipendente rdf:type owl:Class ;
                     
@@ -576,7 +573,7 @@ dc:title rdf:type owl:DatatypeProperty ;
 
 
 
-###  https://litetaryworktopics.com/litetaryworktopics2025#Canzoniere
+###  http://www.semanticweb.org/owl/owlapi/turtle#Canzoniere
 
 :Canzoniere rdf:type owl:Class ;
             
@@ -594,7 +591,7 @@ dc:title rdf:type owl:DatatypeProperty ;
 
 
 
-###  https://litetaryworktopics.com/litetaryworktopics2025#CasaEditrice
+###  http://www.semanticweb.org/owl/owlapi/turtle#CasaEditrice
 
 :CasaEditrice rdf:type owl:Class ;
               
@@ -615,7 +612,19 @@ dc:title rdf:type owl:DatatypeProperty ;
 
 
 
-###  https://litetaryworktopics.com/litetaryworktopics2025#CollanaEditoriale
+###  http://www.semanticweb.org/owl/owlapi/turtle#Collaboratore
+
+:Collaboratore rdf:type owl:Class ;
+               
+               rdfs:label "Traduttore"@it ;
+               
+               rdfs:subClassOf :Persona ;
+               
+               rdfs:comment "Persona che ha contribuito alla stesura di un edizione non come autore"@it .
+
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#CollanaEditoriale
 
 :CollanaEditoriale rdf:type owl:Class ;
                    
@@ -627,7 +636,7 @@ dc:title rdf:type owl:DatatypeProperty ;
 
 
 
-###  https://litetaryworktopics.com/litetaryworktopics2025#Editore
+###  http://www.semanticweb.org/owl/owlapi/turtle#Editore
 
 :Editore rdf:type owl:Class ;
          
@@ -650,7 +659,7 @@ dc:title rdf:type owl:DatatypeProperty ;
 
 
 
-###  https://litetaryworktopics.com/litetaryworktopics2025#Genere
+###  http://www.semanticweb.org/owl/owlapi/turtle#Genere
 
 :Genere rdf:type owl:Class ;
         
@@ -660,7 +669,7 @@ dc:title rdf:type owl:DatatypeProperty ;
 
 
 
-###  https://litetaryworktopics.com/litetaryworktopics2025#GrandeSaga
+###  http://www.semanticweb.org/owl/owlapi/turtle#GrandeSaga
 
 :GrandeSaga rdf:type owl:Class ;
             
@@ -679,17 +688,7 @@ dc:title rdf:type owl:DatatypeProperty ;
 
 
 
-###  https://litetaryworktopics.com/litetaryworktopics2025#Lingua
-
-:Lingua rdf:type owl:Class ;
-        
-        rdfs:label "Lingua"@it ;
-        
-        rdfs:comment "Sistema linguistico utilizzato nell'opera letteraria, definendo l'idioma in cui il testo è scritto, come italiano, inglese, francese, ecc. Questo elemento permette di associare un'opera alla sua lingua di espressione."@it .
-
-
-
-###  https://litetaryworktopics.com/litetaryworktopics2025#ListaDiOpereLetterarie
+###  http://www.semanticweb.org/owl/owlapi/turtle#ListaDiOpereLetterarie
 
 :ListaDiOpereLetterarie rdf:type owl:Class ;
                         
@@ -702,7 +701,7 @@ dc:title rdf:type owl:DatatypeProperty ;
 
 
 
-###  https://litetaryworktopics.com/litetaryworktopics2025#Luogo
+###  http://www.semanticweb.org/owl/owlapi/turtle#Luogo
 
 :Luogo rdf:type owl:Class ;
        
@@ -712,7 +711,7 @@ dc:title rdf:type owl:DatatypeProperty ;
 
 
 
-###  https://litetaryworktopics.com/litetaryworktopics2025#LuogoFisico
+###  http://www.semanticweb.org/owl/owlapi/turtle#LuogoFisico
 
 :LuogoFisico rdf:type owl:Class ;
              
@@ -724,7 +723,7 @@ dc:title rdf:type owl:DatatypeProperty ;
 
 
 
-###  https://litetaryworktopics.com/litetaryworktopics2025#Nazione
+###  http://www.semanticweb.org/owl/owlapi/turtle#Nazione
 
 :Nazione rdf:type owl:Class ;
          
@@ -736,7 +735,7 @@ dc:title rdf:type owl:DatatypeProperty ;
 
 
 
-###  https://litetaryworktopics.com/litetaryworktopics2025#OperaTeatrale
+###  http://www.semanticweb.org/owl/owlapi/turtle#OperaTeatrale
 
 :OperaTeatrale rdf:type owl:Class ;
                
@@ -748,7 +747,7 @@ dc:title rdf:type owl:DatatypeProperty ;
 
 
 
-###  https://litetaryworktopics.com/litetaryworktopics2025#Persona
+###  http://www.semanticweb.org/owl/owlapi/turtle#Persona
 
 :Persona rdf:type owl:Class ;
          
@@ -760,7 +759,7 @@ dc:title rdf:type owl:DatatypeProperty ;
 
 
 
-###  https://litetaryworktopics.com/litetaryworktopics2025#Poesia
+###  http://www.semanticweb.org/owl/owlapi/turtle#Poesia
 
 :Poesia rdf:type owl:Class ;
         
@@ -773,7 +772,7 @@ dc:title rdf:type owl:DatatypeProperty ;
 
 
 
-###  https://litetaryworktopics.com/litetaryworktopics2025#RaccoltaDISaggi
+###  http://www.semanticweb.org/owl/owlapi/turtle#RaccoltaDISaggi
 
 :RaccoltaDISaggi rdf:type owl:Class ;
                  
@@ -791,7 +790,7 @@ dc:title rdf:type owl:DatatypeProperty ;
 
 
 
-###  https://litetaryworktopics.com/litetaryworktopics2025#RaccoltaDiRacconti
+###  http://www.semanticweb.org/owl/owlapi/turtle#RaccoltaDiRacconti
 
 :RaccoltaDiRacconti rdf:type owl:Class ;
                     
@@ -810,7 +809,7 @@ dc:title rdf:type owl:DatatypeProperty ;
 
 
 
-###  https://litetaryworktopics.com/litetaryworktopics2025#RaccoltaTeatrale
+###  http://www.semanticweb.org/owl/owlapi/turtle#RaccoltaTeatrale
 
 :RaccoltaTeatrale rdf:type owl:Class ;
                   
@@ -829,7 +828,7 @@ dc:title rdf:type owl:DatatypeProperty ;
 
 
 
-###  https://litetaryworktopics.com/litetaryworktopics2025#Racconto
+###  http://www.semanticweb.org/owl/owlapi/turtle#Racconto
 
 :Racconto rdf:type owl:Class ;
           
@@ -841,7 +840,7 @@ dc:title rdf:type owl:DatatypeProperty ;
 
 
 
-###  https://litetaryworktopics.com/litetaryworktopics2025#Romanzo
+###  http://www.semanticweb.org/owl/owlapi/turtle#Romanzo
 
 :Romanzo rdf:type owl:Class ;
          
@@ -853,7 +852,7 @@ dc:title rdf:type owl:DatatypeProperty ;
 
 
 
-###  https://litetaryworktopics.com/litetaryworktopics2025#Saga
+###  http://www.semanticweb.org/owl/owlapi/turtle#Saga
 
 :Saga rdf:type owl:Class ;
       
@@ -865,7 +864,7 @@ dc:title rdf:type owl:DatatypeProperty ;
 
 
 
-###  https://litetaryworktopics.com/litetaryworktopics2025#Saggio
+###  http://www.semanticweb.org/owl/owlapi/turtle#Saggio
 
 :Saggio rdf:type owl:Class ;
         
@@ -877,7 +876,7 @@ dc:title rdf:type owl:DatatypeProperty ;
 
 
 
-###  https://litetaryworktopics.com/litetaryworktopics2025#SerieDiRomanzi
+###  http://www.semanticweb.org/owl/owlapi/turtle#SerieDiRomanzi
 
 :SerieDiRomanzi rdf:type owl:Class ;
                 
@@ -895,7 +894,7 @@ dc:title rdf:type owl:DatatypeProperty ;
 
 
 
-###  https://litetaryworktopics.com/litetaryworktopics2025#Tema
+###  http://www.semanticweb.org/owl/owlapi/turtle#Tema
 
 :Tema rdf:type owl:Class ;
       
@@ -905,19 +904,7 @@ dc:title rdf:type owl:DatatypeProperty ;
 
 
 
-###  https://litetaryworktopics.com/litetaryworktopics2025#Traduttore
-
-:Traduttore rdf:type owl:Class ;
-            
-            rdfs:label "Traduttore"@it ;
-            
-            rdfs:subClassOf :Persona ;
-            
-            rdfs:comment "Persona che si è occupata della traduzione di un opera letterararia"@it .
-
-
-
-###  https://litetaryworktopics.com/litetaryworktopics2025#Trilogia
+###  http://www.semanticweb.org/owl/owlapi/turtle#Trilogia
 
 :Trilogia rdf:type owl:Class ;
           
@@ -1034,7 +1021,7 @@ Funziona solo se sono definiti con enumerazione
 #################################################################
 
 
-###  https://litetaryworktopics.com/litetaryworktopics2025#Alessandro_Manzoni
+###  http://www.semanticweb.org/owl/owlapi/turtle#Alessandro_Manzoni
 
 :Alessandro_Manzoni rdf:type owl:NamedIndividual ;
                     
@@ -1047,7 +1034,7 @@ Funziona solo se sono definiti con enumerazione
 
 
 
-###  https://litetaryworktopics.com/litetaryworktopics2025#Benjamin_Franklin
+###  http://www.semanticweb.org/owl/owlapi/turtle#Benjamin_Franklin
 
 :Benjamin_Franklin rdf:type owl:NamedIndividual ;
                    
@@ -1055,7 +1042,7 @@ Funziona solo se sono definiti con enumerazione
 
 
 
-###  https://litetaryworktopics.com/litetaryworktopics2025#Bloomsbury_Publishing
+###  http://www.semanticweb.org/owl/owlapi/turtle#Bloomsbury_Publishing
 
 :Bloomsbury_Publishing rdf:type owl:NamedIndividual ,
                                 <http://www.w3.org/ns/prov#Organization> ;
@@ -1066,7 +1053,7 @@ Funziona solo se sono definiti con enumerazione
 
 
 
-###  https://litetaryworktopics.com/litetaryworktopics2025#Fantasy
+###  http://www.semanticweb.org/owl/owlapi/turtle#Fantasy
 
 :Fantasy rdf:type owl:NamedIndividual ;
          
@@ -1076,7 +1063,7 @@ Funziona solo se sono definiti con enumerazione
 
 
 
-###  https://litetaryworktopics.com/litetaryworktopics2025#Fermo_e_Lucia
+###  http://www.semanticweb.org/owl/owlapi/turtle#Fermo_e_Lucia
 
 :Fermo_e_Lucia rdf:type owl:NamedIndividual ;
                
@@ -1090,7 +1077,7 @@ Funziona solo se sono definiti con enumerazione
 
 
 
-###  https://litetaryworktopics.com/litetaryworktopics2025#Harry_Potter
+###  http://www.semanticweb.org/owl/owlapi/turtle#Harry_Potter
 
 :Harry_Potter rdf:type owl:NamedIndividual ;
               
@@ -1105,7 +1092,7 @@ Funziona solo se sono definiti con enumerazione
 
 
 
-###  https://litetaryworktopics.com/litetaryworktopics2025#I_Promessi_Sposi
+###  http://www.semanticweb.org/owl/owlapi/turtle#I_Promessi_Sposi
 
 :I_Promessi_Sposi rdf:type owl:NamedIndividual ;
                   
@@ -1119,14 +1106,14 @@ Funziona solo se sono definiti con enumerazione
 
 
 
-###  https://litetaryworktopics.com/litetaryworktopics2025#Italia
+###  http://www.semanticweb.org/owl/owlapi/turtle#Italia
 
 :Italia rdf:type :Nazione ,
                  owl:NamedIndividual .
 
 
 
-###  https://litetaryworktopics.com/litetaryworktopics2025#J.K_Rowling
+###  http://www.semanticweb.org/owl/owlapi/turtle#J.K_Rowling
 
 :J.K_Rowling rdf:type owl:NamedIndividual ;
              
@@ -1136,7 +1123,7 @@ Funziona solo se sono definiti con enumerazione
 
 
 
-###  https://litetaryworktopics.com/litetaryworktopics2025#Letteratura_Italiana
+###  http://www.semanticweb.org/owl/owlapi/turtle#Letteratura_Italiana
 
 :Letteratura_Italiana rdf:type owl:NamedIndividual ;
                       
@@ -1149,7 +1136,7 @@ Funziona solo se sono definiti con enumerazione
 
 
 
-###  https://litetaryworktopics.com/litetaryworktopics2025#Opera_Camera_dei_Segreti
+###  http://www.semanticweb.org/owl/owlapi/turtle#Opera_Camera_dei_Segreti
 
 :Opera_Camera_dei_Segreti rdf:type :Romanzo ,
                                    owl:NamedIndividual ;
@@ -1170,19 +1157,19 @@ Funziona solo se sono definiti con enumerazione
 
 
 
-###  https://litetaryworktopics.com/litetaryworktopics2025#Opera_Fermo_e_Lucia
+###  http://www.semanticweb.org/owl/owlapi/turtle#Opera_Fermo_e_Lucia
 
 :Opera_Fermo_e_Lucia rdf:type :Romanzo ,
                               owl:NamedIndividual ;
                      
                      <https://litetaryworktopics.com/litetaryworktopics2025#haLingua> "it"^^xsd:language ;
                      
-                     <https://litetaryworktopics.com/litetaryworktopics2025##HaEdizione> :Fermo_e_Lucia ;
+                     :HaEdizione :Fermo_e_Lucia ;
                      
-                     :HaEdizione :Fermo_e_Lucia ,
-                                 :I_Promessi_Sposi ;
+                     <https://litetaryworktopics.com/litetaryworktopics2025##HaEdizione> :Fermo_e_Lucia ,
+                                                                                         :I_Promessi_Sposi ;
                      
-                     <https://litetaryworktopics.com/litetaryworktopics2025##HaEdizione> :I_Promessi_Sposi ;
+                     :HaEdizione :I_Promessi_Sposi ;
                      
                      :parteDiAntologia :Letteratura_Italiana ;
                      
@@ -1192,7 +1179,7 @@ Funziona solo se sono definiti con enumerazione
 
 
 
-###  https://litetaryworktopics.com/litetaryworktopics2025#Opera_La_Divina_Commedia
+###  http://www.semanticweb.org/owl/owlapi/turtle#Opera_La_Divina_Commedia
 
 :Opera_La_Divina_Commedia rdf:type :Poesia ,
                                    owl:NamedIndividual ;
@@ -1203,7 +1190,7 @@ Funziona solo se sono definiti con enumerazione
 
 
 
-###  https://litetaryworktopics.com/litetaryworktopics2025#Opera_Pietra_Filosofale
+###  http://www.semanticweb.org/owl/owlapi/turtle#Opera_Pietra_Filosofale
 
 :Opera_Pietra_Filosofale rdf:type :Romanzo ,
                                   owl:NamedIndividual ;
@@ -1224,7 +1211,7 @@ Funziona solo se sono definiti con enumerazione
 
 
 
-###  https://litetaryworktopics.com/litetaryworktopics2025#Opera_Prigioniero_di_Azkaban
+###  http://www.semanticweb.org/owl/owlapi/turtle#Opera_Prigioniero_di_Azkaban
 
 :Opera_Prigioniero_di_Azkaban rdf:type :Romanzo ,
                                        owl:NamedIndividual ;
@@ -1237,15 +1224,15 @@ Funziona solo se sono definiti con enumerazione
                               
                               :HaGenereLetterario :Romanzo ;
                               
-                              :HaEdizione :The_Prisoner_of_Azkaban ;
-                              
                               <https://litetaryworktopics.com/litetaryworktopics2025##HaEdizione> :The_Prisoner_of_Azkaban ;
+                              
+                              :HaEdizione :The_Prisoner_of_Azkaban ;
                               
                               :contiene <https://litetaryworktopics.com/litetaryworktopics2025#Harry_James_Potter> .
 
 
 
-###  https://litetaryworktopics.com/litetaryworktopics2025#Opera_The_Autobiography_of_Benjamin_Franklin
+###  http://www.semanticweb.org/owl/owlapi/turtle#Opera_The_Autobiography_of_Benjamin_Franklin
 
 :Opera_The_Autobiography_of_Benjamin_Franklin rdf:type owl:NamedIndividual ;
                                               
@@ -1253,13 +1240,13 @@ Funziona solo se sono definiti con enumerazione
 
 
 
-###  https://litetaryworktopics.com/litetaryworktopics2025#Romanzo_storico
+###  http://www.semanticweb.org/owl/owlapi/turtle#Romanzo_storico
 
 :Romanzo_storico rdf:type owl:NamedIndividual .
 
 
 
-###  https://litetaryworktopics.com/litetaryworktopics2025#The_Autobiography_of_Benjamin_Franklin
+###  http://www.semanticweb.org/owl/owlapi/turtle#The_Autobiography_of_Benjamin_Franklin
 
 :The_Autobiography_of_Benjamin_Franklin rdf:type owl:NamedIndividual ;
                                         
@@ -1267,7 +1254,7 @@ Funziona solo se sono definiti con enumerazione
 
 
 
-###  https://litetaryworktopics.com/litetaryworktopics2025#The_Chamber_of_Secrets
+###  http://www.semanticweb.org/owl/owlapi/turtle#The_Chamber_of_Secrets
 
 :The_Chamber_of_Secrets rdf:type owl:NamedIndividual ;
                         
@@ -1279,7 +1266,7 @@ Funziona solo se sono definiti con enumerazione
 
 
 
-###  https://litetaryworktopics.com/litetaryworktopics2025#The_Philosophers_Stone
+###  http://www.semanticweb.org/owl/owlapi/turtle#The_Philosophers_Stone
 
 :The_Philosophers_Stone rdf:type owl:NamedIndividual ;
                         
@@ -1291,7 +1278,7 @@ Funziona solo se sono definiti con enumerazione
 
 
 
-###  https://litetaryworktopics.com/litetaryworktopics2025#The_Prisoner_of_Azkaban
+###  http://www.semanticweb.org/owl/owlapi/turtle#The_Prisoner_of_Azkaban
 
 :The_Prisoner_of_Azkaban rdf:type owl:NamedIndividual ;
                          
@@ -1319,63 +1306,23 @@ Funziona solo se sono definiti con enumerazione
 
 
 [ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( :Opera_Fermo_e_Lucia
-                        :Opera_La_Divina_Commedia
-                      )
-] .
-[ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( :I_Promessi_Sposi
-                        :The_Chamber_of_Secrets
-                      )
-] .
-[ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( :Opera_Pietra_Filosofale
-                        <https://litetaryworktopics.com/litetaryworktopics2025#Harry_James_Potter>
-                      )
-] .
-[ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( :Opera_Camera_dei_Segreti
-                        <https://litetaryworktopics.com/litetaryworktopics2025#Harry_James_Potter>
-                      )
-] .
-[ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( :I_Promessi_Sposi
-                        :The_Prisoner_of_Azkaban
-                      )
-] .
-[ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( :Opera_Fermo_e_Lucia
-                        :Opera_Prigioniero_di_Azkaban
-                      )
-] .
-[ rdf:type owl:AllDifferent ;
   owl:distinctMembers ( :Harry_Potter
                         :Opera_Pietra_Filosofale
                       )
 ] .
 [ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( :Opera_Prigioniero_di_Azkaban
-                        :Opera_The_Autobiography_of_Benjamin_Franklin
-                      )
-] .
-[ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( :The_Autobiography_of_Benjamin_Franklin
+  owl:distinctMembers ( :I_Promessi_Sposi
                         :The_Prisoner_of_Azkaban
                       )
 ] .
 [ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( :Benjamin_Franklin
-                        :Bloomsbury_Publishing
-                      )
-] .
-[ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( :Alessandro_Manzoni
-                        :Bloomsbury_Publishing
-                      )
-] .
-[ rdf:type owl:AllDifferent ;
   owl:distinctMembers ( :Opera_La_Divina_Commedia
-                        :Opera_The_Autobiography_of_Benjamin_Franklin
+                        :Opera_Prigioniero_di_Azkaban
+                      )
+] .
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :I_Promessi_Sposi
+                        :The_Autobiography_of_Benjamin_Franklin
                       )
 ] .
 [ rdf:type owl:AllDifferent ;
@@ -1384,13 +1331,8 @@ Funziona solo se sono definiti con enumerazione
                       )
 ] .
 [ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( :The_Philosophers_Stone
-                        :The_Prisoner_of_Azkaban
-                      )
-] .
-[ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( :Opera_La_Divina_Commedia
-                        :Opera_Prigioniero_di_Azkaban
+  owl:distinctMembers ( :Opera_Prigioniero_di_Azkaban
+                        <https://litetaryworktopics.com/litetaryworktopics2025#Harry_James_Potter>
                       )
 ] .
 [ rdf:type owl:AllDifferent ;
@@ -1399,13 +1341,8 @@ Funziona solo se sono definiti con enumerazione
                       )
 ] .
 [ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( :Opera_Camera_dei_Segreti
-                        :Opera_Prigioniero_di_Azkaban
-                      )
-] .
-[ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( :The_Autobiography_of_Benjamin_Franklin
-                        :The_Chamber_of_Secrets
+  owl:distinctMembers ( :Opera_Fermo_e_Lucia
+                        :Opera_La_Divina_Commedia
                       )
 ] .
 [ rdf:type owl:AllDifferent ;
@@ -1414,12 +1351,107 @@ Funziona solo se sono definiti con enumerazione
                       )
 ] .
 [ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :Harry_Potter
+                        <https://litetaryworktopics.com/litetaryworktopics2025#Harry_James_Potter>
+                      )
+] .
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :Benjamin_Franklin
+                        :J.K_Rowling
+                      )
+] .
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :Benjamin_Franklin
+                        :Bloomsbury_Publishing
+                      )
+] .
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :Opera_Camera_dei_Segreti
+                        :Opera_The_Autobiography_of_Benjamin_Franklin
+                      )
+] .
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :Opera_La_Divina_Commedia
+                        :Opera_The_Autobiography_of_Benjamin_Franklin
+                      )
+] .
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :Opera_Prigioniero_di_Azkaban
+                        :Opera_The_Autobiography_of_Benjamin_Franklin
+                      )
+] .
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :Opera_Camera_dei_Segreti
+                        :Opera_Pietra_Filosofale
+                      )
+] .
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :Alessandro_Manzoni
+                        :Benjamin_Franklin
+                      )
+] .
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :Opera_Pietra_Filosofale
+                        :Opera_Prigioniero_di_Azkaban
+                      )
+] .
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :Opera_Fermo_e_Lucia
+                        :Opera_Prigioniero_di_Azkaban
+                      )
+] .
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :Harry_Potter
+                        :Opera_Prigioniero_di_Azkaban
+                      )
+] .
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :Opera_Camera_dei_Segreti
+                        :Opera_Prigioniero_di_Azkaban
+                      )
+] .
+[ rdf:type owl:AllDifferent ;
   owl:distinctMembers ( :Fermo_e_Lucia
-                        :The_Autobiography_of_Benjamin_Franklin
+                        :The_Prisoner_of_Azkaban
+                      )
+] .
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :Alessandro_Manzoni
+                        :Bloomsbury_Publishing
+                      )
+] .
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :Opera_Camera_dei_Segreti
+                        <https://litetaryworktopics.com/litetaryworktopics2025#Harry_James_Potter>
                       )
 ] .
 [ rdf:type owl:AllDifferent ;
   owl:distinctMembers ( :The_Autobiography_of_Benjamin_Franklin
+                        :The_Philosophers_Stone
+                      )
+] .
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :Opera_Camera_dei_Segreti
+                        :Opera_Fermo_e_Lucia
+                      )
+] .
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :Alessandro_Manzoni
+                        :J.K_Rowling
+                      )
+] .
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :The_Chamber_of_Secrets
+                        :The_Prisoner_of_Azkaban
+                      )
+] .
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :The_Autobiography_of_Benjamin_Franklin
+                        :The_Prisoner_of_Azkaban
+                      )
+] .
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :The_Chamber_of_Secrets
                         :The_Philosophers_Stone
                       )
 ] .
@@ -1429,98 +1461,18 @@ Funziona solo se sono definiti con enumerazione
                       )
 ] .
 [ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( :Alessandro_Manzoni
-                        :J.K_Rowling
-                      )
-] .
-[ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( :Fermo_e_Lucia
-                        :The_Philosophers_Stone
-                      )
-] .
-[ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( :Opera_Pietra_Filosofale
+  owl:distinctMembers ( :Opera_Fermo_e_Lucia
                         :Opera_The_Autobiography_of_Benjamin_Franklin
                       )
 ] .
 [ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( :I_Promessi_Sposi
-                        :The_Autobiography_of_Benjamin_Franklin
-                      )
-] .
-[ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( :Opera_Fermo_e_Lucia
-                        :Opera_Pietra_Filosofale
-                      )
-] .
-[ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( :Fermo_e_Lucia
-                        :The_Prisoner_of_Azkaban
-                      )
-] .
-[ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( :Alessandro_Manzoni
-                        :Benjamin_Franklin
-                      )
-] .
-[ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( :Fermo_e_Lucia
+  owl:distinctMembers ( :The_Autobiography_of_Benjamin_Franklin
                         :The_Chamber_of_Secrets
                       )
 ] .
 [ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( :The_Chamber_of_Secrets
-                        :The_Prisoner_of_Azkaban
-                      )
-] .
-[ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( :Harry_Potter
-                        :Opera_Camera_dei_Segreti
-                      )
-] .
-[ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( :Opera_Prigioniero_di_Azkaban
-                        <https://litetaryworktopics.com/litetaryworktopics2025#Harry_James_Potter>
-                      )
-] .
-[ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( :Opera_Camera_dei_Segreti
-                        :Opera_Fermo_e_Lucia
-                      )
-] .
-[ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( :The_Chamber_of_Secrets
-                        :The_Philosophers_Stone
-                      )
-] .
-[ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( :Opera_Pietra_Filosofale
-                        :Opera_Prigioniero_di_Azkaban
-                      )
-] .
-[ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( :Harry_Potter
-                        :Opera_Prigioniero_di_Azkaban
-                      )
-] .
-[ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( :Bloomsbury_Publishing
-                        :J.K_Rowling
-                      )
-] .
-[ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( :Opera_Camera_dei_Segreti
-                        :Opera_The_Autobiography_of_Benjamin_Franklin
-                      )
-] .
-[ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( :Opera_Fermo_e_Lucia
-                        :Opera_The_Autobiography_of_Benjamin_Franklin
-                      )
-] .
-[ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( :Benjamin_Franklin
-                        :J.K_Rowling
+  owl:distinctMembers ( :Fermo_e_Lucia
+                        :The_Autobiography_of_Benjamin_Franklin
                       )
 ] .
 [ rdf:type owl:AllDifferent ;
@@ -1529,12 +1481,47 @@ Funziona solo se sono definiti con enumerazione
                       )
 ] .
 [ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( :Harry_Potter
+  owl:distinctMembers ( :The_Philosophers_Stone
+                        :The_Prisoner_of_Azkaban
+                      )
+] .
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :Opera_Pietra_Filosofale
+                        :Opera_The_Autobiography_of_Benjamin_Franklin
+                      )
+] .
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :Fermo_e_Lucia
+                        :The_Philosophers_Stone
+                      )
+] .
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :Fermo_e_Lucia
+                        :The_Chamber_of_Secrets
+                      )
+] .
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :Bloomsbury_Publishing
+                        :J.K_Rowling
+                      )
+] .
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :Opera_Pietra_Filosofale
                         <https://litetaryworktopics.com/litetaryworktopics2025#Harry_James_Potter>
                       )
 ] .
 [ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( :Opera_Camera_dei_Segreti
+  owl:distinctMembers ( :Harry_Potter
+                        :Opera_Camera_dei_Segreti
+                      )
+] .
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :I_Promessi_Sposi
+                        :The_Chamber_of_Secrets
+                      )
+] .
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :Opera_Fermo_e_Lucia
                         :Opera_Pietra_Filosofale
                       )
 ] .
