@@ -16,10 +16,11 @@
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      ontologyIRI="https://litetaryworktopics.com/litetaryworktopics2025#">
-    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
-    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
-    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="" IRI="http://www.w3.org/2002/07/owl#"/>
     <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
     <Annotation>
         <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Enrico Chiesa</Literal>
@@ -37,12 +38,12 @@
         <Literal datatypeIRI="&rdf;PlainLiteral">lwt</Literal>
     </Annotation>
     <Annotation>
-        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/date"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">2025-01-29</Literal>
-    </Annotation>
-    <Annotation>
         <AnnotationProperty IRI="http://web.resource.org/cc/license"/>
         <Literal datatypeIRI="&rdf;PlainLiteral">MIT</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/date"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">2025-01-29</Literal>
     </Annotation>
     <Annotation>
         <AnnotationProperty IRI="http://purl.org/vocab/vann/preferredNamespaceUri"/>
@@ -455,10 +456,6 @@
         <NamedIndividual IRI="http://www.semanticweb.org/owl/owlapi/turtle#Opera_The_Autobiography_of_Benjamin_Franklin"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="http://www.semanticweb.org/owl/owlapi/turtle#Genere"/>
-        <NamedIndividual IRI="http://www.semanticweb.org/owl/owlapi/turtle#Romanzo_storico"/>
-    </ClassAssertion>
-    <ClassAssertion>
         <Class IRI="#Edizione"/>
         <NamedIndividual IRI="http://www.semanticweb.org/owl/owlapi/turtle#The_Autobiography_of_Benjamin_Franklin"/>
     </ClassAssertion>
@@ -473,6 +470,10 @@
     <ClassAssertion>
         <Class IRI="#Edizione"/>
         <NamedIndividual IRI="http://www.semanticweb.org/owl/owlapi/turtle#The_Prisoner_of_Azkaban"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org/owl/owlapi/turtle#Tema"/>
+        <NamedIndividual IRI="Amicizia"/>
     </ClassAssertion>
     <DifferentIndividuals>
         <NamedIndividual IRI="http://www.semanticweb.org/owl/owlapi/turtle#Alessandro_Manzoni"/>
@@ -801,14 +802,19 @@
         <NamedIndividual IRI="http://www.semanticweb.org/owl/owlapi/turtle#J.K_Rowling"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="VieneClassificatoCome"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/owl/owlapi/turtle#Opera_Camera_dei_Segreti"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/owl/owlapi/turtle#Fantasy"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="VieneClassificatoCome"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/owl/owlapi/turtle#Opera_Camera_dei_Segreti"/>
+        <NamedIndividual IRI="Amicizia"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#HaEdizione"/>
         <NamedIndividual IRI="http://www.semanticweb.org/owl/owlapi/turtle#Opera_Camera_dei_Segreti"/>
         <NamedIndividual IRI="http://www.semanticweb.org/owl/owlapi/turtle#The_Chamber_of_Secrets"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#HaGenereLetterario"/>
-        <NamedIndividual IRI="http://www.semanticweb.org/owl/owlapi/turtle#Opera_Camera_dei_Segreti"/>
-        <NamedIndividual IRI="http://www.semanticweb.org/owl/owlapi/turtle#Fantasy"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="http://www.semanticweb.org/owl/owlapi/turtle#AppartieneA"/>
@@ -821,6 +827,11 @@
         <NamedIndividual IRI="http://www.semanticweb.org/owl/owlapi/turtle#Alessandro_Manzoni"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="VieneClassificatoCome"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/owl/owlapi/turtle#Opera_Fermo_e_Lucia"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/owl/owlapi/turtle#Romanzo_storico"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#HaEdizione"/>
         <NamedIndividual IRI="http://www.semanticweb.org/owl/owlapi/turtle#Opera_Fermo_e_Lucia"/>
         <NamedIndividual IRI="http://www.semanticweb.org/owl/owlapi/turtle#Fermo_e_Lucia"/>
@@ -829,11 +840,6 @@
         <ObjectProperty IRI="#HaEdizione"/>
         <NamedIndividual IRI="http://www.semanticweb.org/owl/owlapi/turtle#Opera_Fermo_e_Lucia"/>
         <NamedIndividual IRI="http://www.semanticweb.org/owl/owlapi/turtle#I_Promessi_Sposi"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#HaGenereLetterario"/>
-        <NamedIndividual IRI="http://www.semanticweb.org/owl/owlapi/turtle#Opera_Fermo_e_Lucia"/>
-        <NamedIndividual IRI="http://www.semanticweb.org/owl/owlapi/turtle#Romanzo_storico"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="http://www.semanticweb.org/owl/owlapi/turtle#AppartieneA"/>
@@ -856,14 +862,14 @@
         <NamedIndividual IRI="http://www.semanticweb.org/owl/owlapi/turtle#J.K_Rowling"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="VieneClassificatoCome"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/owl/owlapi/turtle#Opera_Pietra_Filosofale"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/owl/owlapi/turtle#Fantasy"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#HaEdizione"/>
         <NamedIndividual IRI="http://www.semanticweb.org/owl/owlapi/turtle#Opera_Pietra_Filosofale"/>
         <NamedIndividual IRI="http://www.semanticweb.org/owl/owlapi/turtle#The_Philosophers_Stone"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#HaGenereLetterario"/>
-        <NamedIndividual IRI="http://www.semanticweb.org/owl/owlapi/turtle#Opera_Pietra_Filosofale"/>
-        <NamedIndividual IRI="http://www.semanticweb.org/owl/owlapi/turtle#Fantasy"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="http://www.semanticweb.org/owl/owlapi/turtle#AppartieneA"/>
@@ -881,19 +887,29 @@
         <NamedIndividual IRI="http://www.semanticweb.org/owl/owlapi/turtle#J.K_Rowling"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="VieneClassificatoCome"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/owl/owlapi/turtle#Opera_Prigioniero_di_Azkaban"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/owl/owlapi/turtle#Fantasy"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="VieneClassificatoCome"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/owl/owlapi/turtle#Opera_Prigioniero_di_Azkaban"/>
+        <NamedIndividual IRI="Amicizia"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#HaEdizione"/>
         <NamedIndividual IRI="http://www.semanticweb.org/owl/owlapi/turtle#Opera_Prigioniero_di_Azkaban"/>
         <NamedIndividual IRI="http://www.semanticweb.org/owl/owlapi/turtle#The_Prisoner_of_Azkaban"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#HaGenereLetterario"/>
-        <NamedIndividual IRI="http://www.semanticweb.org/owl/owlapi/turtle#Opera_Prigioniero_di_Azkaban"/>
-        <NamedIndividual IRI="http://www.semanticweb.org/owl/owlapi/turtle#Fantasy"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
         <ObjectProperty IRI="http://www.semanticweb.org/owl/owlapi/turtle#PubblicatoDa"/>
         <NamedIndividual IRI="http://www.semanticweb.org/owl/owlapi/turtle#Opera_The_Autobiography_of_Benjamin_Franklin"/>
         <NamedIndividual IRI="http://www.semanticweb.org/owl/owlapi/turtle#Benjamin_Franklin"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="VieneClassificatoCome"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/owl/owlapi/turtle#Opera_The_Autobiography_of_Benjamin_Franklin"/>
+        <NamedIndividual IRI="Amicizia"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#HaEdizione"/>
@@ -945,10 +961,62 @@
         <NamedIndividual IRI="http://www.semanticweb.org/owl/owlapi/turtle#The_Prisoner_of_Azkaban"/>
         <NamedIndividual IRI="http://www.semanticweb.org/owl/owlapi/turtle#Bloomsbury_Publishing"/>
     </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org/owl/owlapi/turtle#VieneUtilizzatoIn"/>
+        <NamedIndividual IRI="Amicizia"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/owl/owlapi/turtle#Opera_Camera_dei_Segreti"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org/owl/owlapi/turtle#VieneUtilizzatoIn"/>
+        <NamedIndividual IRI="Amicizia"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/owl/owlapi/turtle#Opera_Pietra_Filosofale"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org/owl/owlapi/turtle#VieneUtilizzatoIn"/>
+        <NamedIndividual IRI="Amicizia"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/owl/owlapi/turtle#Opera_Prigioniero_di_Azkaban"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/owl/owlapi/turtle#haNome"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/owl/owlapi/turtle#Alessandro_Manzoni"/>
+        <Literal datatypeIRI="&xsd;string">Alessandro Manzoni</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/owl/owlapi/turtle#haNome"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/owl/owlapi/turtle#Benjamin_Franklin"/>
+        <Literal datatypeIRI="&xsd;string">Benjamin Franklin</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/owl/owlapi/turtle#haNome"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/owl/owlapi/turtle#Bloomsbury_Publishing"/>
+        <Literal datatypeIRI="&xsd;string">Bloombsbury Publishing
+</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/owl/owlapi/turtle#haNome"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/owl/owlapi/turtle#Fantasy"/>
+        <Literal datatypeIRI="&xsd;string">Fantasy</Literal>
+    </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="http://www.semanticweb.org/owl/owlapi/turtle#haLingua"/>
         <NamedIndividual IRI="http://www.semanticweb.org/owl/owlapi/turtle#Fermo_e_Lucia"/>
         <Literal datatypeIRI="&xsd;language">it</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/owl/owlapi/turtle#haNome"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/owl/owlapi/turtle#Fermo_e_Lucia"/>
+        <Literal datatypeIRI="&xsd;string">Fermo e Lucia
+</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/owl/owlapi/turtle#haNome"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/owl/owlapi/turtle#Harry_James_Potter"/>
+        <Literal datatypeIRI="&xsd;string">Harry James Potter</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/owl/owlapi/turtle#haNome"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/owl/owlapi/turtle#Harry_Potter"/>
+        <Literal datatypeIRI="&xsd;string">Harry Potter</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="http://www.semanticweb.org/owl/owlapi/turtle#haLingua"/>
@@ -956,9 +1024,34 @@
         <Literal datatypeIRI="&xsd;language">it</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/owl/owlapi/turtle#haNome"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/owl/owlapi/turtle#I_Promessi_Sposi"/>
+        <Literal datatypeIRI="&xsd;string">I Promessi Sposi</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/owl/owlapi/turtle#haNome"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/owl/owlapi/turtle#Italia"/>
+        <Literal datatypeIRI="&xsd;string">Italia</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/owl/owlapi/turtle#haNome"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/owl/owlapi/turtle#J.K_Rowling"/>
+        <Literal datatypeIRI="&xsd;string">J.K. Rowling</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/owl/owlapi/turtle#haNome"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/owl/owlapi/turtle#Letteratura_Italiana"/>
+        <Literal datatypeIRI="&xsd;string">Letteratura Italiana</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="http://www.semanticweb.org/owl/owlapi/turtle#haLingua"/>
         <NamedIndividual IRI="http://www.semanticweb.org/owl/owlapi/turtle#Opera_Camera_dei_Segreti"/>
         <Literal datatypeIRI="&xsd;language">en</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/owl/owlapi/turtle#haNome"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/owl/owlapi/turtle#Opera_Camera_dei_Segreti"/>
+        <Literal datatypeIRI="&xsd;string">La Camera dei Segreti</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="http://www.semanticweb.org/owl/owlapi/turtle#haLingua"/>
@@ -966,9 +1059,19 @@
         <Literal datatypeIRI="&xsd;language">it</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/owl/owlapi/turtle#haNome"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/owl/owlapi/turtle#Opera_Fermo_e_Lucia"/>
+        <Literal datatypeIRI="&xsd;string">Fermo e Lucia</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="http://www.semanticweb.org/owl/owlapi/turtle#haLingua"/>
         <NamedIndividual IRI="http://www.semanticweb.org/owl/owlapi/turtle#Opera_La_Divina_Commedia"/>
         <Literal datatypeIRI="&xsd;language">it</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/owl/owlapi/turtle#haNome"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/owl/owlapi/turtle#Opera_La_Divina_Commedia"/>
+        <Literal datatypeIRI="&xsd;string">La Divina Commedia</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="http://www.semanticweb.org/owl/owlapi/turtle#haLingua"/>
@@ -976,9 +1079,34 @@
         <Literal datatypeIRI="&xsd;language">en</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/owl/owlapi/turtle#haNome"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/owl/owlapi/turtle#Opera_Pietra_Filosofale"/>
+        <Literal datatypeIRI="&xsd;string">La Pietra Filosofale</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="http://www.semanticweb.org/owl/owlapi/turtle#haLingua"/>
         <NamedIndividual IRI="http://www.semanticweb.org/owl/owlapi/turtle#Opera_Prigioniero_di_Azkaban"/>
         <Literal datatypeIRI="&xsd;language">en</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/owl/owlapi/turtle#haNome"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/owl/owlapi/turtle#Opera_Prigioniero_di_Azkaban"/>
+        <Literal datatypeIRI="&xsd;string">Il Prigioniero di Azkaban</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/owl/owlapi/turtle#haNome"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/owl/owlapi/turtle#Opera_The_Autobiography_of_Benjamin_Franklin"/>
+        <Literal datatypeIRI="&xsd;string">The Autobiography of Benjamin Franklin</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/owl/owlapi/turtle#haNome"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/owl/owlapi/turtle#Romanzo_storico"/>
+        <Literal datatypeIRI="&xsd;string">Romanzo Storico</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/owl/owlapi/turtle#haNome"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/owl/owlapi/turtle#The_Autobiography_of_Benjamin_Franklin"/>
+        <Literal datatypeIRI="&xsd;string">The Autobiography of Benjamin Franklin</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="http://www.semanticweb.org/owl/owlapi/turtle#haLingua"/>
@@ -986,23 +1114,40 @@
         <Literal datatypeIRI="&xsd;language">en</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/owl/owlapi/turtle#haNome"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/owl/owlapi/turtle#The_Chamber_of_Secrets"/>
+        <Literal datatypeIRI="&xsd;string">The Chamber of Secrets</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="http://www.semanticweb.org/owl/owlapi/turtle#haLingua"/>
         <NamedIndividual IRI="http://www.semanticweb.org/owl/owlapi/turtle#The_Philosophers_Stone"/>
         <Literal datatypeIRI="&xsd;language">en</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/owl/owlapi/turtle#haNome"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/owl/owlapi/turtle#The_Philosophers_Stone"/>
+        <Literal datatypeIRI="&xsd;string">The Philosophers Stone</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="http://www.semanticweb.org/owl/owlapi/turtle#haLingua"/>
         <NamedIndividual IRI="http://www.semanticweb.org/owl/owlapi/turtle#The_Prisoner_of_Azkaban"/>
         <Literal datatypeIRI="&xsd;language">en</Literal>
     </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/owl/owlapi/turtle#haNome"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/owl/owlapi/turtle#The_Prisoner_of_Azkaban"/>
+        <Literal datatypeIRI="&xsd;string">The Prisoner of Azkaban</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/owl/owlapi/turtle#haNome"/>
+        <NamedIndividual IRI="Amicizia"/>
+        <Literal datatypeIRI="&xsd;string">Amicizia</Literal>
+    </DataPropertyAssertion>
     <EquivalentObjectProperties>
         <ObjectProperty IRI="http://www.semanticweb.org/owl/owlapi/turtle#HaAutore"/>
     </EquivalentObjectProperties>
     <EquivalentObjectProperties>
         <ObjectProperty IRI="http://www.semanticweb.org/owl/owlapi/turtle#HaProvenienza"/>
-    </EquivalentObjectProperties>
-    <EquivalentObjectProperties>
-        <ObjectProperty IRI="http://www.semanticweb.org/owl/owlapi/turtle#HaTema"/>
     </EquivalentObjectProperties>
     <EquivalentObjectProperties>
         <ObjectProperty IRI="http://www.semanticweb.org/owl/owlapi/turtle#PubblicaComeOrganizzazione"/>
@@ -1079,8 +1224,8 @@
         <ObjectProperty IRI="http://www.semanticweb.org/owl/owlapi/turtle#PubblicaComeSingolo"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="#HaGenereLetterario"/>
         <ObjectProperty IRI="http://www.semanticweb.org/owl/owlapi/turtle#VieneUtilizzatoIn"/>
+        <ObjectProperty IRI="VieneClassificatoCome"/>
     </InverseObjectProperties>
     <FunctionalObjectProperty>
         <ObjectProperty IRI="http://www.semanticweb.org/owl/owlapi/turtle#EdizioneDi"/>
@@ -1097,9 +1242,6 @@
     <FunctionalObjectProperty>
         <ObjectProperty IRI="http://www.semanticweb.org/owl/owlapi/turtle#PubblicatoDa"/>
     </FunctionalObjectProperty>
-    <FunctionalObjectProperty>
-        <ObjectProperty IRI="#HaGenereLetterario"/>
-    </FunctionalObjectProperty>
     <InverseFunctionalObjectProperty>
         <ObjectProperty IRI="http://www.semanticweb.org/owl/owlapi/turtle#Pubblica"/>
     </InverseFunctionalObjectProperty>
@@ -1108,9 +1250,6 @@
     </InverseFunctionalObjectProperty>
     <InverseFunctionalObjectProperty>
         <ObjectProperty IRI="http://www.semanticweb.org/owl/owlapi/turtle#PubblicaComeSingolo"/>
-    </InverseFunctionalObjectProperty>
-    <InverseFunctionalObjectProperty>
-        <ObjectProperty IRI="http://www.semanticweb.org/owl/owlapi/turtle#VieneUtilizzatoIn"/>
     </InverseFunctionalObjectProperty>
     <InverseFunctionalObjectProperty>
         <ObjectProperty IRI="#HaEdizione"/>
@@ -1143,10 +1282,6 @@
         </ObjectUnionOf>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="http://www.semanticweb.org/owl/owlapi/turtle#HaTema"/>
-        <Class IRI="#OperaLetteraria"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
         <ObjectProperty IRI="http://www.semanticweb.org/owl/owlapi/turtle#LavoraPerCasaEditrice"/>
         <Class IRI="http://www.semanticweb.org/owl/owlapi/turtle#Editore"/>
     </ObjectPropertyDomain>
@@ -1186,18 +1321,21 @@
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="http://www.semanticweb.org/owl/owlapi/turtle#VieneUtilizzatoIn"/>
-        <Class IRI="http://www.semanticweb.org/owl/owlapi/turtle#Genere"/>
+        <ObjectUnionOf>
+            <Class IRI="http://www.semanticweb.org/owl/owlapi/turtle#Genere"/>
+            <Class IRI="http://www.semanticweb.org/owl/owlapi/turtle#Tema"/>
+        </ObjectUnionOf>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="http://www.semanticweb.org/owl/owlapi/turtle#haEditore"/>
         <Class IRI="http://www.semanticweb.org/owl/owlapi/turtle#CasaEditrice"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="#HaEdizione"/>
+        <ObjectProperty IRI="VieneClassificatoCome"/>
         <Class IRI="#OperaLetteraria"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="#HaGenereLetterario"/>
+        <ObjectProperty IRI="#HaEdizione"/>
         <Class IRI="#OperaLetteraria"/>
     </ObjectPropertyDomain>
     <ObjectPropertyRange>
@@ -1226,10 +1364,6 @@
     <ObjectPropertyRange>
         <ObjectProperty IRI="http://www.semanticweb.org/owl/owlapi/turtle#HaProvenienza"/>
         <Class IRI="http://www.semanticweb.org/owl/owlapi/turtle#Nazione"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="http://www.semanticweb.org/owl/owlapi/turtle#HaTema"/>
-        <Class IRI="http://www.semanticweb.org/owl/owlapi/turtle#Tema"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="http://www.semanticweb.org/owl/owlapi/turtle#LavoraPerCasaEditrice"/>
@@ -1275,6 +1409,13 @@
         <Class IRI="http://www.semanticweb.org/owl/owlapi/turtle#Editore"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
+        <ObjectProperty IRI="VieneClassificatoCome"/>
+        <ObjectUnionOf>
+            <Class IRI="http://www.semanticweb.org/owl/owlapi/turtle#Genere"/>
+            <Class IRI="http://www.semanticweb.org/owl/owlapi/turtle#Tema"/>
+        </ObjectUnionOf>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
         <ObjectProperty IRI="#HaEdizione"/>
         <Class IRI="#Edizione"/>
     </ObjectPropertyRange>
@@ -1302,6 +1443,9 @@
     <EquivalentDataProperties>
         <DataProperty IRI="http://www.semanticweb.org/owl/owlapi/turtle#haPagine"/>
     </EquivalentDataProperties>
+    <EquivalentDataProperties>
+        <DataProperty IRI="http://www.semanticweb.org/owl/owlapi/turtle#haRuolo"/>
+    </EquivalentDataProperties>
     <DataPropertyDomain>
         <DataProperty IRI="http://www.semanticweb.org/owl/owlapi/turtle#haISBN"/>
         <Class IRI="#Edizione"/>
@@ -1309,6 +1453,10 @@
     <DataPropertyDomain>
         <DataProperty IRI="http://www.semanticweb.org/owl/owlapi/turtle#haPagine"/>
         <Class IRI="#Edizione"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="http://www.semanticweb.org/owl/owlapi/turtle#haRuolo"/>
+        <Class IRI="http://www.semanticweb.org/owl/owlapi/turtle#Collaboratore"/>
     </DataPropertyDomain>
     <DataPropertyRange>
         <DataProperty IRI="http://purl.org/dc/elements/1.1/date"/>
@@ -1341,6 +1489,10 @@
     <DataPropertyRange>
         <DataProperty IRI="http://www.semanticweb.org/owl/owlapi/turtle#haPagine"/>
         <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="http://www.semanticweb.org/owl/owlapi/turtle#haRuolo"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
