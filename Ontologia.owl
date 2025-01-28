@@ -1,20 +1,10 @@
 <?xml version="1.0"?>
-
-
-<!DOCTYPE Ontology [
-    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
-    <!ENTITY xml "http://www.w3.org/XML/1998/namespace" >
-    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
-    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
-]>
-
-
 <Ontology xmlns="http://www.w3.org/2002/07/owl#"
      xml:base="https://litetaryworktopics.com/litetaryworktopics2025#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      ontologyIRI="https://litetaryworktopics.com/litetaryworktopics2025#">
     <Prefix name="" IRI="https://litetaryworktopics.com/litetaryworktopics2025#"/>
     <Prefix name="dc" IRI="http://purl.org/dc/elements/1.1/"/>
@@ -31,35 +21,35 @@
     <Prefix name="dbpedia" IRI="https://dbpedia.org/ontology/"/>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="dc:creator"/>
-        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Enrico Chiesa</Literal>
-    </Annotation>
-    <Annotation>
-        <AnnotationProperty abbreviatedIRI="dc:description"/>
-        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Questa ontologia ha l&apos;obiettivo di fornire una rappresentazione generale sulle principali tematiche trattate dalla letteratura, con il particolare obiettivo di rendere possibile il suggerimento di nuove da parte di esperti o amatori.</Literal>
+        <Literal xml:lang="en">Davide Vitturini</Literal>
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="dc:creator"/>
-        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Davide Vitturini</Literal>
-    </Annotation>
-    <Annotation>
-        <AnnotationProperty abbreviatedIRI="vann:preferredNamespacePrefix"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">lwt</Literal>
-    </Annotation>
-    <Annotation>
-        <AnnotationProperty IRI="http://web.resource.org/cc/license"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">MIT</Literal>
+        <Literal xml:lang="en">Enrico Chiesa</Literal>
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="dc:date"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">2025-01-29</Literal>
+        <Literal>2025-01-29</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dc:description"/>
+        <Literal xml:lang="it">Questa ontologia ha l&apos;obiettivo di fornire una rappresentazione generale sulle principali tematiche trattate dalla letteratura, con il particolare obiettivo di rendere possibile il suggerimento di nuove da parte di esperti o amatori.</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="vann:preferredNamespacePrefix"/>
+        <Literal>lwt</Literal>
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="vann:preferredNamespaceUri"/>
-        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">https://litetaryworktopics.com/litetaryworktopics2025#</Literal>
+        <Literal xml:lang="en">https://litetaryworktopics.com/litetaryworktopics2025#</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://web.resource.org/cc/license"/>
+        <Literal>MIT</Literal>
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">litetaryworktopics2025</Literal>
+        <Literal xml:lang="en">litetaryworktopics2025</Literal>
     </Annotation>
     <Declaration>
         <Class IRI="http://dbpedia.org/resource/List"/>
@@ -375,6 +365,9 @@
     </Declaration>
     <Declaration>
         <Datatype abbreviatedIRI="xsd:date"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dc:date"/>
     </Declaration>
     <EquivalentClasses>
         <Class IRI="http://www.semanticweb.org/owl/owlapi/turtle#GrandeSaga"/>
@@ -833,12 +826,12 @@
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="AutoreDi"/>
         <NamedIndividual IRI="Alessandro_Manzoni"/>
-        <NamedIndividual IRI="I_Promessi_Sposi"/>
+        <NamedIndividual IRI="Fermo_e_Lucia"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="AutoreDi"/>
         <NamedIndividual IRI="Alessandro_Manzoni"/>
-        <NamedIndividual IRI="Fermo_e_Lucia"/>
+        <NamedIndividual IRI="I_Promessi_Sposi"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="AutoreDi"/>
@@ -853,7 +846,7 @@
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="VieneUtilizzatoIn"/>
         <NamedIndividual IRI="Amicizia"/>
-        <NamedIndividual IRI="Opera_Prigioniero_di_Azkaban"/>
+        <NamedIndividual IRI="Opera_Camera_dei_Segreti"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="VieneUtilizzatoIn"/>
@@ -868,7 +861,7 @@
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="VieneUtilizzatoIn"/>
         <NamedIndividual IRI="Amicizia"/>
-        <NamedIndividual IRI="Opera_Camera_dei_Segreti"/>
+        <NamedIndividual IRI="Opera_Prigioniero_di_Azkaban"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="VieneUtilizzatoIn"/>
@@ -893,6 +886,11 @@
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="Pubblica"/>
         <NamedIndividual IRI="Bloomsbury_Publishing"/>
+        <NamedIndividual IRI="The_Chamber_of_Secrets"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="Pubblica"/>
+        <NamedIndividual IRI="Bloomsbury_Publishing"/>
         <NamedIndividual IRI="The_Philosophers_Stone"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
@@ -901,19 +899,14 @@
         <NamedIndividual IRI="The_Prisoner_of_Azkaban"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="Pubblica"/>
-        <NamedIndividual IRI="Bloomsbury_Publishing"/>
-        <NamedIndividual IRI="The_Chamber_of_Secrets"/>
+        <ObjectProperty IRI="VieneUtilizzatoIn"/>
+        <NamedIndividual IRI="Fantasy"/>
+        <NamedIndividual IRI="Opera_Camera_dei_Segreti"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="VieneUtilizzatoIn"/>
         <NamedIndividual IRI="Fantasy"/>
         <NamedIndividual IRI="Opera_Pietra_Filosofale"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="VieneUtilizzatoIn"/>
-        <NamedIndividual IRI="Fantasy"/>
-        <NamedIndividual IRI="Opera_Camera_dei_Segreti"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="VieneUtilizzatoIn"/>
@@ -938,7 +931,7 @@
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="AutoreDi"/>
         <NamedIndividual IRI="J.K_Rowling"/>
-        <NamedIndividual IRI="Opera_Prigioniero_di_Azkaban"/>
+        <NamedIndividual IRI="Opera_Camera_dei_Segreti"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="AutoreDi"/>
@@ -948,17 +941,17 @@
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="AutoreDi"/>
         <NamedIndividual IRI="J.K_Rowling"/>
-        <NamedIndividual IRI="Opera_Camera_dei_Segreti"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="Contiene"/>
-        <NamedIndividual IRI="Letteratura_Italiana"/>
-        <NamedIndividual IRI="Opera_La_Divina_Commedia"/>
+        <NamedIndividual IRI="Opera_Prigioniero_di_Azkaban"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="Contiene"/>
         <NamedIndividual IRI="Letteratura_Italiana"/>
         <NamedIndividual IRI="Opera_Fermo_e_Lucia"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="Contiene"/>
+        <NamedIndividual IRI="Letteratura_Italiana"/>
+        <NamedIndividual IRI="Opera_La_Divina_Commedia"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="Contiene"/>
@@ -973,12 +966,12 @@
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="HaEdizione"/>
         <NamedIndividual IRI="Opera_Fermo_e_Lucia"/>
-        <NamedIndividual IRI="I_Promessi_Sposi"/>
+        <NamedIndividual IRI="Fermo_e_Lucia"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="HaEdizione"/>
         <NamedIndividual IRI="Opera_Fermo_e_Lucia"/>
-        <NamedIndividual IRI="Fermo_e_Lucia"/>
+        <NamedIndividual IRI="I_Promessi_Sposi"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="Contiene"/>
@@ -1018,152 +1011,152 @@
     <DataPropertyAssertion>
         <DataProperty IRI="HaNome"/>
         <NamedIndividual IRI="Alessandro_Manzoni"/>
-        <Literal datatypeIRI="&xsd;string">Alessandro Manzoni</Literal>
+        <Literal>Alessandro Manzoni</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="HaNome"/>
         <NamedIndividual IRI="Amicizia"/>
-        <Literal datatypeIRI="&xsd;string">Amicizia</Literal>
+        <Literal>Amicizia</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="HaNome"/>
         <NamedIndividual IRI="BacchetteMagiche"/>
-        <Literal datatypeIRI="&xsd;string">Bacchette Magiche</Literal>
+        <Literal>Bacchette Magiche</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="HaNome"/>
         <NamedIndividual IRI="Benjamin_Franklin"/>
-        <Literal datatypeIRI="&xsd;string">Benjamin Franklin</Literal>
+        <Literal>Benjamin Franklin</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="HaNome"/>
         <NamedIndividual IRI="Fantasy"/>
-        <Literal datatypeIRI="&xsd;string">Fantasy</Literal>
+        <Literal>Fantasy</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty abbreviatedIRI="dc:Title"/>
         <NamedIndividual IRI="Fermo_e_Lucia"/>
-        <Literal datatypeIRI="&xsd;string">Fermo e Lucia</Literal>
+        <Literal>Fermo e Lucia</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="HaNome"/>
         <NamedIndividual IRI="Harry_James_Potter"/>
-        <Literal datatypeIRI="&xsd;string">Harry Jamaes Potter</Literal>
+        <Literal>Harry Jamaes Potter</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="HaNome"/>
         <NamedIndividual IRI="Harry_Potter"/>
-        <Literal datatypeIRI="&xsd;string">Harry Potter</Literal>
+        <Literal>Harry Potter</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty abbreviatedIRI="dc:Title"/>
         <NamedIndividual IRI="I_Promessi_Sposi"/>
-        <Literal datatypeIRI="&xsd;string">I Promesi Sposi</Literal>
+        <Literal>I Promesi Sposi</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="HaNome"/>
         <NamedIndividual IRI="Italia"/>
-        <Literal datatypeIRI="&xsd;string">Italia</Literal>
+        <Literal>Italia</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="HaNome"/>
         <NamedIndividual IRI="J.K_Rowling"/>
-        <Literal datatypeIRI="&xsd;string">J.K. Rowling</Literal>
+        <Literal>J.K. Rowling</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="HaNome"/>
         <NamedIndividual IRI="Letteratura_Italiana"/>
-        <Literal datatypeIRI="&xsd;string">Letteratura Italiana</Literal>
+        <Literal>Letteratura Italiana</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="HaNome"/>
         <NamedIndividual IRI="Opera_Camera_dei_Segreti"/>
-        <Literal datatypeIRI="&xsd;string">Camera dei Segreti</Literal>
+        <Literal>Camera dei Segreti</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="HaNome"/>
         <NamedIndividual IRI="Opera_Fermo_e_Lucia"/>
-        <Literal datatypeIRI="&xsd;string">Fermo e Lucia</Literal>
+        <Literal>Fermo e Lucia</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="HaNome"/>
         <NamedIndividual IRI="Opera_La_Divina_Commedia"/>
-        <Literal datatypeIRI="&xsd;string">La Divina Commedia</Literal>
+        <Literal>La Divina Commedia</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="HaNome"/>
         <NamedIndividual IRI="Opera_Pietra_Filosofale"/>
-        <Literal datatypeIRI="&xsd;string">Pietra Filosofale</Literal>
+        <Literal>Pietra Filosofale</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="HaNome"/>
         <NamedIndividual IRI="Opera_Prigioniero_di_Azkaban"/>
-        <Literal datatypeIRI="&xsd;string">Prigioniero di Azkaban</Literal>
+        <Literal>Prigioniero di Azkaban</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="HaNome"/>
         <NamedIndividual IRI="Opera_The_Autobiography_of_Benjamin_Franklin"/>
-        <Literal datatypeIRI="&xsd;string">The Autobiography of Benjamin Franklin</Literal>
+        <Literal>The Autobiography of Benjamin Franklin</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="HaNome"/>
         <NamedIndividual IRI="Romanzo_storico"/>
-        <Literal datatypeIRI="&xsd;string">Romanzo storico</Literal>
+        <Literal>Romanzo storico</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty abbreviatedIRI="dc:Title"/>
         <NamedIndividual IRI="The_Autobiography_of_Benjamin_Franklin"/>
-        <Literal datatypeIRI="&xsd;string">The Autobiography of Benjamin Franklin</Literal>
+        <Literal>The Autobiography of Benjamin Franklin</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="HaLingua"/>
         <NamedIndividual IRI="The_Autobiography_of_Benjamin_Franklin"/>
-        <Literal datatypeIRI="&xsd;language">en</Literal>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#language">en</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty abbreviatedIRI="dc:Title"/>
         <NamedIndividual IRI="The_Chamber_of_Secrets"/>
-        <Literal datatypeIRI="&xsd;language">en</Literal>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#language">en</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="HaDataPubblicazione"/>
         <NamedIndividual IRI="The_Chamber_of_Secrets"/>
-        <Literal datatypeIRI="&xsd;date">02-07-1998</Literal>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">02-07-1998</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="HaNome"/>
         <NamedIndividual IRI="The_Chamber_of_Secrets"/>
-        <Literal datatypeIRI="&xsd;string">The Chamber of Secret</Literal>
+        <Literal>The Chamber of Secret</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty abbreviatedIRI="dc:Title"/>
         <NamedIndividual IRI="The_Philosophers_Stone"/>
-        <Literal datatypeIRI="&xsd;string">The Philosopher Stone</Literal>
+        <Literal>The Philosopher Stone</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="HaDataPubblicazione"/>
         <NamedIndividual IRI="The_Philosophers_Stone"/>
-        <Literal datatypeIRI="&xsd;date">26-06-1997</Literal>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">26-06-1997</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="HaLingua"/>
         <NamedIndividual IRI="The_Philosophers_Stone"/>
-        <Literal datatypeIRI="&xsd;language">en</Literal>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#language">en</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty abbreviatedIRI="dc:Title"/>
         <NamedIndividual IRI="The_Prisoner_of_Azkaban"/>
-        <Literal datatypeIRI="&xsd;string">The Prisoner of Azkaban</Literal>
+        <Literal>The Prisoner of Azkaban</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="HaDataPubblicazione"/>
         <NamedIndividual IRI="The_Prisoner_of_Azkaban"/>
-        <Literal datatypeIRI="&xsd;date">8-07-1999</Literal>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">8-07-1999</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="HaLingua"/>
         <NamedIndividual IRI="The_Prisoner_of_Azkaban"/>
-        <Literal datatypeIRI="&xsd;language">en</Literal>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#language">en</Literal>
     </DataPropertyAssertion>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="PubblicaComeOrganizzazione"/>
@@ -1182,8 +1175,8 @@
         <ObjectProperty IRI="PubblicatoDa"/>
     </SubObjectPropertyOf>
     <InverseObjectProperties>
-        <ObjectProperty IRI="AutoreDi"/>
         <ObjectProperty IRI="http://www.semanticweb.org/owl/owlapi/turtle#ScrittoDa"/>
+        <ObjectProperty IRI="AutoreDi"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
         <ObjectProperty IRI="AppartieneA"/>
@@ -1194,8 +1187,8 @@
         <ObjectProperty IRI="HaContributoDi"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="HaEdizione"/>
         <ObjectProperty IRI="EdizioneDi"/>
+        <ObjectProperty IRI="HaEdizione"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
         <ObjectProperty IRI="LavoraPerCasaEditrice"/>
@@ -1210,8 +1203,8 @@
         <ObjectProperty IRI="PubblicataDallaPersona"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="VieneUtilizzatoIn"/>
         <ObjectProperty IRI="VieneClassificatoCome"/>
+        <ObjectProperty IRI="VieneUtilizzatoIn"/>
     </InverseObjectProperties>
     <FunctionalObjectProperty>
         <ObjectProperty IRI="EdizioneDi"/>
@@ -1293,7 +1286,10 @@
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="VieneClassificatoCome"/>
-        <Class IRI="OperaLetteraria"/>
+        <ObjectUnionOf>
+            <Class IRI="Edizione"/>
+            <Class IRI="OperaLetteraria"/>
+        </ObjectUnionOf>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="VieneUtilizzatoIn"/>
@@ -1381,7 +1377,10 @@
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="VieneUtilizzatoIn"/>
-        <Class IRI="OperaLetteraria"/>
+        <ObjectUnionOf>
+            <Class IRI="Edizione"/>
+            <Class IRI="OperaLetteraria"/>
+        </ObjectUnionOf>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="haEditore"/>
@@ -1438,61 +1437,61 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>http://dbpedia.org/resource/List</IRI>
-        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Una lista è una raccolta di elementi, che può contenere oggetti o entità con caratteristiche simili o correlate, come una serie di libri, opere o altri elementi definiti da un tema comune.</Literal>
+        <Literal xml:lang="it">Una lista è una raccolta di elementi, che può contenere oggetti o entità con caratteristiche simili o correlate, come una serie di libri, opere o altri elementi definiti da un tema comune.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>http://dbpedia.org/resource/List</IRI>
-        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">List
+        <Literal xml:lang="it">List
 </Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>http://purl.org/dc/terms/Location</IRI>
-        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Un Luogo Fisico rappresenta un Luogo fisicamente presente, tramite la denominazione corrente o passata.</Literal>
+        <Literal xml:lang="it">Un Luogo Fisico rappresenta un Luogo fisicamente presente, tramite la denominazione corrente o passata.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>http://purl.org/dc/terms/Location</IRI>
-        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">LuogoFisico</Literal>
+        <Literal xml:lang="it">LuogoFisico</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="skos:closeMatch"/>
         <IRI>http://purl.org/dc/terms/Location</IRI>
-        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">dc:Location</Literal>
+        <Literal xml:lang="en">dc:Location</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>http://purl.org/vocab/frbr/core#Place</IRI>
-        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">(Rappresenta un&apos;entità spaziale generica, come un luogo o una posizione.)
+        <Literal xml:lang="it">(Rappresenta un&apos;entità spaziale generica, come un luogo o una posizione.)
 
 </Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>http://purl.org/vocab/frbr/core#Place</IRI>
-        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Luogo</Literal>
+        <Literal xml:lang="it">Luogo</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="skos:closeMatch"/>
         <IRI>http://purl.org/vocab/frbr/core#Place</IRI>
-        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">frbr:Place</Literal>
+        <Literal xml:lang="en">frbr:Place</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>http://www.semanticweb.org/owl/owlapi/turtle#GrandeSaga</IRI>
-        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Una grande saga è una narrazione estesa e complessa che si sviluppa su molteplici opere letterarie, spesso seguendo diversi gruppi di personaggi o intere famiglie, con una trama che si estende su generazioni o eventi di ampia portata.</Literal>
+        <Literal xml:lang="it">Una grande saga è una narrazione estesa e complessa che si sviluppa su molteplici opere letterarie, spesso seguendo diversi gruppi di personaggi o intere famiglie, con una trama che si estende su generazioni o eventi di ampia portata.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>http://www.semanticweb.org/owl/owlapi/turtle#GrandeSaga</IRI>
-        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">GrandeSaga
+        <Literal xml:lang="it">GrandeSaga
 </Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>http://www.semanticweb.org/owl/owlapi/turtle#Trilogia</IRI>
-        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Una trilogia è una saga composta da tre opere letterarie che si sviluppano attraverso una trama continuativa, generalmente seguendo lo stesso gruppo di personaggi o un arco narrativo unico.
+        <Literal xml:lang="it">Una trilogia è una saga composta da tre opere letterarie che si sviluppano attraverso una trama continuativa, generalmente seguendo lo stesso gruppo di personaggi o un arco narrativo unico.
 
 
 Funziona solo se sono definiti con enumerazione 
@@ -1501,7 +1500,7 @@ Funziona solo se sono definiti con enumerazione
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>http://www.semanticweb.org/owl/owlapi/turtle#Trilogia</IRI>
-        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Trilogia
+        <Literal xml:lang="it">Trilogia
 
 
 </Literal>
@@ -1509,162 +1508,162 @@ Funziona solo se sono definiti con enumerazione
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>http://www.w3.org/ns/prov#Agent</IRI>
-        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Un agente è un&apos;entità che ha un ruolo attivo in un contesto sociale o lavorativo. Può essere un&apos;organizzazione o una persona che svolge attività specifiche come creare, pubblicare o distribuire opere.</Literal>
+        <Literal xml:lang="it">Un agente è un&apos;entità che ha un ruolo attivo in un contesto sociale o lavorativo. Può essere un&apos;organizzazione o una persona che svolge attività specifiche come creare, pubblicare o distribuire opere.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>http://www.w3.org/ns/prov#Agent</IRI>
-        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Agent</Literal>
+        <Literal xml:lang="it">Agent</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="skos:exactMatch"/>
         <IRI>http://www.w3.org/ns/prov#Agent</IRI>
-        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">dc:Agent</Literal>
+        <Literal xml:lang="en">dc:Agent</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>http://www.w3.org/ns/prov#Organization</IRI>
-        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Un&apos;organizzazione è un&apos;entità strutturata che agisce come un singolo soggetto, come una casa editrice, un&apos;impresa o un ente, ed è composta da persone che operano insieme per raggiungere obiettivi comuni.</Literal>
+        <Literal xml:lang="it">Un&apos;organizzazione è un&apos;entità strutturata che agisce come un singolo soggetto, come una casa editrice, un&apos;impresa o un ente, ed è composta da persone che operano insieme per raggiungere obiettivi comuni.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>http://www.w3.org/ns/prov#Organization</IRI>
-        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Organization</Literal>
+        <Literal xml:lang="it">Organization</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="skos:broadMatch"/>
         <IRI>http://www.w3.org/ns/prov#Organization</IRI>
-        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">frbr:CorporateBody</Literal>
+        <Literal xml:lang="en">frbr:CorporateBody</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="HaNome"/>
         <IRI>Alessandro_Manzoni</IRI>
-        <Literal datatypeIRI="&xsd;string">Alessandro Manzoni</Literal>
+        <Literal>Alessandro Manzoni</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="HaNome"/>
         <IRI>Amicizia</IRI>
-        <Literal datatypeIRI="&xsd;string">Amicizia</Literal>
+        <Literal>Amicizia</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>Autore</IRI>
-        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Un autore è una persona che scrive un&apos;opera letteraria, scientifica o artistica, ed è responsabile della creazione e dell&apos;originalità del contenuto dell&apos;opera.</Literal>
+        <Literal xml:lang="it">Un autore è una persona che scrive un&apos;opera letteraria, scientifica o artistica, ed è responsabile della creazione e dell&apos;originalità del contenuto dell&apos;opera.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>Autore</IRI>
-        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Autore
+        <Literal xml:lang="it">Autore
 </Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>AutoreIndipendente</IRI>
-        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Un autore indipendente è uno scrittore che pubblica e distribuisce le proprie opere senza l&apos;intermediazione di una casa editrice tradizionale, gestendo autonomamente l&apos;intero processo editoriale e promozionale. Questo approccio consente maggiore libertà creativa e guadagni diretti.</Literal>
+        <Literal xml:lang="it">Un autore indipendente è uno scrittore che pubblica e distribuisce le proprie opere senza l&apos;intermediazione di una casa editrice tradizionale, gestendo autonomamente l&apos;intero processo editoriale e promozionale. Questo approccio consente maggiore libertà creativa e guadagni diretti.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>AutoreIndipendente</IRI>
-        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">AutoreIndipendente
+        <Literal xml:lang="it">AutoreIndipendente
 </Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="HaNome"/>
         <IRI>BacchetteMagiche</IRI>
-        <Literal datatypeIRI="&xsd;string">Bacchette Magiche</Literal>
+        <Literal>Bacchette Magiche</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="HaNome"/>
         <IRI>Benjamin_Franklin</IRI>
-        <Literal datatypeIRI="&xsd;string">Benjamin Franklin</Literal>
+        <Literal>Benjamin Franklin</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="HaNome"/>
         <IRI>Bloomsbury_Publishing</IRI>
-        <Literal datatypeIRI="&xsd;string">Bloombsbury Publishing
+        <Literal>Bloombsbury Publishing
 </Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="HaNome"/>
         <IRI>Bloomsbury_Publishing</IRI>
-        <Literal datatypeIRI="&xsd;string">Bloomsbury Publishing</Literal>
+        <Literal>Bloomsbury Publishing</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>Canzoniere</IRI>
-        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Una raccolta di poesie che appartengono alla categoria &quot;Poesia&quot;. Ogni elemento della collezione è un&apos;istanza di &quot;Poesia&quot;.</Literal>
+        <Literal xml:lang="it">Una raccolta di poesie che appartengono alla categoria &quot;Poesia&quot;. Ogni elemento della collezione è un&apos;istanza di &quot;Poesia&quot;.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>Canzoniere</IRI>
-        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Canzoniere</Literal>
+        <Literal xml:lang="it">Canzoniere</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>CasaEditrice</IRI>
-        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Una casa editrice è un&apos;organizzazione che si occupa della pubblicazione e distribuzione di opere letterarie, scientifiche o artistiche, curando la produzione, la stampa e la diffusione dei libri.</Literal>
+        <Literal xml:lang="it">Una casa editrice è un&apos;organizzazione che si occupa della pubblicazione e distribuzione di opere letterarie, scientifiche o artistiche, curando la produzione, la stampa e la diffusione dei libri.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>CasaEditrice</IRI>
-        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">CasaEditrice</Literal>
+        <Literal xml:lang="it">CasaEditrice</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>Collaboratore</IRI>
-        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Persona che ha contribuito alla Scrittura di un&apos;Edizione non come Autore</Literal>
+        <Literal xml:lang="it">Persona che ha contribuito alla Scrittura di un&apos;Edizione non come Autore</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>Collaboratore</IRI>
-        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Collaboratore</Literal>
+        <Literal xml:lang="it">Collaboratore</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>CollanaEditoriale</IRI>
-        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Una raccolta di testi pubblicati da un editore con criteri comuni di genere, tema o formato.</Literal>
+        <Literal xml:lang="it">Una raccolta di testi pubblicati da un editore con criteri comuni di genere, tema o formato.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>CollanaEditoriale</IRI>
-        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">CollanaEditoriale</Literal>
+        <Literal xml:lang="it">CollanaEditoriale</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>Editore</IRI>
-        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Persona che ha pubblicato un Edizione
+        <Literal xml:lang="it">Persona che ha pubblicato un Edizione
 </Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>Editore</IRI>
-        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Editore
+        <Literal xml:lang="it">Editore
 </Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>Edizione</IRI>
-        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Un&apos;entità che rappresenta una specifica pubblicazione di un&apos;opera letteraria.</Literal>
+        <Literal xml:lang="it">Un&apos;entità che rappresenta una specifica pubblicazione di un&apos;opera letteraria.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>Edizione</IRI>
-        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Edizione</Literal>
+        <Literal xml:lang="it">Edizione</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="skos:broadMatch"/>
         <IRI>Edizione</IRI>
-        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">frbr:Endeavour</Literal>
+        <Literal xml:lang="en">frbr:Endeavour</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="HaNome"/>
         <IRI>Fantasy</IRI>
-        <Literal datatypeIRI="&xsd;string">Fantasy</Literal>
+        <Literal>Fantasy</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="HaDataPubblicazione"/>
         <IRI>Fermo_e_Lucia</IRI>
-        <Literal datatypeIRI="&xsd;date">1827-01-01</Literal>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">1827-01-01</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="HaLingua"/>
@@ -1674,38 +1673,33 @@ Funziona solo se sono definiti con enumerazione
     <AnnotationAssertion>
         <AnnotationProperty IRI="HaLingua"/>
         <IRI>Fermo_e_Lucia</IRI>
-        <Literal datatypeIRI="&xsd;language">it</Literal>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#language">it</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="HaNome"/>
         <IRI>Fermo_e_Lucia</IRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">Fermo e Lucia</Literal>
+        <Literal>Fermo e Lucia</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="HaNome"/>
         <IRI>Fermo_e_Lucia</IRI>
-        <Literal datatypeIRI="&xsd;string">Fermo e Lucia</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="HaNome"/>
-        <IRI>Fermo_e_Lucia</IRI>
-        <Literal datatypeIRI="&xsd;string">Fermo e Lucia
+        <Literal>Fermo e Lucia
 </Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>Genere</IRI>
-        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Il genere di un&apos;opera letteraria è una categoria che raggruppa libri con caratteristiche tematiche o stilistiche simili, come ad esempio fantasy, giallo, romance, storia, horror, ecc. Ogni genere aiuta a identificare il tono, il contenuto e lo stile dell&apos;opera.</Literal>
+        <Literal xml:lang="it">Il genere di un&apos;opera letteraria è una categoria che raggruppa libri con caratteristiche tematiche o stilistiche simili, come ad esempio fantasy, giallo, romance, storia, horror, ecc. Ogni genere aiuta a identificare il tono, il contenuto e lo stile dell&apos;opera.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>Genere</IRI>
-        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Genere</Literal>
+        <Literal xml:lang="it">Genere</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="HaNome"/>
         <IRI>Harry_James_Potter</IRI>
-        <Literal datatypeIRI="&xsd;string">Harry James Potter</Literal>
+        <Literal>Harry James Potter</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://www.semanticweb.org/owl/owlapi/turtle#parteDiSaga"/>
@@ -1725,12 +1719,12 @@ Funziona solo se sono definiti con enumerazione
     <AnnotationAssertion>
         <AnnotationProperty IRI="HaNome"/>
         <IRI>Harry_Potter</IRI>
-        <Literal datatypeIRI="&xsd;string">Harry Potter</Literal>
+        <Literal>Harry Potter</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="HaDataPubblicazione"/>
         <IRI>I_Promessi_Sposi</IRI>
-        <Literal datatypeIRI="&xsd;date">1840-01-01</Literal>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">1840-01-01</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="HaLingua"/>
@@ -1740,32 +1734,27 @@ Funziona solo se sono definiti con enumerazione
     <AnnotationAssertion>
         <AnnotationProperty IRI="HaLingua"/>
         <IRI>I_Promessi_Sposi</IRI>
-        <Literal datatypeIRI="&xsd;language">it</Literal>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#language">it</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="HaNome"/>
         <IRI>I_Promessi_Sposi</IRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">I Promessi Sposi</Literal>
+        <Literal>I Promessi Sposi</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="HaNome"/>
         <IRI>I_Promessi_Sposi</IRI>
-        <Literal datatypeIRI="&xsd;string">I Promessi Sposi</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="HaNome"/>
-        <IRI>I_Promessi_Sposi</IRI>
-        <Literal datatypeIRI="&xsd;string">I promessi Sposi</Literal>
+        <Literal>I promessi Sposi</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="HaNome"/>
         <IRI>Italia</IRI>
-        <Literal datatypeIRI="&xsd;string">Italia</Literal>
+        <Literal>Italia</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="HaNome"/>
         <IRI>J.K_Rowling</IRI>
-        <Literal datatypeIRI="&xsd;string">J.K. Rowling</Literal>
+        <Literal>J.K. Rowling</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://www.semanticweb.org/owl/owlapi/turtle#parteDiAntologia"/>
@@ -1785,42 +1774,42 @@ Funziona solo se sono definiti con enumerazione
     <AnnotationAssertion>
         <AnnotationProperty IRI="HaNome"/>
         <IRI>Letteratura_Italiana</IRI>
-        <Literal datatypeIRI="&xsd;string">Letteratura Italiana</Literal>
+        <Literal>Letteratura Italiana</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>Nazione</IRI>
-        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Un&apos;entità nazionale nel presente o passato.</Literal>
+        <Literal xml:lang="it">Un&apos;entità nazionale nel presente o passato.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>Nazione</IRI>
-        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Nazione</Literal>
+        <Literal xml:lang="it">Nazione</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>OperaLetteraria</IRI>
-        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">L&apos;entità concettuale di Opera Letteraria, include tutte le sue materializzazioni e Formati.</Literal>
+        <Literal xml:lang="it">L&apos;entità concettuale di Opera Letteraria, include tutte le sue materializzazioni e Formati.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>OperaLetteraria</IRI>
-        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">OperaLetteraria</Literal>
+        <Literal xml:lang="it">OperaLetteraria</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="skos:closeMatch"/>
         <IRI>OperaLetteraria</IRI>
-        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">frbr:Work</Literal>
+        <Literal xml:lang="en">frbr:Work</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>OperaTeatrale</IRI>
-        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Un&apos;opera teatrale è una forma di opera letteraria scritta per essere rappresentata su un palcoscenico, con personaggi che parlano e interagiscono tra loro secondo una trama.</Literal>
+        <Literal xml:lang="it">Un&apos;opera teatrale è una forma di opera letteraria scritta per essere rappresentata su un palcoscenico, con personaggi che parlano e interagiscono tra loro secondo una trama.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>OperaTeatrale</IRI>
-        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Operateatrale</Literal>
+        <Literal xml:lang="it">Operateatrale</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://www.semanticweb.org/owl/owlapi/turtle#HaEdizione"/>
@@ -1845,12 +1834,12 @@ Funziona solo se sono definiti con enumerazione
     <AnnotationAssertion>
         <AnnotationProperty IRI="HaLingua"/>
         <IRI>Opera_Camera_dei_Segreti</IRI>
-        <Literal datatypeIRI="&xsd;language">en</Literal>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#language">en</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="HaNome"/>
         <IRI>Opera_Camera_dei_Segreti</IRI>
-        <Literal datatypeIRI="&xsd;string">La Camera dei Segreti</Literal>
+        <Literal>La Camera dei Segreti</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://www.semanticweb.org/owl/owlapi/turtle#HaEdizione"/>
@@ -1875,12 +1864,12 @@ Funziona solo se sono definiti con enumerazione
     <AnnotationAssertion>
         <AnnotationProperty IRI="HaLingua"/>
         <IRI>Opera_Fermo_e_Lucia</IRI>
-        <Literal datatypeIRI="&xsd;language">it</Literal>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#language">it</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="HaNome"/>
         <IRI>Opera_Fermo_e_Lucia</IRI>
-        <Literal datatypeIRI="&xsd;string">Fermo e Lucia</Literal>
+        <Literal>Fermo e Lucia</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://www.semanticweb.org/owl/owlapi/turtle#parteDiAntologia"/>
@@ -1890,12 +1879,12 @@ Funziona solo se sono definiti con enumerazione
     <AnnotationAssertion>
         <AnnotationProperty IRI="HaLingua"/>
         <IRI>Opera_La_Divina_Commedia</IRI>
-        <Literal datatypeIRI="&xsd;language">it</Literal>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#language">it</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="HaNome"/>
         <IRI>Opera_La_Divina_Commedia</IRI>
-        <Literal datatypeIRI="&xsd;string">La Divina Commedia</Literal>
+        <Literal>La Divina Commedia</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://www.semanticweb.org/owl/owlapi/turtle#HaEdizione"/>
@@ -1920,12 +1909,12 @@ Funziona solo se sono definiti con enumerazione
     <AnnotationAssertion>
         <AnnotationProperty IRI="HaLingua"/>
         <IRI>Opera_Pietra_Filosofale</IRI>
-        <Literal datatypeIRI="&xsd;language">en</Literal>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#language">en</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="HaNome"/>
         <IRI>Opera_Pietra_Filosofale</IRI>
-        <Literal datatypeIRI="&xsd;string">La Pietra Filosofale</Literal>
+        <Literal>La Pietra Filosofale</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://www.semanticweb.org/owl/owlapi/turtle#HaEdizione"/>
@@ -1950,175 +1939,175 @@ Funziona solo se sono definiti con enumerazione
     <AnnotationAssertion>
         <AnnotationProperty IRI="HaLingua"/>
         <IRI>Opera_Prigioniero_di_Azkaban</IRI>
-        <Literal datatypeIRI="&xsd;language">en</Literal>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#language">en</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="HaNome"/>
         <IRI>Opera_Prigioniero_di_Azkaban</IRI>
-        <Literal datatypeIRI="&xsd;string">Il Prigioniero di Azkaban</Literal>
+        <Literal>Il Prigioniero di Azkaban</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="HaNome"/>
         <IRI>Opera_The_Autobiography_of_Benjamin_Franklin</IRI>
-        <Literal datatypeIRI="&xsd;string">The Autobiography of Benjamin Franklin</Literal>
+        <Literal>The Autobiography of Benjamin Franklin</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>Persona</IRI>
-        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Una persona è un individuo umano che svolge un ruolo all&apos;interno di un contesto sociale o professionale, come autore, editore, o altro.</Literal>
+        <Literal xml:lang="it">Una persona è un individuo umano che svolge un ruolo all&apos;interno di un contesto sociale o professionale, come autore, editore, o altro.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>Persona</IRI>
-        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Persona</Literal>
+        <Literal xml:lang="it">Persona</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="skos:exactMatch"/>
         <IRI>Persona</IRI>
-        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">frbr:Agent</Literal>
+        <Literal xml:lang="en">frbr:Agent</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>Personaggio</IRI>
-        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral"> Una persona, creatura magica o entità</Literal>
+        <Literal xml:lang="it"> Una persona, creatura magica o entità</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>Personaggio</IRI>
-        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Personaggio</Literal>
+        <Literal xml:lang="it">Personaggio</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>PersonaggioLibro</IRI>
-        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral"> Una persona, creatura magica o entità che appare specificatamente ad un opera letteraria</Literal>
+        <Literal xml:lang="it"> Una persona, creatura magica o entità che appare specificatamente ad un opera letteraria</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>PersonaggioLibro</IRI>
-        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">PersonaggioLibro</Literal>
+        <Literal xml:lang="it">PersonaggioLibro</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>Poesia</IRI>
-        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Forma di espressione letteraria che utilizza il linguaggio in modo artistico, spesso caratterizzata da metrica, ritmo e rime.</Literal>
+        <Literal xml:lang="it">Forma di espressione letteraria che utilizza il linguaggio in modo artistico, spesso caratterizzata da metrica, ritmo e rime.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>Poesia</IRI>
-        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Poesia
+        <Literal xml:lang="it">Poesia
 </Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>RaccoltaDISaggi</IRI>
-        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Una raccolta di saggi che appartengono alla categoria &quot;Saggio&quot;. Ogni elemento della collezione è un&apos;istanza di &quot;Saggio&quot;.</Literal>
+        <Literal xml:lang="it">Una raccolta di saggi che appartengono alla categoria &quot;Saggio&quot;. Ogni elemento della collezione è un&apos;istanza di &quot;Saggio&quot;.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>RaccoltaDISaggi</IRI>
-        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">RaccoltaDiSaggi</Literal>
+        <Literal xml:lang="it">RaccoltaDiSaggi</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>RaccoltaDiRacconti</IRI>
-        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral"> Una raccolta di racconti che appartengono alla categoria &quot;Racconto&quot;. Ogni elemento della collezione è un&apos;istanza di &quot;Racconto&quot;.
+        <Literal xml:lang="it"> Una raccolta di racconti che appartengono alla categoria &quot;Racconto&quot;. Ogni elemento della collezione è un&apos;istanza di &quot;Racconto&quot;.
 </Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>RaccoltaDiRacconti</IRI>
-        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">RaccoltaDiRacconti</Literal>
+        <Literal xml:lang="it">RaccoltaDiRacconti</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>RaccoltaTeatrale</IRI>
-        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Una raccolta di opere teatrali che appartengono alla categoria &quot;OperaTeatrale&quot;. Ogni elemento della collezione è un&apos;istanza di &quot;OperaTeatrale&quot;</Literal>
+        <Literal xml:lang="it">Una raccolta di opere teatrali che appartengono alla categoria &quot;OperaTeatrale&quot;. Ogni elemento della collezione è un&apos;istanza di &quot;OperaTeatrale&quot;</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>RaccoltaTeatrale</IRI>
-        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">RaccoltaTeatrale
+        <Literal xml:lang="it">RaccoltaTeatrale
 </Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>Racconto</IRI>
-        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Il racconto è un&apos;opera narrativa breve che si concentra su un singolo evento o tema, con un numero limitato di personaggi e uno sviluppo conciso della trama.</Literal>
+        <Literal xml:lang="it">Il racconto è un&apos;opera narrativa breve che si concentra su un singolo evento o tema, con un numero limitato di personaggi e uno sviluppo conciso della trama.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>Racconto</IRI>
-        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Racconto</Literal>
+        <Literal xml:lang="it">Racconto</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>Romanzo</IRI>
-        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Il romanzo è un&apos;opera letteraria di narrativa lunga, che sviluppa una trama complessa e approfondisce la caratterizzazione dei personaggi attraverso eventi e situazioni.</Literal>
+        <Literal xml:lang="it">Il romanzo è un&apos;opera letteraria di narrativa lunga, che sviluppa una trama complessa e approfondisce la caratterizzazione dei personaggi attraverso eventi e situazioni.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>Romanzo</IRI>
-        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Romanzo</Literal>
+        <Literal xml:lang="it">Romanzo</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="HaNome"/>
         <IRI>Romanzo_storico</IRI>
-        <Literal datatypeIRI="&xsd;string">Romanzo Storico</Literal>
+        <Literal>Romanzo Storico</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>Saga</IRI>
-        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Una narrazione estesa che segue personaggi o famiglie attraverso eventi o generazioni, spesso con una trama continuativa.</Literal>
+        <Literal xml:lang="it">Una narrazione estesa che segue personaggi o famiglie attraverso eventi o generazioni, spesso con una trama continuativa.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>Saga</IRI>
-        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Saga</Literal>
+        <Literal xml:lang="it">Saga</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>Saggio</IRI>
-        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Il saggio è un&apos;opera letteraria che esamina un argomento in modo critico, riflessivo e approfondito, utilizzando argomentazioni e prove per sostenere un punto di vista.</Literal>
+        <Literal xml:lang="it">Il saggio è un&apos;opera letteraria che esamina un argomento in modo critico, riflessivo e approfondito, utilizzando argomentazioni e prove per sostenere un punto di vista.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>Saggio</IRI>
-        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Saggio</Literal>
+        <Literal xml:lang="it">Saggio</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>SerieDiRomanzi</IRI>
-        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Una raccolta di romanzi che appartengono alla categoria &quot;Romanzo&quot;. Ogni elemento della collezione è un&apos;istanza di &quot;Romanzo&quot;</Literal>
+        <Literal xml:lang="it">Una raccolta di romanzi che appartengono alla categoria &quot;Romanzo&quot;. Ogni elemento della collezione è un&apos;istanza di &quot;Romanzo&quot;</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>SerieDiRomanzi</IRI>
-        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">SerieDiRomanzi</Literal>
+        <Literal xml:lang="it">SerieDiRomanzi</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>Tema</IRI>
-        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Materia trattata da un&apos;Opera Letteraria.</Literal>
+        <Literal xml:lang="it">Materia trattata da un&apos;Opera Letteraria.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>Tema</IRI>
-        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Tema</Literal>
+        <Literal xml:lang="it">Tema</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="HaNome"/>
         <IRI>The_Autobiography_of_Benjamin_Franklin</IRI>
-        <Literal datatypeIRI="&xsd;string">The Autobiography of Benjamin Franklin</Literal>
+        <Literal>The Autobiography of Benjamin Franklin</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="HaDataPubblicazione"/>
         <IRI>The_Chamber_of_Secrets</IRI>
-        <Literal datatypeIRI="&xsd;date"> 2 07 1998</Literal>
+        <Literal>2 luglio 1998</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="HaDataPubblicazione"/>
         <IRI>The_Chamber_of_Secrets</IRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">2 luglio 1998</Literal>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date"> 2 07 1998</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="HaLingua"/>
@@ -2128,22 +2117,22 @@ Funziona solo se sono definiti con enumerazione
     <AnnotationAssertion>
         <AnnotationProperty IRI="HaLingua"/>
         <IRI>The_Chamber_of_Secrets</IRI>
-        <Literal datatypeIRI="&xsd;language">en</Literal>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#language">en</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="HaNome"/>
         <IRI>The_Chamber_of_Secrets</IRI>
-        <Literal datatypeIRI="&xsd;string">The Chamber of Secrets</Literal>
+        <Literal>The Chamber of Secrets</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="HaDataPubblicazione"/>
         <IRI>The_Philosophers_Stone</IRI>
-        <Literal datatypeIRI="&xsd;date">26 06 1997</Literal>
+        <Literal>26 giugno 1997</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="HaDataPubblicazione"/>
         <IRI>The_Philosophers_Stone</IRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">26 giugno 1997</Literal>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">26 06 1997</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="HaLingua"/>
@@ -2153,22 +2142,22 @@ Funziona solo se sono definiti con enumerazione
     <AnnotationAssertion>
         <AnnotationProperty IRI="HaLingua"/>
         <IRI>The_Philosophers_Stone</IRI>
-        <Literal datatypeIRI="&xsd;language">en</Literal>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#language">en</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="HaNome"/>
         <IRI>The_Philosophers_Stone</IRI>
-        <Literal datatypeIRI="&xsd;string">The Philosophers Stone</Literal>
+        <Literal>The Philosophers Stone</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="HaDataPubblicazione"/>
         <IRI>The_Prisoner_of_Azkaban</IRI>
-        <Literal datatypeIRI="&xsd;date">8 07 1999</Literal>
+        <Literal>8 luglio 1999</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="HaDataPubblicazione"/>
         <IRI>The_Prisoner_of_Azkaban</IRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">8 luglio 1999</Literal>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">8 07 1999</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="HaLingua"/>
@@ -2178,12 +2167,12 @@ Funziona solo se sono definiti con enumerazione
     <AnnotationAssertion>
         <AnnotationProperty IRI="HaLingua"/>
         <IRI>The_Prisoner_of_Azkaban</IRI>
-        <Literal datatypeIRI="&xsd;language">en</Literal>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#language">en</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="HaNome"/>
         <IRI>The_Prisoner_of_Azkaban</IRI>
-        <Literal datatypeIRI="&xsd;string">The Prisoner of Azkaban</Literal>
+        <Literal>The Prisoner of Azkaban</Literal>
     </AnnotationAssertion>
     <SubAnnotationPropertyOf>
         <AnnotationProperty abbreviatedIRI="skos:exactMatch"/>
@@ -2197,5 +2186,5 @@ Funziona solo se sono definiti con enumerazione
 
 
 
-<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
 
