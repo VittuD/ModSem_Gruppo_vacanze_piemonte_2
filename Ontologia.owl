@@ -1050,6 +1050,17 @@ Funziona solo se sono definiti con enumerazione
 
 
 
+###  http://www.semanticweb.org/owl/owlapi/turtle#BacchetteMagiche
+
+:BacchetteMagiche rdf:type :Tema ,
+                           owl:NamedIndividual ;
+                  
+                  :VieneUtilizzatoIn :Opera_Camera_dei_Segreti ,
+                                     :Opera_Pietra_Filosofale ,
+                                     :Opera_Prigioniero_di_Azkaban .
+
+
+
 ###  http://www.semanticweb.org/owl/owlapi/turtle#Benjamin_Franklin
 
 :Benjamin_Franklin rdf:type owl:NamedIndividual ;
@@ -1389,53 +1400,8 @@ Funziona solo se sono definiti con enumerazione
 
 
 [ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( :The_Philosophers_Stone
-                        :The_Prisoner_of_Azkaban
-                      )
-] .
-[ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( :The_Autobiography_of_Benjamin_Franklin
-                        :The_Prisoner_of_Azkaban
-                      )
-] .
-[ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( :I_Promessi_Sposi
-                        :The_Chamber_of_Secrets
-                      )
-] .
-[ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( :Opera_Camera_dei_Segreti
-                        :Opera_Fermo_e_Lucia
-                      )
-] .
-[ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( :Alessandro_Manzoni
-                        :Bloomsbury_Publishing
-                      )
-] .
-[ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( :Opera_Fermo_e_Lucia
-                        :Opera_Pietra_Filosofale
-                      )
-] .
-[ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( :Opera_Fermo_e_Lucia
-                        :Opera_Prigioniero_di_Azkaban
-                      )
-] .
-[ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( :I_Promessi_Sposi
-                        :The_Prisoner_of_Azkaban
-                      )
-] .
-[ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( :Harry_Potter
-                        :Opera_Camera_dei_Segreti
-                      )
-] .
-[ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( :Opera_La_Divina_Commedia
-                        :Opera_Pietra_Filosofale
+  owl:distinctMembers ( :Fermo_e_Lucia
+                        :I_Promessi_Sposi
                       )
 ] .
 [ rdf:type owl:AllDifferent ;
@@ -1444,43 +1410,13 @@ Funziona solo se sono definiti con enumerazione
                       )
 ] .
 [ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( :Benjamin_Franklin
-                        :J.K_Rowling
-                      )
-] .
-[ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( :Harry_Potter
-                        :Opera_Pietra_Filosofale
-                      )
-] .
-[ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( :Fantasy
-                        <https://litetaryworktopics.com/litetaryworktopics2025#Amicizia>
-                      )
-] .
-[ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( :The_Autobiography_of_Benjamin_Franklin
-                        :The_Philosophers_Stone
-                      )
-] .
-[ rdf:type owl:AllDifferent ;
   owl:distinctMembers ( :Opera_Camera_dei_Segreti
-                        :Opera_The_Autobiography_of_Benjamin_Franklin
+                        :Opera_La_Divina_Commedia
                       )
 ] .
 [ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( :The_Autobiography_of_Benjamin_Franklin
+  owl:distinctMembers ( :I_Promessi_Sposi
                         :The_Chamber_of_Secrets
-                      )
-] .
-[ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( :Harry_Potter
-                        :Opera_Prigioniero_di_Azkaban
-                      )
-] .
-[ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( :The_Chamber_of_Secrets
-                        :The_Prisoner_of_Azkaban
                       )
 ] .
 [ rdf:type owl:AllDifferent ;
@@ -1489,8 +1425,28 @@ Funziona solo se sono definiti con enumerazione
                       )
 ] .
 [ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :Benjamin_Franklin
+                        :Bloomsbury_Publishing
+                      )
+] .
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :Opera_Pietra_Filosofale
+                        :Opera_Prigioniero_di_Azkaban
+                      )
+] .
+[ rdf:type owl:AllDifferent ;
   owl:distinctMembers ( :Harry_James_Potter
                         :Opera_Camera_dei_Segreti
+                      )
+] .
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :BacchetteMagiche
+                        :Fantasy
+                      )
+] .
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :The_Autobiography_of_Benjamin_Franklin
+                        :The_Prisoner_of_Azkaban
                       )
 ] .
 [ rdf:type owl:AllDifferent ;
@@ -1499,18 +1455,53 @@ Funziona solo se sono definiti con enumerazione
                       )
 ] .
 [ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( :Fermo_e_Lucia
-                        :I_Promessi_Sposi
+  owl:distinctMembers ( :Opera_Camera_dei_Segreti
+                        :Opera_The_Autobiography_of_Benjamin_Franklin
                       )
 ] .
 [ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( :Opera_La_Divina_Commedia
+  owl:distinctMembers ( :Harry_Potter
+                        :Opera_Pietra_Filosofale
+                      )
+] .
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :Fermo_e_Lucia
+                        :The_Philosophers_Stone
+                      )
+] .
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :The_Philosophers_Stone
+                        :The_Prisoner_of_Azkaban
+                      )
+] .
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :Opera_Fermo_e_Lucia
+                        :Opera_The_Autobiography_of_Benjamin_Franklin
+                      )
+] .
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :Harry_Potter
                         :Opera_Prigioniero_di_Azkaban
                       )
 ] .
 [ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( :Alessandro_Manzoni
-                        :J.K_Rowling
+  owl:distinctMembers ( :Opera_Camera_dei_Segreti
+                        :Opera_Fermo_e_Lucia
+                      )
+] .
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :Opera_La_Divina_Commedia
+                        :Opera_Pietra_Filosofale
+                      )
+] .
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :BacchetteMagiche
+                        <https://litetaryworktopics.com/litetaryworktopics2025#Amicizia>
+                      )
+] .
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :Opera_Fermo_e_Lucia
+                        :Opera_Prigioniero_di_Azkaban
                       )
 ] .
 [ rdf:type owl:AllDifferent ;
@@ -1519,48 +1510,38 @@ Funziona solo se sono definiti con enumerazione
                       )
 ] .
 [ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( :I_Promessi_Sposi
-                        :The_Philosophers_Stone
-                      )
-] .
-[ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( :The_Chamber_of_Secrets
-                        :The_Philosophers_Stone
-                      )
-] .
-[ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( :Opera_Pietra_Filosofale
-                        :Opera_Prigioniero_di_Azkaban
-                      )
-] .
-[ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( :Opera_La_Divina_Commedia
-                        :Opera_The_Autobiography_of_Benjamin_Franklin
-                      )
-] .
-[ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( :Opera_Fermo_e_Lucia
-                        :Opera_La_Divina_Commedia
-                      )
-] .
-[ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( :Opera_Pietra_Filosofale
-                        :Opera_The_Autobiography_of_Benjamin_Franklin
-                      )
-] .
-[ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( :Harry_Potter
-                        :Letteratura_Italiana
-                      )
-] .
-[ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( :Fermo_e_Lucia
-                        :The_Philosophers_Stone
+  owl:distinctMembers ( :Opera_Camera_dei_Segreti
+                        :Opera_Pietra_Filosofale
                       )
 ] .
 [ rdf:type owl:AllDifferent ;
   owl:distinctMembers ( :Benjamin_Franklin
+                        :J.K_Rowling
+                      )
+] .
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :Opera_Pietra_Filosofale
+                        :Opera_The_Autobiography_of_Benjamin_Franklin
+                      )
+] .
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :Alessandro_Manzoni
                         :Bloomsbury_Publishing
+                      )
+] .
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :Opera_Fermo_e_Lucia
+                        :Opera_Pietra_Filosofale
+                      )
+] .
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :The_Autobiography_of_Benjamin_Franklin
+                        :The_Philosophers_Stone
+                      )
+] .
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :Fantasy
+                        <https://litetaryworktopics.com/litetaryworktopics2025#Amicizia>
                       )
 ] .
 [ rdf:type owl:AllDifferent ;
@@ -1569,33 +1550,28 @@ Funziona solo se sono definiti con enumerazione
                       )
 ] .
 [ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( :Fermo_e_Lucia
-                        :The_Prisoner_of_Azkaban
-                      )
-] .
-[ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( :Fermo_e_Lucia
-                        :The_Autobiography_of_Benjamin_Franklin
-                      )
-] .
-[ rdf:type owl:AllDifferent ;
   owl:distinctMembers ( :Harry_James_Potter
                         :Opera_Pietra_Filosofale
                       )
 ] .
 [ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( :Opera_Camera_dei_Segreti
-                        :Opera_Pietra_Filosofale
-                      )
-] .
-[ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( :Bloomsbury_Publishing
-                        :J.K_Rowling
-                      )
-] .
-[ rdf:type owl:AllDifferent ;
   owl:distinctMembers ( :Opera_Fermo_e_Lucia
-                        :Opera_The_Autobiography_of_Benjamin_Franklin
+                        :Opera_La_Divina_Commedia
+                      )
+] .
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :The_Autobiography_of_Benjamin_Franklin
+                        :The_Chamber_of_Secrets
+                      )
+] .
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :The_Chamber_of_Secrets
+                        :The_Philosophers_Stone
+                      )
+] .
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :The_Chamber_of_Secrets
+                        :The_Prisoner_of_Azkaban
                       )
 ] .
 [ rdf:type owl:AllDifferent ;
@@ -1604,13 +1580,58 @@ Funziona solo se sono definiti con enumerazione
                       )
 ] .
 [ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( :Opera_Camera_dei_Segreti
-                        :Opera_La_Divina_Commedia
+  owl:distinctMembers ( :Harry_Potter
+                        :Opera_Camera_dei_Segreti
                       )
 ] .
 [ rdf:type owl:AllDifferent ;
   owl:distinctMembers ( :I_Promessi_Sposi
                         :The_Autobiography_of_Benjamin_Franklin
+                      )
+] .
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :Fermo_e_Lucia
+                        :The_Autobiography_of_Benjamin_Franklin
+                      )
+] .
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :Opera_La_Divina_Commedia
+                        :Opera_Prigioniero_di_Azkaban
+                      )
+] .
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :Opera_La_Divina_Commedia
+                        :Opera_The_Autobiography_of_Benjamin_Franklin
+                      )
+] .
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :I_Promessi_Sposi
+                        :The_Prisoner_of_Azkaban
+                      )
+] .
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :Fermo_e_Lucia
+                        :The_Prisoner_of_Azkaban
+                      )
+] .
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :Alessandro_Manzoni
+                        :J.K_Rowling
+                      )
+] .
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :Harry_Potter
+                        :Letteratura_Italiana
+                      )
+] .
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :I_Promessi_Sposi
+                        :The_Philosophers_Stone
+                      )
+] .
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :Bloomsbury_Publishing
+                        :J.K_Rowling
                       )
 ] .
 
