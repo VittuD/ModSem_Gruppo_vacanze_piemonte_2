@@ -81,14 +81,6 @@ vann:preferredNamespaceUri rdf:type owl:AnnotationProperty .
 
 
 
-###  http://www.semanticweb.org/owl/owlapi/turtle#HaDataPubblicazione
-
-<http://www.semanticweb.org/owl/owlapi/turtle#HaDataPubblicazione> rdf:type owl:AnnotationProperty ;
-                                                                   
-                                                                   rdfs:domain <https://litetaryworktopics.com/litetaryworktopics2025##Edizione> .
-
-
-
 ###  http://www.semanticweb.org/owl/owlapi/turtle#HaEdizione
 
 <http://www.semanticweb.org/owl/owlapi/turtle#HaEdizione> rdf:type owl:AnnotationProperty .
@@ -98,18 +90,6 @@ vann:preferredNamespaceUri rdf:type owl:AnnotationProperty .
 ###  http://www.semanticweb.org/owl/owlapi/turtle#HaGenereLetterario
 
 <http://www.semanticweb.org/owl/owlapi/turtle#HaGenereLetterario> rdf:type owl:AnnotationProperty .
-
-
-
-###  http://www.semanticweb.org/owl/owlapi/turtle#HaLingua
-
-<http://www.semanticweb.org/owl/owlapi/turtle#HaLingua> rdf:type owl:AnnotationProperty .
-
-
-
-###  http://www.semanticweb.org/owl/owlapi/turtle#HaNome
-
-<http://www.semanticweb.org/owl/owlapi/turtle#HaNome> rdf:type owl:AnnotationProperty .
 
 
 
@@ -151,6 +131,26 @@ skos:exactMatch rdf:type owl:AnnotationProperty ;
 
 
 
+###  https://litetaryworktopics.com/litetaryworktopics2025#HaDataPubblicazione
+
+:HaDataPubblicazione rdf:type owl:AnnotationProperty ;
+                     
+                     rdfs:domain <https://litetaryworktopics.com/litetaryworktopics2025##Edizione> .
+
+
+
+###  https://litetaryworktopics.com/litetaryworktopics2025#HaLingua
+
+:HaLingua rdf:type owl:AnnotationProperty .
+
+
+
+###  https://litetaryworktopics.com/litetaryworktopics2025#HaNome
+
+:HaNome rdf:type owl:AnnotationProperty .
+
+
+
 
 
 #################################################################
@@ -175,189 +175,6 @@ xsd:date rdf:type rdfs:Datatype .
 #################################################################
 
 
-###  http://www.semanticweb.org/owl/owlapi/turtle#AppartieneA
-
-<http://www.semanticweb.org/owl/owlapi/turtle#AppartieneA> rdf:type owl:ObjectProperty ;
-                                                           
-                                                           owl:inverseOf <http://www.semanticweb.org/owl/owlapi/turtle#Contiene> .
-
-
-
-###  http://www.semanticweb.org/owl/owlapi/turtle#AutoreDi
-
-<http://www.semanticweb.org/owl/owlapi/turtle#AutoreDi> rdf:type owl:ObjectProperty ;
-                                                        
-                                                        owl:inverseOf <http://www.semanticweb.org/owl/owlapi/turtle#ScrittoDa> ;
-                                                        
-                                                        rdfs:domain :Autore ;
-                                                        
-                                                        rdfs:range [ rdf:type owl:Class ;
-                                                                     owl:unionOf ( :Edizione
-                                                                                   :OperaLetteraria
-                                                                                 )
-                                                                   ] .
-
-
-
-###  http://www.semanticweb.org/owl/owlapi/turtle#Contiene
-
-<http://www.semanticweb.org/owl/owlapi/turtle#Contiene> rdf:type owl:ObjectProperty .
-
-
-
-###  http://www.semanticweb.org/owl/owlapi/turtle#Contribuisce
-
-<http://www.semanticweb.org/owl/owlapi/turtle#Contribuisce> rdf:type owl:ObjectProperty ;
-                                                            
-                                                            owl:inverseOf <http://www.semanticweb.org/owl/owlapi/turtle#HaContributoDi> ;
-                                                            
-                                                            rdfs:domain :Collaboratore ;
-                                                            
-                                                            rdfs:range :Edizione .
-
-
-
-###  http://www.semanticweb.org/owl/owlapi/turtle#EdizioneDi
-
-<http://www.semanticweb.org/owl/owlapi/turtle#EdizioneDi> rdf:type owl:FunctionalProperty ,
-                                                                   owl:ObjectProperty ;
-                                                          
-                                                          rdfs:domain :Edizione ;
-                                                          
-                                                          rdfs:range :OperaLetteraria ;
-                                                          
-                                                          owl:inverseOf <https://litetaryworktopics.com/litetaryworktopics2025##HaEdizione> .
-
-
-
-###  http://www.semanticweb.org/owl/owlapi/turtle#HaAutore
-
-<http://www.semanticweb.org/owl/owlapi/turtle#HaAutore> rdf:type owl:ObjectProperty ;
-                                                        
-                                                        rdfs:domain :Autore ;
-                                                        
-                                                        rdfs:range :OperaLetteraria .
-
-
-
-###  http://www.semanticweb.org/owl/owlapi/turtle#HaContributoDi
-
-<http://www.semanticweb.org/owl/owlapi/turtle#HaContributoDi> rdf:type owl:ObjectProperty ;
-                                                              
-                                                              rdfs:range :Collaboratore ;
-                                                              
-                                                              rdfs:domain :Edizione .
-
-
-
-###  http://www.semanticweb.org/owl/owlapi/turtle#HaProvenienza
-
-<http://www.semanticweb.org/owl/owlapi/turtle#HaProvenienza> rdf:type owl:FunctionalProperty ,
-                                                                      owl:ObjectProperty ;
-                                                             
-                                                             rdfs:range :Nazione ;
-                                                             
-                                                             rdfs:domain [ rdf:type owl:Class ;
-                                                                           owl:unionOf ( <http://www.w3.org/ns/prov#Agent>
-                                                                                         <http://www.w3.org/ns/prov#Organization>
-                                                                                       )
-                                                                         ] .
-
-
-
-###  http://www.semanticweb.org/owl/owlapi/turtle#LavoraPerCasaEditrice
-
-<http://www.semanticweb.org/owl/owlapi/turtle#LavoraPerCasaEditrice> rdf:type owl:ObjectProperty ;
-                                                                     
-                                                                     owl:inverseOf <http://www.semanticweb.org/owl/owlapi/turtle#haEditore> ;
-                                                                     
-                                                                     rdfs:range :CasaEditrice ;
-                                                                     
-                                                                     rdfs:domain :Editore .
-
-
-
-###  http://www.semanticweb.org/owl/owlapi/turtle#Pubblica
-
-<http://www.semanticweb.org/owl/owlapi/turtle#Pubblica> rdf:type owl:ObjectProperty ;
-                                                        
-                                                        owl:inverseOf <http://www.semanticweb.org/owl/owlapi/turtle#PubblicatoDa> ;
-                                                        
-                                                        rdfs:range :Edizione ;
-                                                        
-                                                        rdfs:domain [ rdf:type owl:Class ;
-                                                                      owl:unionOf ( <http://www.w3.org/ns/prov#Organization>
-                                                                                    :Persona
-                                                                                  )
-                                                                    ] .
-
-
-
-###  http://www.semanticweb.org/owl/owlapi/turtle#PubblicaComeOrganizzazione
-
-<http://www.semanticweb.org/owl/owlapi/turtle#PubblicaComeOrganizzazione> rdf:type owl:ObjectProperty ;
-                                                                          
-                                                                          rdfs:subPropertyOf <http://www.semanticweb.org/owl/owlapi/turtle#Pubblica> ;
-                                                                          
-                                                                          rdfs:domain <http://www.w3.org/ns/prov#Organization> ;
-                                                                          
-                                                                          rdfs:range :Edizione .
-
-
-
-###  http://www.semanticweb.org/owl/owlapi/turtle#PubblicaComeSingolo
-
-<http://www.semanticweb.org/owl/owlapi/turtle#PubblicaComeSingolo> rdf:type owl:ObjectProperty ;
-                                                                   
-                                                                   rdfs:subPropertyOf <http://www.semanticweb.org/owl/owlapi/turtle#Pubblica> ;
-                                                                   
-                                                                   owl:inverseOf <http://www.semanticweb.org/owl/owlapi/turtle#PubblicataDallaPersona> ;
-                                                                   
-                                                                   rdfs:range :Edizione ;
-                                                                   
-                                                                   rdfs:domain :Persona .
-
-
-
-###  http://www.semanticweb.org/owl/owlapi/turtle#PubblicataDallOrganizazione
-
-<http://www.semanticweb.org/owl/owlapi/turtle#PubblicataDallOrganizazione> rdf:type owl:ObjectProperty ;
-                                                                           
-                                                                           rdfs:subPropertyOf <http://www.semanticweb.org/owl/owlapi/turtle#PubblicatoDa> ;
-                                                                           
-                                                                           rdfs:range <http://www.w3.org/ns/prov#Organization> ;
-                                                                           
-                                                                           rdfs:domain :Edizione .
-
-
-
-###  http://www.semanticweb.org/owl/owlapi/turtle#PubblicataDallaPersona
-
-<http://www.semanticweb.org/owl/owlapi/turtle#PubblicataDallaPersona> rdf:type owl:ObjectProperty ;
-                                                                      
-                                                                      rdfs:subPropertyOf <http://www.semanticweb.org/owl/owlapi/turtle#PubblicatoDa> ;
-                                                                      
-                                                                      rdfs:domain :Edizione ;
-                                                                      
-                                                                      rdfs:range :Persona .
-
-
-
-###  http://www.semanticweb.org/owl/owlapi/turtle#PubblicatoDa
-
-<http://www.semanticweb.org/owl/owlapi/turtle#PubblicatoDa> rdf:type owl:FunctionalProperty ,
-                                                                     owl:ObjectProperty ;
-                                                            
-                                                            rdfs:domain :Edizione ;
-                                                            
-                                                            rdfs:range [ rdf:type owl:Class ;
-                                                                         owl:unionOf ( <http://www.w3.org/ns/prov#Organization>
-                                                                                       :Persona
-                                                                                     )
-                                                                       ] .
-
-
-
 ###  http://www.semanticweb.org/owl/owlapi/turtle#ScrittoDa
 
 <http://www.semanticweb.org/owl/owlapi/turtle#ScrittoDa> rdf:type owl:ObjectProperty ;
@@ -372,53 +189,236 @@ xsd:date rdf:type rdfs:Datatype .
 
 
 
-###  http://www.semanticweb.org/owl/owlapi/turtle#VieneClassificatoCome
+###  https://litetaryworktopics.com/litetaryworktopics2025#AppartieneA
 
-<http://www.semanticweb.org/owl/owlapi/turtle#VieneClassificatoCome> rdf:type owl:ObjectProperty ;
-                                                                     
-                                                                     owl:inverseOf <http://www.semanticweb.org/owl/owlapi/turtle#VieneUtilizzatoIn> ;
-                                                                     
-                                                                     rdfs:domain :OperaLetteraria ;
-                                                                     
-                                                                     rdfs:range [ rdf:type owl:Class ;
-                                                                                  owl:unionOf ( :Genere
-                                                                                                :Tema
-                                                                                              )
-                                                                                ] .
+:AppartieneA rdf:type owl:ObjectProperty ;
+             
+             owl:inverseOf :Contiene .
 
 
 
-###  http://www.semanticweb.org/owl/owlapi/turtle#VieneUtilizzatoIn
+###  https://litetaryworktopics.com/litetaryworktopics2025#AutoreDi
 
-<http://www.semanticweb.org/owl/owlapi/turtle#VieneUtilizzatoIn> rdf:type owl:ObjectProperty ;
-                                                                 
-                                                                 rdfs:range :OperaLetteraria ;
-                                                                 
-                                                                 rdfs:domain [ rdf:type owl:Class ;
-                                                                               owl:unionOf ( :Genere
-                                                                                             :Tema
-                                                                                           )
-                                                                             ] .
-
-
-
-###  http://www.semanticweb.org/owl/owlapi/turtle#haEditore
-
-<http://www.semanticweb.org/owl/owlapi/turtle#haEditore> rdf:type owl:ObjectProperty ;
-                                                         
-                                                         rdfs:domain :CasaEditrice ;
-                                                         
-                                                         rdfs:range :Editore .
+:AutoreDi rdf:type owl:ObjectProperty ;
+          
+          owl:inverseOf <http://www.semanticweb.org/owl/owlapi/turtle#ScrittoDa> ;
+          
+          rdfs:domain :Autore ;
+          
+          rdfs:range [ rdf:type owl:Class ;
+                       owl:unionOf ( :Edizione
+                                     :OperaLetteraria
+                                   )
+                     ] .
 
 
 
-###  https://litetaryworktopics.com/litetaryworktopics2025##HaEdizione
+###  https://litetaryworktopics.com/litetaryworktopics2025#Contiene
 
-<https://litetaryworktopics.com/litetaryworktopics2025##HaEdizione> rdf:type owl:ObjectProperty ;
-                                                                    
-                                                                    rdfs:range :Edizione ;
-                                                                    
-                                                                    rdfs:domain :OperaLetteraria .
+:Contiene rdf:type owl:ObjectProperty .
+
+
+
+###  https://litetaryworktopics.com/litetaryworktopics2025#Contribuisce
+
+:Contribuisce rdf:type owl:ObjectProperty ;
+              
+              rdfs:domain :Collaboratore ;
+              
+              rdfs:range :Edizione ;
+              
+              owl:inverseOf :HaContributoDi .
+
+
+
+###  https://litetaryworktopics.com/litetaryworktopics2025#EdizioneDi
+
+:EdizioneDi rdf:type owl:FunctionalProperty ,
+                     owl:ObjectProperty ;
+            
+            rdfs:domain :Edizione ;
+            
+            owl:inverseOf :HaEdizione ;
+            
+            rdfs:range :OperaLetteraria .
+
+
+
+###  https://litetaryworktopics.com/litetaryworktopics2025#HaAutore
+
+:HaAutore rdf:type owl:ObjectProperty ;
+          
+          rdfs:domain :Autore ;
+          
+          rdfs:range :OperaLetteraria .
+
+
+
+###  https://litetaryworktopics.com/litetaryworktopics2025#HaContributoDi
+
+:HaContributoDi rdf:type owl:ObjectProperty ;
+                
+                rdfs:range :Collaboratore ;
+                
+                rdfs:domain :Edizione .
+
+
+
+###  https://litetaryworktopics.com/litetaryworktopics2025#HaEdizione
+
+:HaEdizione rdf:type owl:ObjectProperty ;
+            
+            rdfs:range :Edizione ;
+            
+            rdfs:domain :OperaLetteraria .
+
+
+
+###  https://litetaryworktopics.com/litetaryworktopics2025#HaProvenienza
+
+:HaProvenienza rdf:type owl:FunctionalProperty ,
+                        owl:ObjectProperty ;
+               
+               rdfs:range :Nazione ;
+               
+               rdfs:domain [ rdf:type owl:Class ;
+                             owl:unionOf ( <http://www.w3.org/ns/prov#Agent>
+                                           <http://www.w3.org/ns/prov#Organization>
+                                         )
+                           ] .
+
+
+
+###  https://litetaryworktopics.com/litetaryworktopics2025#LavoraPerCasaEditrice
+
+:LavoraPerCasaEditrice rdf:type owl:ObjectProperty ;
+                       
+                       rdfs:range :CasaEditrice ;
+                       
+                       rdfs:domain :Editore ;
+                       
+                       owl:inverseOf :haEditore .
+
+
+
+###  https://litetaryworktopics.com/litetaryworktopics2025#Pubblica
+
+:Pubblica rdf:type owl:ObjectProperty ;
+          
+          rdfs:range :Edizione ;
+          
+          owl:inverseOf :PubblicatoDa ;
+          
+          rdfs:domain [ rdf:type owl:Class ;
+                        owl:unionOf ( <http://www.w3.org/ns/prov#Organization>
+                                      :Persona
+                                    )
+                      ] .
+
+
+
+###  https://litetaryworktopics.com/litetaryworktopics2025#PubblicaComeOrganizzazione
+
+:PubblicaComeOrganizzazione rdf:type owl:ObjectProperty ;
+                            
+                            rdfs:domain <http://www.w3.org/ns/prov#Organization> ;
+                            
+                            rdfs:range :Edizione ;
+                            
+                            rdfs:subPropertyOf :Pubblica .
+
+
+
+###  https://litetaryworktopics.com/litetaryworktopics2025#PubblicaComeSingolo
+
+:PubblicaComeSingolo rdf:type owl:ObjectProperty ;
+                     
+                     rdfs:range :Edizione ;
+                     
+                     rdfs:domain :Persona ;
+                     
+                     rdfs:subPropertyOf :Pubblica ;
+                     
+                     owl:inverseOf :PubblicataDallaPersona .
+
+
+
+###  https://litetaryworktopics.com/litetaryworktopics2025#PubblicataDallOrganizazione
+
+:PubblicataDallOrganizazione rdf:type owl:ObjectProperty ;
+                             
+                             rdfs:range <http://www.w3.org/ns/prov#Organization> ;
+                             
+                             rdfs:domain :Edizione ;
+                             
+                             rdfs:subPropertyOf :PubblicatoDa .
+
+
+
+###  https://litetaryworktopics.com/litetaryworktopics2025#PubblicataDallaPersona
+
+:PubblicataDallaPersona rdf:type owl:ObjectProperty ;
+                        
+                        rdfs:domain :Edizione ;
+                        
+                        rdfs:range :Persona ;
+                        
+                        rdfs:subPropertyOf :PubblicatoDa .
+
+
+
+###  https://litetaryworktopics.com/litetaryworktopics2025#PubblicatoDa
+
+:PubblicatoDa rdf:type owl:FunctionalProperty ,
+                       owl:ObjectProperty ;
+              
+              rdfs:domain :Edizione ;
+              
+              rdfs:range [ rdf:type owl:Class ;
+                           owl:unionOf ( <http://www.w3.org/ns/prov#Organization>
+                                         :Persona
+                                       )
+                         ] .
+
+
+
+###  https://litetaryworktopics.com/litetaryworktopics2025#VieneClassificatoCome
+
+:VieneClassificatoCome rdf:type owl:ObjectProperty ;
+                       
+                       rdfs:domain :OperaLetteraria ;
+                       
+                       owl:inverseOf :VieneUtilizzatoIn ;
+                       
+                       rdfs:range [ rdf:type owl:Class ;
+                                    owl:unionOf ( :Genere
+                                                  :Tema
+                                                )
+                                  ] .
+
+
+
+###  https://litetaryworktopics.com/litetaryworktopics2025#VieneUtilizzatoIn
+
+:VieneUtilizzatoIn rdf:type owl:ObjectProperty ;
+                   
+                   rdfs:range :OperaLetteraria ;
+                   
+                   rdfs:domain [ rdf:type owl:Class ;
+                                 owl:unionOf ( :Genere
+                                               :Tema
+                                             )
+                               ] .
+
+
+
+###  https://litetaryworktopics.com/litetaryworktopics2025#haEditore
+
+:haEditore rdf:type owl:ObjectProperty ;
+           
+           rdfs:domain :CasaEditrice ;
+           
+           rdfs:range :Editore .
 
 
 
@@ -447,65 +447,65 @@ dc:Title rdf:type owl:DatatypeProperty ;
 
 
 
-###  http://www.semanticweb.org/owl/owlapi/turtle#HaDataPubblicazione
+###  https://litetaryworktopics.com/litetaryworktopics2025#HaDataPubblicazione
 
-<http://www.semanticweb.org/owl/owlapi/turtle#HaDataPubblicazione> rdf:type owl:DatatypeProperty ;
-                                                                   
-                                                                   rdfs:range xsd:date .
-
-
-
-###  http://www.semanticweb.org/owl/owlapi/turtle#HaDescrizione
-
-<http://www.semanticweb.org/owl/owlapi/turtle#HaDescrizione> rdf:type owl:DatatypeProperty ;
-                                                             
-                                                             rdfs:range xsd:string .
+:HaDataPubblicazione rdf:type owl:DatatypeProperty ;
+                     
+                     rdfs:range xsd:date .
 
 
 
-###  http://www.semanticweb.org/owl/owlapi/turtle#HaISBN
+###  https://litetaryworktopics.com/litetaryworktopics2025#HaDescrizione
 
-<http://www.semanticweb.org/owl/owlapi/turtle#HaISBN> rdf:type owl:DatatypeProperty ;
-                                                      
-                                                      rdfs:range xsd:nonPositiveInteger ;
-                                                      
-                                                      rdfs:domain :Edizione .
+:HaDescrizione rdf:type owl:DatatypeProperty ;
+               
+               rdfs:range xsd:string .
 
 
 
-###  http://www.semanticweb.org/owl/owlapi/turtle#HaLingua
+###  https://litetaryworktopics.com/litetaryworktopics2025#HaISBN
 
-<http://www.semanticweb.org/owl/owlapi/turtle#HaLingua> rdf:type owl:DatatypeProperty ;
-                                                        
-                                                        rdfs:range xsd:language .
-
-
-
-###  http://www.semanticweb.org/owl/owlapi/turtle#HaNome
-
-<http://www.semanticweb.org/owl/owlapi/turtle#HaNome> rdf:type owl:DatatypeProperty ;
-                                                      
-                                                      rdfs:range xsd:string .
+:HaISBN rdf:type owl:DatatypeProperty ;
+        
+        rdfs:range xsd:nonPositiveInteger ;
+        
+        rdfs:domain :Edizione .
 
 
 
-###  http://www.semanticweb.org/owl/owlapi/turtle#HaPagine
+###  https://litetaryworktopics.com/litetaryworktopics2025#HaLingua
 
-<http://www.semanticweb.org/owl/owlapi/turtle#HaPagine> rdf:type owl:DatatypeProperty ;
-                                                        
-                                                        rdfs:range xsd:integer ;
-                                                        
-                                                        rdfs:domain :Edizione .
+:HaLingua rdf:type owl:DatatypeProperty ;
+          
+          rdfs:range xsd:language .
 
 
 
-###  http://www.semanticweb.org/owl/owlapi/turtle#HaRuolo
+###  https://litetaryworktopics.com/litetaryworktopics2025#HaNome
 
-<http://www.semanticweb.org/owl/owlapi/turtle#HaRuolo> rdf:type owl:DatatypeProperty ;
-                                                       
-                                                       rdfs:range xsd:string ;
-                                                       
-                                                       rdfs:domain :Collaboratore .
+:HaNome rdf:type owl:DatatypeProperty ;
+        
+        rdfs:range xsd:string .
+
+
+
+###  https://litetaryworktopics.com/litetaryworktopics2025#HaPagine
+
+:HaPagine rdf:type owl:DatatypeProperty ;
+          
+          rdfs:range xsd:integer ;
+          
+          rdfs:domain :Edizione .
+
+
+
+###  https://litetaryworktopics.com/litetaryworktopics2025#HaRuolo
+
+:HaRuolo rdf:type owl:DatatypeProperty ;
+         
+         rdfs:range xsd:string ;
+         
+         rdfs:domain :Collaboratore .
 
 
 
@@ -565,7 +565,7 @@ dc:Title rdf:type owl:DatatypeProperty ;
 """@it ;
                                                           
                                                           owl:equivalentClass [ rdf:type owl:Restriction ;
-                                                                                owl:onProperty <http://www.semanticweb.org/owl/owlapi/turtle#Contiene> ;
+                                                                                owl:onProperty :Contiene ;
                                                                                 owl:onClass :OperaLetteraria ;
                                                                                 owl:minQualifiedCardinality "3"^^xsd:nonNegativeInteger
                                                                               ] ;
@@ -586,7 +586,7 @@ dc:Title rdf:type owl:DatatypeProperty ;
 """@it ;
                                                         
                                                         owl:equivalentClass [ rdf:type owl:Restriction ;
-                                                                              owl:onProperty <http://www.semanticweb.org/owl/owlapi/turtle#Contiene> ;
+                                                                              owl:onProperty :Contiene ;
                                                                               owl:onClass :OperaLetteraria ;
                                                                               owl:qualifiedCardinality "3"^^xsd:nonNegativeInteger
                                                                             ] ;
@@ -635,7 +635,7 @@ Funziona solo se sono definiti con enumerazione
 """@it ;
         
         owl:equivalentClass [ rdf:type owl:Restriction ;
-                              owl:onProperty <http://www.semanticweb.org/owl/owlapi/turtle#AutoreDi> ;
+                              owl:onProperty :AutoreDi ;
                               owl:someValuesFrom :Edizione
                             ] ;
         
@@ -656,11 +656,11 @@ Funziona solo se sono definiti con enumerazione
                                           owl:intersectionOf ( :Autore
                                                                :Editore
                                                                [ rdf:type owl:Restriction ;
-                                                                 owl:onProperty <http://www.semanticweb.org/owl/owlapi/turtle#AutoreDi> ;
+                                                                 owl:onProperty :AutoreDi ;
                                                                  owl:someValuesFrom :Edizione
                                                                ]
                                                                [ rdf:type owl:Restriction ;
-                                                                 owl:onProperty <http://www.semanticweb.org/owl/owlapi/turtle#Pubblica> ;
+                                                                 owl:onProperty :Pubblica ;
                                                                  owl:someValuesFrom :Edizione
                                                                ]
                                                              )
@@ -679,7 +679,7 @@ Funziona solo se sono definiti con enumerazione
             rdfs:label "Canzoniere"@it ;
             
             owl:equivalentClass [ rdf:type owl:Restriction ;
-                                  owl:onProperty <http://www.semanticweb.org/owl/owlapi/turtle#Contiene> ;
+                                  owl:onProperty :Contiene ;
                                   owl:onClass :Poesia ;
                                   owl:minQualifiedCardinality "2"^^xsd:nonNegativeInteger
                                 ] ;
@@ -699,7 +699,7 @@ Funziona solo se sono definiti con enumerazione
               owl:equivalentClass [ rdf:type owl:Class ;
                                     owl:intersectionOf ( <http://www.w3.org/ns/prov#Organization>
                                                          [ rdf:type owl:Restriction ;
-                                                           owl:onProperty <http://www.semanticweb.org/owl/owlapi/turtle#Pubblica> ;
+                                                           owl:onProperty :Pubblica ;
                                                            owl:someValuesFrom :Edizione
                                                          ]
                                                        )
@@ -745,7 +745,7 @@ Funziona solo se sono definiti con enumerazione
          owl:equivalentClass [ rdf:type owl:Class ;
                                owl:intersectionOf ( :Persona
                                                     [ rdf:type owl:Restriction ;
-                                                      owl:onProperty <http://www.semanticweb.org/owl/owlapi/turtle#Pubblica> ;
+                                                      owl:onProperty :Pubblica ;
                                                       owl:someValuesFrom :Edizione
                                                     ]
                                                   )
@@ -765,7 +765,7 @@ Funziona solo se sono definiti con enumerazione
           rdfs:label "Edizione"@it ;
           
           owl:equivalentClass [ rdf:type owl:Restriction ;
-                                owl:onProperty <http://www.semanticweb.org/owl/owlapi/turtle#EdizioneDi> ;
+                                owl:onProperty :EdizioneDi ;
                                 owl:someValuesFrom :OperaLetteraria
                               ] ;
           
@@ -790,7 +790,7 @@ Funziona solo se sono definiti con enumerazione
 :ListaDiOpereLetterarie rdf:type owl:Class ;
                         
                         owl:equivalentClass [ rdf:type owl:Restriction ;
-                                              owl:onProperty <http://www.semanticweb.org/owl/owlapi/turtle#Contiene> ;
+                                              owl:onProperty :Contiene ;
                                               owl:someValuesFrom :OperaLetteraria
                                             ] ;
                         
@@ -867,11 +867,11 @@ Funziona solo se sono definiti con enumerazione
                   rdfs:label "PersonaggioLibro"@it ;
                   
                   owl:equivalentClass [ rdf:type owl:Restriction ;
-                                        owl:onProperty <http://www.semanticweb.org/owl/owlapi/turtle#AppartieneA> ;
+                                        owl:onProperty :AppartieneA ;
                                         owl:someValuesFrom [ rdf:type owl:Class ;
                                                              owl:intersectionOf ( :OperaLetteraria
                                                                                   [ rdf:type owl:Restriction ;
-                                                                                    owl:onProperty <http://www.semanticweb.org/owl/owlapi/turtle#Contiene> ;
+                                                                                    owl:onProperty :Contiene ;
                                                                                     owl:someValuesFrom owl:Thing
                                                                                   ]
                                                                                 )
@@ -904,7 +904,7 @@ Funziona solo se sono definiti con enumerazione
                  rdfs:label "RaccoltaDiSaggi"@it ;
                  
                  owl:equivalentClass [ rdf:type owl:Restriction ;
-                                       owl:onProperty <http://www.semanticweb.org/owl/owlapi/turtle#Contiene> ;
+                                       owl:onProperty :Contiene ;
                                        owl:onClass :Saggio ;
                                        owl:minQualifiedCardinality "2"^^xsd:nonNegativeInteger
                                      ] ;
@@ -922,7 +922,7 @@ Funziona solo se sono definiti con enumerazione
                     rdfs:label "RaccoltaDiRacconti"@it ;
                     
                     owl:equivalentClass [ rdf:type owl:Restriction ;
-                                          owl:onProperty <http://www.semanticweb.org/owl/owlapi/turtle#Contiene> ;
+                                          owl:onProperty :Contiene ;
                                           owl:onClass :Racconto ;
                                           owl:minQualifiedCardinality "2"^^xsd:nonNegativeInteger
                                         ] ;
@@ -942,7 +942,7 @@ Funziona solo se sono definiti con enumerazione
 """@it ;
                   
                   owl:equivalentClass [ rdf:type owl:Restriction ;
-                                        owl:onProperty <http://www.semanticweb.org/owl/owlapi/turtle#Contiene> ;
+                                        owl:onProperty :Contiene ;
                                         owl:onClass :OperaTeatrale ;
                                         owl:minQualifiedCardinality "2"^^xsd:nonNegativeInteger
                                       ] ;
@@ -1008,7 +1008,7 @@ Funziona solo se sono definiti con enumerazione
                 rdfs:label "SerieDiRomanzi"@it ;
                 
                 owl:equivalentClass [ rdf:type owl:Restriction ;
-                                      owl:onProperty <http://www.semanticweb.org/owl/owlapi/turtle#Contiene> ;
+                                      owl:onProperty :Contiene ;
                                       owl:onClass :Romanzo ;
                                       owl:minQualifiedCardinality "2"^^xsd:nonNegativeInteger
                                     ] ;
@@ -1042,14 +1042,14 @@ Funziona solo se sono definiti con enumerazione
 
 <http://www.semanticweb.org/owl/owlapi/turtle#Alessandro_Manzoni> rdf:type owl:NamedIndividual ;
                                                                   
-                                                                  <http://www.semanticweb.org/owl/owlapi/turtle#HaNome> "Alessandro Manzoni"^^xsd:string ;
+                                                                  :HaNome "Alessandro Manzoni"^^xsd:string ;
                                                                   
-                                                                  <http://www.semanticweb.org/owl/owlapi/turtle#AutoreDi> <http://www.semanticweb.org/owl/owlapi/turtle#Fermo_e_Lucia> ,
-                                                                                                                          <http://www.semanticweb.org/owl/owlapi/turtle#I_Promessi_Sposi> ;
+                                                                  :AutoreDi <http://www.semanticweb.org/owl/owlapi/turtle#Fermo_e_Lucia> ,
+                                                                            <http://www.semanticweb.org/owl/owlapi/turtle#I_Promessi_Sposi> ;
                                                                   
-                                                                  <http://www.semanticweb.org/owl/owlapi/turtle#HaProvenienza> <http://www.semanticweb.org/owl/owlapi/turtle#Italia> ;
+                                                                  :HaProvenienza <http://www.semanticweb.org/owl/owlapi/turtle#Italia> ;
                                                                   
-                                                                  <http://www.semanticweb.org/owl/owlapi/turtle#AutoreDi> <http://www.semanticweb.org/owl/owlapi/turtle#Opera_Fermo_e_Lucia> .
+                                                                  :AutoreDi <http://www.semanticweb.org/owl/owlapi/turtle#Opera_Fermo_e_Lucia> .
 
 
 
@@ -1058,11 +1058,11 @@ Funziona solo se sono definiti con enumerazione
 <http://www.semanticweb.org/owl/owlapi/turtle#BacchetteMagiche> rdf:type owl:NamedIndividual ,
                                                                          :Tema ;
                                                                 
-                                                                <http://www.semanticweb.org/owl/owlapi/turtle#HaNome> "Bacchette Magiche"^^xsd:string ;
+                                                                :HaNome "Bacchette Magiche"^^xsd:string ;
                                                                 
-                                                                <http://www.semanticweb.org/owl/owlapi/turtle#VieneUtilizzatoIn> <http://www.semanticweb.org/owl/owlapi/turtle#Opera_Camera_dei_Segreti> ,
-                                                                                                                                 <http://www.semanticweb.org/owl/owlapi/turtle#Opera_Pietra_Filosofale> ,
-                                                                                                                                 <http://www.semanticweb.org/owl/owlapi/turtle#Opera_Prigioniero_di_Azkaban> .
+                                                                :VieneUtilizzatoIn <http://www.semanticweb.org/owl/owlapi/turtle#Opera_Camera_dei_Segreti> ,
+                                                                                   <http://www.semanticweb.org/owl/owlapi/turtle#Opera_Pietra_Filosofale> ,
+                                                                                   <http://www.semanticweb.org/owl/owlapi/turtle#Opera_Prigioniero_di_Azkaban> .
 
 
 
@@ -1070,9 +1070,9 @@ Funziona solo se sono definiti con enumerazione
 
 <http://www.semanticweb.org/owl/owlapi/turtle#Benjamin_Franklin> rdf:type owl:NamedIndividual ;
                                                                  
-                                                                 <http://www.semanticweb.org/owl/owlapi/turtle#HaNome> "Benjamin Franklin"^^xsd:string ;
+                                                                 :HaNome "Benjamin Franklin"^^xsd:string ;
                                                                  
-                                                                 <http://www.semanticweb.org/owl/owlapi/turtle#AutoreDi> <http://www.semanticweb.org/owl/owlapi/turtle#The_Autobiography_of_Benjamin_Franklin> .
+                                                                 :AutoreDi <http://www.semanticweb.org/owl/owlapi/turtle#The_Autobiography_of_Benjamin_Franklin> .
 
 
 
@@ -1081,13 +1081,13 @@ Funziona solo se sono definiti con enumerazione
 <http://www.semanticweb.org/owl/owlapi/turtle#Bloomsbury_Publishing> rdf:type owl:NamedIndividual ,
                                                                               <http://www.w3.org/ns/prov#Organization> ;
                                                                      
-                                                                     <http://www.semanticweb.org/owl/owlapi/turtle#HaNome> """Bloombsbury Publishing
+                                                                     :HaNome """Bloombsbury Publishing
 """^^xsd:string ,
-                                                                                                                           "Bloomsbury Publishing"^^xsd:string ;
+                                                                             "Bloomsbury Publishing"^^xsd:string ;
                                                                      
-                                                                     <http://www.semanticweb.org/owl/owlapi/turtle#Pubblica> <http://www.semanticweb.org/owl/owlapi/turtle#The_Chamber_of_Secrets> ,
-                                                                                                                             <http://www.semanticweb.org/owl/owlapi/turtle#The_Philosophers_Stone> ,
-                                                                                                                             <http://www.semanticweb.org/owl/owlapi/turtle#The_Prisoner_of_Azkaban> .
+                                                                     :Pubblica <http://www.semanticweb.org/owl/owlapi/turtle#The_Chamber_of_Secrets> ,
+                                                                               <http://www.semanticweb.org/owl/owlapi/turtle#The_Philosophers_Stone> ,
+                                                                               <http://www.semanticweb.org/owl/owlapi/turtle#The_Prisoner_of_Azkaban> .
 
 
 
@@ -1096,11 +1096,11 @@ Funziona solo se sono definiti con enumerazione
 <http://www.semanticweb.org/owl/owlapi/turtle#Fantasy> rdf:type owl:NamedIndividual ,
                                                                 :Genere ;
                                                        
-                                                       <http://www.semanticweb.org/owl/owlapi/turtle#HaNome> "Fantasy"^^xsd:string ;
+                                                       :HaNome "Fantasy"^^xsd:string ;
                                                        
-                                                       <http://www.semanticweb.org/owl/owlapi/turtle#VieneUtilizzatoIn> <http://www.semanticweb.org/owl/owlapi/turtle#Opera_Camera_dei_Segreti> ,
-                                                                                                                        <http://www.semanticweb.org/owl/owlapi/turtle#Opera_Pietra_Filosofale> ,
-                                                                                                                        <http://www.semanticweb.org/owl/owlapi/turtle#Opera_Prigioniero_di_Azkaban> .
+                                                       :VieneUtilizzatoIn <http://www.semanticweb.org/owl/owlapi/turtle#Opera_Camera_dei_Segreti> ,
+                                                                          <http://www.semanticweb.org/owl/owlapi/turtle#Opera_Pietra_Filosofale> ,
+                                                                          <http://www.semanticweb.org/owl/owlapi/turtle#Opera_Prigioniero_di_Azkaban> .
 
 
 
@@ -1108,17 +1108,17 @@ Funziona solo se sono definiti con enumerazione
 
 <http://www.semanticweb.org/owl/owlapi/turtle#Fermo_e_Lucia> rdf:type owl:NamedIndividual ;
                                                              
-                                                             <http://www.semanticweb.org/owl/owlapi/turtle#HaDataPubblicazione> "1827-01-01"^^xsd:date ;
+                                                             :HaDataPubblicazione "1827-01-01"^^xsd:date ;
                                                              
-                                                             <http://www.semanticweb.org/owl/owlapi/turtle#HaNome> "Fermo e Lucia"^^xsd:string ,
-                                                                                                                   """Fermo e Lucia
+                                                             :HaNome "Fermo e Lucia"^^xsd:string ,
+                                                                     """Fermo e Lucia
 """^^xsd:string ;
                                                              
-                                                             <http://www.semanticweb.org/owl/owlapi/turtle#HaLingua> "it"^^xsd:language ;
+                                                             :HaLingua "it"^^xsd:language ;
                                                              
-                                                             <http://www.semanticweb.org/owl/owlapi/turtle#HaNome> "Fermo e Lucia" ;
+                                                             :HaNome "Fermo e Lucia" ;
                                                              
-                                                             <http://www.semanticweb.org/owl/owlapi/turtle#HaLingua> <http://www.semanticweb.org/owl/owlapi/turtle#Italiano> .
+                                                             :HaLingua <http://www.semanticweb.org/owl/owlapi/turtle#Italiano> .
 
 
 
@@ -1126,7 +1126,7 @@ Funziona solo se sono definiti con enumerazione
 
 <http://www.semanticweb.org/owl/owlapi/turtle#Harry_James_Potter> rdf:type owl:NamedIndividual ;
                                                                   
-                                                                  <http://www.semanticweb.org/owl/owlapi/turtle#HaNome> "Harry James Potter"^^xsd:string .
+                                                                  :HaNome "Harry James Potter"^^xsd:string .
 
 
 
@@ -1134,13 +1134,13 @@ Funziona solo se sono definiti con enumerazione
 
 <http://www.semanticweb.org/owl/owlapi/turtle#Harry_Potter> rdf:type owl:NamedIndividual ;
                                                             
-                                                            <http://www.semanticweb.org/owl/owlapi/turtle#HaNome> "Harry Potter"^^xsd:string ;
+                                                            :HaNome "Harry Potter"^^xsd:string ;
                                                             
                                                             <http://www.semanticweb.org/owl/owlapi/turtle#parteDiSaga> <http://www.semanticweb.org/owl/owlapi/turtle#Camera_dei_Segreti_opera> ;
                                                             
-                                                            <http://www.semanticweb.org/owl/owlapi/turtle#Contiene> <http://www.semanticweb.org/owl/owlapi/turtle#Opera_Camera_dei_Segreti> ,
-                                                                                                                    <http://www.semanticweb.org/owl/owlapi/turtle#Opera_Pietra_Filosofale> ,
-                                                                                                                    <http://www.semanticweb.org/owl/owlapi/turtle#Opera_Prigioniero_di_Azkaban> ;
+                                                            :Contiene <http://www.semanticweb.org/owl/owlapi/turtle#Opera_Camera_dei_Segreti> ,
+                                                                      <http://www.semanticweb.org/owl/owlapi/turtle#Opera_Pietra_Filosofale> ,
+                                                                      <http://www.semanticweb.org/owl/owlapi/turtle#Opera_Prigioniero_di_Azkaban> ;
                                                             
                                                             <http://www.semanticweb.org/owl/owlapi/turtle#parteDiSaga> <http://www.semanticweb.org/owl/owlapi/turtle#Pietra_Filosofale_Opera> ,
                                                                                                                        <http://www.semanticweb.org/owl/owlapi/turtle#Prigioniero_di_Azkaban_Opera> .
@@ -1151,16 +1151,16 @@ Funziona solo se sono definiti con enumerazione
 
 <http://www.semanticweb.org/owl/owlapi/turtle#I_Promessi_Sposi> rdf:type owl:NamedIndividual ;
                                                                 
-                                                                <http://www.semanticweb.org/owl/owlapi/turtle#HaDataPubblicazione> "1840-01-01"^^xsd:date ;
+                                                                :HaDataPubblicazione "1840-01-01"^^xsd:date ;
                                                                 
-                                                                <http://www.semanticweb.org/owl/owlapi/turtle#HaNome> "I Promessi Sposi"^^xsd:string ,
-                                                                                                                      "I promessi Sposi"^^xsd:string ;
+                                                                :HaNome "I Promessi Sposi"^^xsd:string ,
+                                                                        "I promessi Sposi"^^xsd:string ;
                                                                 
-                                                                <http://www.semanticweb.org/owl/owlapi/turtle#HaLingua> "it"^^xsd:language ;
+                                                                :HaLingua "it"^^xsd:language ;
                                                                 
-                                                                <http://www.semanticweb.org/owl/owlapi/turtle#HaNome> "I Promessi Sposi" ;
+                                                                :HaNome "I Promessi Sposi" ;
                                                                 
-                                                                <http://www.semanticweb.org/owl/owlapi/turtle#HaLingua> <http://www.semanticweb.org/owl/owlapi/turtle#Italiano> .
+                                                                :HaLingua <http://www.semanticweb.org/owl/owlapi/turtle#Italiano> .
 
 
 
@@ -1169,7 +1169,7 @@ Funziona solo se sono definiti con enumerazione
 <http://www.semanticweb.org/owl/owlapi/turtle#Italia> rdf:type owl:NamedIndividual ,
                                                                :Nazione ;
                                                       
-                                                      <http://www.semanticweb.org/owl/owlapi/turtle#HaNome> "Italia"^^xsd:string .
+                                                      :HaNome "Italia"^^xsd:string .
 
 
 
@@ -1177,11 +1177,11 @@ Funziona solo se sono definiti con enumerazione
 
 <http://www.semanticweb.org/owl/owlapi/turtle#J.K_Rowling> rdf:type owl:NamedIndividual ;
                                                            
-                                                           <http://www.semanticweb.org/owl/owlapi/turtle#HaNome> "J.K. Rowling"^^xsd:string ;
+                                                           :HaNome "J.K. Rowling"^^xsd:string ;
                                                            
-                                                           <http://www.semanticweb.org/owl/owlapi/turtle#AutoreDi> <http://www.semanticweb.org/owl/owlapi/turtle#Opera_Camera_dei_Segreti> ,
-                                                                                                                   <http://www.semanticweb.org/owl/owlapi/turtle#Opera_Pietra_Filosofale> ,
-                                                                                                                   <http://www.semanticweb.org/owl/owlapi/turtle#Opera_Prigioniero_di_Azkaban> .
+                                                           :AutoreDi <http://www.semanticweb.org/owl/owlapi/turtle#Opera_Camera_dei_Segreti> ,
+                                                                     <http://www.semanticweb.org/owl/owlapi/turtle#Opera_Pietra_Filosofale> ,
+                                                                     <http://www.semanticweb.org/owl/owlapi/turtle#Opera_Prigioniero_di_Azkaban> .
 
 
 
@@ -1189,14 +1189,14 @@ Funziona solo se sono definiti con enumerazione
 
 <http://www.semanticweb.org/owl/owlapi/turtle#Letteratura_Italiana> rdf:type owl:NamedIndividual ;
                                                                     
-                                                                    <http://www.semanticweb.org/owl/owlapi/turtle#HaNome> "Letteratura Italiana"^^xsd:string ;
+                                                                    :HaNome "Letteratura Italiana"^^xsd:string ;
                                                                     
                                                                     <http://www.semanticweb.org/owl/owlapi/turtle#parteDiAntologia> <http://www.semanticweb.org/owl/owlapi/turtle#La_Divina_Commedia> ,
                                                                                                                                     <http://www.semanticweb.org/owl/owlapi/turtle#OperaRomantica2> ,
                                                                                                                                     <http://www.semanticweb.org/owl/owlapi/turtle#OperaRomantica3> ;
                                                                     
-                                                                    <http://www.semanticweb.org/owl/owlapi/turtle#Contiene> <http://www.semanticweb.org/owl/owlapi/turtle#Opera_Fermo_e_Lucia> ,
-                                                                                                                            <http://www.semanticweb.org/owl/owlapi/turtle#Opera_La_Divina_Commedia> .
+                                                                    :Contiene <http://www.semanticweb.org/owl/owlapi/turtle#Opera_Fermo_e_Lucia> ,
+                                                                              <http://www.semanticweb.org/owl/owlapi/turtle#Opera_La_Divina_Commedia> .
 
 
 
@@ -1205,11 +1205,11 @@ Funziona solo se sono definiti con enumerazione
 <http://www.semanticweb.org/owl/owlapi/turtle#Opera_Camera_dei_Segreti> rdf:type owl:NamedIndividual ,
                                                                                  :Romanzo ;
                                                                         
-                                                                        <http://www.semanticweb.org/owl/owlapi/turtle#HaNome> "La Camera dei Segreti"^^xsd:string ;
+                                                                        :HaNome "La Camera dei Segreti"^^xsd:string ;
                                                                         
-                                                                        <http://www.semanticweb.org/owl/owlapi/turtle#HaLingua> "en"^^xsd:language ;
+                                                                        :HaLingua "en"^^xsd:language ;
                                                                         
-                                                                        <http://www.semanticweb.org/owl/owlapi/turtle#Contiene> <http://www.semanticweb.org/owl/owlapi/turtle#Harry_James_Potter> ;
+                                                                        :Contiene <http://www.semanticweb.org/owl/owlapi/turtle#Harry_James_Potter> ;
                                                                         
                                                                         <http://www.semanticweb.org/owl/owlapi/turtle#parteDiSaga> <http://www.semanticweb.org/owl/owlapi/turtle#Harry_Potter> ;
                                                                         
@@ -1217,9 +1217,9 @@ Funziona solo se sono definiti con enumerazione
                                                                         
                                                                         <http://www.semanticweb.org/owl/owlapi/turtle#HaGenereLetterario> <http://www.semanticweb.org/owl/owlapi/turtle#Romanzo> ;
                                                                         
-                                                                        <http://www.semanticweb.org/owl/owlapi/turtle#HaEdizione> <http://www.semanticweb.org/owl/owlapi/turtle#The_Chamber_of_Secrets> ;
+                                                                        :HaEdizione <http://www.semanticweb.org/owl/owlapi/turtle#The_Chamber_of_Secrets> ;
                                                                         
-                                                                        <https://litetaryworktopics.com/litetaryworktopics2025##HaEdizione> <http://www.semanticweb.org/owl/owlapi/turtle#The_Chamber_of_Secrets> .
+                                                                        <http://www.semanticweb.org/owl/owlapi/turtle#HaEdizione> <http://www.semanticweb.org/owl/owlapi/turtle#The_Chamber_of_Secrets> .
 
 
 
@@ -1228,14 +1228,14 @@ Funziona solo se sono definiti con enumerazione
 <http://www.semanticweb.org/owl/owlapi/turtle#Opera_Fermo_e_Lucia> rdf:type owl:NamedIndividual ,
                                                                             :Romanzo ;
                                                                    
-                                                                   <http://www.semanticweb.org/owl/owlapi/turtle#HaNome> "Fermo e Lucia"^^xsd:string ;
+                                                                   :HaNome "Fermo e Lucia"^^xsd:string ;
                                                                    
-                                                                   <http://www.semanticweb.org/owl/owlapi/turtle#HaLingua> "it"^^xsd:language ;
+                                                                   :HaLingua "it"^^xsd:language ;
                                                                    
                                                                    <http://www.semanticweb.org/owl/owlapi/turtle#HaEdizione> <http://www.semanticweb.org/owl/owlapi/turtle#Fermo_e_Lucia> ;
                                                                    
-                                                                   <https://litetaryworktopics.com/litetaryworktopics2025##HaEdizione> <http://www.semanticweb.org/owl/owlapi/turtle#Fermo_e_Lucia> ,
-                                                                                                                                       <http://www.semanticweb.org/owl/owlapi/turtle#I_Promessi_Sposi> ;
+                                                                   :HaEdizione <http://www.semanticweb.org/owl/owlapi/turtle#Fermo_e_Lucia> ,
+                                                                               <http://www.semanticweb.org/owl/owlapi/turtle#I_Promessi_Sposi> ;
                                                                    
                                                                    <http://www.semanticweb.org/owl/owlapi/turtle#HaEdizione> <http://www.semanticweb.org/owl/owlapi/turtle#I_Promessi_Sposi> ;
                                                                    
@@ -1250,9 +1250,9 @@ Funziona solo se sono definiti con enumerazione
 <http://www.semanticweb.org/owl/owlapi/turtle#Opera_La_Divina_Commedia> rdf:type owl:NamedIndividual ,
                                                                                  :Poesia ;
                                                                         
-                                                                        <http://www.semanticweb.org/owl/owlapi/turtle#HaNome> "La Divina Commedia"^^xsd:string ;
+                                                                        :HaNome "La Divina Commedia"^^xsd:string ;
                                                                         
-                                                                        <http://www.semanticweb.org/owl/owlapi/turtle#HaLingua> "it"^^xsd:language ;
+                                                                        :HaLingua "it"^^xsd:language ;
                                                                         
                                                                         <http://www.semanticweb.org/owl/owlapi/turtle#parteDiAntologia> <http://www.semanticweb.org/owl/owlapi/turtle#Letteratura_Italiana> .
 
@@ -1263,11 +1263,11 @@ Funziona solo se sono definiti con enumerazione
 <http://www.semanticweb.org/owl/owlapi/turtle#Opera_Pietra_Filosofale> rdf:type owl:NamedIndividual ,
                                                                                 :Romanzo ;
                                                                        
-                                                                       <http://www.semanticweb.org/owl/owlapi/turtle#HaNome> "La Pietra Filosofale"^^xsd:string ;
+                                                                       :HaNome "La Pietra Filosofale"^^xsd:string ;
                                                                        
-                                                                       <http://www.semanticweb.org/owl/owlapi/turtle#HaLingua> "en"^^xsd:language ;
+                                                                       :HaLingua "en"^^xsd:language ;
                                                                        
-                                                                       <http://www.semanticweb.org/owl/owlapi/turtle#Contiene> <http://www.semanticweb.org/owl/owlapi/turtle#Harry_James_Potter> ;
+                                                                       :Contiene <http://www.semanticweb.org/owl/owlapi/turtle#Harry_James_Potter> ;
                                                                        
                                                                        <http://www.semanticweb.org/owl/owlapi/turtle#parteDiSaga> <http://www.semanticweb.org/owl/owlapi/turtle#Harry_Potter> ;
                                                                        
@@ -1277,7 +1277,7 @@ Funziona solo se sono definiti con enumerazione
                                                                        
                                                                        <http://www.semanticweb.org/owl/owlapi/turtle#HaEdizione> <http://www.semanticweb.org/owl/owlapi/turtle#The_Philosophers_Stone> ;
                                                                        
-                                                                       <https://litetaryworktopics.com/litetaryworktopics2025##HaEdizione> <http://www.semanticweb.org/owl/owlapi/turtle#The_Philosophers_Stone> .
+                                                                       :HaEdizione <http://www.semanticweb.org/owl/owlapi/turtle#The_Philosophers_Stone> .
 
 
 
@@ -1286,11 +1286,11 @@ Funziona solo se sono definiti con enumerazione
 <http://www.semanticweb.org/owl/owlapi/turtle#Opera_Prigioniero_di_Azkaban> rdf:type owl:NamedIndividual ,
                                                                                      :Romanzo ;
                                                                             
-                                                                            <http://www.semanticweb.org/owl/owlapi/turtle#HaNome> "Il Prigioniero di Azkaban"^^xsd:string ;
+                                                                            :HaNome "Il Prigioniero di Azkaban"^^xsd:string ;
                                                                             
-                                                                            <http://www.semanticweb.org/owl/owlapi/turtle#HaLingua> "en"^^xsd:language ;
+                                                                            :HaLingua "en"^^xsd:language ;
                                                                             
-                                                                            <http://www.semanticweb.org/owl/owlapi/turtle#Contiene> <http://www.semanticweb.org/owl/owlapi/turtle#Harry_James_Potter> ;
+                                                                            :Contiene <http://www.semanticweb.org/owl/owlapi/turtle#Harry_James_Potter> ;
                                                                             
                                                                             <http://www.semanticweb.org/owl/owlapi/turtle#parteDiSaga> <http://www.semanticweb.org/owl/owlapi/turtle#Harry_Potter> ;
                                                                             
@@ -1298,9 +1298,9 @@ Funziona solo se sono definiti con enumerazione
                                                                             
                                                                             <http://www.semanticweb.org/owl/owlapi/turtle#HaGenereLetterario> <http://www.semanticweb.org/owl/owlapi/turtle#Romanzo> ;
                                                                             
-                                                                            <https://litetaryworktopics.com/litetaryworktopics2025##HaEdizione> <http://www.semanticweb.org/owl/owlapi/turtle#The_Prisoner_of_Azkaban> ;
+                                                                            <http://www.semanticweb.org/owl/owlapi/turtle#HaEdizione> <http://www.semanticweb.org/owl/owlapi/turtle#The_Prisoner_of_Azkaban> ;
                                                                             
-                                                                            <http://www.semanticweb.org/owl/owlapi/turtle#HaEdizione> <http://www.semanticweb.org/owl/owlapi/turtle#The_Prisoner_of_Azkaban> .
+                                                                            :HaEdizione <http://www.semanticweb.org/owl/owlapi/turtle#The_Prisoner_of_Azkaban> .
 
 
 
@@ -1308,9 +1308,9 @@ Funziona solo se sono definiti con enumerazione
 
 <http://www.semanticweb.org/owl/owlapi/turtle#Opera_The_Autobiography_of_Benjamin_Franklin> rdf:type owl:NamedIndividual ;
                                                                                             
-                                                                                            <http://www.semanticweb.org/owl/owlapi/turtle#HaNome> "The Autobiography of Benjamin Franklin"^^xsd:string ;
+                                                                                            :HaNome "The Autobiography of Benjamin Franklin"^^xsd:string ;
                                                                                             
-                                                                                            <http://www.semanticweb.org/owl/owlapi/turtle#PubblicatoDa> <http://www.semanticweb.org/owl/owlapi/turtle#Benjamin_Franklin> .
+                                                                                            :PubblicatoDa <http://www.semanticweb.org/owl/owlapi/turtle#Benjamin_Franklin> .
 
 
 
@@ -1318,9 +1318,9 @@ Funziona solo se sono definiti con enumerazione
 
 <http://www.semanticweb.org/owl/owlapi/turtle#Romanzo_storico> rdf:type owl:NamedIndividual ;
                                                                
-                                                               <http://www.semanticweb.org/owl/owlapi/turtle#HaNome> "Romanzo Storico"^^xsd:string ;
+                                                               :HaNome "Romanzo Storico"^^xsd:string ;
                                                                
-                                                               <http://www.semanticweb.org/owl/owlapi/turtle#VieneUtilizzatoIn> <http://www.semanticweb.org/owl/owlapi/turtle#Opera_Fermo_e_Lucia> .
+                                                               :VieneUtilizzatoIn <http://www.semanticweb.org/owl/owlapi/turtle#Opera_Fermo_e_Lucia> .
 
 
 
@@ -1328,9 +1328,9 @@ Funziona solo se sono definiti con enumerazione
 
 <http://www.semanticweb.org/owl/owlapi/turtle#The_Autobiography_of_Benjamin_Franklin> rdf:type owl:NamedIndividual ;
                                                                                       
-                                                                                      <http://www.semanticweb.org/owl/owlapi/turtle#HaNome> "The Autobiography of Benjamin Franklin"^^xsd:string ;
+                                                                                      :HaNome "The Autobiography of Benjamin Franklin"^^xsd:string ;
                                                                                       
-                                                                                      <http://www.semanticweb.org/owl/owlapi/turtle#EdizioneDi> <http://www.semanticweb.org/owl/owlapi/turtle#Opera_The_Autobiography_of_Benjamin_Franklin> .
+                                                                                      :EdizioneDi <http://www.semanticweb.org/owl/owlapi/turtle#Opera_The_Autobiography_of_Benjamin_Franklin> .
 
 
 
@@ -1338,15 +1338,15 @@ Funziona solo se sono definiti con enumerazione
 
 <http://www.semanticweb.org/owl/owlapi/turtle#The_Chamber_of_Secrets> rdf:type owl:NamedIndividual ;
                                                                       
-                                                                      <http://www.semanticweb.org/owl/owlapi/turtle#HaDataPubblicazione> " 2 07 1998"^^xsd:date ;
+                                                                      :HaDataPubblicazione " 2 07 1998"^^xsd:date ;
                                                                       
-                                                                      <http://www.semanticweb.org/owl/owlapi/turtle#HaNome> "The Chamber of Secrets"^^xsd:string ;
+                                                                      :HaNome "The Chamber of Secrets"^^xsd:string ;
                                                                       
-                                                                      <http://www.semanticweb.org/owl/owlapi/turtle#HaLingua> "en"^^xsd:language ;
+                                                                      :HaLingua "en"^^xsd:language ;
                                                                       
-                                                                      <http://www.semanticweb.org/owl/owlapi/turtle#HaDataPubblicazione> "2 luglio 1998" ;
+                                                                      :HaDataPubblicazione "2 luglio 1998" ;
                                                                       
-                                                                      <http://www.semanticweb.org/owl/owlapi/turtle#HaLingua> <http://www.semanticweb.org/owl/owlapi/turtle#Italiano> .
+                                                                      :HaLingua <http://www.semanticweb.org/owl/owlapi/turtle#Italiano> .
 
 
 
@@ -1354,15 +1354,15 @@ Funziona solo se sono definiti con enumerazione
 
 <http://www.semanticweb.org/owl/owlapi/turtle#The_Philosophers_Stone> rdf:type owl:NamedIndividual ;
                                                                       
-                                                                      <http://www.semanticweb.org/owl/owlapi/turtle#HaDataPubblicazione> "26 06 1997"^^xsd:date ;
+                                                                      :HaDataPubblicazione "26 06 1997"^^xsd:date ;
                                                                       
-                                                                      <http://www.semanticweb.org/owl/owlapi/turtle#HaNome> "The Philosophers Stone"^^xsd:string ;
+                                                                      :HaNome "The Philosophers Stone"^^xsd:string ;
                                                                       
-                                                                      <http://www.semanticweb.org/owl/owlapi/turtle#HaLingua> "en"^^xsd:language ;
+                                                                      :HaLingua "en"^^xsd:language ;
                                                                       
-                                                                      <http://www.semanticweb.org/owl/owlapi/turtle#HaDataPubblicazione> "26 giugno 1997" ;
+                                                                      :HaDataPubblicazione "26 giugno 1997" ;
                                                                       
-                                                                      <http://www.semanticweb.org/owl/owlapi/turtle#HaLingua> <http://www.semanticweb.org/owl/owlapi/turtle#Italiano> .
+                                                                      :HaLingua <http://www.semanticweb.org/owl/owlapi/turtle#Italiano> .
 
 
 
@@ -1370,15 +1370,15 @@ Funziona solo se sono definiti con enumerazione
 
 <http://www.semanticweb.org/owl/owlapi/turtle#The_Prisoner_of_Azkaban> rdf:type owl:NamedIndividual ;
                                                                        
-                                                                       <http://www.semanticweb.org/owl/owlapi/turtle#HaDataPubblicazione> "8 07 1999"^^xsd:date ;
+                                                                       :HaDataPubblicazione "8 07 1999"^^xsd:date ;
                                                                        
-                                                                       <http://www.semanticweb.org/owl/owlapi/turtle#HaNome> "The Prisoner of Azkaban"^^xsd:string ;
+                                                                       :HaNome "The Prisoner of Azkaban"^^xsd:string ;
                                                                        
-                                                                       <http://www.semanticweb.org/owl/owlapi/turtle#HaLingua> "en"^^xsd:language ;
+                                                                       :HaLingua "en"^^xsd:language ;
                                                                        
-                                                                       <http://www.semanticweb.org/owl/owlapi/turtle#HaDataPubblicazione> "8 luglio 1999" ;
+                                                                       :HaDataPubblicazione "8 luglio 1999" ;
                                                                        
-                                                                       <http://www.semanticweb.org/owl/owlapi/turtle#HaLingua> <http://www.semanticweb.org/owl/owlapi/turtle#Italiano> .
+                                                                       :HaLingua <http://www.semanticweb.org/owl/owlapi/turtle#Italiano> .
 
 
 
@@ -1387,12 +1387,12 @@ Funziona solo se sono definiti con enumerazione
 :Amicizia rdf:type owl:NamedIndividual ,
                    :Tema ;
           
-          <http://www.semanticweb.org/owl/owlapi/turtle#HaNome> "Amicizia"^^xsd:string ;
+          :HaNome "Amicizia"^^xsd:string ;
           
-          <http://www.semanticweb.org/owl/owlapi/turtle#VieneUtilizzatoIn> <http://www.semanticweb.org/owl/owlapi/turtle#Opera_Camera_dei_Segreti> ,
-                                                                           <http://www.semanticweb.org/owl/owlapi/turtle#Opera_Fermo_e_Lucia> ,
-                                                                           <http://www.semanticweb.org/owl/owlapi/turtle#Opera_Pietra_Filosofale> ,
-                                                                           <http://www.semanticweb.org/owl/owlapi/turtle#Opera_Prigioniero_di_Azkaban> .
+          :VieneUtilizzatoIn <http://www.semanticweb.org/owl/owlapi/turtle#Opera_Camera_dei_Segreti> ,
+                             <http://www.semanticweb.org/owl/owlapi/turtle#Opera_Fermo_e_Lucia> ,
+                             <http://www.semanticweb.org/owl/owlapi/turtle#Opera_Pietra_Filosofale> ,
+                             <http://www.semanticweb.org/owl/owlapi/turtle#Opera_Prigioniero_di_Azkaban> .
 
 
 
@@ -1406,38 +1406,18 @@ Funziona solo se sono definiti con enumerazione
 
 
 [ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( <http://www.semanticweb.org/owl/owlapi/turtle#BacchetteMagiche>
-                        <http://www.semanticweb.org/owl/owlapi/turtle#Fantasy>
+  owl:distinctMembers ( <http://www.semanticweb.org/owl/owlapi/turtle#Opera_La_Divina_Commedia>
+                        <http://www.semanticweb.org/owl/owlapi/turtle#Opera_Prigioniero_di_Azkaban>
                       )
 ] .
 [ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( <http://www.semanticweb.org/owl/owlapi/turtle#Harry_Potter>
-                        <http://www.semanticweb.org/owl/owlapi/turtle#Opera_Pietra_Filosofale>
+  owl:distinctMembers ( <http://www.semanticweb.org/owl/owlapi/turtle#Opera_La_Divina_Commedia>
+                        <http://www.semanticweb.org/owl/owlapi/turtle#Opera_The_Autobiography_of_Benjamin_Franklin>
                       )
 ] .
 [ rdf:type owl:AllDifferent ;
   owl:distinctMembers ( <http://www.semanticweb.org/owl/owlapi/turtle#Fermo_e_Lucia>
-                        <http://www.semanticweb.org/owl/owlapi/turtle#I_Promessi_Sposi>
-                      )
-] .
-[ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( <http://www.semanticweb.org/owl/owlapi/turtle#Opera_Camera_dei_Segreti>
-                        <http://www.semanticweb.org/owl/owlapi/turtle#Opera_Pietra_Filosofale>
-                      )
-] .
-[ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( <http://www.semanticweb.org/owl/owlapi/turtle#The_Autobiography_of_Benjamin_Franklin>
-                        <http://www.semanticweb.org/owl/owlapi/turtle#The_Prisoner_of_Azkaban>
-                      )
-] .
-[ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( <http://www.semanticweb.org/owl/owlapi/turtle#Alessandro_Manzoni>
-                        <http://www.semanticweb.org/owl/owlapi/turtle#J.K_Rowling>
-                      )
-] .
-[ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( <http://www.semanticweb.org/owl/owlapi/turtle#The_Philosophers_Stone>
-                        <http://www.semanticweb.org/owl/owlapi/turtle#The_Prisoner_of_Azkaban>
+                        <http://www.semanticweb.org/owl/owlapi/turtle#The_Autobiography_of_Benjamin_Franklin>
                       )
 ] .
 [ rdf:type owl:AllDifferent ;
@@ -1446,13 +1426,33 @@ Funziona solo se sono definiti con enumerazione
                       )
 ] .
 [ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( <http://www.semanticweb.org/owl/owlapi/turtle#Opera_Camera_dei_Segreti>
+                        <http://www.semanticweb.org/owl/owlapi/turtle#Opera_La_Divina_Commedia>
+                      )
+] .
+[ rdf:type owl:AllDifferent ;
   owl:distinctMembers ( <http://www.semanticweb.org/owl/owlapi/turtle#Opera_La_Divina_Commedia>
-                        <http://www.semanticweb.org/owl/owlapi/turtle#Opera_Prigioniero_di_Azkaban>
+                        <http://www.semanticweb.org/owl/owlapi/turtle#Opera_Pietra_Filosofale>
                       )
 ] .
 [ rdf:type owl:AllDifferent ;
   owl:distinctMembers ( <http://www.semanticweb.org/owl/owlapi/turtle#Opera_Camera_dei_Segreti>
+                        <http://www.semanticweb.org/owl/owlapi/turtle#Opera_Pietra_Filosofale>
+                      )
+] .
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( <http://www.semanticweb.org/owl/owlapi/turtle#I_Promessi_Sposi>
+                        <http://www.semanticweb.org/owl/owlapi/turtle#The_Philosophers_Stone>
+                      )
+] .
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( <http://www.semanticweb.org/owl/owlapi/turtle#Harry_Potter>
                         <http://www.semanticweb.org/owl/owlapi/turtle#Opera_Prigioniero_di_Azkaban>
+                      )
+] .
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( <http://www.semanticweb.org/owl/owlapi/turtle#Bloomsbury_Publishing>
+                        <http://www.semanticweb.org/owl/owlapi/turtle#J.K_Rowling>
                       )
 ] .
 [ rdf:type owl:AllDifferent ;
@@ -1462,112 +1462,12 @@ Funziona solo se sono definiti con enumerazione
 ] .
 [ rdf:type owl:AllDifferent ;
   owl:distinctMembers ( <http://www.semanticweb.org/owl/owlapi/turtle#Opera_Fermo_e_Lucia>
-                        <http://www.semanticweb.org/owl/owlapi/turtle#Opera_Prigioniero_di_Azkaban>
-                      )
-] .
-[ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( <http://www.semanticweb.org/owl/owlapi/turtle#The_Autobiography_of_Benjamin_Franklin>
-                        <http://www.semanticweb.org/owl/owlapi/turtle#The_Chamber_of_Secrets>
-                      )
-] .
-[ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( <http://www.semanticweb.org/owl/owlapi/turtle#Alessandro_Manzoni>
-                        <http://www.semanticweb.org/owl/owlapi/turtle#Bloomsbury_Publishing>
+                        <http://www.semanticweb.org/owl/owlapi/turtle#Opera_The_Autobiography_of_Benjamin_Franklin>
                       )
 ] .
 [ rdf:type owl:AllDifferent ;
   owl:distinctMembers ( <http://www.semanticweb.org/owl/owlapi/turtle#Opera_Pietra_Filosofale>
-                        <http://www.semanticweb.org/owl/owlapi/turtle#Opera_Prigioniero_di_Azkaban>
-                      )
-] .
-[ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( <http://www.semanticweb.org/owl/owlapi/turtle#Fermo_e_Lucia>
-                        <http://www.semanticweb.org/owl/owlapi/turtle#The_Chamber_of_Secrets>
-                      )
-] .
-[ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( <http://www.semanticweb.org/owl/owlapi/turtle#Harry_Potter>
-                        <http://www.semanticweb.org/owl/owlapi/turtle#Opera_Camera_dei_Segreti>
-                      )
-] .
-[ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( <http://www.semanticweb.org/owl/owlapi/turtle#Opera_Camera_dei_Segreti>
                         <http://www.semanticweb.org/owl/owlapi/turtle#Opera_The_Autobiography_of_Benjamin_Franklin>
-                      )
-] .
-[ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( <http://www.semanticweb.org/owl/owlapi/turtle#The_Chamber_of_Secrets>
-                        <http://www.semanticweb.org/owl/owlapi/turtle#The_Philosophers_Stone>
-                      )
-] .
-[ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( <http://www.semanticweb.org/owl/owlapi/turtle#Benjamin_Franklin>
-                        <http://www.semanticweb.org/owl/owlapi/turtle#J.K_Rowling>
-                      )
-] .
-[ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( <http://www.semanticweb.org/owl/owlapi/turtle#I_Promessi_Sposi>
-                        <http://www.semanticweb.org/owl/owlapi/turtle#The_Chamber_of_Secrets>
-                      )
-] .
-[ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( <http://www.semanticweb.org/owl/owlapi/turtle#Fermo_e_Lucia>
-                        <http://www.semanticweb.org/owl/owlapi/turtle#The_Autobiography_of_Benjamin_Franklin>
-                      )
-] .
-[ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( <http://www.semanticweb.org/owl/owlapi/turtle#Opera_Prigioniero_di_Azkaban>
-                        <http://www.semanticweb.org/owl/owlapi/turtle#Opera_The_Autobiography_of_Benjamin_Franklin>
-                      )
-] .
-[ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( <http://www.semanticweb.org/owl/owlapi/turtle#Harry_James_Potter>
-                        <http://www.semanticweb.org/owl/owlapi/turtle#Opera_Prigioniero_di_Azkaban>
-                      )
-] .
-[ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( <http://www.semanticweb.org/owl/owlapi/turtle#Fermo_e_Lucia>
-                        <http://www.semanticweb.org/owl/owlapi/turtle#The_Philosophers_Stone>
-                      )
-] .
-[ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( <http://www.semanticweb.org/owl/owlapi/turtle#The_Chamber_of_Secrets>
-                        <http://www.semanticweb.org/owl/owlapi/turtle#The_Prisoner_of_Azkaban>
-                      )
-] .
-[ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( <http://www.semanticweb.org/owl/owlapi/turtle#Benjamin_Franklin>
-                        <http://www.semanticweb.org/owl/owlapi/turtle#Bloomsbury_Publishing>
-                      )
-] .
-[ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( <http://www.semanticweb.org/owl/owlapi/turtle#Opera_Camera_dei_Segreti>
-                        <http://www.semanticweb.org/owl/owlapi/turtle#Opera_Fermo_e_Lucia>
-                      )
-] .
-[ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( <http://www.semanticweb.org/owl/owlapi/turtle#Bloomsbury_Publishing>
-                        <http://www.semanticweb.org/owl/owlapi/turtle#J.K_Rowling>
-                      )
-] .
-[ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( <http://www.semanticweb.org/owl/owlapi/turtle#Opera_Fermo_e_Lucia>
-                        <http://www.semanticweb.org/owl/owlapi/turtle#Opera_La_Divina_Commedia>
-                      )
-] .
-[ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( <http://www.semanticweb.org/owl/owlapi/turtle#Opera_Fermo_e_Lucia>
-                        <http://www.semanticweb.org/owl/owlapi/turtle#Opera_The_Autobiography_of_Benjamin_Franklin>
-                      )
-] .
-[ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( <http://www.semanticweb.org/owl/owlapi/turtle#I_Promessi_Sposi>
-                        <http://www.semanticweb.org/owl/owlapi/turtle#The_Prisoner_of_Azkaban>
-                      )
-] .
-[ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( <http://www.semanticweb.org/owl/owlapi/turtle#Harry_Potter>
-                        <http://www.semanticweb.org/owl/owlapi/turtle#Opera_Prigioniero_di_Azkaban>
                       )
 ] .
 [ rdf:type owl:AllDifferent ;
@@ -1576,13 +1476,8 @@ Funziona solo se sono definiti con enumerazione
                       )
 ] .
 [ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( <http://www.semanticweb.org/owl/owlapi/turtle#Opera_La_Divina_Commedia>
-                        <http://www.semanticweb.org/owl/owlapi/turtle#Opera_Pietra_Filosofale>
-                      )
-] .
-[ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( <http://www.semanticweb.org/owl/owlapi/turtle#Opera_Pietra_Filosofale>
-                        <http://www.semanticweb.org/owl/owlapi/turtle#Opera_The_Autobiography_of_Benjamin_Franklin>
+  owl:distinctMembers ( <http://www.semanticweb.org/owl/owlapi/turtle#Alessandro_Manzoni>
+                        <http://www.semanticweb.org/owl/owlapi/turtle#J.K_Rowling>
                       )
 ] .
 [ rdf:type owl:AllDifferent ;
@@ -1591,8 +1486,13 @@ Funziona solo se sono definiti con enumerazione
                       )
 ] .
 [ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( <http://www.semanticweb.org/owl/owlapi/turtle#Opera_Camera_dei_Segreti>
-                        <http://www.semanticweb.org/owl/owlapi/turtle#Opera_La_Divina_Commedia>
+  owl:distinctMembers ( <http://www.semanticweb.org/owl/owlapi/turtle#The_Autobiography_of_Benjamin_Franklin>
+                        <http://www.semanticweb.org/owl/owlapi/turtle#The_Prisoner_of_Azkaban>
+                      )
+] .
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( <http://www.semanticweb.org/owl/owlapi/turtle#Benjamin_Franklin>
+                        <http://www.semanticweb.org/owl/owlapi/turtle#J.K_Rowling>
                       )
 ] .
 [ rdf:type owl:AllDifferent ;
@@ -1601,8 +1501,13 @@ Funziona solo se sono definiti con enumerazione
                       )
 ] .
 [ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( <http://www.semanticweb.org/owl/owlapi/turtle#The_Chamber_of_Secrets>
+                        <http://www.semanticweb.org/owl/owlapi/turtle#The_Philosophers_Stone>
+                      )
+] .
+[ rdf:type owl:AllDifferent ;
   owl:distinctMembers ( <http://www.semanticweb.org/owl/owlapi/turtle#Fermo_e_Lucia>
-                        <http://www.semanticweb.org/owl/owlapi/turtle#The_Prisoner_of_Azkaban>
+                        <http://www.semanticweb.org/owl/owlapi/turtle#The_Philosophers_Stone>
                       )
 ] .
 [ rdf:type owl:AllDifferent ;
@@ -1611,23 +1516,48 @@ Funziona solo se sono definiti con enumerazione
                       )
 ] .
 [ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( <http://www.semanticweb.org/owl/owlapi/turtle#Opera_Camera_dei_Segreti>
+                        <http://www.semanticweb.org/owl/owlapi/turtle#Opera_Fermo_e_Lucia>
+                      )
+] .
+[ rdf:type owl:AllDifferent ;
   owl:distinctMembers ( <http://www.semanticweb.org/owl/owlapi/turtle#I_Promessi_Sposi>
                         <http://www.semanticweb.org/owl/owlapi/turtle#The_Autobiography_of_Benjamin_Franklin>
                       )
 ] .
 [ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( <http://www.semanticweb.org/owl/owlapi/turtle#Opera_La_Divina_Commedia>
+  owl:distinctMembers ( <http://www.semanticweb.org/owl/owlapi/turtle#Alessandro_Manzoni>
+                        <http://www.semanticweb.org/owl/owlapi/turtle#Bloomsbury_Publishing>
+                      )
+] .
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( <http://www.semanticweb.org/owl/owlapi/turtle#Harry_Potter>
+                        <http://www.semanticweb.org/owl/owlapi/turtle#Opera_Pietra_Filosofale>
+                      )
+] .
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( <http://www.semanticweb.org/owl/owlapi/turtle#Harry_James_Potter>
+                        <http://www.semanticweb.org/owl/owlapi/turtle#Opera_Prigioniero_di_Azkaban>
+                      )
+] .
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( <http://www.semanticweb.org/owl/owlapi/turtle#Fermo_e_Lucia>
+                        <http://www.semanticweb.org/owl/owlapi/turtle#The_Chamber_of_Secrets>
+                      )
+] .
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( <http://www.semanticweb.org/owl/owlapi/turtle#Harry_Potter>
+                        <http://www.semanticweb.org/owl/owlapi/turtle#Opera_Camera_dei_Segreti>
+                      )
+] .
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( <http://www.semanticweb.org/owl/owlapi/turtle#Opera_Camera_dei_Segreti>
                         <http://www.semanticweb.org/owl/owlapi/turtle#Opera_The_Autobiography_of_Benjamin_Franklin>
                       )
 ] .
 [ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( <http://www.semanticweb.org/owl/owlapi/turtle#I_Promessi_Sposi>
-                        <http://www.semanticweb.org/owl/owlapi/turtle#The_Philosophers_Stone>
-                      )
-] .
-[ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( <http://www.semanticweb.org/owl/owlapi/turtle#Opera_Fermo_e_Lucia>
-                        <http://www.semanticweb.org/owl/owlapi/turtle#Opera_Pietra_Filosofale>
+  owl:distinctMembers ( <http://www.semanticweb.org/owl/owlapi/turtle#Fermo_e_Lucia>
+                        <http://www.semanticweb.org/owl/owlapi/turtle#The_Prisoner_of_Azkaban>
                       )
 ] .
 [ rdf:type owl:AllDifferent ;
@@ -1636,8 +1566,78 @@ Funziona solo se sono definiti con enumerazione
                       )
 ] .
 [ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( <http://www.semanticweb.org/owl/owlapi/turtle#Opera_Fermo_e_Lucia>
+                        <http://www.semanticweb.org/owl/owlapi/turtle#Opera_La_Divina_Commedia>
+                      )
+] .
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( <http://www.semanticweb.org/owl/owlapi/turtle#Opera_Fermo_e_Lucia>
+                        <http://www.semanticweb.org/owl/owlapi/turtle#Opera_Prigioniero_di_Azkaban>
+                      )
+] .
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( <http://www.semanticweb.org/owl/owlapi/turtle#The_Philosophers_Stone>
+                        <http://www.semanticweb.org/owl/owlapi/turtle#The_Prisoner_of_Azkaban>
+                      )
+] .
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( <http://www.semanticweb.org/owl/owlapi/turtle#Fermo_e_Lucia>
+                        <http://www.semanticweb.org/owl/owlapi/turtle#I_Promessi_Sposi>
+                      )
+] .
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( <http://www.semanticweb.org/owl/owlapi/turtle#The_Autobiography_of_Benjamin_Franklin>
+                        <http://www.semanticweb.org/owl/owlapi/turtle#The_Chamber_of_Secrets>
+                      )
+] .
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( <http://www.semanticweb.org/owl/owlapi/turtle#Opera_Pietra_Filosofale>
+                        <http://www.semanticweb.org/owl/owlapi/turtle#Opera_Prigioniero_di_Azkaban>
+                      )
+] .
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( <http://www.semanticweb.org/owl/owlapi/turtle#BacchetteMagiche>
+                        <http://www.semanticweb.org/owl/owlapi/turtle#Fantasy>
+                      )
+] .
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( <http://www.semanticweb.org/owl/owlapi/turtle#The_Chamber_of_Secrets>
+                        <http://www.semanticweb.org/owl/owlapi/turtle#The_Prisoner_of_Azkaban>
+                      )
+] .
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( <http://www.semanticweb.org/owl/owlapi/turtle#Benjamin_Franklin>
+                        <http://www.semanticweb.org/owl/owlapi/turtle#Bloomsbury_Publishing>
+                      )
+] .
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( <http://www.semanticweb.org/owl/owlapi/turtle#I_Promessi_Sposi>
+                        <http://www.semanticweb.org/owl/owlapi/turtle#The_Chamber_of_Secrets>
+                      )
+] .
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( <http://www.semanticweb.org/owl/owlapi/turtle#I_Promessi_Sposi>
+                        <http://www.semanticweb.org/owl/owlapi/turtle#The_Prisoner_of_Azkaban>
+                      )
+] .
+[ rdf:type owl:AllDifferent ;
   owl:distinctMembers ( <http://www.semanticweb.org/owl/owlapi/turtle#BacchetteMagiche>
                         :Amicizia
+                      )
+] .
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( <http://www.semanticweb.org/owl/owlapi/turtle#Opera_Fermo_e_Lucia>
+                        <http://www.semanticweb.org/owl/owlapi/turtle#Opera_Pietra_Filosofale>
+                      )
+] .
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( <http://www.semanticweb.org/owl/owlapi/turtle#Opera_Camera_dei_Segreti>
+                        <http://www.semanticweb.org/owl/owlapi/turtle#Opera_Prigioniero_di_Azkaban>
+                      )
+] .
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( <http://www.semanticweb.org/owl/owlapi/turtle#Opera_Prigioniero_di_Azkaban>
+                        <http://www.semanticweb.org/owl/owlapi/turtle#Opera_The_Autobiography_of_Benjamin_Franklin>
                       )
 ] .
 
