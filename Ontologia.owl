@@ -615,6 +615,10 @@
         <NamedIndividual IRI="Fantasy"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="Saga"/>
+        <NamedIndividual IRI="Harry_Potter"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="Nazione"/>
         <NamedIndividual IRI="Italia"/>
     </ClassAssertion>
@@ -1037,7 +1041,7 @@
         <Literal datatypeIRI="&xsd;string">Fantasy</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="HaNome"/>
+        <DataProperty abbreviatedIRI="dc:Title"/>
         <NamedIndividual IRI="Fermo_e_Lucia"/>
         <Literal datatypeIRI="&xsd;string">Fermo e Lucia</Literal>
     </DataPropertyAssertion>
@@ -1052,7 +1056,7 @@
         <Literal datatypeIRI="&xsd;string">Harry Potter</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="HaNome"/>
+        <DataProperty abbreviatedIRI="dc:Title"/>
         <NamedIndividual IRI="I_Promessi_Sposi"/>
         <Literal datatypeIRI="&xsd;string">I Promesi Sposi</Literal>
     </DataPropertyAssertion>
@@ -1107,14 +1111,19 @@
         <Literal datatypeIRI="&xsd;string">Romanzo storico</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="dc:Title"/>
+        <NamedIndividual IRI="The_Autobiography_of_Benjamin_Franklin"/>
+        <Literal datatypeIRI="&xsd;string">The Autobiography of Benjamin Franklin</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="HaLingua"/>
         <NamedIndividual IRI="The_Autobiography_of_Benjamin_Franklin"/>
         <Literal datatypeIRI="&xsd;language">en</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="HaNome"/>
-        <NamedIndividual IRI="The_Autobiography_of_Benjamin_Franklin"/>
-        <Literal datatypeIRI="&xsd;string">The Autobiography of Benjamin Franklin</Literal>
+        <DataProperty abbreviatedIRI="dc:Title"/>
+        <NamedIndividual IRI="The_Chamber_of_Secrets"/>
+        <Literal datatypeIRI="&xsd;language">en</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="HaDataPubblicazione"/>
@@ -1122,14 +1131,14 @@
         <Literal datatypeIRI="&xsd;date">02-07-1998</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="HaLingua"/>
-        <NamedIndividual IRI="The_Chamber_of_Secrets"/>
-        <Literal datatypeIRI="&xsd;language">en</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
         <DataProperty IRI="HaNome"/>
         <NamedIndividual IRI="The_Chamber_of_Secrets"/>
         <Literal datatypeIRI="&xsd;string">The Chamber of Secret</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="dc:Title"/>
+        <NamedIndividual IRI="The_Philosophers_Stone"/>
+        <Literal datatypeIRI="&xsd;string">The Philosopher Stone</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="HaDataPubblicazione"/>
@@ -1142,9 +1151,9 @@
         <Literal datatypeIRI="&xsd;language">en</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="HaNome"/>
-        <NamedIndividual IRI="The_Philosophers_Stone"/>
-        <Literal datatypeIRI="&xsd;string">The Philosopher Stone</Literal>
+        <DataProperty abbreviatedIRI="dc:Title"/>
+        <NamedIndividual IRI="The_Prisoner_of_Azkaban"/>
+        <Literal datatypeIRI="&xsd;string">The Prisoner of Azkaban</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="HaDataPubblicazione"/>
@@ -1155,11 +1164,6 @@
         <DataProperty IRI="HaLingua"/>
         <NamedIndividual IRI="The_Prisoner_of_Azkaban"/>
         <Literal datatypeIRI="&xsd;language">en</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="HaNome"/>
-        <NamedIndividual IRI="The_Prisoner_of_Azkaban"/>
-        <Literal datatypeIRI="&xsd;string">The Prisoner of Azkaban</Literal>
     </DataPropertyAssertion>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="PubblicaComeOrganizzazione"/>
@@ -1190,8 +1194,8 @@
         <ObjectProperty IRI="HaContributoDi"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="EdizioneDi"/>
         <ObjectProperty IRI="HaEdizione"/>
+        <ObjectProperty IRI="EdizioneDi"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
         <ObjectProperty IRI="LavoraPerCasaEditrice"/>
@@ -1206,8 +1210,8 @@
         <ObjectProperty IRI="PubblicataDallaPersona"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="VieneClassificatoCome"/>
         <ObjectProperty IRI="VieneUtilizzatoIn"/>
+        <ObjectProperty IRI="VieneClassificatoCome"/>
     </InverseObjectProperties>
     <FunctionalObjectProperty>
         <ObjectProperty IRI="EdizioneDi"/>
