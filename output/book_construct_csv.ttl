@@ -1,0 +1,41 @@
+@prefix dc:     <http://purl.org/dc/elements/1.1/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix lwt:    <https://litetaryworktopics.com/litetaryworktopics2025#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+lwt:Chicago_Review_Press
+        rdf:type          lwt:CasaEditrice ;
+        lwt:HaPubblicato  lwt:Avalon .
+
+lwt:fiction  rdf:type          lwt:Genere ;
+        lwt:HaNome             "fiction" ;
+        lwt:VieneUtilizzatoIn  lwt:Avalon .
+
+lwt:Anya_Seton  rdf:type  lwt:Autore ;
+        lwt:HaNome  "Anya Seton" .
+
+lwt:Avalon  rdf:type               lwt:Edizione , lwt:OperaLetteraria ;
+        dc:Title                   "Avalon" ;
+        lwt:EdizioneDi             lwt:Avalon ;
+        lwt:HaContributoDi         lwt:Philippa_Gregory ;
+        lwt:HaDataPubblicazione    "2006-05-01" ;
+        lwt:HaEdizione             lwt:Avalon ;
+        lwt:HaLingua               "English" ;
+        lwt:HaNome                 "Avalon" ;
+        lwt:HaNumeroPagine         "440" ;
+        lwt:PubblicatoDallOrganizzazione
+                lwt:Chicago_Review_Press ;
+        lwt:ScrittoDa              lwt:Anya_Seton ;
+        lwt:VieneClassificatoCome  lwt:fiction , lwt:historical_fiction .
+
+lwt:historical_fiction
+        rdf:type               lwt:Tema ;
+        lwt:HaNome             "historical fiction" ;
+        lwt:VieneUtilizzatoIn  lwt:Avalon .
+
+lwt:Philippa_Gregory  rdf:type  lwt:Persona ;
+        lwt:HaNome   "Philippa Gregory" ;
+        lwt:HaRuolo  lwt:Foreword .

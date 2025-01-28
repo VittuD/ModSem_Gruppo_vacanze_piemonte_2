@@ -1,0 +1,111 @@
+PREFIX fx: <http://sparql.xyz/facade-x/ns/>
+PREFIX schema: <http://schema.org/>
+PREFIX lwt: <https://litetaryworktopics.com/litetaryworktopics2025#>
+PREFIX xyz: <http://sparql.xyz/facade-x/data/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+
+CONSTRUCT {
+    # Book details
+    ?bookMyNs a lwt:Edizione .
+    ?bookMyNs dc:Title ?cleanEditionTitle .
+    ?bookMyNs lwt:ScrittoDa ?authorMyNs .
+    ?bookMyNs lwt:EdizioneDi ?firstEditionMyNs .
+
+    # Work (OperaLetteraria) details
+    ?firstEditionMyNs a lwt:OperaLetteraria .
+    ?firstEditionMyNs lwt:HaNome ?cleanFirstEditionTitle .
+    ?firstEditionMyNs lwt:HaEdizione ?bookMyNs .
+
+    # Author details
+    ?authorMyNs a lwt:Autore .
+    ?authorMyNs lwt:HaNome ?cleanAuthorName .
+
+    # Secondary contributor (if available)
+    ?bookMyNs lwt:HaContributoDi ?secondaryContributorMyNs .
+    ?secondaryContributorMyNs a lwt:Persona .
+    ?secondaryContributorMyNs lwt:HaNome ?cleanSecondaryContributorName .
+    ?secondaryContributorMyNs lwt:HaRuolo ?secondaryContributorRoleIRI .
+
+    # Series, genres, and topics
+    ?bookMyNs lwt:AppartieneA ?seriesMyNs .
+    ?seriesMyNs a lwt:Saga .
+    ?seriesMyNs lwt:HaNome ?cleanSeriesName .
+
+    ?bookMyNs lwt:VieneClassificatoCome ?genreMyNs .
+    ?genreMyNs a lwt:Genere .
+    ?genreMyNs lwt:VieneUtilizzatoIn ?bookMyNs .
+    ?genreMyNs lwt:HaNome ?cleanGenreName .
+
+    ?bookMyNs lwt:VieneClassificatoCome ?topicMyNs .
+    ?topicMyNs a lwt:Tema .
+    ?topicMyNs lwt:VieneUtilizzatoIn ?bookMyNs .
+    ?topicMyNs lwt:HaNome ?cleanTopicName .
+
+    # Book metadata
+    ?bookMyNs lwt:HaNumeroPagine ?numPages .
+    ?bookMyNs lwt:HaDataPubblicazione ?publicationDate .
+    ?bookMyNs lwt:PubblicatoDallOrganizzazione ?publisherMyNs .
+    ?bookMyNs lwt:HaLingua ?language .
+
+    # Publisher details
+    ?publisherMyNs a lwt:CasaEditrice .
+    ?publisherMyNs lwt:HaPubblicato ?bookMyNs .
+
+} WHERE {
+    SERVICE <x-sparql-anything:location=InformazioniTema.csv,csv.headers=true> {
+        
+        # Extract and clean book information
+        ?row <http://sparql.xyz/facade-x/data/Titolo%20Edizione> ?editionTitle .
+        BIND (REPLACE(?editionTitle, "\"", "") AS ?cleanEditionTitle)
+        BIND (IRI(CONCAT("https://litetaryworktopics.com/litetaryworktopics2025#", REPLACE(?cleanEditionTitle, " ", "_", "i"))) AS ?bookMyNs)
+        
+        # Extract and clean first edition (OperaLetteraria)
+        ?row <http://sparql.xyz/facade-x/data/Titolo%20Prima%20Edizione> ?firstEditionTitle .
+        BIND (REPLACE(?firstEditionTitle, "\"", "") AS ?cleanFirstEditionTitle)
+        BIND (IRI(CONCAT("https://litetaryworktopics.com/litetaryworktopics2025#", REPLACE(?cleanFirstEditionTitle, " ", "_", "i"))) AS ?firstEditionMyNs)
+
+        # Extract and clean author information
+        ?row <http://sparql.xyz/facade-x/data/Nome%20Cognome%20Autore> ?authorName .
+        BIND (REPLACE(?authorName, "\"", "") AS ?cleanAuthorName)
+        BIND (IRI(CONCAT("https://litetaryworktopics.com/litetaryworktopics2025#", REPLACE(?cleanAuthorName, " ", "_", "i"))) AS ?authorMyNs)
+
+        # Extract and clean secondary contributor (optional)
+        OPTIONAL {
+            ?row <http://sparql.xyz/facade-x/data/Nome%20Cognome%20Contributore%20Secondario> ?secondaryContributorName .
+            BIND (REPLACE(?secondaryContributorName, "\"", "") AS ?cleanSecondaryContributorName)
+            ?row <http://sparql.xyz/facade-x/data/Ruolo%20Contributore%20Secondario> ?secondaryContributorRole .
+            BIND (REPLACE(?secondaryContributorRole, "\"", "") AS ?cleanSecondaryContributorRole)
+            BIND (IRI(CONCAT("https://litetaryworktopics.com/litetaryworktopics2025#", REPLACE(?cleanSecondaryContributorName, " ", "_", "i"))) AS ?secondaryContributorMyNs)
+            BIND (IRI(CONCAT("https://litetaryworktopics.com/litetaryworktopics2025#", REPLACE(?cleanSecondaryContributorRole, " ", "_", "i"))) AS ?secondaryContributorRoleIRI)
+        }
+
+        # Extract and clean series (optional, skip if empty)
+        OPTIONAL {
+            ?row <http://sparql.xyz/facade-x/data/Serie%20Afferente> ?seriesName .
+            FILTER (?seriesName != "")
+            BIND (REPLACE(?seriesName, "\"", "") AS ?cleanSeriesName)
+            BIND (IRI(CONCAT("https://litetaryworktopics.com/litetaryworktopics2025#", REPLACE(?cleanSeriesName, " ", "_", "i"))) AS ?seriesMyNs)
+        }
+
+        # Extract and clean genres
+        ?row <http://sparql.xyz/facade-x/data/Generi%20afferenti> ?genreName .
+        BIND (REPLACE(?genreName, "\"", "") AS ?cleanGenreName)
+        BIND (IRI(CONCAT("https://litetaryworktopics.com/litetaryworktopics2025#", REPLACE(?cleanGenreName, " ", "_", "i"))) AS ?genreMyNs)
+
+        # Extract and clean topics
+        ?row <http://sparql.xyz/facade-x/data/Tema%20Afferente> ?topicName .
+        BIND (REPLACE(?topicName, "\"", "") AS ?cleanTopicName)
+        BIND (IRI(CONCAT("https://litetaryworktopics.com/litetaryworktopics2025#", REPLACE(?cleanTopicName, " ", "_", "i"))) AS ?topicMyNs)
+
+        # Extract book metadata
+        ?row <http://sparql.xyz/facade-x/data/Numero%20Pagine> ?numPages .
+        ?row <http://sparql.xyz/facade-x/data/Data%20di%20pubblicazione> ?publicationDate .
+        ?row <http://sparql.xyz/facade-x/data/Casa%20Editrice> ?publisherName .
+        BIND (REPLACE(?publisherName, "\"", "") AS ?cleanPublisherName)
+        BIND (IRI(CONCAT("https://litetaryworktopics.com/litetaryworktopics2025#", REPLACE(?cleanPublisherName, " ", "_", "i"))) AS ?publisherMyNs)
+        
+        ?row <http://sparql.xyz/facade-x/data/Lingua> ?language .
+    }
+}
