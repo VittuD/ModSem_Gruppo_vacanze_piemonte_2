@@ -1066,7 +1066,8 @@ Funziona solo se sono definiti con enumerazione
                                 <http://www.w3.org/ns/prov#Organization> ;
                        
                        :haNome """Bloombsbury Publishing
-"""^^xsd:string ;
+"""^^xsd:string ,
+                               "Bloomsbury Publishing"^^xsd:string ;
                        
                        :Pubblica :The_Chamber_of_Secrets ,
                                  :The_Philosophers_Stone ,
@@ -1093,7 +1094,8 @@ Funziona solo se sono definiti con enumerazione
                
                :haDataPubblicazione "1827-01-01"^^xsd:date ;
                
-               :haNome """Fermo e Lucia
+               :haNome "Fermo e Lucia"^^xsd:string ,
+                       """Fermo e Lucia
 """^^xsd:string ;
                
                :haLingua "it"^^xsd:language ;
@@ -1135,7 +1137,8 @@ Funziona solo se sono definiti con enumerazione
                   
                   :haDataPubblicazione "1840-01-01"^^xsd:date ;
                   
-                  :haNome "I Promessi Sposi"^^xsd:string ;
+                  :haNome "I Promessi Sposi"^^xsd:string ,
+                          "I promessi Sposi"^^xsd:string ;
                   
                   :haLingua "it"^^xsd:language ;
                   

@@ -1114,6 +1114,11 @@
         <Literal datatypeIRI="&xsd;string">The Autobiography of Benjamin Franklin</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/owl/owlapi/turtle#haDataPubblicazione"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/owl/owlapi/turtle#The_Chamber_of_Secrets"/>
+        <Literal datatypeIRI="&xsd;date">02 07 1998</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="http://www.semanticweb.org/owl/owlapi/turtle#haLingua"/>
         <NamedIndividual IRI="http://www.semanticweb.org/owl/owlapi/turtle#The_Chamber_of_Secrets"/>
         <Literal datatypeIRI="&xsd;language">en</Literal>
@@ -1124,6 +1129,11 @@
         <Literal datatypeIRI="&xsd;string">The Chamber of Secrets</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/owl/owlapi/turtle#haDataPubblicazione"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/owl/owlapi/turtle#The_Philosophers_Stone"/>
+        <Literal datatypeIRI="&xsd;date">26 06 1997</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="http://www.semanticweb.org/owl/owlapi/turtle#haLingua"/>
         <NamedIndividual IRI="http://www.semanticweb.org/owl/owlapi/turtle#The_Philosophers_Stone"/>
         <Literal datatypeIRI="&xsd;language">en</Literal>
@@ -1132,6 +1142,11 @@
         <DataProperty IRI="http://www.semanticweb.org/owl/owlapi/turtle#haNome"/>
         <NamedIndividual IRI="http://www.semanticweb.org/owl/owlapi/turtle#The_Philosophers_Stone"/>
         <Literal datatypeIRI="&xsd;string">The Philosophers Stone</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/owl/owlapi/turtle#haDataPubblicazione"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/owl/owlapi/turtle#The_Prisoner_of_Azkaban"/>
+        <Literal datatypeIRI="&xsd;date">8 07 1999</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="http://www.semanticweb.org/owl/owlapi/turtle#haLingua"/>
