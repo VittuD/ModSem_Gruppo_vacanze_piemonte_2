@@ -4,6 +4,7 @@
 @prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema: <http://schema.org/> .
 @prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+@prefix dc:     <http://purl.org/dc/elements/1.1/> .
 
 ####
 #   AUTHORS
