@@ -1038,347 +1038,18 @@ Funziona solo se sono definiti con enumerazione
 #################################################################
 
 
-###  http://www.semanticweb.org/owl/owlapi/turtle#Alessandro_Manzoni
-
-<http://www.semanticweb.org/owl/owlapi/turtle#Alessandro_Manzoni> rdf:type owl:NamedIndividual ;
-                                                                  
-                                                                  :HaNome "Alessandro Manzoni"^^xsd:string ;
-                                                                  
-                                                                  :AutoreDi <http://www.semanticweb.org/owl/owlapi/turtle#Fermo_e_Lucia> ,
-                                                                            <http://www.semanticweb.org/owl/owlapi/turtle#I_Promessi_Sposi> ;
-                                                                  
-                                                                  :HaProvenienza <http://www.semanticweb.org/owl/owlapi/turtle#Italia> ;
-                                                                  
-                                                                  :AutoreDi <http://www.semanticweb.org/owl/owlapi/turtle#Opera_Fermo_e_Lucia> .
-
-
-
-###  http://www.semanticweb.org/owl/owlapi/turtle#BacchetteMagiche
-
-<http://www.semanticweb.org/owl/owlapi/turtle#BacchetteMagiche> rdf:type owl:NamedIndividual ,
-                                                                         :Tema ;
-                                                                
-                                                                :HaNome "Bacchette Magiche"^^xsd:string ;
-                                                                
-                                                                :VieneUtilizzatoIn <http://www.semanticweb.org/owl/owlapi/turtle#Opera_Camera_dei_Segreti> ,
-                                                                                   <http://www.semanticweb.org/owl/owlapi/turtle#Opera_Pietra_Filosofale> ,
-                                                                                   <http://www.semanticweb.org/owl/owlapi/turtle#Opera_Prigioniero_di_Azkaban> .
-
-
-
-###  http://www.semanticweb.org/owl/owlapi/turtle#Benjamin_Franklin
-
-<http://www.semanticweb.org/owl/owlapi/turtle#Benjamin_Franklin> rdf:type owl:NamedIndividual ;
-                                                                 
-                                                                 :HaNome "Benjamin Franklin"^^xsd:string ;
-                                                                 
-                                                                 :AutoreDi <http://www.semanticweb.org/owl/owlapi/turtle#The_Autobiography_of_Benjamin_Franklin> .
-
-
-
-###  http://www.semanticweb.org/owl/owlapi/turtle#Bloomsbury_Publishing
-
-<http://www.semanticweb.org/owl/owlapi/turtle#Bloomsbury_Publishing> rdf:type owl:NamedIndividual ,
-                                                                              <http://www.w3.org/ns/prov#Organization> ;
-                                                                     
-                                                                     :HaNome """Bloombsbury Publishing
-"""^^xsd:string ,
-                                                                             "Bloomsbury Publishing"^^xsd:string ;
-                                                                     
-                                                                     :Pubblica <http://www.semanticweb.org/owl/owlapi/turtle#The_Chamber_of_Secrets> ,
-                                                                               <http://www.semanticweb.org/owl/owlapi/turtle#The_Philosophers_Stone> ,
-                                                                               <http://www.semanticweb.org/owl/owlapi/turtle#The_Prisoner_of_Azkaban> .
-
-
-
-###  http://www.semanticweb.org/owl/owlapi/turtle#Fantasy
-
-<http://www.semanticweb.org/owl/owlapi/turtle#Fantasy> rdf:type owl:NamedIndividual ,
-                                                                :Genere ;
-                                                       
-                                                       :HaNome "Fantasy"^^xsd:string ;
-                                                       
-                                                       :VieneUtilizzatoIn <http://www.semanticweb.org/owl/owlapi/turtle#Opera_Camera_dei_Segreti> ,
-                                                                          <http://www.semanticweb.org/owl/owlapi/turtle#Opera_Pietra_Filosofale> ,
-                                                                          <http://www.semanticweb.org/owl/owlapi/turtle#Opera_Prigioniero_di_Azkaban> .
-
-
-
-###  http://www.semanticweb.org/owl/owlapi/turtle#Fermo_e_Lucia
-
-<http://www.semanticweb.org/owl/owlapi/turtle#Fermo_e_Lucia> rdf:type owl:NamedIndividual ;
-                                                             
-                                                             :HaDataPubblicazione "1827-01-01"^^xsd:date ;
-                                                             
-                                                             :HaNome "Fermo e Lucia"^^xsd:string ,
-                                                                     """Fermo e Lucia
-"""^^xsd:string ;
-                                                             
-                                                             :HaLingua "it"^^xsd:language ;
-                                                             
-                                                             :HaNome "Fermo e Lucia" ;
-                                                             
-                                                             :HaLingua <http://www.semanticweb.org/owl/owlapi/turtle#Italiano> .
-
-
-
-###  http://www.semanticweb.org/owl/owlapi/turtle#Harry_James_Potter
-
-<http://www.semanticweb.org/owl/owlapi/turtle#Harry_James_Potter> rdf:type owl:NamedIndividual ;
-                                                                  
-                                                                  :HaNome "Harry James Potter"^^xsd:string .
-
-
-
-###  http://www.semanticweb.org/owl/owlapi/turtle#Harry_Potter
-
-<http://www.semanticweb.org/owl/owlapi/turtle#Harry_Potter> rdf:type owl:NamedIndividual ;
-                                                            
-                                                            :HaNome "Harry Potter"^^xsd:string ;
-                                                            
-                                                            <http://www.semanticweb.org/owl/owlapi/turtle#parteDiSaga> <http://www.semanticweb.org/owl/owlapi/turtle#Camera_dei_Segreti_opera> ;
-                                                            
-                                                            :Contiene <http://www.semanticweb.org/owl/owlapi/turtle#Opera_Camera_dei_Segreti> ,
-                                                                      <http://www.semanticweb.org/owl/owlapi/turtle#Opera_Pietra_Filosofale> ,
-                                                                      <http://www.semanticweb.org/owl/owlapi/turtle#Opera_Prigioniero_di_Azkaban> ;
-                                                            
-                                                            <http://www.semanticweb.org/owl/owlapi/turtle#parteDiSaga> <http://www.semanticweb.org/owl/owlapi/turtle#Pietra_Filosofale_Opera> ,
-                                                                                                                       <http://www.semanticweb.org/owl/owlapi/turtle#Prigioniero_di_Azkaban_Opera> .
-
-
-
-###  http://www.semanticweb.org/owl/owlapi/turtle#I_Promessi_Sposi
-
-<http://www.semanticweb.org/owl/owlapi/turtle#I_Promessi_Sposi> rdf:type owl:NamedIndividual ;
-                                                                
-                                                                :HaDataPubblicazione "1840-01-01"^^xsd:date ;
-                                                                
-                                                                :HaNome "I Promessi Sposi"^^xsd:string ,
-                                                                        "I promessi Sposi"^^xsd:string ;
-                                                                
-                                                                :HaLingua "it"^^xsd:language ;
-                                                                
-                                                                :HaNome "I Promessi Sposi" ;
-                                                                
-                                                                :HaLingua <http://www.semanticweb.org/owl/owlapi/turtle#Italiano> .
-
-
-
-###  http://www.semanticweb.org/owl/owlapi/turtle#Italia
-
-<http://www.semanticweb.org/owl/owlapi/turtle#Italia> rdf:type owl:NamedIndividual ,
-                                                               :Nazione ;
-                                                      
-                                                      :HaNome "Italia"^^xsd:string .
-
-
-
-###  http://www.semanticweb.org/owl/owlapi/turtle#J.K_Rowling
-
-<http://www.semanticweb.org/owl/owlapi/turtle#J.K_Rowling> rdf:type owl:NamedIndividual ;
-                                                           
-                                                           :HaNome "J.K. Rowling"^^xsd:string ;
-                                                           
-                                                           :AutoreDi <http://www.semanticweb.org/owl/owlapi/turtle#Opera_Camera_dei_Segreti> ,
-                                                                     <http://www.semanticweb.org/owl/owlapi/turtle#Opera_Pietra_Filosofale> ,
-                                                                     <http://www.semanticweb.org/owl/owlapi/turtle#Opera_Prigioniero_di_Azkaban> .
-
-
-
-###  http://www.semanticweb.org/owl/owlapi/turtle#Letteratura_Italiana
-
-<http://www.semanticweb.org/owl/owlapi/turtle#Letteratura_Italiana> rdf:type owl:NamedIndividual ;
-                                                                    
-                                                                    :HaNome "Letteratura Italiana"^^xsd:string ;
-                                                                    
-                                                                    <http://www.semanticweb.org/owl/owlapi/turtle#parteDiAntologia> <http://www.semanticweb.org/owl/owlapi/turtle#La_Divina_Commedia> ,
-                                                                                                                                    <http://www.semanticweb.org/owl/owlapi/turtle#OperaRomantica2> ,
-                                                                                                                                    <http://www.semanticweb.org/owl/owlapi/turtle#OperaRomantica3> ;
-                                                                    
-                                                                    :Contiene <http://www.semanticweb.org/owl/owlapi/turtle#Opera_Fermo_e_Lucia> ,
-                                                                              <http://www.semanticweb.org/owl/owlapi/turtle#Opera_La_Divina_Commedia> .
-
-
-
-###  http://www.semanticweb.org/owl/owlapi/turtle#Opera_Camera_dei_Segreti
-
-<http://www.semanticweb.org/owl/owlapi/turtle#Opera_Camera_dei_Segreti> rdf:type owl:NamedIndividual ,
-                                                                                 :Romanzo ;
-                                                                        
-                                                                        :HaNome "La Camera dei Segreti"^^xsd:string ;
-                                                                        
-                                                                        :HaLingua "en"^^xsd:language ;
-                                                                        
-                                                                        :Contiene <http://www.semanticweb.org/owl/owlapi/turtle#Harry_James_Potter> ;
-                                                                        
-                                                                        <http://www.semanticweb.org/owl/owlapi/turtle#parteDiSaga> <http://www.semanticweb.org/owl/owlapi/turtle#Harry_Potter> ;
-                                                                        
-                                                                        <http://www.semanticweb.org/owl/owlapi/turtle#HaProvenienzaAutore> <http://www.semanticweb.org/owl/owlapi/turtle#Italiana> ;
-                                                                        
-                                                                        <http://www.semanticweb.org/owl/owlapi/turtle#HaGenereLetterario> <http://www.semanticweb.org/owl/owlapi/turtle#Romanzo> ;
-                                                                        
-                                                                        :HaEdizione <http://www.semanticweb.org/owl/owlapi/turtle#The_Chamber_of_Secrets> ;
-                                                                        
-                                                                        <http://www.semanticweb.org/owl/owlapi/turtle#HaEdizione> <http://www.semanticweb.org/owl/owlapi/turtle#The_Chamber_of_Secrets> .
-
-
-
-###  http://www.semanticweb.org/owl/owlapi/turtle#Opera_Fermo_e_Lucia
-
-<http://www.semanticweb.org/owl/owlapi/turtle#Opera_Fermo_e_Lucia> rdf:type owl:NamedIndividual ,
-                                                                            :Romanzo ;
-                                                                   
-                                                                   :HaNome "Fermo e Lucia"^^xsd:string ;
-                                                                   
-                                                                   :HaLingua "it"^^xsd:language ;
-                                                                   
-                                                                   <http://www.semanticweb.org/owl/owlapi/turtle#HaEdizione> <http://www.semanticweb.org/owl/owlapi/turtle#Fermo_e_Lucia> ;
-                                                                   
-                                                                   :HaEdizione <http://www.semanticweb.org/owl/owlapi/turtle#Fermo_e_Lucia> ,
-                                                                               <http://www.semanticweb.org/owl/owlapi/turtle#I_Promessi_Sposi> ;
-                                                                   
-                                                                   <http://www.semanticweb.org/owl/owlapi/turtle#HaEdizione> <http://www.semanticweb.org/owl/owlapi/turtle#I_Promessi_Sposi> ;
-                                                                   
-                                                                   <http://www.semanticweb.org/owl/owlapi/turtle#parteDiAntologia> <http://www.semanticweb.org/owl/owlapi/turtle#Letteratura_Italiana> ;
-                                                                   
-                                                                   <http://www.semanticweb.org/owl/owlapi/turtle#HaGenereLetterario> <http://www.semanticweb.org/owl/owlapi/turtle#Romanzo_storico> .
-
-
-
-###  http://www.semanticweb.org/owl/owlapi/turtle#Opera_La_Divina_Commedia
-
-<http://www.semanticweb.org/owl/owlapi/turtle#Opera_La_Divina_Commedia> rdf:type owl:NamedIndividual ,
-                                                                                 :Poesia ;
-                                                                        
-                                                                        :HaNome "La Divina Commedia"^^xsd:string ;
-                                                                        
-                                                                        :HaLingua "it"^^xsd:language ;
-                                                                        
-                                                                        <http://www.semanticweb.org/owl/owlapi/turtle#parteDiAntologia> <http://www.semanticweb.org/owl/owlapi/turtle#Letteratura_Italiana> .
-
-
-
-###  http://www.semanticweb.org/owl/owlapi/turtle#Opera_Pietra_Filosofale
-
-<http://www.semanticweb.org/owl/owlapi/turtle#Opera_Pietra_Filosofale> rdf:type owl:NamedIndividual ,
-                                                                                :Romanzo ;
-                                                                       
-                                                                       :HaNome "La Pietra Filosofale"^^xsd:string ;
-                                                                       
-                                                                       :HaLingua "en"^^xsd:language ;
-                                                                       
-                                                                       :Contiene <http://www.semanticweb.org/owl/owlapi/turtle#Harry_James_Potter> ;
-                                                                       
-                                                                       <http://www.semanticweb.org/owl/owlapi/turtle#parteDiSaga> <http://www.semanticweb.org/owl/owlapi/turtle#Harry_Potter> ;
-                                                                       
-                                                                       <http://www.semanticweb.org/owl/owlapi/turtle#HaProvenienzaAutore> <http://www.semanticweb.org/owl/owlapi/turtle#Italia> ;
-                                                                       
-                                                                       <http://www.semanticweb.org/owl/owlapi/turtle#HaGenereLetterario> <http://www.semanticweb.org/owl/owlapi/turtle#Romanzo> ;
-                                                                       
-                                                                       <http://www.semanticweb.org/owl/owlapi/turtle#HaEdizione> <http://www.semanticweb.org/owl/owlapi/turtle#The_Philosophers_Stone> ;
-                                                                       
-                                                                       :HaEdizione <http://www.semanticweb.org/owl/owlapi/turtle#The_Philosophers_Stone> .
-
-
-
-###  http://www.semanticweb.org/owl/owlapi/turtle#Opera_Prigioniero_di_Azkaban
-
-<http://www.semanticweb.org/owl/owlapi/turtle#Opera_Prigioniero_di_Azkaban> rdf:type owl:NamedIndividual ,
-                                                                                     :Romanzo ;
-                                                                            
-                                                                            :HaNome "Il Prigioniero di Azkaban"^^xsd:string ;
-                                                                            
-                                                                            :HaLingua "en"^^xsd:language ;
-                                                                            
-                                                                            :Contiene <http://www.semanticweb.org/owl/owlapi/turtle#Harry_James_Potter> ;
-                                                                            
-                                                                            <http://www.semanticweb.org/owl/owlapi/turtle#parteDiSaga> <http://www.semanticweb.org/owl/owlapi/turtle#Harry_Potter> ;
-                                                                            
-                                                                            <http://www.semanticweb.org/owl/owlapi/turtle#HaProvenienzaAutore> <http://www.semanticweb.org/owl/owlapi/turtle#Italiana> ;
-                                                                            
-                                                                            <http://www.semanticweb.org/owl/owlapi/turtle#HaGenereLetterario> <http://www.semanticweb.org/owl/owlapi/turtle#Romanzo> ;
-                                                                            
-                                                                            <http://www.semanticweb.org/owl/owlapi/turtle#HaEdizione> <http://www.semanticweb.org/owl/owlapi/turtle#The_Prisoner_of_Azkaban> ;
-                                                                            
-                                                                            :HaEdizione <http://www.semanticweb.org/owl/owlapi/turtle#The_Prisoner_of_Azkaban> .
-
-
-
-###  http://www.semanticweb.org/owl/owlapi/turtle#Opera_The_Autobiography_of_Benjamin_Franklin
-
-<http://www.semanticweb.org/owl/owlapi/turtle#Opera_The_Autobiography_of_Benjamin_Franklin> rdf:type owl:NamedIndividual ;
-                                                                                            
-                                                                                            :HaNome "The Autobiography of Benjamin Franklin"^^xsd:string ;
-                                                                                            
-                                                                                            :PubblicatoDa <http://www.semanticweb.org/owl/owlapi/turtle#Benjamin_Franklin> .
-
-
-
-###  http://www.semanticweb.org/owl/owlapi/turtle#Romanzo_storico
-
-<http://www.semanticweb.org/owl/owlapi/turtle#Romanzo_storico> rdf:type owl:NamedIndividual ;
-                                                               
-                                                               :HaNome "Romanzo Storico"^^xsd:string ;
-                                                               
-                                                               :VieneUtilizzatoIn <http://www.semanticweb.org/owl/owlapi/turtle#Opera_Fermo_e_Lucia> .
-
-
-
-###  http://www.semanticweb.org/owl/owlapi/turtle#The_Autobiography_of_Benjamin_Franklin
-
-<http://www.semanticweb.org/owl/owlapi/turtle#The_Autobiography_of_Benjamin_Franklin> rdf:type owl:NamedIndividual ;
-                                                                                      
-                                                                                      :HaNome "The Autobiography of Benjamin Franklin"^^xsd:string ;
-                                                                                      
-                                                                                      :EdizioneDi <http://www.semanticweb.org/owl/owlapi/turtle#Opera_The_Autobiography_of_Benjamin_Franklin> .
-
-
-
-###  http://www.semanticweb.org/owl/owlapi/turtle#The_Chamber_of_Secrets
-
-<http://www.semanticweb.org/owl/owlapi/turtle#The_Chamber_of_Secrets> rdf:type owl:NamedIndividual ;
-                                                                      
-                                                                      :HaDataPubblicazione " 2 07 1998"^^xsd:date ;
-                                                                      
-                                                                      :HaNome "The Chamber of Secrets"^^xsd:string ;
-                                                                      
-                                                                      :HaLingua "en"^^xsd:language ;
-                                                                      
-                                                                      :HaDataPubblicazione "2 luglio 1998" ;
-                                                                      
-                                                                      :HaLingua <http://www.semanticweb.org/owl/owlapi/turtle#Italiano> .
-
-
-
-###  http://www.semanticweb.org/owl/owlapi/turtle#The_Philosophers_Stone
-
-<http://www.semanticweb.org/owl/owlapi/turtle#The_Philosophers_Stone> rdf:type owl:NamedIndividual ;
-                                                                      
-                                                                      :HaDataPubblicazione "26 06 1997"^^xsd:date ;
-                                                                      
-                                                                      :HaNome "The Philosophers Stone"^^xsd:string ;
-                                                                      
-                                                                      :HaLingua "en"^^xsd:language ;
-                                                                      
-                                                                      :HaDataPubblicazione "26 giugno 1997" ;
-                                                                      
-                                                                      :HaLingua <http://www.semanticweb.org/owl/owlapi/turtle#Italiano> .
-
-
-
-###  http://www.semanticweb.org/owl/owlapi/turtle#The_Prisoner_of_Azkaban
-
-<http://www.semanticweb.org/owl/owlapi/turtle#The_Prisoner_of_Azkaban> rdf:type owl:NamedIndividual ;
-                                                                       
-                                                                       :HaDataPubblicazione "8 07 1999"^^xsd:date ;
-                                                                       
-                                                                       :HaNome "The Prisoner of Azkaban"^^xsd:string ;
-                                                                       
-                                                                       :HaLingua "en"^^xsd:language ;
-                                                                       
-                                                                       :HaDataPubblicazione "8 luglio 1999" ;
-                                                                       
-                                                                       :HaLingua <http://www.semanticweb.org/owl/owlapi/turtle#Italiano> .
+###  https://litetaryworktopics.com/litetaryworktopics2025#Alessandro_Manzoni
+
+:Alessandro_Manzoni rdf:type owl:NamedIndividual ;
+                    
+                    :HaNome "Alessandro Manzoni"^^xsd:string ;
+                    
+                    :AutoreDi :Fermo_e_Lucia ,
+                              :I_Promessi_Sposi ;
+                    
+                    :HaProvenienza :Italia ;
+                    
+                    :AutoreDi :Opera_Fermo_e_Lucia .
 
 
 
@@ -1389,10 +1060,353 @@ Funziona solo se sono definiti con enumerazione
           
           :HaNome "Amicizia"^^xsd:string ;
           
-          :VieneUtilizzatoIn <http://www.semanticweb.org/owl/owlapi/turtle#Opera_Camera_dei_Segreti> ,
-                             <http://www.semanticweb.org/owl/owlapi/turtle#Opera_Fermo_e_Lucia> ,
-                             <http://www.semanticweb.org/owl/owlapi/turtle#Opera_Pietra_Filosofale> ,
-                             <http://www.semanticweb.org/owl/owlapi/turtle#Opera_Prigioniero_di_Azkaban> .
+          :VieneUtilizzatoIn :Opera_Camera_dei_Segreti ,
+                             :Opera_Fermo_e_Lucia ,
+                             :Opera_Pietra_Filosofale ,
+                             :Opera_Prigioniero_di_Azkaban .
+
+
+
+###  https://litetaryworktopics.com/litetaryworktopics2025#BacchetteMagiche
+
+:BacchetteMagiche rdf:type owl:NamedIndividual ,
+                           :Tema ;
+                  
+                  :HaNome "Bacchette Magiche"^^xsd:string ;
+                  
+                  :VieneUtilizzatoIn :Opera_Camera_dei_Segreti ,
+                                     :Opera_Pietra_Filosofale ,
+                                     :Opera_Prigioniero_di_Azkaban .
+
+
+
+###  https://litetaryworktopics.com/litetaryworktopics2025#Benjamin_Franklin
+
+:Benjamin_Franklin rdf:type owl:NamedIndividual ;
+                   
+                   :HaNome "Benjamin Franklin"^^xsd:string ;
+                   
+                   :AutoreDi :The_Autobiography_of_Benjamin_Franklin .
+
+
+
+###  https://litetaryworktopics.com/litetaryworktopics2025#Bloomsbury_Publishing
+
+:Bloomsbury_Publishing rdf:type owl:NamedIndividual ,
+                                <http://www.w3.org/ns/prov#Organization> ;
+                       
+                       :HaNome """Bloombsbury Publishing
+"""^^xsd:string ,
+                               "Bloomsbury Publishing"^^xsd:string ;
+                       
+                       :Pubblica :The_Chamber_of_Secrets ,
+                                 :The_Philosophers_Stone ,
+                                 :The_Prisoner_of_Azkaban .
+
+
+
+###  https://litetaryworktopics.com/litetaryworktopics2025#Fantasy
+
+:Fantasy rdf:type owl:NamedIndividual ,
+                  :Genere ;
+         
+         :HaNome "Fantasy"^^xsd:string ;
+         
+         :VieneUtilizzatoIn :Opera_Camera_dei_Segreti ,
+                            :Opera_Pietra_Filosofale ,
+                            :Opera_Prigioniero_di_Azkaban .
+
+
+
+###  https://litetaryworktopics.com/litetaryworktopics2025#Fermo_e_Lucia
+
+:Fermo_e_Lucia rdf:type owl:NamedIndividual ;
+               
+               :HaDataPubblicazione "1827-01-01"^^xsd:date ;
+               
+               :HaNome "Fermo e Lucia"^^xsd:string ,
+                       """Fermo e Lucia
+"""^^xsd:string ;
+               
+               :HaLingua "it"^^xsd:language ;
+               
+               :HaNome "Fermo e Lucia" ;
+               
+               :HaLingua <http://www.semanticweb.org/owl/owlapi/turtle#Italiano> .
+
+
+
+###  https://litetaryworktopics.com/litetaryworktopics2025#Harry_James_Potter
+
+:Harry_James_Potter rdf:type owl:NamedIndividual ;
+                    
+                    :HaNome "Harry Jamaes Potter"^^xsd:string ,
+                            "Harry James Potter"^^xsd:string .
+
+
+
+###  https://litetaryworktopics.com/litetaryworktopics2025#Harry_Potter
+
+:Harry_Potter rdf:type owl:NamedIndividual ;
+              
+              :HaNome "Harry Potter"^^xsd:string ;
+              
+              <http://www.semanticweb.org/owl/owlapi/turtle#parteDiSaga> <http://www.semanticweb.org/owl/owlapi/turtle#Camera_dei_Segreti_opera> ,
+                                                                         <http://www.semanticweb.org/owl/owlapi/turtle#Pietra_Filosofale_Opera> ,
+                                                                         <http://www.semanticweb.org/owl/owlapi/turtle#Prigioniero_di_Azkaban_Opera> ;
+              
+              :Contiene :Opera_Camera_dei_Segreti ,
+                        :Opera_Pietra_Filosofale ,
+                        :Opera_Prigioniero_di_Azkaban .
+
+
+
+###  https://litetaryworktopics.com/litetaryworktopics2025#I_Promessi_Sposi
+
+:I_Promessi_Sposi rdf:type owl:NamedIndividual ;
+                  
+                  :HaDataPubblicazione "1840-01-01"^^xsd:date ;
+                  
+                  :HaNome "I Promesi Sposi"^^xsd:string ,
+                          "I Promessi Sposi"^^xsd:string ,
+                          "I promessi Sposi"^^xsd:string ;
+                  
+                  :HaLingua "it"^^xsd:language ;
+                  
+                  :HaNome "I Promessi Sposi" ;
+                  
+                  :HaLingua <http://www.semanticweb.org/owl/owlapi/turtle#Italiano> .
+
+
+
+###  https://litetaryworktopics.com/litetaryworktopics2025#Italia
+
+:Italia rdf:type owl:NamedIndividual ,
+                 :Nazione ;
+        
+        :HaNome "Italia"^^xsd:string .
+
+
+
+###  https://litetaryworktopics.com/litetaryworktopics2025#J.K_Rowling
+
+:J.K_Rowling rdf:type owl:NamedIndividual ;
+             
+             :HaNome "J.K. Rowling"^^xsd:string ;
+             
+             :AutoreDi :Opera_Camera_dei_Segreti ,
+                       :Opera_Pietra_Filosofale ,
+                       :Opera_Prigioniero_di_Azkaban .
+
+
+
+###  https://litetaryworktopics.com/litetaryworktopics2025#Letteratura_Italiana
+
+:Letteratura_Italiana rdf:type owl:NamedIndividual ;
+                      
+                      :HaNome "Letteratura Italiana"^^xsd:string ;
+                      
+                      <http://www.semanticweb.org/owl/owlapi/turtle#parteDiAntologia> <http://www.semanticweb.org/owl/owlapi/turtle#La_Divina_Commedia> ,
+                                                                                      <http://www.semanticweb.org/owl/owlapi/turtle#OperaRomantica2> ,
+                                                                                      <http://www.semanticweb.org/owl/owlapi/turtle#OperaRomantica3> ;
+                      
+                      :Contiene :Opera_Fermo_e_Lucia ,
+                                :Opera_La_Divina_Commedia .
+
+
+
+###  https://litetaryworktopics.com/litetaryworktopics2025#Opera_Camera_dei_Segreti
+
+:Opera_Camera_dei_Segreti rdf:type owl:NamedIndividual ,
+                                   :Romanzo ;
+                          
+                          :HaNome "Camera dei Segreti"^^xsd:string ,
+                                  "La Camera dei Segreti"^^xsd:string ;
+                          
+                          :HaLingua "en"^^xsd:language ;
+                          
+                          <http://www.semanticweb.org/owl/owlapi/turtle#parteDiSaga> <http://www.semanticweb.org/owl/owlapi/turtle#Harry_Potter> ;
+                          
+                          <http://www.semanticweb.org/owl/owlapi/turtle#HaProvenienzaAutore> <http://www.semanticweb.org/owl/owlapi/turtle#Italiana> ;
+                          
+                          <http://www.semanticweb.org/owl/owlapi/turtle#HaGenereLetterario> <http://www.semanticweb.org/owl/owlapi/turtle#Romanzo> ;
+                          
+                          <http://www.semanticweb.org/owl/owlapi/turtle#HaEdizione> <http://www.semanticweb.org/owl/owlapi/turtle#The_Chamber_of_Secrets> ;
+                          
+                          :Contiene :Harry_James_Potter ;
+                          
+                          :HaEdizione :The_Chamber_of_Secrets .
+
+
+
+###  https://litetaryworktopics.com/litetaryworktopics2025#Opera_Fermo_e_Lucia
+
+:Opera_Fermo_e_Lucia rdf:type owl:NamedIndividual ,
+                              :Romanzo ;
+                     
+                     :HaNome "Fermo e Lucia"^^xsd:string ;
+                     
+                     :HaLingua "it"^^xsd:language ;
+                     
+                     <http://www.semanticweb.org/owl/owlapi/turtle#HaEdizione> <http://www.semanticweb.org/owl/owlapi/turtle#Fermo_e_Lucia> ,
+                                                                               <http://www.semanticweb.org/owl/owlapi/turtle#I_Promessi_Sposi> ;
+                     
+                     <http://www.semanticweb.org/owl/owlapi/turtle#parteDiAntologia> <http://www.semanticweb.org/owl/owlapi/turtle#Letteratura_Italiana> ;
+                     
+                     <http://www.semanticweb.org/owl/owlapi/turtle#HaGenereLetterario> <http://www.semanticweb.org/owl/owlapi/turtle#Romanzo_storico> ;
+                     
+                     :HaEdizione :Fermo_e_Lucia ,
+                                 :I_Promessi_Sposi .
+
+
+
+###  https://litetaryworktopics.com/litetaryworktopics2025#Opera_La_Divina_Commedia
+
+:Opera_La_Divina_Commedia rdf:type owl:NamedIndividual ,
+                                   :Poesia ;
+                          
+                          :HaNome "La Divina Commedia"^^xsd:string ;
+                          
+                          :HaLingua "it"^^xsd:language ;
+                          
+                          <http://www.semanticweb.org/owl/owlapi/turtle#parteDiAntologia> <http://www.semanticweb.org/owl/owlapi/turtle#Letteratura_Italiana> .
+
+
+
+###  https://litetaryworktopics.com/litetaryworktopics2025#Opera_Pietra_Filosofale
+
+:Opera_Pietra_Filosofale rdf:type owl:NamedIndividual ,
+                                  :Romanzo ;
+                         
+                         :HaNome "La Pietra Filosofale"^^xsd:string ,
+                                 "Pietra Filosofale"^^xsd:string ;
+                         
+                         :HaLingua "en"^^xsd:language ;
+                         
+                         <http://www.semanticweb.org/owl/owlapi/turtle#parteDiSaga> <http://www.semanticweb.org/owl/owlapi/turtle#Harry_Potter> ;
+                         
+                         <http://www.semanticweb.org/owl/owlapi/turtle#HaProvenienzaAutore> <http://www.semanticweb.org/owl/owlapi/turtle#Italia> ;
+                         
+                         <http://www.semanticweb.org/owl/owlapi/turtle#HaGenereLetterario> <http://www.semanticweb.org/owl/owlapi/turtle#Romanzo> ;
+                         
+                         <http://www.semanticweb.org/owl/owlapi/turtle#HaEdizione> <http://www.semanticweb.org/owl/owlapi/turtle#The_Philosophers_Stone> ;
+                         
+                         :Contiene :Harry_James_Potter ;
+                         
+                         :HaEdizione :The_Philosophers_Stone .
+
+
+
+###  https://litetaryworktopics.com/litetaryworktopics2025#Opera_Prigioniero_di_Azkaban
+
+:Opera_Prigioniero_di_Azkaban rdf:type owl:NamedIndividual ,
+                                       :Romanzo ;
+                              
+                              :HaNome "Il Prigioniero di Azkaban"^^xsd:string ,
+                                      "Prigioniero di Azkaban"^^xsd:string ;
+                              
+                              :HaLingua "en"^^xsd:language ;
+                              
+                              <http://www.semanticweb.org/owl/owlapi/turtle#parteDiSaga> <http://www.semanticweb.org/owl/owlapi/turtle#Harry_Potter> ;
+                              
+                              <http://www.semanticweb.org/owl/owlapi/turtle#HaProvenienzaAutore> <http://www.semanticweb.org/owl/owlapi/turtle#Italiana> ;
+                              
+                              <http://www.semanticweb.org/owl/owlapi/turtle#HaGenereLetterario> <http://www.semanticweb.org/owl/owlapi/turtle#Romanzo> ;
+                              
+                              <http://www.semanticweb.org/owl/owlapi/turtle#HaEdizione> <http://www.semanticweb.org/owl/owlapi/turtle#The_Prisoner_of_Azkaban> ;
+                              
+                              :Contiene :Harry_James_Potter ;
+                              
+                              :HaEdizione :The_Prisoner_of_Azkaban .
+
+
+
+###  https://litetaryworktopics.com/litetaryworktopics2025#Opera_The_Autobiography_of_Benjamin_Franklin
+
+:Opera_The_Autobiography_of_Benjamin_Franklin rdf:type owl:NamedIndividual ;
+                                              
+                                              :HaNome "The Autobiography of Benjamin Franklin"^^xsd:string ;
+                                              
+                                              :PubblicatoDa :Benjamin_Franklin .
+
+
+
+###  https://litetaryworktopics.com/litetaryworktopics2025#Romanzo_storico
+
+:Romanzo_storico rdf:type owl:NamedIndividual ;
+                 
+                 :HaNome "Romanzo Storico"^^xsd:string ,
+                         "Romanzo storico"^^xsd:string ;
+                 
+                 :VieneUtilizzatoIn :Opera_Fermo_e_Lucia .
+
+
+
+###  https://litetaryworktopics.com/litetaryworktopics2025#The_Autobiography_of_Benjamin_Franklin
+
+:The_Autobiography_of_Benjamin_Franklin rdf:type owl:NamedIndividual ;
+                                        
+                                        :HaNome "The Autobiography of Benjamin Franklin"^^xsd:string ;
+                                        
+                                        :HaLingua "en"^^xsd:language ;
+                                        
+                                        :EdizioneDi :Opera_The_Autobiography_of_Benjamin_Franklin .
+
+
+
+###  https://litetaryworktopics.com/litetaryworktopics2025#The_Chamber_of_Secrets
+
+:The_Chamber_of_Secrets rdf:type owl:NamedIndividual ;
+                        
+                        :HaDataPubblicazione " 2 07 1998"^^xsd:date ,
+                                             "02-07-1998"^^xsd:date ;
+                        
+                        :HaNome "The Chamber of Secret"^^xsd:string ,
+                                "The Chamber of Secrets"^^xsd:string ;
+                        
+                        :HaLingua "en"^^xsd:language ;
+                        
+                        :HaDataPubblicazione "2 luglio 1998" ;
+                        
+                        :HaLingua <http://www.semanticweb.org/owl/owlapi/turtle#Italiano> .
+
+
+
+###  https://litetaryworktopics.com/litetaryworktopics2025#The_Philosophers_Stone
+
+:The_Philosophers_Stone rdf:type owl:NamedIndividual ;
+                        
+                        :HaDataPubblicazione "26 06 1997"^^xsd:date ,
+                                             "26-06-1997"^^xsd:date ;
+                        
+                        :HaLingua "The Philosopher Stone"^^xsd:string ;
+                        
+                        :HaNome "The Philosophers Stone"^^xsd:string ;
+                        
+                        :HaLingua "en"^^xsd:language ;
+                        
+                        :HaDataPubblicazione "26 giugno 1997" ;
+                        
+                        :HaLingua <http://www.semanticweb.org/owl/owlapi/turtle#Italiano> .
+
+
+
+###  https://litetaryworktopics.com/litetaryworktopics2025#The_Prisoner_of_Azkaban
+
+:The_Prisoner_of_Azkaban rdf:type owl:NamedIndividual ;
+                         
+                         :HaDataPubblicazione "8 07 1999"^^xsd:date ,
+                                              "8-07-1999"^^xsd:date ;
+                         
+                         :HaLingua "The Prisoner of Azkaban"^^xsd:string ;
+                         
+                         :HaNome "The Prisoner of Azkaban"^^xsd:string ;
+                         
+                         :HaLingua "en"^^xsd:language ;
+                         
+                         :HaDataPubblicazione "8 luglio 1999" ;
+                         
+                         :HaLingua <http://www.semanticweb.org/owl/owlapi/turtle#Italiano> .
 
 
 
@@ -1406,238 +1420,238 @@ Funziona solo se sono definiti con enumerazione
 
 
 [ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( <http://www.semanticweb.org/owl/owlapi/turtle#Opera_La_Divina_Commedia>
-                        <http://www.semanticweb.org/owl/owlapi/turtle#Opera_Prigioniero_di_Azkaban>
+  owl:distinctMembers ( :The_Philosophers_Stone
+                        :The_Prisoner_of_Azkaban
                       )
 ] .
 [ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( <http://www.semanticweb.org/owl/owlapi/turtle#Opera_La_Divina_Commedia>
-                        <http://www.semanticweb.org/owl/owlapi/turtle#Opera_The_Autobiography_of_Benjamin_Franklin>
+  owl:distinctMembers ( :Harry_Potter
+                        :Opera_Camera_dei_Segreti
                       )
 ] .
 [ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( <http://www.semanticweb.org/owl/owlapi/turtle#Fermo_e_Lucia>
-                        <http://www.semanticweb.org/owl/owlapi/turtle#The_Autobiography_of_Benjamin_Franklin>
+  owl:distinctMembers ( :The_Autobiography_of_Benjamin_Franklin
+                        :The_Philosophers_Stone
                       )
 ] .
 [ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( <http://www.semanticweb.org/owl/owlapi/turtle#The_Autobiography_of_Benjamin_Franklin>
-                        <http://www.semanticweb.org/owl/owlapi/turtle#The_Philosophers_Stone>
+  owl:distinctMembers ( :Fermo_e_Lucia
+                        :The_Philosophers_Stone
                       )
 ] .
 [ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( <http://www.semanticweb.org/owl/owlapi/turtle#Opera_Camera_dei_Segreti>
-                        <http://www.semanticweb.org/owl/owlapi/turtle#Opera_La_Divina_Commedia>
+  owl:distinctMembers ( :Opera_Fermo_e_Lucia
+                        :Opera_Pietra_Filosofale
                       )
 ] .
 [ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( <http://www.semanticweb.org/owl/owlapi/turtle#Opera_La_Divina_Commedia>
-                        <http://www.semanticweb.org/owl/owlapi/turtle#Opera_Pietra_Filosofale>
+  owl:distinctMembers ( :Opera_Fermo_e_Lucia
+                        :Opera_The_Autobiography_of_Benjamin_Franklin
                       )
 ] .
 [ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( <http://www.semanticweb.org/owl/owlapi/turtle#Opera_Camera_dei_Segreti>
-                        <http://www.semanticweb.org/owl/owlapi/turtle#Opera_Pietra_Filosofale>
+  owl:distinctMembers ( :Fermo_e_Lucia
+                        :I_Promessi_Sposi
                       )
 ] .
 [ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( <http://www.semanticweb.org/owl/owlapi/turtle#I_Promessi_Sposi>
-                        <http://www.semanticweb.org/owl/owlapi/turtle#The_Philosophers_Stone>
+  owl:distinctMembers ( :I_Promessi_Sposi
+                        :The_Philosophers_Stone
                       )
 ] .
 [ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( <http://www.semanticweb.org/owl/owlapi/turtle#Harry_Potter>
-                        <http://www.semanticweb.org/owl/owlapi/turtle#Opera_Prigioniero_di_Azkaban>
+  owl:distinctMembers ( :Opera_Prigioniero_di_Azkaban
+                        :Opera_The_Autobiography_of_Benjamin_Franklin
                       )
 ] .
 [ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( <http://www.semanticweb.org/owl/owlapi/turtle#Bloomsbury_Publishing>
-                        <http://www.semanticweb.org/owl/owlapi/turtle#J.K_Rowling>
+  owl:distinctMembers ( :Harry_James_Potter
+                        :Opera_Camera_dei_Segreti
                       )
 ] .
 [ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( <http://www.semanticweb.org/owl/owlapi/turtle#Harry_James_Potter>
-                        <http://www.semanticweb.org/owl/owlapi/turtle#Harry_Potter>
+  owl:distinctMembers ( :Opera_Camera_dei_Segreti
+                        :Opera_Prigioniero_di_Azkaban
                       )
 ] .
 [ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( <http://www.semanticweb.org/owl/owlapi/turtle#Opera_Fermo_e_Lucia>
-                        <http://www.semanticweb.org/owl/owlapi/turtle#Opera_The_Autobiography_of_Benjamin_Franklin>
+  owl:distinctMembers ( :Fermo_e_Lucia
+                        :The_Autobiography_of_Benjamin_Franklin
                       )
 ] .
 [ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( <http://www.semanticweb.org/owl/owlapi/turtle#Opera_Pietra_Filosofale>
-                        <http://www.semanticweb.org/owl/owlapi/turtle#Opera_The_Autobiography_of_Benjamin_Franklin>
+  owl:distinctMembers ( :Opera_Camera_dei_Segreti
+                        :Opera_The_Autobiography_of_Benjamin_Franklin
                       )
 ] .
 [ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( <http://www.semanticweb.org/owl/owlapi/turtle#Harry_Potter>
-                        <http://www.semanticweb.org/owl/owlapi/turtle#Letteratura_Italiana>
+  owl:distinctMembers ( :Opera_La_Divina_Commedia
+                        :Opera_The_Autobiography_of_Benjamin_Franklin
                       )
 ] .
 [ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( <http://www.semanticweb.org/owl/owlapi/turtle#Alessandro_Manzoni>
-                        <http://www.semanticweb.org/owl/owlapi/turtle#J.K_Rowling>
+  owl:distinctMembers ( :The_Chamber_of_Secrets
+                        :The_Prisoner_of_Azkaban
                       )
 ] .
 [ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( <http://www.semanticweb.org/owl/owlapi/turtle#Alessandro_Manzoni>
-                        <http://www.semanticweb.org/owl/owlapi/turtle#Benjamin_Franklin>
+  owl:distinctMembers ( :Harry_Potter
+                        :Opera_Prigioniero_di_Azkaban
                       )
 ] .
 [ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( <http://www.semanticweb.org/owl/owlapi/turtle#The_Autobiography_of_Benjamin_Franklin>
-                        <http://www.semanticweb.org/owl/owlapi/turtle#The_Prisoner_of_Azkaban>
+  owl:distinctMembers ( :I_Promessi_Sposi
+                        :The_Chamber_of_Secrets
                       )
 ] .
 [ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( <http://www.semanticweb.org/owl/owlapi/turtle#Benjamin_Franklin>
-                        <http://www.semanticweb.org/owl/owlapi/turtle#J.K_Rowling>
+  owl:distinctMembers ( :Fermo_e_Lucia
+                        :The_Chamber_of_Secrets
                       )
 ] .
 [ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( <http://www.semanticweb.org/owl/owlapi/turtle#Harry_James_Potter>
-                        <http://www.semanticweb.org/owl/owlapi/turtle#Opera_Camera_dei_Segreti>
+  owl:distinctMembers ( :Alessandro_Manzoni
+                        :Benjamin_Franklin
                       )
 ] .
 [ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( <http://www.semanticweb.org/owl/owlapi/turtle#The_Chamber_of_Secrets>
-                        <http://www.semanticweb.org/owl/owlapi/turtle#The_Philosophers_Stone>
+  owl:distinctMembers ( :BacchetteMagiche
+                        :Fantasy
                       )
 ] .
 [ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( <http://www.semanticweb.org/owl/owlapi/turtle#Fermo_e_Lucia>
-                        <http://www.semanticweb.org/owl/owlapi/turtle#The_Philosophers_Stone>
+  owl:distinctMembers ( :Harry_Potter
+                        :Opera_Pietra_Filosofale
                       )
 ] .
 [ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( <http://www.semanticweb.org/owl/owlapi/turtle#Harry_James_Potter>
-                        <http://www.semanticweb.org/owl/owlapi/turtle#Opera_Pietra_Filosofale>
+  owl:distinctMembers ( :Harry_Potter
+                        :Letteratura_Italiana
                       )
 ] .
 [ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( <http://www.semanticweb.org/owl/owlapi/turtle#Opera_Camera_dei_Segreti>
-                        <http://www.semanticweb.org/owl/owlapi/turtle#Opera_Fermo_e_Lucia>
+  owl:distinctMembers ( :Opera_Camera_dei_Segreti
+                        :Opera_Pietra_Filosofale
                       )
 ] .
 [ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( <http://www.semanticweb.org/owl/owlapi/turtle#I_Promessi_Sposi>
-                        <http://www.semanticweb.org/owl/owlapi/turtle#The_Autobiography_of_Benjamin_Franklin>
+  owl:distinctMembers ( :Alessandro_Manzoni
+                        :Bloomsbury_Publishing
                       )
 ] .
 [ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( <http://www.semanticweb.org/owl/owlapi/turtle#Alessandro_Manzoni>
-                        <http://www.semanticweb.org/owl/owlapi/turtle#Bloomsbury_Publishing>
+  owl:distinctMembers ( :Amicizia
+                        :Fantasy
                       )
 ] .
 [ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( <http://www.semanticweb.org/owl/owlapi/turtle#Harry_Potter>
-                        <http://www.semanticweb.org/owl/owlapi/turtle#Opera_Pietra_Filosofale>
+  owl:distinctMembers ( :Bloomsbury_Publishing
+                        :J.K_Rowling
                       )
 ] .
 [ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( <http://www.semanticweb.org/owl/owlapi/turtle#Harry_James_Potter>
-                        <http://www.semanticweb.org/owl/owlapi/turtle#Opera_Prigioniero_di_Azkaban>
+  owl:distinctMembers ( :The_Autobiography_of_Benjamin_Franklin
+                        :The_Prisoner_of_Azkaban
                       )
 ] .
 [ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( <http://www.semanticweb.org/owl/owlapi/turtle#Fermo_e_Lucia>
-                        <http://www.semanticweb.org/owl/owlapi/turtle#The_Chamber_of_Secrets>
+  owl:distinctMembers ( :Harry_James_Potter
+                        :Opera_Pietra_Filosofale
                       )
 ] .
 [ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( <http://www.semanticweb.org/owl/owlapi/turtle#Harry_Potter>
-                        <http://www.semanticweb.org/owl/owlapi/turtle#Opera_Camera_dei_Segreti>
+  owl:distinctMembers ( :Harry_James_Potter
+                        :Opera_Prigioniero_di_Azkaban
                       )
 ] .
 [ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( <http://www.semanticweb.org/owl/owlapi/turtle#Opera_Camera_dei_Segreti>
-                        <http://www.semanticweb.org/owl/owlapi/turtle#Opera_The_Autobiography_of_Benjamin_Franklin>
+  owl:distinctMembers ( :Opera_Camera_dei_Segreti
+                        :Opera_Fermo_e_Lucia
                       )
 ] .
 [ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( <http://www.semanticweb.org/owl/owlapi/turtle#Fermo_e_Lucia>
-                        <http://www.semanticweb.org/owl/owlapi/turtle#The_Prisoner_of_Azkaban>
+  owl:distinctMembers ( :I_Promessi_Sposi
+                        :The_Autobiography_of_Benjamin_Franklin
                       )
 ] .
 [ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( <http://www.semanticweb.org/owl/owlapi/turtle#Fantasy>
-                        :Amicizia
+  owl:distinctMembers ( :I_Promessi_Sposi
+                        :The_Prisoner_of_Azkaban
                       )
 ] .
 [ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( <http://www.semanticweb.org/owl/owlapi/turtle#Opera_Fermo_e_Lucia>
-                        <http://www.semanticweb.org/owl/owlapi/turtle#Opera_La_Divina_Commedia>
+  owl:distinctMembers ( :Opera_Camera_dei_Segreti
+                        :Opera_La_Divina_Commedia
                       )
 ] .
 [ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( <http://www.semanticweb.org/owl/owlapi/turtle#Opera_Fermo_e_Lucia>
-                        <http://www.semanticweb.org/owl/owlapi/turtle#Opera_Prigioniero_di_Azkaban>
+  owl:distinctMembers ( :Opera_La_Divina_Commedia
+                        :Opera_Prigioniero_di_Azkaban
                       )
 ] .
 [ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( <http://www.semanticweb.org/owl/owlapi/turtle#The_Philosophers_Stone>
-                        <http://www.semanticweb.org/owl/owlapi/turtle#The_Prisoner_of_Azkaban>
+  owl:distinctMembers ( :Fermo_e_Lucia
+                        :The_Prisoner_of_Azkaban
                       )
 ] .
 [ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( <http://www.semanticweb.org/owl/owlapi/turtle#Fermo_e_Lucia>
-                        <http://www.semanticweb.org/owl/owlapi/turtle#I_Promessi_Sposi>
+  owl:distinctMembers ( :Opera_Pietra_Filosofale
+                        :Opera_Prigioniero_di_Azkaban
                       )
 ] .
 [ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( <http://www.semanticweb.org/owl/owlapi/turtle#The_Autobiography_of_Benjamin_Franklin>
-                        <http://www.semanticweb.org/owl/owlapi/turtle#The_Chamber_of_Secrets>
+  owl:distinctMembers ( :Opera_Fermo_e_Lucia
+                        :Opera_La_Divina_Commedia
                       )
 ] .
 [ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( <http://www.semanticweb.org/owl/owlapi/turtle#Opera_Pietra_Filosofale>
-                        <http://www.semanticweb.org/owl/owlapi/turtle#Opera_Prigioniero_di_Azkaban>
+  owl:distinctMembers ( :Benjamin_Franklin
+                        :J.K_Rowling
                       )
 ] .
 [ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( <http://www.semanticweb.org/owl/owlapi/turtle#BacchetteMagiche>
-                        <http://www.semanticweb.org/owl/owlapi/turtle#Fantasy>
+  owl:distinctMembers ( :The_Chamber_of_Secrets
+                        :The_Philosophers_Stone
                       )
 ] .
 [ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( <http://www.semanticweb.org/owl/owlapi/turtle#The_Chamber_of_Secrets>
-                        <http://www.semanticweb.org/owl/owlapi/turtle#The_Prisoner_of_Azkaban>
+  owl:distinctMembers ( :Opera_Fermo_e_Lucia
+                        :Opera_Prigioniero_di_Azkaban
                       )
 ] .
 [ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( <http://www.semanticweb.org/owl/owlapi/turtle#Benjamin_Franklin>
-                        <http://www.semanticweb.org/owl/owlapi/turtle#Bloomsbury_Publishing>
+  owl:distinctMembers ( :Harry_James_Potter
+                        :Harry_Potter
                       )
 ] .
 [ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( <http://www.semanticweb.org/owl/owlapi/turtle#I_Promessi_Sposi>
-                        <http://www.semanticweb.org/owl/owlapi/turtle#The_Chamber_of_Secrets>
+  owl:distinctMembers ( :Amicizia
+                        :BacchetteMagiche
                       )
 ] .
 [ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( <http://www.semanticweb.org/owl/owlapi/turtle#I_Promessi_Sposi>
-                        <http://www.semanticweb.org/owl/owlapi/turtle#The_Prisoner_of_Azkaban>
+  owl:distinctMembers ( :Benjamin_Franklin
+                        :Bloomsbury_Publishing
                       )
 ] .
 [ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( <http://www.semanticweb.org/owl/owlapi/turtle#BacchetteMagiche>
-                        :Amicizia
+  owl:distinctMembers ( :The_Autobiography_of_Benjamin_Franklin
+                        :The_Chamber_of_Secrets
                       )
 ] .
 [ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( <http://www.semanticweb.org/owl/owlapi/turtle#Opera_Fermo_e_Lucia>
-                        <http://www.semanticweb.org/owl/owlapi/turtle#Opera_Pietra_Filosofale>
+  owl:distinctMembers ( :Opera_La_Divina_Commedia
+                        :Opera_Pietra_Filosofale
                       )
 ] .
 [ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( <http://www.semanticweb.org/owl/owlapi/turtle#Opera_Camera_dei_Segreti>
-                        <http://www.semanticweb.org/owl/owlapi/turtle#Opera_Prigioniero_di_Azkaban>
+  owl:distinctMembers ( :Opera_Pietra_Filosofale
+                        :Opera_The_Autobiography_of_Benjamin_Franklin
                       )
 ] .
 [ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( <http://www.semanticweb.org/owl/owlapi/turtle#Opera_Prigioniero_di_Azkaban>
-                        <http://www.semanticweb.org/owl/owlapi/turtle#Opera_The_Autobiography_of_Benjamin_Franklin>
+  owl:distinctMembers ( :Alessandro_Manzoni
+                        :J.K_Rowling
                       )
 ] .
 
