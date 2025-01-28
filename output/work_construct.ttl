@@ -1,0 +1,262 @@
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix lwt:    <https://litetaryworktopics.com/litetaryworktopics2025#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+lwt:Buliwyf  rdf:type  lwt:Personaggio ;
+        lwt:HaNome  "Buliwyf" .
+
+lwt:Rethel  rdf:type  lwt:Personaggio ;
+        lwt:HaNome  "Rethel" .
+
+lwt:Olof_Skötkonung  rdf:type  lwt:Personaggio ;
+        lwt:HaNome  "Olof Skötkonung" .
+
+lwt:Kingsbridge  rdf:type  lwt:Saga ;
+        lwt:HaNome  "Kingsbridge" .
+
+lwt:Sagan_om_Valhalla
+        rdf:type    lwt:Saga ;
+        lwt:HaNome  "Sagan om Valhalla" .
+
+lwt:Weath  rdf:type  lwt:Personaggio ;
+        lwt:HaNome  "Weath" .
+
+lwt:Edward_the_Elder  rdf:type  lwt:Personaggio ;
+        lwt:HaNome  "Edward the Elder" .
+
+lwt:Harald_Bluetooth  rdf:type  lwt:Personaggio ;
+        lwt:HaNome  "Harald Bluetooth" .
+
+lwt:Sagard  rdf:type  lwt:Personaggio ;
+        lwt:HaNome  "Sagard" .
+
+lwt:رسالة_  rdf:type        lwt:OperaLetteraria ;
+        schema:relatedLink  "https://www.goodreads.com/work/editions/7004105" ;
+        lwt:AppartieneA     lwt:رحلات , lwt:Library_of_Arabic_Literature ;
+        lwt:Contiene        lwt:Ahmad_ibn_Fadlān ;
+        lwt:HaNome          "رسالة " .
+
+lwt:Asser  rdf:type  lwt:Personaggio ;
+        lwt:HaNome  "Asser" .
+
+lwt:Wulfgar  rdf:type  lwt:Personaggio ;
+        lwt:HaNome  "Wulfgar" .
+
+lwt:The_Flame_Bearer  rdf:type  lwt:OperaLetteraria ;
+        schema:relatedLink  "https://www.goodreads.com/work/editions/49172708" ;
+        lwt:AppartieneA     lwt:The_Last_Kingdom ;
+        lwt:Contiene        lwt:Aethelflaed , <https://litetaryworktopics.com/litetaryworktopics2025#Constantine_II,_King_of_Alba> , lwt:Uhtred_of_Bebbanburg , lwt:Edward_the_Elder ;
+        lwt:HaNome          "The Flame Bearer" .
+
+lwt:Murasaki_Shikibu  rdf:type  lwt:Personaggio ;
+        lwt:HaNome  "Murasaki Shikibu" .
+
+lwt:Aethelflaed  rdf:type  lwt:Personaggio ;
+        lwt:HaNome  "Aethelflaed" .
+
+lwt:Sigrid_:_sagan_om_Valhalla_
+        rdf:type            lwt:OperaLetteraria ;
+        schema:relatedLink  "https://www.goodreads.com/work/editions/42748842" ;
+        lwt:AppartieneA     lwt:Sagan_om_Valhalla , lwt:Valhalla ;
+        lwt:Contiene        lwt:Sigrid_the_Haughty , lwt:Harald_Bluetooth , lwt:Eric_the_Victorious , lwt:Styrbjörn_the_Strong , lwt:Olof_Skötkonung , lwt:Olaf_Tryggvason ;
+        lwt:HaNome          "Sigrid : sagan om Valhalla " .
+
+lwt:Wiglaf  rdf:type  lwt:Personaggio ;
+        lwt:HaNome  "Wiglaf" .
+
+lwt:Hrothgar  rdf:type  lwt:Personaggio ;
+        lwt:HaNome  "Hrothgar" .
+
+lwt:Sigurd  rdf:type  lwt:Personaggio ;
+        lwt:HaNome  "Sigurd" .
+
+lwt:Halga  rdf:type  lwt:Personaggio ;
+        lwt:HaNome  "Halga" .
+
+lwt:Uhtred_of_Bebbanburg
+        rdf:type    lwt:Personaggio ;
+        lwt:HaNome  "Uhtred of Bebbanburg" .
+
+<https://litetaryworktopics.com/litetaryworktopics2025#Aethelwulf_(King_of_Wessex)>
+        rdf:type    lwt:Personaggio ;
+        lwt:HaNome  "Aethelwulf (King of Wessex)" .
+
+lwt:Edgar_the_Builder
+        rdf:type    lwt:Personaggio ;
+        lwt:HaNome  "Edgar the Builder" .
+
+lwt:Higlak  rdf:type  lwt:Personaggio ;
+        lwt:HaNome  "Higlak" .
+
+lwt:Helfdane  rdf:type  lwt:Personaggio ;
+        lwt:HaNome  "Helfdane" .
+
+lwt:The_Pagan_Lord  rdf:type  lwt:OperaLetteraria ;
+        schema:relatedLink  "https://www.goodreads.com/work/editions/24989806" ;
+        lwt:AppartieneA     lwt:The_Last_Kingdom ;
+        lwt:Contiene        lwt:Uhtred_of_Bebbanburg , lwt:Aethelflaed ;
+        lwt:HaNome          "The Pagan Lord" .
+
+lwt:Beowulf  rdf:type  lwt:Personaggio ;
+        lwt:HaNome  "Beowulf" .
+
+lwt:Beowulf._A_Prose_Translation
+        rdf:type            lwt:OperaLetteraria ;
+        schema:relatedLink  "https://www.goodreads.com/work/editions/189503" ;
+        lwt:Contiene        lwt:Unferth , lwt:Breca , lwt:Grendel , lwt:Wiglaf , lwt:Hrothgar , lwt:Beowulf , lwt:Onela , lwt:Wealhtheow ;
+        lwt:HaNome          "Beowulf. A Prose Translation" .
+
+lwt:Herger  rdf:type  lwt:Personaggio ;
+        lwt:HaNome  "Herger" .
+
+lwt:Rumon  rdf:type  lwt:Personaggio ;
+        lwt:HaNome  "Rumon" .
+
+lwt:Avalon  rdf:type        lwt:OperaLetteraria ;
+        schema:relatedLink  "https://www.goodreads.com/work/editions/587624" ;
+        lwt:Contiene        lwt:Eirik_the_Red , lwt:Sigurd , lwt:Ketil , lwt:Queen_Alfrida , lwt:Merewyn , lwt:Rumon ;
+        lwt:HaNome          "Avalon" .
+
+lwt:Haltaf  rdf:type  lwt:Personaggio ;
+        lwt:HaNome  "Haltaf" .
+
+lwt:Guthrum_the_Dane  rdf:type  lwt:Personaggio ;
+        lwt:HaNome  "Guthrum the Dane" .
+
+lwt:Roneth  rdf:type  lwt:Personaggio ;
+        lwt:HaNome  "Roneth" .
+
+lwt:Breca  rdf:type  lwt:Personaggio ;
+        lwt:HaNome  "Breca" .
+
+lwt:رحلات  rdf:type  lwt:Saga ;
+        lwt:HaNome  "رحلات" .
+
+lwt:Wealhtheow  rdf:type  lwt:Personaggio ;
+        lwt:HaNome  "Wealhtheow" .
+
+lwt:Styrbjörn_the_Strong
+        rdf:type    lwt:Personaggio ;
+        lwt:HaNome  "Styrbjörn the Strong" .
+
+lwt:Edmund_the_Martyr
+        rdf:type    lwt:Personaggio ;
+        lwt:HaNome  "Edmund the Martyr" .
+
+lwt:Alfred_the_Great  rdf:type  lwt:Personaggio ;
+        lwt:HaNome  "Alfred the Great" .
+
+lwt:Wiglif  rdf:type  lwt:Personaggio ;
+        lwt:HaNome  "Wiglif" .
+
+lwt:Rothgar  rdf:type  lwt:Personaggio ;
+        lwt:HaNome  "Rothgar" .
+
+lwt:Fujiwara_no_Michinaga
+        rdf:type    lwt:Personaggio ;
+        lwt:HaNome  "Fujiwara no Michinaga" .
+
+lwt:Ahmad_ibn_Fadlān  rdf:type  lwt:Personaggio ;
+        lwt:HaNome  "Ahmad ibn Fadlān" .
+
+lwt:Ivar_the_Boneless
+        rdf:type    lwt:Personaggio ;
+        lwt:HaNome  "Ivar the Boneless" .
+
+lwt:Ketil  rdf:type  lwt:Personaggio ;
+        lwt:HaNome  "Ketil" .
+
+lwt:Grendel  rdf:type  lwt:Personaggio ;
+        lwt:HaNome  "Grendel" .
+
+lwt:Unferth  rdf:type  lwt:Personaggio ;
+        lwt:HaNome  "Unferth" .
+
+lwt:Eaters_of_the_Dead
+        rdf:type            lwt:OperaLetteraria ;
+        schema:relatedLink  "https://www.goodreads.com/work/editions/997260" ;
+        lwt:Contiene        lwt:Roneth , lwt:Wiglif , lwt:Halga , lwt:Sagard , lwt:Higlak , lwt:Helfdane , lwt:Skeld , lwt:Edgtho , lwt:Rothgar , lwt:Ecthgow , lwt:Buliwyf , lwt:Ahmad_ibn_Fadlān , lwt:Haltaf , lwt:Wulfgar , lwt:Herger , lwt:Rethel , lwt:Thorkel , lwt:Weath ;
+        lwt:HaNome          "Eaters of the Dead" .
+
+lwt:Halfdan_Ragnarsson
+        rdf:type    lwt:Personaggio ;
+        lwt:HaNome  "Halfdan Ragnarsson" .
+
+lwt:Valhalla  rdf:type  lwt:Saga ;
+        lwt:HaNome  "Valhalla" .
+
+lwt:Skeld  rdf:type  lwt:Personaggio ;
+        lwt:HaNome  "Skeld" .
+
+lwt:Sigrid_the_Haughty
+        rdf:type    lwt:Personaggio ;
+        lwt:HaNome  "Sigrid the Haughty" .
+
+lwt:The_Evening_and_the_Morning
+        rdf:type            lwt:OperaLetteraria ;
+        schema:relatedLink  "https://www.goodreads.com/work/editions/73816656" ;
+        lwt:AppartieneA     lwt:Kingsbridge ;
+        lwt:Contiene        lwt:Edgar_the_Builder ;
+        lwt:HaNome          "The Evening and the Morning" .
+
+<https://litetaryworktopics.com/litetaryworktopics2025#Odda,_Ealdorman_of_Devon>
+        rdf:type    lwt:Personaggio ;
+        lwt:HaNome  "Odda, Ealdorman of Devon" .
+
+lwt:Merewyn  rdf:type  lwt:Personaggio ;
+        lwt:HaNome  "Merewyn" .
+
+lwt:Olaf_Tryggvason  rdf:type  lwt:Personaggio ;
+        lwt:HaNome  "Olaf Tryggvason" .
+
+<https://litetaryworktopics.com/litetaryworktopics2025#Constantine_II,_King_of_Alba>
+        rdf:type    lwt:Personaggio ;
+        lwt:HaNome  "Constantine II, King of Alba" .
+
+lwt:Eirik_the_Red  rdf:type  lwt:Personaggio ;
+        lwt:HaNome  "Eirik the Red" .
+
+lwt:Ubba_Ragnarsson  rdf:type  lwt:Personaggio ;
+        lwt:HaNome  "Ubba Ragnarsson" .
+
+lwt:Bagsecg  rdf:type  lwt:Personaggio ;
+        lwt:HaNome  "Bagsecg" .
+
+lwt:Onela  rdf:type  lwt:Personaggio ;
+        lwt:HaNome  "Onela" .
+
+lwt:Edgtho  rdf:type  lwt:Personaggio ;
+        lwt:HaNome  "Edgtho" .
+
+lwt:Warriors_of_the_Storm
+        rdf:type            lwt:OperaLetteraria ;
+        schema:relatedLink  "https://www.goodreads.com/work/editions/45146066" ;
+        lwt:AppartieneA     lwt:The_Last_Kingdom ;
+        lwt:Contiene        lwt:Uhtred_of_Bebbanburg , lwt:Aethelflaed , lwt:Alfred_the_Great ;
+        lwt:HaNome          "Warriors of the Storm" .
+
+lwt:The_Last_Kingdom  rdf:type  lwt:Saga , lwt:OperaLetteraria ;
+        schema:relatedLink  "https://www.goodreads.com/work/editions/881821" ;
+        lwt:AppartieneA     lwt:The_Last_Kingdom ;
+        lwt:Contiene        lwt:Edmund_the_Martyr , lwt:Ivar_the_Boneless , lwt:Alfred_the_Great , <https://litetaryworktopics.com/litetaryworktopics2025#Aethelwulf_(King_of_Wessex)> , lwt:Asser , <https://litetaryworktopics.com/litetaryworktopics2025#Odda,_Ealdorman_of_Devon> , lwt:Guthrum_the_Dane , lwt:Halfdan_Ragnarsson , lwt:Bagsecg , lwt:Ubba_Ragnarsson , lwt:Uhtred_of_Bebbanburg ;
+        lwt:HaNome          "The Last Kingdom" .
+
+lwt:Ecthgow  rdf:type  lwt:Personaggio ;
+        lwt:HaNome  "Ecthgow" .
+
+lwt:Eric_the_Victorious
+        rdf:type    lwt:Personaggio ;
+        lwt:HaNome  "Eric the Victorious" .
+
+lwt:Queen_Alfrida  rdf:type  lwt:Personaggio ;
+        lwt:HaNome  "Queen Alfrida" .
+
+lwt:Thorkel  rdf:type  lwt:Personaggio ;
+        lwt:HaNome  "Thorkel" .
+
+lwt:Library_of_Arabic_Literature
+        rdf:type    lwt:Saga ;
+        lwt:HaNome  "Library of Arabic Literature" .

@@ -232,7 +232,7 @@
         <DataProperty IRI="HaNome"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="HaPagine"/>
+        <DataProperty IRI="HaNumeroPagine"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="HaRuolo"/>
@@ -1391,7 +1391,7 @@
         <Class IRI="Edizione"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
-        <DataProperty IRI="HaPagine"/>
+        <DataProperty IRI="HaNumeroPagine"/>
         <Class IRI="Edizione"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
@@ -1427,7 +1427,7 @@
         <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <DataPropertyRange>
-        <DataProperty IRI="HaPagine"/>
+        <DataProperty IRI="HaNumeroPagine"/>
         <Datatype abbreviatedIRI="xsd:integer"/>
     </DataPropertyRange>
     <DataPropertyRange>

@@ -1,0 +1,84 @@
+PREFIX fx: <http://sparql.xyz/facade-x/ns/>
+PREFIX schema: <http://schema.org/>
+PREFIX lwt: <https://litetaryworktopics.com/litetaryworktopics2025#>
+PREFIX xyz: <http://sparql.xyz/facade-x/data/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+
+CONSTRUCT {
+    # Book details
+    ?bookMyNs a lwt:Edizione .
+    ?bookMyNs dc:Title ?title .
+    ?bookMyNs lwt:ScrittoDa ?primaryContributorMyNs .
+    
+    # Primary contributor details
+    ?primaryContributorMyNs a lwt:Autore .
+    ?primaryContributorMyNs lwt:HaNome ?primaryContributorName .
+    
+    # Secondary contributors (if available)
+    ?bookMyNs lwt:HaContributoDi ?secondaryContributorMyNs .
+    ?secondaryContributorMyNs a lwt:Persona .
+    ?secondaryContributorMyNs lwt:HaNome ?secondaryContributorName .
+    ?secondaryContributorMyNs lwt:HaRuolo ?secondaryContributorRole .
+
+    # Series, genres, and topics
+    ?bookMyNs lwt:AppartieneA ?seriesMyNs .
+    ?seriesMyNs a lwt:Saga .
+    ?seriesMyNs lwt:HaNome ?seriesName .
+
+    ?bookMyNs lwt:VieneClassificatoCome ?genreMyNs .
+    ?genreMyNs a lwt:Genere .
+    ?genreMyNs lwt:HaNome ?genreName .
+
+    ?bookMyNs lwt:VieneClassificatoCome ?topicMyNs .
+    ?topicMyNs a lwt:Tema .
+    ?topicMyNs lwt:HaNome ?topicName .
+
+    # Book metadata
+    ?bookMyNs lwt:HaNumeroPagine ?numPages .
+    ?bookMyNs lwt:HaDataPubblicazione ?publicationTime .
+    ?bookMyNs lwt:HaEditore ?publisher .
+    ?bookMyNs lwt:HaLingua ?language .
+} WHERE {
+    SERVICE <x-sparql-anything:location=merged_book_details.json> {
+        
+        # Extract basic book information
+        ?book xyz:title ?title .
+        BIND (IRI(CONCAT("https://litetaryworktopics.com/litetaryworktopics2025#", REPLACE(?title, " ", "_", "i"))) AS ?bookMyNs)
+        
+        # Extract primary contributor (author) information
+        ?book xyz:primaryContributorEdge_name ?primaryContributorName .
+        BIND (IRI(CONCAT("https://litetaryworktopics.com/litetaryworktopics2025#", REPLACE(?primaryContributorName, " ", "_", "i"))) AS ?primaryContributorMyNs)
+
+        # Secondary contributors (optional)
+        OPTIONAL {
+            ?book xyz:secondaryContributorEdge_name ?secondaryContributorName .
+            ?book xyz:secondaryContributorEdge_role ?secondaryContributorRole .
+            BIND (IRI(CONCAT("https://litetaryworktopics.com/litetaryworktopics2025#", REPLACE(?secondaryContributorName, " ", "_", "i"))) AS ?secondaryContributorMyNs)
+        }
+
+        # Series (optional)
+        OPTIONAL {
+            ?book xyz:bookSeries ?seriesContainer .
+            ?seriesContainer fx:anySlot ?seriesName .
+            BIND (IRI(CONCAT("https://litetaryworktopics.com/litetaryworktopics2025#", REPLACE(?seriesName, " ", "_", "i"))) AS ?seriesMyNs)
+        }
+
+        # Genres
+        ?book xyz:bookGenres ?genreContainer .
+        ?genreContainer fx:anySlot ?genreName .
+        BIND (IRI(CONCAT("https://litetaryworktopics.com/litetaryworktopics2025#", REPLACE(?genreName, " ", "_", "i"))) AS ?genreMyNs)
+
+        # Topics
+        ?book xyz:bookTopics ?topicContainer .
+        ?topicContainer fx:anySlot ?topicName .
+        BIND (IRI(CONCAT("https://litetaryworktopics.com/litetaryworktopics2025#", REPLACE(?topicName, " ", "_", "i"))) AS ?topicMyNs)
+
+        # Book metadata
+        ?book xyz:numPages ?numPages .
+        ?book xyz:publicationTime ?publicationTime .
+        ?book xyz:publisher ?publisher .
+        ?book xyz:language ?language .
+    }
+}

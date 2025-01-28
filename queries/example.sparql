@@ -1,58 +1,38 @@
 PREFIX fx: <http://sparql.xyz/facade-x/ns/>
+PREFIX schema: <http://schema.org/>
 PREFIX xyz: <http://sparql.xyz/facade-x/data/>
-PREFIX lwt: <https://litetaryworktopics.com/litetaryworktopics2025#>
-PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX myns: <http://example.org/myns/>
 
 CONSTRUCT {
+    ?bookMyNs a schema:Book .
+    ?bookMyNs schema:name ?title .
+    ?bookMyNs schema:genre ?seriesMyNs .
+    ?bookMyNs schema:url ?webUrl .
+    ?bookMyNs schema:description ?characterList .
+    ?characterMyNs a schema:Person .
+    ?characterMyNs schema:name ?character .
+} WHERE {
+    SERVICE <x-sparql-anything:location=literaryworks.csv,csv.format=TDF> {
+        [] xyz:originalTitle ?title ;
+           xyz:series ?seriesRaw ;
+           xyz:webUrl ?webUrl ;
+           xyz:characters ?charactersRaw .
 
-  ?publisherIRI a lwt:CasaEditrice ;
-                lwt:haNome ?publisher .
+        # Bind the book IRI
+        BIND (IRI(CONCAT("http://example.org/myns/", REPLACE(?title, " ", "_", "i"))) AS ?bookMyNs)
 
-  ?translatorIRI a lwt:Traduttore ;
-                 lwt:haNome ?translator .
+        # Process series into an IRI
+        BIND (REPLACE(?seriesRaw, "[\\[\\]\']", "", "i") AS ?seriesClean)
+        BIND (IRI(CONCAT("http://example.org/myns/", REPLACE(?seriesClean, " ", "_", "i"))) AS ?seriesMyNs)
 
-  ?authorIRI a lwt:Autore ;
-             lwt:haNome ?author .
+        # Process characters into a list
+        BIND (REPLACE(?charactersRaw, "[\\[\\]\']", "", "i") AS ?charactersClean)
+        BIND (SPLIT(?charactersClean, ", ") AS ?characterList)
 
-  ?genreIRI a lwt:GenereLetterario .
-
-  ?opera a lwt:OperaLetteraria ;
-        dc:title ?title ;
-        lwt:èScrittoDa ?authorIRI ;
-        lwt:haEditore ?publisherIRI ;
-        lwt:haDataPubblicazione ?publicationDate ;
-        lwt:HaEdizione ?isbn ;
-        lwt:HaLingua ?language ;
-        lwt:HaGenereLetterario ?genreIRI ;
-        lwt:haPagine ?pageCount ;
-        lwt:haTraduttore ?translatorIRI ;
-        rdfs:seeAlso ?webURL .
-
-}
-WHERE {
-  SERVICE <x-sparql-anything:csv.headers=true,location=example.csv> {
-    [] xyz:ID ?id ;
-       xyz:Title ?title ;
-       xyz:Author ?author ;
-       xyz:Publisher ?publisher ;
-       xyz:PublicationDate ?publicationDate ;
-       xyz:ISBN ?isbn ;
-       xyz:Language ?language ;
-       xyz:Genres ?genres ;
-       xyz:PageCount ?pageCount ;
-       xyz:Awards ?awards ;
-       xyz:Translator ?translator ;
-       xyz:Places ?places ;
-       xyz:WebURL ?webURL ;
-       xyz:Rating ?rating .
-  }
-  
-  # Generate a unique IRI for the individuals by hashing the name
-  BIND(IRI(CONCAT("https://litetaryworktopics.com/litetaryworktopics2025#", "casaEditrice_", MD5(?publisher))) AS ?publisherIRI)
-  BIND(IRI(CONCAT("https://litetaryworktopics.com/litetaryworktopics2025#", "translator_", MD5(?translator))) AS ?translatorIRI)
-  BIND(IRI(CONCAT("https://litetaryworktopics.com/litetaryworktopics2025#", "author_", MD5(?author))) AS ?authorIRI)
-  # Maybe we could directly use the genre name as IRI TODO find out if it's correct
-  BIND(IRI(CONCAT("https://litetaryworktopics.com/litetaryworktopics2025#", "genereLetterario_", MD5(?genres))) AS ?genreIRI)
-  BIND(IRI(CONCAT("https://litetaryworktopics.com/litetaryworktopics2025#", "opera_", ?id)) AS ?opera)
+        # Unnest the character list and create individual IRIs
+        UNNEST(?characterList AS ?character)
+        BIND (IRI(CONCAT("http://example.org/myns/", REPLACE(?character, " ", "_", "i"))) AS ?characterMyNs)
+    }
 }

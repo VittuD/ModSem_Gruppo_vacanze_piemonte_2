@@ -1,0 +1,41 @@
+PREFIX fx: <http://sparql.xyz/facade-x/ns/>
+PREFIX schema: <http://schema.org/>
+PREFIX lwt: <https://litetaryworktopics.com/litetaryworktopics2025#>
+PREFIX xyz: <http://sparql.xyz/facade-x/data/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+CONSTRUCT {
+    ?bookMyNs a lwt:OperaLetteraria .
+    ?bookMyNs lwt:HaNome ?originalTitle .
+    ?bookMyNs lwt:Contiene ?characterMyNs .
+    ?characterMyNs a lwt:Personaggio .
+    ?characterMyNs lwt:HaNome ?character .
+    ?bookMyNs schema:relatedLink ?webUrl .
+    ?bookMyNs lwt:AppartieneA ?seriesMyNs .
+    ?seriesMyNs a lwt:Saga .
+    ?seriesMyNs lwt:HaNome ?series .
+} WHERE {
+    SERVICE <x-sparql-anything:location=merged_work_details.json> {
+        # merged_work_details
+        # literaryworks
+        # Extract book information
+        ?book xyz:originalTitle ?originalTitle .
+        BIND (IRI(CONCAT("https://litetaryworktopics.com/litetaryworktopics2025#", REPLACE(?originalTitle, " ", "_", "i"))) AS ?bookMyNs)
+
+        # Extract characters and link them to the book
+        ?book xyz:characters ?characterContainer .
+        ?characterContainer fx:anySlot ?character .
+        BIND (IRI(CONCAT("https://litetaryworktopics.com/litetaryworktopics2025#", REPLACE(?character, " ", "_", "i"))) AS ?characterMyNs)
+
+        # Extract web URL
+        ?book xyz:webUrl ?webUrl .
+
+        # Extract series (if available) and link them to the book
+        OPTIONAL {
+            ?book xyz:series ?seriesContainer .
+            ?seriesContainer fx:anySlot ?series .
+            BIND (IRI(CONCAT("https://litetaryworktopics.com/litetaryworktopics2025#", REPLACE(?series, " ", "_", "i"))) AS ?seriesMyNs)
+        }
+    }
+}

@@ -1,0 +1,26 @@
+    PREFIX fx: <http://sparql.xyz/facade-x/ns/>
+    PREFIX schema: <http://schema.org/>
+    PREFIX lwt: <https://litetaryworktopics.com/litetaryworktopics2025#>
+    PREFIX xyz: <http://sparql.xyz/facade-x/data/>
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+    CONSTRUCT {
+        ?authorMyNs a schema:Person .
+        ?authorMyNs lwt:HaNome ?name .
+        ?authorMyNs schema:HaDescrizione ?description .
+        ?authorMyNs schema:relatedLink ?webUrl .
+    } WHERE {
+        SERVICE <x-sparql-anything:location=merged_author_details.json> {
+
+            # Extract author information
+            ?author xyz:name ?name .
+            BIND (IRI(CONCAT("https://litetaryworktopics.com/litetaryworktopics2025#", REPLACE(?name, " ", "_", "i"))) AS ?authorMyNs)
+
+            # Extract description
+            ?author xyz:description ?description .
+
+            # Extract web URL
+            ?author xyz:webUrl ?webUrl .
+        }
+    }
