@@ -1379,9 +1379,8 @@ Funziona solo se sono definiti con enumerazione
                         :HaDataPubblicazione "26 06 1997"^^xsd:date ,
                                              "26-06-1997"^^xsd:date ;
                         
-                        :HaLingua "The Philosopher Stone"^^xsd:string ;
-                        
-                        :HaNome "The Philosophers Stone"^^xsd:string ;
+                        :HaNome "The Philosopher Stone"^^xsd:string ,
+                                "The Philosophers Stone"^^xsd:string ;
                         
                         :HaLingua "en"^^xsd:language ;
                         
@@ -1397,8 +1396,6 @@ Funziona solo se sono definiti con enumerazione
                          
                          :HaDataPubblicazione "8 07 1999"^^xsd:date ,
                                               "8-07-1999"^^xsd:date ;
-                         
-                         :HaLingua "The Prisoner of Azkaban"^^xsd:string ;
                          
                          :HaNome "The Prisoner of Azkaban"^^xsd:string ;
                          
@@ -1556,12 +1553,12 @@ Funziona solo se sono definiti con enumerazione
 ] .
 [ rdf:type owl:AllDifferent ;
   owl:distinctMembers ( :Harry_James_Potter
-                        :Opera_Pietra_Filosofale
+                        :Opera_Prigioniero_di_Azkaban
                       )
 ] .
 [ rdf:type owl:AllDifferent ;
   owl:distinctMembers ( :Harry_James_Potter
-                        :Opera_Prigioniero_di_Azkaban
+                        :Opera_Pietra_Filosofale
                       )
 ] .
 [ rdf:type owl:AllDifferent ;
