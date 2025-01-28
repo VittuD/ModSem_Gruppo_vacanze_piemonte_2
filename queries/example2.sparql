@@ -1,0 +1,84 @@
+PREFIX xyz: <http://sparql.xyz/facade-x/data/>
+PREFIX lwt: <https://litetaryworktopics.com/litetaryworktopics2025#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+CONSTRUCT {
+  ?operaUri a lwt:Opera ;
+            lwt:hasName ?originalTitle ;
+            lwt:webUrl ?webUrl .
+
+  # Character 1
+  ?char1Uri a lwt:Character ;
+            lwt:hasName ?char1 ;
+            lwt:appearsIn ?operaUri .
+
+  # Character 2
+  ?char2Uri a lwt:Character ;
+            lwt:hasName ?char2 ;
+            lwt:appearsIn ?operaUri .
+
+  # Character 3
+  ?char3Uri a lwt:Character ;
+            lwt:hasName ?char3 ;
+            lwt:appearsIn ?operaUri .
+
+  # Saga
+  ?sagaUri a lwt:Saga ;
+           lwt:hasName ?seriesClean ;
+           lwt:contains ?operaUri .
+}
+WHERE {
+  SERVICE <x-sparql-anything:csv.headers=true,location=./literaryworks.csv> {
+    [] xyz:originalTitle ?originalTitle ;
+       xyz:characters    ?charactersRaw ;
+       xyz:webUrl        ?webUrl ;
+       xyz:series        ?seriesRaw .
+  }
+
+  # Convert the Opera's webUrl into its IRI
+  BIND( IRI(?webUrl) AS ?operaUri )
+
+  #
+  # -- (A) EXTRACT CHARACTERS --
+  #
+  # 1. Remove leading/trailing ['...']
+  BIND(
+    REPLACE(STR(?charactersRaw), "^\\['|\\']$", "") 
+    AS ?temp
+  )
+  # Now ?temp should look like: "Alfred the Great', 'Aethelflaed', 'Uhtred of Bebbanburg"
+
+  # 2. First character is everything BEFORE the first "', '"
+  BIND( STRBEFORE(?temp, "', '") AS ?char1 )
+
+  # 3. Remaining string is everything AFTER the first "', '"
+  BIND( STRAFTER(?temp, "', '") AS ?temp2 )
+
+  # 4. Second character
+  BIND( STRBEFORE(?temp2, "', '") AS ?char2 )
+
+  # 5. Remaining string after the second character
+  BIND( STRAFTER(?temp2, "', '") AS ?char3 )
+
+  # Because we know there are exactly three items in this example,
+  # we didn't do a further STRBEFORE/STRAFTER. 
+
+  # 6. Turn character names into IRIs
+  BIND( IRI(CONCAT("https://litetaryworktopics.com/character/", ENCODE_FOR_URI(?char1))) AS ?char1Uri )
+  BIND( IRI(CONCAT("https://litetaryworktopics.com/character/", ENCODE_FOR_URI(?char2))) AS ?char2Uri )
+  BIND( IRI(CONCAT("https://litetaryworktopics.com/character/", ENCODE_FOR_URI(?char3))) AS ?char3Uri )
+
+
+  #
+  # -- (B) EXTRACT SERIES --
+  #
+  # For your sample CSV, there's only a single series: ['The Last Kingdom']
+  BIND(
+    REPLACE(STR(?seriesRaw), "^\\['|\\']$", "") 
+    AS ?seriesClean
+  )
+  # ?seriesClean should be: "The Last Kingdom"
+
+  # 7. Create Saga URI
+  BIND( IRI(CONCAT("https://litetaryworktopics.com/saga/", ENCODE_FOR_URI(?seriesClean))) AS ?sagaUri )
+}

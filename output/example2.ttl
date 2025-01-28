@@ -1,0 +1,28 @@
+@prefix lwt: <https://litetaryworktopics.com/litetaryworktopics2025#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz: <http://sparql.xyz/facade-x/data/> .
+
+<https://litetaryworktopics.com/character/Aethelflaed>
+        a              lwt:Character ;
+        lwt:appearsIn  <https://www.goodreads.com/work/editions/45146066> ;
+        lwt:hasName    "Aethelflaed" .
+
+<https://litetaryworktopics.com/character/Uhtred%20of%20Bebbanburg>
+        a              lwt:Character ;
+        lwt:appearsIn  <https://www.goodreads.com/work/editions/45146066> ;
+        lwt:hasName    "Uhtred of Bebbanburg" .
+
+<https://www.goodreads.com/work/editions/45146066>
+        a            lwt:Opera ;
+        lwt:hasName  "Warriors of the Storm" ;
+        lwt:webUrl   "https://www.goodreads.com/work/editions/45146066" .
+
+<https://litetaryworktopics.com/character/Alfred%20the%20Great>
+        a              lwt:Character ;
+        lwt:appearsIn  <https://www.goodreads.com/work/editions/45146066> ;
+        lwt:hasName    "Alfred the Great" .
+
+<https://litetaryworktopics.com/saga/The%20Last%20Kingdom>
+        a             lwt:Saga ;
+        lwt:contains  <https://www.goodreads.com/work/editions/45146066> ;
+        lwt:hasName   "The Last Kingdom" .
