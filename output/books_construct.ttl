@@ -10,9 +10,10 @@ lwt:The_Pillow_Book  rdf:type      lwt:Edizione ;
         dc:Title                   "The Pillow Book" ;
         lwt:HaContributoDi         lwt:Ivan_Morris ;
         lwt:HaDataPubblicazione    "1991-04-15" ;
-        lwt:HaEditore              "Columbia University Press" ;
         lwt:HaLingua               "English" ;
         lwt:HaNumeroPagine         "419"^^<http://www.w3.org/2001/XMLSchema#int> ;
+        lwt:PubblicatoDallOrganizzazione
+                lwt:Columbia_University_Press ;
         lwt:ScrittoDa              lwt:Sei_Shōnagon ;
         lwt:VieneClassificatoCome  lwt:historical , lwt:nonfiction , lwt:poetry , lwt:literature , lwt:biography , lwt:history , lwt:memoir , lwt:japan , lwt:classics , lwt:japanese_literature .
 
@@ -40,15 +41,19 @@ lwt:The_Arabian_Nights
         lwt:EdizioneDi             lwt:ألف_ليلة_وليلة ;
         lwt:HaContributoDi         lwt:A.S._Byatt ;
         lwt:HaDataPubblicazione    "2004-06-01" ;
-        lwt:HaEditore              "Modern Library" ;
         lwt:HaLingua               "English" ;
         lwt:HaNumeroPagine         "1049"^^<http://www.w3.org/2001/XMLSchema#int> ;
+        lwt:PubblicatoDallOrganizzazione
+                lwt:Modern_Library ;
         lwt:ScrittoDa              lwt:Anonymous ;
         lwt:VieneClassificatoCome  lwt:classic_literature , lwt:classics , lwt:fairy_tales , lwt:short_stories , lwt:literature , lwt:folklore , lwt:adventure , lwt:fiction , lwt:mythology , lwt:fantasy .
 
 lwt:伊勢物語  rdf:type      lwt:OperaLetteraria ;
         lwt:HaEdizione  lwt:The_Tales_of_Ise ;
         lwt:HaNome      "伊勢物語" .
+
+lwt:Avon_Books  rdf:type  lwt:CasaEditrice ;
+        lwt:HaPubblicato  lwt:Eaters_of_the_Dead .
 
 lwt:mythology  rdf:type        lwt:Tema ;
         lwt:HaNome             "mythology" ;
@@ -60,13 +65,22 @@ lwt:mythology  rdf:type        lwt:Tema ;
         lwt:EdizioneDi             <https://litetaryworktopics.com/litetaryworktopics2025#The_Ink_Dark_Moon:_Love_Poems_by_Ono_no_Komachi_and_Izumi_Shikibu,_Women_of_the_Ancient_Court_of_Japan> ;
         lwt:HaContributoDi         lwt:Izumi_Shikibu ;
         lwt:HaDataPubblicazione    "1990-10-03" ;
-        lwt:HaEditore              "Vintage" ;
         lwt:HaEdizione             <https://litetaryworktopics.com/litetaryworktopics2025#The_Ink_Dark_Moon:_Love_Poems_by_Ono_no_Komachi_and_Izumi_Shikibu,_Women_of_the_Ancient_Court_of_Japan> ;
         lwt:HaLingua               "English" ;
         lwt:HaNome                 "The Ink Dark Moon: Love Poems by Ono no Komachi and Izumi Shikibu, Women of the Ancient Court of Japan" ;
         lwt:HaNumeroPagine         "212"^^<http://www.w3.org/2001/XMLSchema#int> ;
+        lwt:PubblicatoDallOrganizzazione
+                lwt:Vintage ;
         lwt:ScrittoDa              lwt:Ono_no_Komachi ;
         lwt:VieneClassificatoCome  lwt:history , lwt:asia , lwt:japan , lwt:literature , lwt:japanese_literature , lwt:classics , lwt:anthologies , lwt:poetry , lwt:love , lwt:romance .
+
+lwt:Columbia_University_Press
+        rdf:type          lwt:CasaEditrice ;
+        lwt:HaPubblicato  lwt:The_Pillow_Book .
+
+lwt:Tuttle_Publishing
+        rdf:type          lwt:CasaEditrice ;
+        lwt:HaPubblicato  lwt:The_Tales_of_Ise .
 
 lwt:The_Unbroken_Line_of_the_Moon
         rdf:type                   lwt:Edizione ;
@@ -75,9 +89,10 @@ lwt:The_Unbroken_Line_of_the_Moon
         lwt:EdizioneDi             lwt:Sigrid_:_sagan_om_Valhalla_ ;
         lwt:HaContributoDi         lwt:Tara_Chace ;
         lwt:HaDataPubblicazione    "2016-10-01" ;
-        lwt:HaEditore              "Amazon Crossing" ;
         lwt:HaLingua               "English" ;
         lwt:HaNumeroPagine         "464"^^<http://www.w3.org/2001/XMLSchema#int> ;
+        lwt:PubblicatoDallOrganizzazione
+                lwt:Amazon_Crossing ;
         lwt:ScrittoDa              lwt:Johanne_Hildebrandt ;
         lwt:VieneClassificatoCome  lwt:sweden , lwt:paranormal , lwt:historical_fiction , lwt:mythology , lwt:audiobook , lwt:historical , lwt:fantasy , lwt:fiction , lwt:amazon , lwt:romance .
 
@@ -86,9 +101,10 @@ lwt:The_Unbroken_Line_of_the_Moon
         dc:Title                   "The Abbot's Tale" ;
         lwt:EdizioneDi             lwt: ;
         lwt:HaDataPubblicazione    "2018-05-01" ;
-        lwt:HaEditore              "Pegasus Books" ;
         lwt:HaLingua               "English" ;
         lwt:HaNumeroPagine         "480"^^<http://www.w3.org/2001/XMLSchema#int> ;
+        lwt:PubblicatoDallOrganizzazione
+                lwt:Pegasus_Books ;
         lwt:ScrittoDa              lwt:Conn_Iggulden ;
         lwt:VieneClassificatoCome  lwt:novels , lwt:historical , lwt:adult , lwt:war , lwt:british_literature , lwt:10th_century , lwt:historical_fiction , lwt:medieval , lwt:audiobook , lwt:fiction .
 
@@ -97,11 +113,12 @@ lwt:The_Flame_Bearer  rdf:type     lwt:Edizione , lwt:OperaLetteraria ;
         lwt:AppartieneA            <https://litetaryworktopics.com/litetaryworktopics2025#kca://series/amzn1.gr.series.v1._wedZzHR7zE0Lx56fNmudA> ;
         lwt:EdizioneDi             lwt:The_Flame_Bearer ;
         lwt:HaDataPubblicazione    "2016-10-06" ;
-        lwt:HaEditore              "HARPER COLLINS" ;
         lwt:HaEdizione             lwt:The_Flame_Bearer ;
         lwt:HaLingua               "English" ;
         lwt:HaNome                 "The Flame Bearer" ;
         lwt:HaNumeroPagine         "284"^^<http://www.w3.org/2001/XMLSchema#int> ;
+        lwt:PubblicatoDallOrganizzazione
+                lwt:HARPER_COLLINS ;
         lwt:ScrittoDa              lwt:Bernard_Cornwell ;
         lwt:VieneClassificatoCome  lwt:medieval , lwt:adventure , lwt:historical , lwt:fantasy , lwt:fiction , lwt:audiobook , lwt:novels , lwt:war , lwt:historical_fiction , lwt:british_literature .
 
@@ -110,11 +127,12 @@ lwt:War_Lord  rdf:type             lwt:Edizione , lwt:OperaLetteraria ;
         lwt:AppartieneA            <https://litetaryworktopics.com/litetaryworktopics2025#kca://series/amzn1.gr.series.v1._wedZzHR7zE0Lx56fNmudA> ;
         lwt:EdizioneDi             lwt:War_Lord ;
         lwt:HaDataPubblicazione    "2020-10-15" ;
-        lwt:HaEditore              "HarperCollins" ;
         lwt:HaEdizione             lwt:War_Lord ;
         lwt:HaLingua               "English" ;
         lwt:HaNome                 "War Lord" ;
         lwt:HaNumeroPagine         "333"^^<http://www.w3.org/2001/XMLSchema#int> ;
+        lwt:PubblicatoDallOrganizzazione
+                lwt:HarperCollins ;
         lwt:ScrittoDa              lwt:Bernard_Cornwell ;
         lwt:VieneClassificatoCome  lwt:war , lwt:action , lwt:adventure , lwt:medieval , lwt:british_literature , lwt:fantasy , lwt:fiction , lwt:historical_fiction , lwt:historical , lwt:audiobook .
 
@@ -130,6 +148,10 @@ lwt:british_literature
         rdf:type               lwt:Tema ;
         lwt:HaNome             "british literature" ;
         lwt:VieneUtilizzatoIn  lwt:Warriors_of_the_Storm , lwt:The_Evening_and_the_Morning , lwt:War_Lord , <https://litetaryworktopics.com/litetaryworktopics2025#The_Abbot's_Tale> , lwt:The_Pagan_Lord , lwt:Avalon , lwt:The_Flame_Bearer , lwt:The_Last_Kingdom .
+
+lwt:love  rdf:type             lwt:Genere ;
+        lwt:HaNome             "love" ;
+        lwt:VieneUtilizzatoIn  <https://litetaryworktopics.com/litetaryworktopics2025#The_Ink_Dark_Moon:_Love_Poems_by_Ono_no_Komachi_and_Izumi_Shikibu,_Women_of_the_Ancient_Court_of_Japan> .
 
 lwt:thriller  rdf:type         lwt:Tema ;
         lwt:HaNome             "thriller" ;
@@ -153,13 +175,15 @@ lwt:japanese_literature
         lwt:HaNome             "japanese literature" ;
         lwt:VieneUtilizzatoIn  <https://litetaryworktopics.com/litetaryworktopics2025#The_Ink_Dark_Moon:_Love_Poems_by_Ono_no_Komachi_and_Izumi_Shikibu,_Women_of_the_Ancient_Court_of_Japan> , lwt:The_Pillow_Book , lwt:The_Tales_of_Ise .
 
-lwt:love  rdf:type             lwt:Genere ;
-        lwt:HaNome             "love" ;
-        lwt:VieneUtilizzatoIn  <https://litetaryworktopics.com/litetaryworktopics2025#The_Ink_Dark_Moon:_Love_Poems_by_Ono_no_Komachi_and_Izumi_Shikibu,_Women_of_the_Ancient_Court_of_Japan> .
+lwt:Pegasus_Books  rdf:type  lwt:CasaEditrice ;
+        lwt:HaPubblicato  <https://litetaryworktopics.com/litetaryworktopics2025#The_Abbot's_Tale> .
 
 lwt:retellings  rdf:type       lwt:Tema ;
         lwt:HaNome             "retellings" ;
         lwt:VieneUtilizzatoIn  lwt:The_Weaver_and_the_Witch_Queen .
+
+lwt:Vintage  rdf:type     lwt:CasaEditrice ;
+        lwt:HaPubblicato  <https://litetaryworktopics.com/litetaryworktopics2025#The_Ink_Dark_Moon:_Love_Poems_by_Ono_no_Komachi_and_Izumi_Shikibu,_Women_of_the_Ancient_Court_of_Japan> .
 
 lwt:ألف_ليلة_وليلة  rdf:type  lwt:OperaLetteraria ;
         lwt:HaEdizione  lwt:The_Arabian_Nights ;
@@ -177,17 +201,22 @@ lwt:The_Weaver_and_the_Witch_Queen
         dc:Title                   "The Weaver and the Witch Queen" ;
         lwt:EdizioneDi             lwt:The_Weaver_and_the_Witch_Queen ;
         lwt:HaDataPubblicazione    "2023-07-25" ;
-        lwt:HaEditore              "Ace" ;
         lwt:HaEdizione             lwt:The_Weaver_and_the_Witch_Queen ;
         lwt:HaLingua               "English" ;
         lwt:HaNome                 "The Weaver and the Witch Queen" ;
         lwt:HaNumeroPagine         "424"^^<http://www.w3.org/2001/XMLSchema#int> ;
+        lwt:PubblicatoDallOrganizzazione
+                lwt:Ace ;
         lwt:ScrittoDa              lwt:Genevieve_Gornichec ;
         lwt:VieneClassificatoCome  lwt:historical_fantasy , lwt:fiction , lwt:mythology , lwt:witches , lwt:fantasy , lwt:historical_fiction , lwt:adult , lwt:historical , lwt:audiobook , lwt:retellings .
 
 lwt:literature  rdf:type       lwt:Tema ;
         lwt:HaNome             "literature" ;
         lwt:VieneUtilizzatoIn  <https://litetaryworktopics.com/litetaryworktopics2025#The_Ink_Dark_Moon:_Love_Poems_by_Ono_no_Komachi_and_Izumi_Shikibu,_Women_of_the_Ancient_Court_of_Japan> , lwt:The_Pillow_Book , lwt:The_Tales_of_Ise , lwt:Beowulf , lwt:The_Arabian_Nights .
+
+<https://litetaryworktopics.com/litetaryworktopics2025#W.W._Norton_&_Company>
+        rdf:type          lwt:CasaEditrice ;
+        lwt:HaPubblicato  lwt:Beowulf .
 
 lwt:folklore  rdf:type         lwt:Tema ;
         lwt:HaNome             "folklore" ;
@@ -198,11 +227,12 @@ lwt:The_Pagan_Lord  rdf:type       lwt:Edizione , lwt:OperaLetteraria ;
         lwt:AppartieneA            <https://litetaryworktopics.com/litetaryworktopics2025#kca://series/amzn1.gr.series.v1._wedZzHR7zE0Lx56fNmudA> ;
         lwt:EdizioneDi             lwt:The_Pagan_Lord ;
         lwt:HaDataPubblicazione    "2013-09-26" ;
-        lwt:HaEditore              "Harper Collins" ;
         lwt:HaEdizione             lwt:The_Pagan_Lord ;
         lwt:HaLingua               "English" ;
         lwt:HaNome                 "The Pagan Lord" ;
         lwt:HaNumeroPagine         "303"^^<http://www.w3.org/2001/XMLSchema#int> ;
+        lwt:PubblicatoDallOrganizzazione
+                lwt:Harper_Collins ;
         lwt:ScrittoDa              lwt:Bernard_Cornwell ;
         lwt:VieneClassificatoCome  lwt:historical_fiction , lwt:adventure , lwt:fiction , lwt:british_literature , lwt:fantasy , lwt:war , lwt:medieval , lwt:historical , lwt:audiobook , lwt:action .
 
@@ -211,9 +241,10 @@ lwt:Beowulf  rdf:type              lwt:Edizione ;
         lwt:EdizioneDi             lwt:Beowulf._A_Prose_Translation ;
         lwt:HaContributoDi         lwt:Seamus_Heaney ;
         lwt:HaDataPubblicazione    "2001-02-17" ;
-        lwt:HaEditore              "W.W. Norton & Company" ;
         lwt:HaLingua               "English" ;
         lwt:HaNumeroPagine         "259"^^<http://www.w3.org/2001/XMLSchema#int> ;
+        lwt:PubblicatoDallOrganizzazione
+                <https://litetaryworktopics.com/litetaryworktopics2025#W.W._Norton_&_Company> ;
         lwt:ScrittoDa              lwt:Unknown ;
         lwt:VieneClassificatoCome  lwt:literature , lwt:mythology , lwt:poetry , lwt:classics , lwt:historical_fiction , lwt:school , lwt:high_school , lwt:fantasy , lwt:fiction , lwt:read_for_school .
 
@@ -236,11 +267,12 @@ lwt:Avalon  rdf:type               lwt:Edizione , lwt:OperaLetteraria ;
         lwt:EdizioneDi             lwt:Avalon ;
         lwt:HaContributoDi         lwt:Philippa_Gregory ;
         lwt:HaDataPubblicazione    "2006-05-01" ;
-        lwt:HaEditore              "Chicago Review Press" ;
         lwt:HaEdizione             lwt:Avalon ;
         lwt:HaLingua               "English" ;
         lwt:HaNome                 "Avalon" ;
         lwt:HaNumeroPagine         "440"^^<http://www.w3.org/2001/XMLSchema#int> ;
+        lwt:PubblicatoDallOrganizzazione
+                lwt:Chicago_Review_Press ;
         lwt:ScrittoDa              lwt:Anya_Seton ;
         lwt:VieneClassificatoCome  lwt:medieval , lwt:romance , lwt:fiction , lwt:british_literature , lwt:arthurian , lwt:historical_fiction , lwt:historical_romance , lwt:fantasy , lwt:historical , lwt:classics .
 
@@ -253,9 +285,10 @@ lwt:The_Tales_of_Ise  rdf:type     lwt:Edizione ;
         lwt:EdizioneDi             lwt:伊勢物語 ;
         lwt:HaContributoDi         lwt:H._Jay_Harris ;
         lwt:HaDataPubblicazione    "1972-01-01" ;
-        lwt:HaEditore              "Tuttle Publishing" ;
         lwt:HaLingua               "English" ;
         lwt:HaNumeroPagine         "247"^^<http://www.w3.org/2001/XMLSchema#int> ;
+        lwt:PubblicatoDallOrganizzazione
+                lwt:Tuttle_Publishing ;
         lwt:ScrittoDa              lwt:Anonymous ;
         lwt:VieneClassificatoCome  lwt:asia , lwt:poetry , lwt:10th_century , lwt:fiction , lwt:japan , lwt:asian_literature , lwt:literature , lwt:short_stories , lwt:japanese_literature , lwt:classics .
 
@@ -301,6 +334,9 @@ lwt:Sei_Shōnagon  rdf:type  lwt:Autore ;
 lwt:Unknown  rdf:type  lwt:Autore ;
         lwt:HaNome  "Unknown" .
 
+lwt:Ace  rdf:type         lwt:CasaEditrice ;
+        lwt:HaPubblicato  lwt:The_Weaver_and_the_Witch_Queen .
+
 lwt:medieval  rdf:type         lwt:Tema ;
         lwt:HaNome             "medieval" ;
         lwt:VieneUtilizzatoIn  lwt:Warriors_of_the_Storm , lwt:The_Pagan_Lord , lwt:War_Lord , lwt:The_Last_Kingdom , <https://litetaryworktopics.com/litetaryworktopics2025#The_Abbot's_Tale> , lwt:The_Flame_Bearer , lwt:Avalon , lwt:The_Evening_and_the_Morning .
@@ -309,17 +345,20 @@ lwt:A.S._Byatt  rdf:type  lwt:Persona ;
         lwt:HaNome   "A.S. Byatt" ;
         lwt:HaRuolo  "Introduction" .
 
+lwt:Head_of_Zeus  rdf:type  lwt:CasaEditrice ;
+        lwt:HaPubblicato  lwt:The_Children_of_Gods_and_Fighting_Men .
+
 lwt:historical  rdf:type       lwt:Tema ;
         lwt:HaNome             "historical" ;
         lwt:VieneUtilizzatoIn  lwt:The_Unbroken_Line_of_the_Moon , lwt:War_Lord , lwt:The_Pagan_Lord , lwt:The_Evening_and_the_Morning , lwt:Avalon , lwt:Warriors_of_the_Storm , lwt:The_Pillow_Book , lwt:The_Flame_Bearer , lwt:The_Weaver_and_the_Witch_Queen , <https://litetaryworktopics.com/litetaryworktopics2025#The_Abbot's_Tale> , lwt:The_Children_of_Gods_and_Fighting_Men , lwt:Eaters_of_the_Dead , lwt:The_Last_Kingdom .
 
-lwt:ireland  rdf:type          lwt:Tema ;
-        lwt:HaNome             "ireland" ;
-        lwt:VieneUtilizzatoIn  lwt:The_Children_of_Gods_and_Fighting_Men .
-
 lwt:Ivan_Morris  rdf:type  lwt:Persona ;
         lwt:HaNome   "Ivan Morris" ;
         lwt:HaRuolo  "Translator" .
+
+lwt:ireland  rdf:type          lwt:Tema ;
+        lwt:HaNome             "ireland" ;
+        lwt:VieneUtilizzatoIn  lwt:The_Children_of_Gods_and_Fighting_Men .
 
 <https://litetaryworktopics.com/litetaryworktopics2025#kca://series/amzn1.gr.series.v1._wedZzHR7zE0Lx56fNmudA>
         rdf:type    lwt:Saga ;
@@ -333,9 +372,19 @@ lwt:audiobook  rdf:type        lwt:Genere ;
         lwt:HaNome             "audiobook" ;
         lwt:VieneUtilizzatoIn  lwt:The_Weaver_and_the_Witch_Queen , lwt:The_Children_of_Gods_and_Fighting_Men , lwt:The_Last_Kingdom , lwt:The_Flame_Bearer , lwt:The_Evening_and_the_Morning , lwt:The_Pagan_Lord , <https://litetaryworktopics.com/litetaryworktopics2025#The_Abbot's_Tale> , lwt:Warriors_of_the_Storm , lwt:The_Unbroken_Line_of_the_Moon , lwt:War_Lord .
 
+lwt:Amazon_Crossing  rdf:type  lwt:CasaEditrice ;
+        lwt:HaPubblicato  lwt:The_Unbroken_Line_of_the_Moon .
+
 lwt:sweden  rdf:type           lwt:Tema ;
         lwt:HaNome             "sweden" ;
         lwt:VieneUtilizzatoIn  lwt:The_Unbroken_Line_of_the_Moon .
+
+lwt:Chicago_Review_Press
+        rdf:type          lwt:CasaEditrice ;
+        lwt:HaPubblicato  lwt:Avalon .
+
+lwt:Harper_Collins  rdf:type  lwt:CasaEditrice ;
+        lwt:HaPubblicato  lwt:The_Pagan_Lord .
 
 lwt:asia  rdf:type             lwt:Tema ;
         lwt:HaNome             "asia" ;
@@ -369,11 +418,12 @@ lwt:Eaters_of_the_Dead
         dc:Title                   "Eaters of the Dead" ;
         lwt:EdizioneDi             lwt:Eaters_of_the_Dead ;
         lwt:HaDataPubblicazione    "2006-01-01" ;
-        lwt:HaEditore              "Avon Books" ;
         lwt:HaEdizione             lwt:Eaters_of_the_Dead ;
         lwt:HaLingua               "English" ;
         lwt:HaNome                 "Eaters of the Dead" ;
         lwt:HaNumeroPagine         "304"^^<http://www.w3.org/2001/XMLSchema#int> ;
+        lwt:PubblicatoDallOrganizzazione
+                lwt:Avon_Books ;
         lwt:ScrittoDa              lwt:Michael_Crichton ;
         lwt:VieneClassificatoCome  lwt:horror , lwt:fiction , lwt:thriller , lwt:fantasy , lwt:historical , lwt:science_fiction , lwt:mythology , lwt:novels , lwt:historical_fiction , lwt:adventure .
 
@@ -391,11 +441,12 @@ lwt:The_Evening_and_the_Morning
         lwt:AppartieneA            <https://litetaryworktopics.com/litetaryworktopics2025#kca://series/amzn1.gr.series.v1.qgqLmU5OAQDt0jayLbSGBw> ;
         lwt:EdizioneDi             lwt:The_Evening_and_the_Morning ;
         lwt:HaDataPubblicazione    "2020-09-15" ;
-        lwt:HaEditore              "Viking" ;
         lwt:HaEdizione             lwt:The_Evening_and_the_Morning ;
         lwt:HaLingua               "English" ;
         lwt:HaNome                 "The Evening and the Morning" ;
         lwt:HaNumeroPagine         "913"^^<http://www.w3.org/2001/XMLSchema#int> ;
+        lwt:PubblicatoDallOrganizzazione
+                lwt:Viking ;
         lwt:ScrittoDa              lwt:Ken_Follett ;
         lwt:VieneClassificatoCome  lwt:romance , lwt:historical , lwt:adult , lwt:audiobook , lwt:fiction , lwt:british_literature , lwt:medieval , lwt:adventure , lwt:fantasy , lwt:historical_fiction .
 
@@ -430,9 +481,10 @@ lwt:The_Children_of_Gods_and_Fighting_Men
         lwt:AppartieneA            <https://litetaryworktopics.com/litetaryworktopics2025#kca://series/amzn1.gr.series.v3.X06FNO2HyMlDyAJM> ;
         lwt:EdizioneDi             lwt: ;
         lwt:HaDataPubblicazione    "2022-09-01" ;
-        lwt:HaEditore              "Head of Zeus" ;
         lwt:HaLingua               "English" ;
         lwt:HaNumeroPagine         "416"^^<http://www.w3.org/2001/XMLSchema#int> ;
+        lwt:PubblicatoDallOrganizzazione
+                lwt:Head_of_Zeus ;
         lwt:ScrittoDa              lwt:Shauna_Lawless ;
         lwt:VieneClassificatoCome  lwt:folklore , lwt:mythology , lwt:fantasy , lwt:historical , lwt:adult , lwt:ireland , lwt:audiobook , lwt:fiction , lwt:historical_fiction , lwt:historical_fantasy .
 
@@ -465,11 +517,12 @@ lwt:Warriors_of_the_Storm
         lwt:AppartieneA            <https://litetaryworktopics.com/litetaryworktopics2025#kca://series/amzn1.gr.series.v1._wedZzHR7zE0Lx56fNmudA> ;
         lwt:EdizioneDi             lwt:Warriors_of_the_Storm ;
         lwt:HaDataPubblicazione    "2015-10-08" ;
-        lwt:HaEditore              "HarperCollins" ;
         lwt:HaEdizione             lwt:Warriors_of_the_Storm ;
         lwt:HaLingua               "English" ;
         lwt:HaNome                 "Warriors of the Storm" ;
         lwt:HaNumeroPagine         "298"^^<http://www.w3.org/2001/XMLSchema#int> ;
+        lwt:PubblicatoDallOrganizzazione
+                lwt:HarperCollins ;
         lwt:ScrittoDa              lwt:Bernard_Cornwell ;
         lwt:VieneClassificatoCome  lwt:novels , lwt:adventure , lwt:medieval , lwt:historical , lwt:audiobook , lwt:war , lwt:fantasy , lwt:historical_fiction , lwt:fiction , lwt:british_literature .
 
@@ -481,21 +534,34 @@ lwt:school  rdf:type           lwt:Tema ;
         lwt:HaNome             "school" ;
         lwt:VieneUtilizzatoIn  lwt:Beowulf .
 
+lwt:Viking  rdf:type      lwt:CasaEditrice ;
+        lwt:HaPubblicato  lwt:The_Evening_and_the_Morning .
+
 lwt:The_Last_Kingdom  rdf:type     lwt:Edizione , lwt:OperaLetteraria ;
         dc:Title                   "The Last Kingdom" ;
         lwt:AppartieneA            <https://litetaryworktopics.com/litetaryworktopics2025#kca://series/amzn1.gr.series.v1._wedZzHR7zE0Lx56fNmudA> ;
         lwt:EdizioneDi             lwt:The_Last_Kingdom ;
         lwt:HaDataPubblicazione    "2006-01-01" ;
-        lwt:HaEditore              "HarperCollins" ;
         lwt:HaEdizione             lwt:The_Last_Kingdom ;
         lwt:HaLingua               "English" ;
         lwt:HaNome                 "The Last Kingdom" ;
         lwt:HaNumeroPagine         "333"^^<http://www.w3.org/2001/XMLSchema#int> ;
+        lwt:PubblicatoDallOrganizzazione
+                lwt:HarperCollins ;
         lwt:ScrittoDa              lwt:Bernard_Cornwell ;
         lwt:VieneClassificatoCome  lwt:fiction , lwt:adult , lwt:historical_fiction , lwt:historical , lwt:war , lwt:adventure , lwt:medieval , lwt:british_literature , lwt:audiobook , lwt:fantasy .
 
+lwt:HARPER_COLLINS  rdf:type  lwt:CasaEditrice ;
+        lwt:HaPubblicato  lwt:The_Flame_Bearer .
+
+lwt:HarperCollins  rdf:type  lwt:CasaEditrice ;
+        lwt:HaPubblicato  lwt:The_Last_Kingdom , lwt:Warriors_of_the_Storm , lwt:War_Lord .
+
 lwt:Bernard_Cornwell  rdf:type  lwt:Autore ;
         lwt:HaNome  "Bernard Cornwell" .
+
+lwt:Modern_Library  rdf:type  lwt:CasaEditrice ;
+        lwt:HaPubblicato  lwt:The_Arabian_Nights .
 
 lwt:biography  rdf:type        lwt:Tema ;
         lwt:HaNome             "biography" ;

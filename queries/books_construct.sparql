@@ -46,8 +46,13 @@ CONSTRUCT {
     # Book metadata
     ?bookMyNs lwt:HaNumeroPagine ?numPages .
     ?bookMyNs lwt:HaDataPubblicazione ?publicationTime .
-    ?bookMyNs lwt:HaEditore ?publisher .
+    ?bookMyNs lwt:PubblicatoDallOrganizzazione ?publisherMyNs .
     ?bookMyNs lwt:HaLingua ?language .
+
+    # Publisher details
+    ?publisherMyNs a lwt:CasaEditrice .
+    ?publisherMyNs lwt:HaPubblicato ?bookMyNs .
+
 } WHERE {
     SERVICE <x-sparql-anything:location=merged_book_details.json> {
         
@@ -90,7 +95,9 @@ CONSTRUCT {
         # Book metadata
         ?book xyz:numPages ?numPages .
         ?book xyz:publicationTime ?publicationTime .
-        ?book xyz:publisher ?publisher .
+        ?book xyz:publisher ?publisherName .
+        BIND (IRI(CONCAT("https://litetaryworktopics.com/litetaryworktopics2025#", REPLACE(?publisherName, " ", "_", "i"))) AS ?publisherMyNs)
+        
         ?book xyz:language ?language .
     }
 }
