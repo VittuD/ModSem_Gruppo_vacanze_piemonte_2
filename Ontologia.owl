@@ -444,6 +444,13 @@
         </ObjectSomeValuesFrom>
     </EquivalentClasses>
     <EquivalentClasses>
+        <Class IRI="Genere"/>
+        <ObjectOneOf>
+            <NamedIndividual IRI="Fantasy"/>
+            <NamedIndividual IRI="Romanzo_storico"/>
+        </ObjectOneOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
         <Class IRI="ListaDiOpereLetterarie"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="Contiene"/>
