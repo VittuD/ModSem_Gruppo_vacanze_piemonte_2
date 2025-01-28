@@ -1,10 +1,95 @@
-@prefix dc:     <http://purl.org/dc/elements/1.1/> .
 @prefix fx:     <http://sparql.xyz/facade-x/ns/> .
 @prefix lwt:    <https://litetaryworktopics.com/litetaryworktopics2025#> .
 @prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema: <http://schema.org/> .
 @prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+####
+#   AUTHORS
+####
+
+lwt:Ken_Follett  rdf:type     schema:Person ;
+        schema:HaDescrizione  "Ken Follett is one of the world’s most successful authors. Over 170 million copies of the 36 books he has written have been sold in over 80 countries and in 33 languages.<br /><br />Born on June 5th, 1949 in Cardiff, Wales, the son of a tax inspector, Ken was educated at state schools and went on to graduate from University College, London, with an Honours degree in Philosophy – later to be made a Fellow of the College in 1995.<br /><br />He started his career as a reporter, first with his hometown newspaper the South Wales Echo and then with the London Evening News. Subsequently, he worked for a small London publishing house, Everest Books, eventually becoming Deputy Managing Director.<br /><br />Ken’s first major success came with the publication of Eye of the Needle in 1978. A World War II thriller set in England, this book earned him the 1979 Edgar Award for Best Novel from the Mystery Writers of America. It remains one of Ken’s most popular books.<br /><br />In 1989, Ken’s epic novel about the building of a medieval cathedral, The Pillars of the Earth, was published. It reached number one on best-seller lists everywhere and was turned into a major television series produced by Ridley Scott, which aired in 2010. World Without End, the sequel to The Pillars of the Earth, proved equally popular when it was published in 2007.<br /><br />Ken’s new book, The Evening and the Morning, will be published in September 2020. It is a prequel to The Pillars of the Earth and is set around the year 1,000, when Kingsbridge was an Anglo-Saxon settlement threatened by Viking invaders.<br /><br />Ken has been active in numerous literacy charities and was president of Dyslexia Action for ten years. He was chair of the National Year of Reading, a joint initiative between government and businesses. He is also active in many Stevenage charities and is President of the Stevenage Community Trust and Patron of Home-Start Hertfordshire.<br /><br />Ken, who loves music almost as much as he loves books, is an enthusiastic bass guitar player. He lives in Stevenage, Hertfordshire, with his wife Barbara, the former Labour Member of Parliament for Stevenage. Between them they have five children, six grandchildren and two Labradors." ;
+        schema:relatedLink    "https://www.goodreads.com/author/show/3447.Ken_Follett" ;
+        lwt:HaNome            "Ken Follett" .
+
+lwt:Michitsuna_no_Haha
+        rdf:type              schema:Person ;
+        schema:HaDescrizione  "Michitsuna no Haha (c.935-995) was a Heian period writer in Japan. Her true name is unknown to history. The term <i>Michitsuna no Haha</i> literally translates to <i>Michitsuna's mother</i>. She is a member of the Thirty-six Medieval Poetry Immortals (中古三十六歌仙 <i>chūko sanjurokkasen</i>).<br /><br />She wrote the <i>Kagerō Nikki</i> about her troubled marriage to Fujiwara no Kaneie, (who served as Sesshō and Kampaku,) which is a classic of Japanese literature.<br /><br />(from Wikipedia)" ;
+        schema:relatedLink    "https://www.goodreads.com/author/show/108677.Michitsuna_no_Haha" ;
+        lwt:HaNome            "Michitsuna no Haha" .
+
+lwt:Sei_Shōnagon  rdf:type    schema:Person ;
+        schema:HaDescrizione  "清少納言 in Japanese <br />Sei Shonagon (c. 966 -1017) was a Japanese author and a court lady who served the Empress Teishi (Sadako) around the year 1000 during the middle Heian period. She is best known as the author of \"The Pillow Book\" (枕草子 makura no sōshi).<br />" ;
+        schema:relatedLink    "https://www.goodreads.com/author/show/10983.Sei_Sh_nagon" ;
+        lwt:HaNome            "Sei Shōnagon" .
+
+lwt:Ono_no_Komachi  rdf:type  schema:Person ;
+        schema:HaDescrizione  "Ono no Komachi (小野 小町?, c. 825 – c. 900) was a Japanese waka poet, one of the Rokkasen — the six best waka poets of the early Heian period. She was renowned for her unusual beauty, and Komachi is today a synonym for feminine beauty in Japan.[1] She also counts among the Thirty-six Poetry Immortals." ;
+        schema:relatedLink    "https://www.goodreads.com/author/show/110183.Ono_no_Komachi" ;
+        lwt:HaNome            "Ono no Komachi" .
+
+lwt:Anya_Seton  rdf:type      schema:Person ;
+        schema:HaDescrizione  "Anya Seton (January 23, 1904 (although the year is often misstated to be 1906 or 1916) - November 8, 1990) was the pen name of the American author of historical romances, Ann Seton.<br /><br />Ann Seton was born in New York, and died in Old Greenwich, Connecticut. She was the daughter of English-born naturalist and pioneer of the Boy Scouts of America, <a href=\"https://www.goodreads.com/author/show/31707.Ernest_Thompson_Seton\" title=\"Ernest Thompson Seton\" rel=\"nofollow noopener\">Ernest Thompson Seton</a> and <a href=\"https://www.goodreads.com/author/show/3916395.Grace_Gallatin_Seton_Thompson\" title=\"Grace Gallatin Seton-Thompson\" rel=\"nofollow noopener\">Grace Gallatin Seton-Thompson</a>. She is interred at Putnam Cemetery in Greenwich.<br /><br />Her historical novels were noted for how extensively she researched the historical facts, and some of them were best-sellers.[citation needed] Dragonwyck (1941) and Foxfire (1950) were both made into Hollywood films. Two of her books are classics in their genre and continue in their popularity to the present; Katherine, the story of Katherine Swynford, the mistress and eventual wife of John of Gaunt, and their children, who eventually became the basis for the Tudor and Stuart families of England, and Green Darkness, the story of a modern couple plagued by their past life incarnations. Most of her novels have been recently republished, several with forewords by Philippa Gregory.<br /><br />Her novel Devil Water concerns James, the luckless Earl of Derwentwater and his involvement with the Jacobite rising of 1715. She also narrates the story of his brother Charles, beheaded after the 1745 rebellion, the last man to die for the cause. The action of the novel moves back and forth between Northumberland, Tyneside, London and America.<br /><br />Anya Seton stated that the book developed out of her love for Northumberland. Anya certainly visited her Snowdon cousins at Felton. Billy Pigg, the celebrated Northumbrian piper played 'Derwentwater's Farewell' especially for her. The novel shows her typical thorough research of events and places, though the accents are a little wayward. Anya Seton said that her greatest debt of all was to Miss Amy Flagg of Westoe Village in South Shields, her father's birthplace." ;
+        schema:relatedLink    "https://www.goodreads.com/author/show/18930.Anya_Seton" ;
+        lwt:HaNome            "Anya Seton" .
+
+lwt:Anonymous  rdf:type       schema:Person ;
+        schema:HaDescrizione  "Books can be attributed to \"Anonymous\" for several reasons: <br /><br />* They are officially published under that name <br />* They are traditional stories not attributed to a specific author <br />* They are religious texts not generally attributed to a specific author <br /><br />Books whose authorship is merely uncertain should be attributed to <a href=\"https://www.goodreads.com/author/show/4699102.Unknown\" title=\"Unknown\" rel=\"nofollow noopener\">Unknown</a>.<br /><br />See also: <a href=\"https://www.goodreads.com/author/show/22619802.Anonymous\" title=\"Anonymous\" rel=\"nofollow noopener\">Anonymous</a><p></p>" ;
+        schema:relatedLink    "https://www.goodreads.com/author/show/5158478.Anonymous" ;
+        lwt:HaNome            "Anonymous" .
+
+lwt:Ahmad_ibn_Fadlān  rdf:type  schema:Person ;
+        schema:HaDescrizione  "هو أحمد بن العباس بن راشد بن حماد البغدادي، عالم إسلامي من القرن العاشر الميلادي . كتب وصف رحلته كعضو في سفارة الخليفة العباسي إلى ملك الصقالبة (بلغار الفولجا)سنة 921 م.<br /> <br />Ahmad ibn Fadlān ibn al-Abbās ibn Rāšid ibn Hammād (Arabic: أحمد بن فضلان بن العباس بن راشد بن حماد‎) was a 10th-century Arab traveler, famous for his account of his travels as a member of an embassy of the Abbasid Caliph of Baghdad to the king of the Volga Bulgars. His account is most known for providing a description of the Volga Vikings, including an eyewitness account of a ship burial. He provided descriptions for various other peoples, most notably Turkic peoples such as the Oghuzes, Pechenegs, Bashkirs, and Khazars.<br />" ;
+        schema:relatedLink    "https://www.goodreads.com/author/show/49810.Ahmad_ibn_Fadl_n" ;
+        lwt:HaNome            "Ahmad ibn Fadlān" .
+
+lwt:Shauna_Lawless  rdf:type  schema:Person ;
+        schema:HaDescrizione  "" ;
+        schema:relatedLink    "https://www.goodreads.com/author/show/22225370.Shauna_Lawless" ;
+        lwt:HaNome            "Shauna Lawless" .
+
+lwt:Unknown  rdf:type         schema:Person ;
+        schema:HaDescrizione  "Books can be attributed to \"Unknown\" when the author or editor (as applicable) is not known and cannot be discovered. If at all possible, list at least one actual author or editor for a book instead of using \"Unknown\".<br /><br />Books whose authorship is purposefully withheld should be attributed instead to Anonymous." ;
+        schema:relatedLink    "https://www.goodreads.com/author/show/4699102.Unknown" ;
+        lwt:HaNome            "Unknown" .
+
+lwt:Conn_Iggulden  rdf:type   schema:Person ;
+        schema:HaDescrizione  "<i>Also publishes under author name <a href=\"https://www.goodreads.com/author/show/16155974.C_F__Iggulden\" title=\"C.F. Iggulden\" rel=\"nofollow noopener\">C.F. Iggulden</a>.</i><br /><br />I was born in the normal way in 1971, and vaguely remember half-pennies and sixpences. I have written for as long as I can remember: poetry, short stories and novels. It’s what I always wanted to do and read English at London University with writing in mind. I taught English for seven years and was Head of English at St. Gregory’s RC High School in London by the end of that period. I have enormous respect for those who still labour at the chalk-face. In truth, I can’t find it in me to miss the grind of paperwork and initiatives. I do miss the camaraderie of the smokers’ room, as well as the lessons where their faces lit up as they understood what I was wittering on about.<br /><br />My mother is Irish and from an early age she told me history as an exciting series of stories – with dates. My great-grandfather was a Seannachie, so I suppose story-telling is in the genes somewhere. My father flew in Bomber Command in WWII, then taught maths and science. Perhaps crucially, he also loved poetry and cracking good tales. Though it seems a dated idea now, I began teaching when boys were told only girls were good at English, despite the great names that must spring to mind after that statement. My father loved working with wood and equations, but he also recited ‘Vitai Lampada’ with a gleam in his eye and that matters, frankly.<br /><br />I’ve always loved historical fiction as a genre and cut my teeth on Hornblower and Tai-Pan, Flashman, Sharpe and Jack Aubrey. I still remember the sheer joy of reading my first Patrick O’Brian book and discovering there were nineteen more in the series. I love just about anything by David Gemmell, or Peter F. Hamilton or Wilbur Smith. I suppose the one thing that links all those is the love of a good tale.<br /><br />That’s about it for the moment. If you’d like to get in touch with me leave a comment in the forum or you can tweet me @Conn_Iggulden. I’ll leave it there for the moment. If you’ve read my books, you know an awful lot about the way I think already. There’s no point overdoing it.<br /><br />Conn Iggulden<br />" ;
+        schema:relatedLink    "https://www.goodreads.com/author/show/119121.Conn_Iggulden" ;
+        lwt:HaNome            "Conn Iggulden" .
+
+lwt:Murasaki_Shikibu  rdf:type  schema:Person ;
+        schema:HaDescrizione  "born perhaps 978<br />died perhaps 1031<br />Japanese: <a href=\"https://www.goodreads.com/author/show/880790.___\" title=\"紫式部\" rel=\"nofollow noopener\">紫式部</a><br /><br /><i>\n  <a href=\"https://www.goodreads.com/book/show/7042.The_Tale_of_Genji\" title=\"The Tale of Genji\" rel=\"nofollow noopener\">The Tale of Genji</a>\n</i> among the first examples of the novel as a literary form of Japanese writer Baroness <b>Murasaki Shikibu</b> greatly influenced later fiction.<br /><br />People in English sometimes knew Murasaki Shikibu, a lady, a poet, and a maid of honor of the imperial court during the period of Heian. People best knew this earliest and most famous author between 1000 and 1008 in human history. Some scholars postulated Fujiwara Takako as her unknown, real, actual, given name. Her diary states that after a character, court nicknamed her \"Murasaki,\" purple wisteria blossom.\" <br />\"Shikibu\" refers to position of her father in the bureau of ceremony. <br /><br /><a target=\"_blank\" rel=\"noopener nofollow\" href=\"https://en.wikipedia.org/wiki/Murasaki_Shikibu\">https://en.wikipedia.org/wiki/Murasak...</a><br />" ;
+        schema:relatedLink    "https://www.goodreads.com/author/show/4739.Murasaki_Shikibu" ;
+        lwt:HaNome            "Murasaki Shikibu" .
+
+lwt:Johanne_Hildebrandt
+        rdf:type              schema:Person ;
+        schema:HaDescrizione  "" ;
+        schema:relatedLink    "https://www.goodreads.com/author/show/744576.Johanne_Hildebrandt" ;
+        lwt:HaNome            "Johanne Hildebrandt" .
+
+lwt:Michael_Crichton  rdf:type  schema:Person ;
+        schema:HaDescrizione  "Michael Crichton (1942-2008) was one of the most successful novelists of his generation, admired for his meticulous scientific research and fast-paced narrative. He graduated summa cum laude and earned his MD from Harvard Medical School in 1969. His first novel, <i>\n  <a href=\"https://www.goodreads.com/book/show/18078737.Odds_On\" title=\"Odds On\" rel=\"nofollow noopener\">Odds On</a>\n</i> (1966), was written under the pseudonym <a href=\"https://www.goodreads.com/author/show/12619.John_Lange\" title=\"John Lange\" rel=\"nofollow noopener\">John Lange</a> and was followed by seven more Lange novels. He also wrote as <a href=\"https://www.goodreads.com/author/show/85503.Michael_Douglas\" title=\"Michael Douglas\" rel=\"nofollow noopener\">Michael Douglas</a> and <a href=\"https://www.goodreads.com/author/show/607284.Jeffery_Hudson\" title=\"Jeffery Hudson\" rel=\"nofollow noopener\">Jeffery Hudson</a>. His novel <i>\n  <a href=\"https://www.goodreads.com/book/show/7663.A_Case_of_Need\" title=\"A Case of Need\" rel=\"nofollow noopener\">A Case of Need</a>\n</i> won the Edgar Award in 1969. Popular throughout the world, he has sold more than 200 million books. His novels have been translated into thirty-eight languages, and thirteen have been made into films.<br /><br />Michael Crichton died of lymphoma in 2008. He was 66 years old." ;
+        schema:relatedLink    "https://www.goodreads.com/author/show/5194.Michael_Crichton" ;
+        lwt:HaNome            "Michael Crichton" .
+
+lwt:Genevieve_Gornichec
+        rdf:type              schema:Person ;
+        schema:HaDescrizione  "Genevieve Gornichec very occasionally logs on here to rate a book or two. She lives in northeast Ohio, where she has been known to haunt local coffee shops and also pretend to be a tenth-century Scandinavian weaver on the weekends.<br /><br />Instagram: @gengornichec (most active)<br />Twitter: @gengornichec (updates only)<br />Facebook: <a target=\"_blank\" rel=\"noopener nofollow\" href=\"https://www.facebook.com/gengornichec\">https://www.facebook.com/gengornichec</a> (updates only)" ;
+        schema:relatedLink    "https://www.goodreads.com/author/show/18360585.Genevieve_Gornichec" ;
+        lwt:HaNome            "Genevieve Gornichec" .
+
+lwt:Bernard_Cornwell  rdf:type  schema:Person ;
+        schema:HaDescrizione  "Cornwell was born in London in 1944. His father was a Canadian airman, and his mother, who was English, a member of the Women's Auxiliary Air Force. He was adopted and brought up in Essex by the Wiggins family, who were members of the Peculiar People, a strict Protestant sect who banned frivolity of all kinds and even medicine. After he left them, he changed his name to his birth mother's maiden name, Cornwell.<br /><br />Cornwell was sent away to Monkton Combe School, attended the University of London, and after graduating, worked as a teacher. He attempted to enlist in the British armed services at least three times but was rejected on the grounds of myopia.<br /><br />He then joined BBC's Nationwide and was promoted to become head of current affairs at BBC Northern Ireland. He then joined Thames Television as editor of Thames News. He relocated to the United States in 1980 after marrying an American. Unable to get a green card, he started writing novels, as this did not require a work permit.<br /><br />As a child, Cornwell loved the novels of C.S. Forester, chronicling the adventures of fictional British naval officer Horatio Hornblower during the Napoleonic Wars, and was surprised to find there were no such novels following Lord Wellington's campaign on land. Motivated by the need to support himself in the U.S. through writing, Cornwell decided to write such a series. He named his chief protagonist Richard Sharpe, a rifleman involved in most major battles of the Peninsular War.<br /><br />Cornwell wanted to start the series with the Siege of Badajoz but decided instead to start with a couple of \"warm-up\" novels. These were <i>Sharpe's Eagle</i> and <i>Sharpe's Gold</i>, both published in 1981. <i>Sharpe's Eagle</i> was picked up by a publisher, and Cornwell got a three-book deal. He went on to tell the story of Badajoz in his third Sharpe novel, <i>Sharpe's Company</i>, published in 1982.<br /><br />Cornwell and wife Judy co-wrote a series of novels, published under the pseudonym \"Susannah Kells\". These were <i>A Crowning Mercy</i>, published in 1983, <i>Fallen Angels</i> in 1984, and <i>Coat of Arms</i> (aka <i>The Aristocrats</i>) in 1986. (Cornwell's strict Protestant upbringing informed the background of <i>A Crowning Mercy</i>, which took place during the English Civil War.) In 1987, he also published <i>Redcoat</i>, an American Revolutionary War novel set in Philadelphia during its 1777 occupation by the British.<br /><br />After publishing eight books in his ongoing Sharpe series, Cornwell was approached by a production company interested in adapting them for television. The producers asked him to write a prequel to give them a starting point to the series. They also requested that the story feature a large role for Spanish characters to secure co-funding from Spain. The result was <i>Sharpe’s Rifles</i>, published in 1987, and a series of Sharpe television films staring Sean Bean.<br /><br />A series of contemporary thrillers with sailing as a background and common themes followed: <i>Wildtrack</i> published in 1988, <i>Sea Lord</i> (aka <i>Killer's Wake</i>) in 1989, <i>Crackdown</i> in 1990, <i>Stormchild</i> in 1991, and <i>Scoundrel</i>, a political thriller, in 1992.<br /><br />In June 2006, Cornwell was made an Officer of the Order of the British Empire in the Queen's 80th Birthday Honours List.<br /><br />Cornwell's latest work, <i>Azincourt</i>, was released in the UK in October 2008. The protagonist is an archer who participates in the Battle of Agincourt, another devastating defeat suffered by the French in the Hundred Years War. However, Cornwell has stated that it will not be about Thomas of Hookton from The Grail Quest or any of his relatives." ;
+        schema:relatedLink    "https://www.goodreads.com/author/show/12542.Bernard_Cornwell" ;
+        lwt:HaNome            "Bernard Cornwell" .
+
+####
+#   BOOKS
+####
 
 lwt:The_Pillow_Book  rdf:type      lwt:Edizione ;
         dc:Title                   "The Pillow Book" ;
@@ -520,3 +605,263 @@ lwt:poetry  rdf:type           lwt:Genere ;
 lwt:adult  rdf:type            lwt:Genere ;
         lwt:HaNome             "adult" ;
         lwt:VieneUtilizzatoIn  lwt:The_Last_Kingdom , lwt:The_Children_of_Gods_and_Fighting_Men , <https://litetaryworktopics.com/litetaryworktopics2025#The_Abbot's_Tale> , lwt:The_Evening_and_the_Morning , lwt:The_Weaver_and_the_Witch_Queen .
+
+####
+#   WORKS
+####
+
+lwt:Buliwyf  rdf:type  lwt:Personaggio ;
+        lwt:HaNome  "Buliwyf" .
+
+lwt:Rethel  rdf:type  lwt:Personaggio ;
+        lwt:HaNome  "Rethel" .
+
+lwt:Olof_Skötkonung  rdf:type  lwt:Personaggio ;
+        lwt:HaNome  "Olof Skötkonung" .
+
+lwt:Kingsbridge  rdf:type  lwt:Saga ;
+        lwt:HaNome  "Kingsbridge" .
+
+lwt:Sagan_om_Valhalla
+        rdf:type    lwt:Saga ;
+        lwt:HaNome  "Sagan om Valhalla" .
+
+lwt:Weath  rdf:type  lwt:Personaggio ;
+        lwt:HaNome  "Weath" .
+
+lwt:Edward_the_Elder  rdf:type  lwt:Personaggio ;
+        lwt:HaNome  "Edward the Elder" .
+
+lwt:Harald_Bluetooth  rdf:type  lwt:Personaggio ;
+        lwt:HaNome  "Harald Bluetooth" .
+
+lwt:Sagard  rdf:type  lwt:Personaggio ;
+        lwt:HaNome  "Sagard" .
+
+lwt:رسالة_  rdf:type        lwt:OperaLetteraria ;
+        schema:relatedLink  "https://www.goodreads.com/work/editions/7004105" ;
+        lwt:AppartieneA     lwt:رحلات , lwt:Library_of_Arabic_Literature ;
+        lwt:Contiene        lwt:Ahmad_ibn_Fadlān ;
+        lwt:HaNome          "رسالة " .
+
+lwt:Asser  rdf:type  lwt:Personaggio ;
+        lwt:HaNome  "Asser" .
+
+lwt:Wulfgar  rdf:type  lwt:Personaggio ;
+        lwt:HaNome  "Wulfgar" .
+
+lwt:The_Flame_Bearer  rdf:type  lwt:OperaLetteraria ;
+        schema:relatedLink  "https://www.goodreads.com/work/editions/49172708" ;
+        lwt:AppartieneA     lwt:The_Last_Kingdom ;
+        lwt:Contiene        lwt:Aethelflaed , <https://litetaryworktopics.com/litetaryworktopics2025#Constantine_II,_King_of_Alba> , lwt:Uhtred_of_Bebbanburg , lwt:Edward_the_Elder ;
+        lwt:HaNome          "The Flame Bearer" .
+
+lwt:Murasaki_Shikibu  rdf:type  lwt:Personaggio ;
+        lwt:HaNome  "Murasaki Shikibu" .
+
+lwt:Aethelflaed  rdf:type  lwt:Personaggio ;
+        lwt:HaNome  "Aethelflaed" .
+
+lwt:Sigrid_:_sagan_om_Valhalla_
+        rdf:type            lwt:OperaLetteraria ;
+        schema:relatedLink  "https://www.goodreads.com/work/editions/42748842" ;
+        lwt:AppartieneA     lwt:Sagan_om_Valhalla , lwt:Valhalla ;
+        lwt:Contiene        lwt:Sigrid_the_Haughty , lwt:Harald_Bluetooth , lwt:Eric_the_Victorious , lwt:Styrbjörn_the_Strong , lwt:Olof_Skötkonung , lwt:Olaf_Tryggvason ;
+        lwt:HaNome          "Sigrid : sagan om Valhalla " .
+
+lwt:Wiglaf  rdf:type  lwt:Personaggio ;
+        lwt:HaNome  "Wiglaf" .
+
+lwt:Hrothgar  rdf:type  lwt:Personaggio ;
+        lwt:HaNome  "Hrothgar" .
+
+lwt:Sigurd  rdf:type  lwt:Personaggio ;
+        lwt:HaNome  "Sigurd" .
+
+lwt:Halga  rdf:type  lwt:Personaggio ;
+        lwt:HaNome  "Halga" .
+
+lwt:Uhtred_of_Bebbanburg
+        rdf:type    lwt:Personaggio ;
+        lwt:HaNome  "Uhtred of Bebbanburg" .
+
+<https://litetaryworktopics.com/litetaryworktopics2025#Aethelwulf_(King_of_Wessex)>
+        rdf:type    lwt:Personaggio ;
+        lwt:HaNome  "Aethelwulf (King of Wessex)" .
+
+lwt:Edgar_the_Builder
+        rdf:type    lwt:Personaggio ;
+        lwt:HaNome  "Edgar the Builder" .
+
+lwt:Higlak  rdf:type  lwt:Personaggio ;
+        lwt:HaNome  "Higlak" .
+
+lwt:Helfdane  rdf:type  lwt:Personaggio ;
+        lwt:HaNome  "Helfdane" .
+
+lwt:The_Pagan_Lord  rdf:type  lwt:OperaLetteraria ;
+        schema:relatedLink  "https://www.goodreads.com/work/editions/24989806" ;
+        lwt:AppartieneA     lwt:The_Last_Kingdom ;
+        lwt:Contiene        lwt:Uhtred_of_Bebbanburg , lwt:Aethelflaed ;
+        lwt:HaNome          "The Pagan Lord" .
+
+lwt:Beowulf  rdf:type  lwt:Personaggio ;
+        lwt:HaNome  "Beowulf" .
+
+lwt:Beowulf._A_Prose_Translation
+        rdf:type            lwt:OperaLetteraria ;
+        schema:relatedLink  "https://www.goodreads.com/work/editions/189503" ;
+        lwt:Contiene        lwt:Unferth , lwt:Breca , lwt:Grendel , lwt:Wiglaf , lwt:Hrothgar , lwt:Beowulf , lwt:Onela , lwt:Wealhtheow ;
+        lwt:HaNome          "Beowulf. A Prose Translation" .
+
+lwt:Herger  rdf:type  lwt:Personaggio ;
+        lwt:HaNome  "Herger" .
+
+lwt:Rumon  rdf:type  lwt:Personaggio ;
+        lwt:HaNome  "Rumon" .
+
+lwt:Avalon  rdf:type        lwt:OperaLetteraria ;
+        schema:relatedLink  "https://www.goodreads.com/work/editions/587624" ;
+        lwt:Contiene        lwt:Eirik_the_Red , lwt:Sigurd , lwt:Ketil , lwt:Queen_Alfrida , lwt:Merewyn , lwt:Rumon ;
+        lwt:HaNome          "Avalon" .
+
+lwt:Haltaf  rdf:type  lwt:Personaggio ;
+        lwt:HaNome  "Haltaf" .
+
+lwt:Guthrum_the_Dane  rdf:type  lwt:Personaggio ;
+        lwt:HaNome  "Guthrum the Dane" .
+
+lwt:Roneth  rdf:type  lwt:Personaggio ;
+        lwt:HaNome  "Roneth" .
+
+lwt:Breca  rdf:type  lwt:Personaggio ;
+        lwt:HaNome  "Breca" .
+
+lwt:رحلات  rdf:type  lwt:Saga ;
+        lwt:HaNome  "رحلات" .
+
+lwt:Wealhtheow  rdf:type  lwt:Personaggio ;
+        lwt:HaNome  "Wealhtheow" .
+
+lwt:Styrbjörn_the_Strong
+        rdf:type    lwt:Personaggio ;
+        lwt:HaNome  "Styrbjörn the Strong" .
+
+lwt:Edmund_the_Martyr
+        rdf:type    lwt:Personaggio ;
+        lwt:HaNome  "Edmund the Martyr" .
+
+lwt:Alfred_the_Great  rdf:type  lwt:Personaggio ;
+        lwt:HaNome  "Alfred the Great" .
+
+lwt:Wiglif  rdf:type  lwt:Personaggio ;
+        lwt:HaNome  "Wiglif" .
+
+lwt:Rothgar  rdf:type  lwt:Personaggio ;
+        lwt:HaNome  "Rothgar" .
+
+lwt:Fujiwara_no_Michinaga
+        rdf:type    lwt:Personaggio ;
+        lwt:HaNome  "Fujiwara no Michinaga" .
+
+lwt:Ahmad_ibn_Fadlān  rdf:type  lwt:Personaggio ;
+        lwt:HaNome  "Ahmad ibn Fadlān" .
+
+lwt:Ivar_the_Boneless
+        rdf:type    lwt:Personaggio ;
+        lwt:HaNome  "Ivar the Boneless" .
+
+lwt:Ketil  rdf:type  lwt:Personaggio ;
+        lwt:HaNome  "Ketil" .
+
+lwt:Grendel  rdf:type  lwt:Personaggio ;
+        lwt:HaNome  "Grendel" .
+
+lwt:Unferth  rdf:type  lwt:Personaggio ;
+        lwt:HaNome  "Unferth" .
+
+lwt:Eaters_of_the_Dead
+        rdf:type            lwt:OperaLetteraria ;
+        schema:relatedLink  "https://www.goodreads.com/work/editions/997260" ;
+        lwt:Contiene        lwt:Roneth , lwt:Wiglif , lwt:Halga , lwt:Sagard , lwt:Higlak , lwt:Helfdane , lwt:Skeld , lwt:Edgtho , lwt:Rothgar , lwt:Ecthgow , lwt:Buliwyf , lwt:Ahmad_ibn_Fadlān , lwt:Haltaf , lwt:Wulfgar , lwt:Herger , lwt:Rethel , lwt:Thorkel , lwt:Weath ;
+        lwt:HaNome          "Eaters of the Dead" .
+
+lwt:Halfdan_Ragnarsson
+        rdf:type    lwt:Personaggio ;
+        lwt:HaNome  "Halfdan Ragnarsson" .
+
+lwt:Valhalla  rdf:type  lwt:Saga ;
+        lwt:HaNome  "Valhalla" .
+
+lwt:Skeld  rdf:type  lwt:Personaggio ;
+        lwt:HaNome  "Skeld" .
+
+lwt:Sigrid_the_Haughty
+        rdf:type    lwt:Personaggio ;
+        lwt:HaNome  "Sigrid the Haughty" .
+
+lwt:The_Evening_and_the_Morning
+        rdf:type            lwt:OperaLetteraria ;
+        schema:relatedLink  "https://www.goodreads.com/work/editions/73816656" ;
+        lwt:AppartieneA     lwt:Kingsbridge ;
+        lwt:Contiene        lwt:Edgar_the_Builder ;
+        lwt:HaNome          "The Evening and the Morning" .
+
+<https://litetaryworktopics.com/litetaryworktopics2025#Odda,_Ealdorman_of_Devon>
+        rdf:type    lwt:Personaggio ;
+        lwt:HaNome  "Odda, Ealdorman of Devon" .
+
+lwt:Merewyn  rdf:type  lwt:Personaggio ;
+        lwt:HaNome  "Merewyn" .
+
+lwt:Olaf_Tryggvason  rdf:type  lwt:Personaggio ;
+        lwt:HaNome  "Olaf Tryggvason" .
+
+<https://litetaryworktopics.com/litetaryworktopics2025#Constantine_II,_King_of_Alba>
+        rdf:type    lwt:Personaggio ;
+        lwt:HaNome  "Constantine II, King of Alba" .
+
+lwt:Eirik_the_Red  rdf:type  lwt:Personaggio ;
+        lwt:HaNome  "Eirik the Red" .
+
+lwt:Ubba_Ragnarsson  rdf:type  lwt:Personaggio ;
+        lwt:HaNome  "Ubba Ragnarsson" .
+
+lwt:Bagsecg  rdf:type  lwt:Personaggio ;
+        lwt:HaNome  "Bagsecg" .
+
+lwt:Onela  rdf:type  lwt:Personaggio ;
+        lwt:HaNome  "Onela" .
+
+lwt:Edgtho  rdf:type  lwt:Personaggio ;
+        lwt:HaNome  "Edgtho" .
+
+lwt:Warriors_of_the_Storm
+        rdf:type            lwt:OperaLetteraria ;
+        schema:relatedLink  "https://www.goodreads.com/work/editions/45146066" ;
+        lwt:AppartieneA     lwt:The_Last_Kingdom ;
+        lwt:Contiene        lwt:Uhtred_of_Bebbanburg , lwt:Aethelflaed , lwt:Alfred_the_Great ;
+        lwt:HaNome          "Warriors of the Storm" .
+
+lwt:The_Last_Kingdom  rdf:type  lwt:Saga , lwt:OperaLetteraria ;
+        schema:relatedLink  "https://www.goodreads.com/work/editions/881821" ;
+        lwt:AppartieneA     lwt:The_Last_Kingdom ;
+        lwt:Contiene        lwt:Edmund_the_Martyr , lwt:Ivar_the_Boneless , lwt:Alfred_the_Great , <https://litetaryworktopics.com/litetaryworktopics2025#Aethelwulf_(King_of_Wessex)> , lwt:Asser , <https://litetaryworktopics.com/litetaryworktopics2025#Odda,_Ealdorman_of_Devon> , lwt:Guthrum_the_Dane , lwt:Halfdan_Ragnarsson , lwt:Bagsecg , lwt:Ubba_Ragnarsson , lwt:Uhtred_of_Bebbanburg ;
+        lwt:HaNome          "The Last Kingdom" .
+
+lwt:Ecthgow  rdf:type  lwt:Personaggio ;
+        lwt:HaNome  "Ecthgow" .
+
+lwt:Eric_the_Victorious
+        rdf:type    lwt:Personaggio ;
+        lwt:HaNome  "Eric the Victorious" .
+
+lwt:Queen_Alfrida  rdf:type  lwt:Personaggio ;
+        lwt:HaNome  "Queen Alfrida" .
+
+lwt:Thorkel  rdf:type  lwt:Personaggio ;
+        lwt:HaNome  "Thorkel" .
+
+lwt:Library_of_Arabic_Literature
+        rdf:type    lwt:Saga ;
+        lwt:HaNome  "Library of Arabic Literature" .

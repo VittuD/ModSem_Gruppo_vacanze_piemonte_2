@@ -35,10 +35,12 @@ CONSTRUCT {
 
     ?bookMyNs lwt:VieneClassificatoCome ?genreMyNs .
     ?genreMyNs a lwt:Genere .
+    ?genreMyNs lwt:VieneUtilizzatoIn ?bookMyNs .
     ?genreMyNs lwt:HaNome ?genreName .
 
     ?bookMyNs lwt:VieneClassificatoCome ?topicMyNs .
     ?topicMyNs a lwt:Tema .
+    ?topicMyNs lwt:VieneUtilizzatoIn ?bookMyNs .
     ?topicMyNs lwt:HaNome ?topicName .
 
     # Book metadata
