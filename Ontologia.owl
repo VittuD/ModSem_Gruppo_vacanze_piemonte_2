@@ -18,6 +18,7 @@
     <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
     <Prefix name="skos" IRI="http://www.w3.org/2004/02/skos/core#"/>
     <Prefix name="vann" IRI="http://purl.org/vocab/vann/"/>
+    <Prefix name="schema" IRI="http://schema.org/"/>
     <Prefix name="dbpedia" IRI="https://dbpedia.org/ontology/"/>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="dc:creator"/>
@@ -319,6 +320,9 @@
         <AnnotationProperty abbreviatedIRI="dc:creator"/>
     </Declaration>
     <Declaration>
+        <AnnotationProperty abbreviatedIRI="dc:date"/>
+    </Declaration>
+    <Declaration>
         <AnnotationProperty abbreviatedIRI="dc:description"/>
     </Declaration>
     <Declaration>
@@ -326,6 +330,9 @@
     </Declaration>
     <Declaration>
         <AnnotationProperty abbreviatedIRI="vann:preferredNamespaceUri"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="schema:relatedLink"/>
     </Declaration>
     <Declaration>
         <AnnotationProperty IRI="http://web.resource.org/cc/license"/>
@@ -365,9 +372,6 @@
     </Declaration>
     <Declaration>
         <Datatype abbreviatedIRI="xsd:date"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty abbreviatedIRI="dc:date"/>
     </Declaration>
     <EquivalentClasses>
         <Class IRI="http://www.semanticweb.org/owl/owlapi/turtle#GrandeSaga"/>
