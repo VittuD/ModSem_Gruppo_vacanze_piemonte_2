@@ -187,13 +187,13 @@ xsd:date rdf:type rdfs:Datatype .
 
 <http://www.semanticweb.org/owl/owlapi/turtle#AutoreDi> rdf:type owl:ObjectProperty ;
                                                         
-                                                        rdfs:domain <http://www.semanticweb.org/owl/owlapi/turtle#Autore> ;
-                                                        
                                                         owl:inverseOf <http://www.semanticweb.org/owl/owlapi/turtle#ScrittoDa> ;
                                                         
+                                                        rdfs:domain :Autore ;
+                                                        
                                                         rdfs:range [ rdf:type owl:Class ;
-                                                                     owl:unionOf ( <https://litetaryworktopics.com/litetaryworktopics2025##Edizione>
-                                                                                   <https://litetaryworktopics.com/litetaryworktopics2025##OperaLetteraria>
+                                                                     owl:unionOf ( :Edizione
+                                                                                   :OperaLetteraria
                                                                                  )
                                                                    ] .
 
@@ -209,11 +209,11 @@ xsd:date rdf:type rdfs:Datatype .
 
 <http://www.semanticweb.org/owl/owlapi/turtle#Contribuisce> rdf:type owl:ObjectProperty ;
                                                             
-                                                            rdfs:domain <http://www.semanticweb.org/owl/owlapi/turtle#Collaboratore> ;
-                                                            
                                                             owl:inverseOf <http://www.semanticweb.org/owl/owlapi/turtle#HaContributoDi> ;
                                                             
-                                                            rdfs:range <https://litetaryworktopics.com/litetaryworktopics2025##Edizione> .
+                                                            rdfs:domain :Collaboratore ;
+                                                            
+                                                            rdfs:range :Edizione .
 
 
 
@@ -222,11 +222,11 @@ xsd:date rdf:type rdfs:Datatype .
 <http://www.semanticweb.org/owl/owlapi/turtle#EdizioneDi> rdf:type owl:FunctionalProperty ,
                                                                    owl:ObjectProperty ;
                                                           
-                                                          rdfs:domain <https://litetaryworktopics.com/litetaryworktopics2025##Edizione> ;
+                                                          rdfs:domain :Edizione ;
                                                           
-                                                          owl:inverseOf <https://litetaryworktopics.com/litetaryworktopics2025##HaEdizione> ;
+                                                          rdfs:range :OperaLetteraria ;
                                                           
-                                                          rdfs:range <https://litetaryworktopics.com/litetaryworktopics2025##OperaLetteraria> .
+                                                          owl:inverseOf <https://litetaryworktopics.com/litetaryworktopics2025##HaEdizione> .
 
 
 
@@ -234,9 +234,9 @@ xsd:date rdf:type rdfs:Datatype .
 
 <http://www.semanticweb.org/owl/owlapi/turtle#HaAutore> rdf:type owl:ObjectProperty ;
                                                         
-                                                        rdfs:domain <http://www.semanticweb.org/owl/owlapi/turtle#Autore> ;
+                                                        rdfs:domain :Autore ;
                                                         
-                                                        rdfs:range <https://litetaryworktopics.com/litetaryworktopics2025##OperaLetteraria> .
+                                                        rdfs:range :OperaLetteraria .
 
 
 
@@ -244,9 +244,9 @@ xsd:date rdf:type rdfs:Datatype .
 
 <http://www.semanticweb.org/owl/owlapi/turtle#HaContributoDi> rdf:type owl:ObjectProperty ;
                                                               
-                                                              rdfs:range <http://www.semanticweb.org/owl/owlapi/turtle#Collaboratore> ;
+                                                              rdfs:range :Collaboratore ;
                                                               
-                                                              rdfs:domain <https://litetaryworktopics.com/litetaryworktopics2025##Edizione> .
+                                                              rdfs:domain :Edizione .
 
 
 
@@ -255,7 +255,7 @@ xsd:date rdf:type rdfs:Datatype .
 <http://www.semanticweb.org/owl/owlapi/turtle#HaProvenienza> rdf:type owl:FunctionalProperty ,
                                                                       owl:ObjectProperty ;
                                                              
-                                                             rdfs:range <http://www.semanticweb.org/owl/owlapi/turtle#Nazione> ;
+                                                             rdfs:range :Nazione ;
                                                              
                                                              rdfs:domain [ rdf:type owl:Class ;
                                                                            owl:unionOf ( <http://www.w3.org/ns/prov#Agent>
@@ -269,11 +269,11 @@ xsd:date rdf:type rdfs:Datatype .
 
 <http://www.semanticweb.org/owl/owlapi/turtle#LavoraPerCasaEditrice> rdf:type owl:ObjectProperty ;
                                                                      
-                                                                     rdfs:range <http://www.semanticweb.org/owl/owlapi/turtle#CasaEditrice> ;
+                                                                     owl:inverseOf <http://www.semanticweb.org/owl/owlapi/turtle#haEditore> ;
                                                                      
-                                                                     rdfs:domain <http://www.semanticweb.org/owl/owlapi/turtle#Editore> ;
+                                                                     rdfs:range :CasaEditrice ;
                                                                      
-                                                                     owl:inverseOf <http://www.semanticweb.org/owl/owlapi/turtle#haEditore> .
+                                                                     rdfs:domain :Editore .
 
 
 
@@ -283,11 +283,11 @@ xsd:date rdf:type rdfs:Datatype .
                                                         
                                                         owl:inverseOf <http://www.semanticweb.org/owl/owlapi/turtle#PubblicatoDa> ;
                                                         
-                                                        rdfs:range <https://litetaryworktopics.com/litetaryworktopics2025##Edizione> ;
+                                                        rdfs:range :Edizione ;
                                                         
                                                         rdfs:domain [ rdf:type owl:Class ;
-                                                                      owl:unionOf ( <http://www.semanticweb.org/owl/owlapi/turtle#Persona>
-                                                                                    <http://www.w3.org/ns/prov#Organization>
+                                                                      owl:unionOf ( <http://www.w3.org/ns/prov#Organization>
+                                                                                    :Persona
                                                                                   )
                                                                     ] .
 
@@ -301,7 +301,7 @@ xsd:date rdf:type rdfs:Datatype .
                                                                           
                                                                           rdfs:domain <http://www.w3.org/ns/prov#Organization> ;
                                                                           
-                                                                          rdfs:range <https://litetaryworktopics.com/litetaryworktopics2025##Edizione> .
+                                                                          rdfs:range :Edizione .
 
 
 
@@ -309,13 +309,13 @@ xsd:date rdf:type rdfs:Datatype .
 
 <http://www.semanticweb.org/owl/owlapi/turtle#PubblicaComeSingolo> rdf:type owl:ObjectProperty ;
                                                                    
-                                                                   rdfs:domain <http://www.semanticweb.org/owl/owlapi/turtle#Persona> ;
-                                                                   
                                                                    rdfs:subPropertyOf <http://www.semanticweb.org/owl/owlapi/turtle#Pubblica> ;
                                                                    
                                                                    owl:inverseOf <http://www.semanticweb.org/owl/owlapi/turtle#PubblicataDallaPersona> ;
                                                                    
-                                                                   rdfs:range <https://litetaryworktopics.com/litetaryworktopics2025##Edizione> .
+                                                                   rdfs:range :Edizione ;
+                                                                   
+                                                                   rdfs:domain :Persona .
 
 
 
@@ -327,7 +327,7 @@ xsd:date rdf:type rdfs:Datatype .
                                                                            
                                                                            rdfs:range <http://www.w3.org/ns/prov#Organization> ;
                                                                            
-                                                                           rdfs:domain <https://litetaryworktopics.com/litetaryworktopics2025##Edizione> .
+                                                                           rdfs:domain :Edizione .
 
 
 
@@ -335,11 +335,11 @@ xsd:date rdf:type rdfs:Datatype .
 
 <http://www.semanticweb.org/owl/owlapi/turtle#PubblicataDallaPersona> rdf:type owl:ObjectProperty ;
                                                                       
-                                                                      rdfs:range <http://www.semanticweb.org/owl/owlapi/turtle#Persona> ;
-                                                                      
                                                                       rdfs:subPropertyOf <http://www.semanticweb.org/owl/owlapi/turtle#PubblicatoDa> ;
                                                                       
-                                                                      rdfs:domain <https://litetaryworktopics.com/litetaryworktopics2025##Edizione> .
+                                                                      rdfs:domain :Edizione ;
+                                                                      
+                                                                      rdfs:range :Persona .
 
 
 
@@ -348,11 +348,11 @@ xsd:date rdf:type rdfs:Datatype .
 <http://www.semanticweb.org/owl/owlapi/turtle#PubblicatoDa> rdf:type owl:FunctionalProperty ,
                                                                      owl:ObjectProperty ;
                                                             
-                                                            rdfs:domain <https://litetaryworktopics.com/litetaryworktopics2025##Edizione> ;
+                                                            rdfs:domain :Edizione ;
                                                             
                                                             rdfs:range [ rdf:type owl:Class ;
-                                                                         owl:unionOf ( <http://www.semanticweb.org/owl/owlapi/turtle#Persona>
-                                                                                       <http://www.w3.org/ns/prov#Organization>
+                                                                         owl:unionOf ( <http://www.w3.org/ns/prov#Organization>
+                                                                                       :Persona
                                                                                      )
                                                                        ] .
 
@@ -362,11 +362,11 @@ xsd:date rdf:type rdfs:Datatype .
 
 <http://www.semanticweb.org/owl/owlapi/turtle#ScrittoDa> rdf:type owl:ObjectProperty ;
                                                          
-                                                         rdfs:range <http://www.semanticweb.org/owl/owlapi/turtle#Autore> ;
+                                                         rdfs:range :Autore ;
                                                          
                                                          rdfs:domain [ rdf:type owl:Class ;
-                                                                       owl:unionOf ( <https://litetaryworktopics.com/litetaryworktopics2025##Edizione>
-                                                                                     <https://litetaryworktopics.com/litetaryworktopics2025##OperaLetteraria>
+                                                                       owl:unionOf ( :Edizione
+                                                                                     :OperaLetteraria
                                                                                    )
                                                                      ] .
 
@@ -378,11 +378,11 @@ xsd:date rdf:type rdfs:Datatype .
                                                                      
                                                                      owl:inverseOf <http://www.semanticweb.org/owl/owlapi/turtle#VieneUtilizzatoIn> ;
                                                                      
-                                                                     rdfs:domain <https://litetaryworktopics.com/litetaryworktopics2025##OperaLetteraria> ;
+                                                                     rdfs:domain :OperaLetteraria ;
                                                                      
                                                                      rdfs:range [ rdf:type owl:Class ;
-                                                                                  owl:unionOf ( <http://www.semanticweb.org/owl/owlapi/turtle#Genere>
-                                                                                                <http://www.semanticweb.org/owl/owlapi/turtle#Tema>
+                                                                                  owl:unionOf ( :Genere
+                                                                                                :Tema
                                                                                               )
                                                                                 ] .
 
@@ -392,11 +392,11 @@ xsd:date rdf:type rdfs:Datatype .
 
 <http://www.semanticweb.org/owl/owlapi/turtle#VieneUtilizzatoIn> rdf:type owl:ObjectProperty ;
                                                                  
-                                                                 rdfs:range <https://litetaryworktopics.com/litetaryworktopics2025##OperaLetteraria> ;
+                                                                 rdfs:range :OperaLetteraria ;
                                                                  
                                                                  rdfs:domain [ rdf:type owl:Class ;
-                                                                               owl:unionOf ( <http://www.semanticweb.org/owl/owlapi/turtle#Genere>
-                                                                                             <http://www.semanticweb.org/owl/owlapi/turtle#Tema>
+                                                                               owl:unionOf ( :Genere
+                                                                                             :Tema
                                                                                            )
                                                                              ] .
 
@@ -406,9 +406,9 @@ xsd:date rdf:type rdfs:Datatype .
 
 <http://www.semanticweb.org/owl/owlapi/turtle#haEditore> rdf:type owl:ObjectProperty ;
                                                          
-                                                         rdfs:domain <http://www.semanticweb.org/owl/owlapi/turtle#CasaEditrice> ;
+                                                         rdfs:domain :CasaEditrice ;
                                                          
-                                                         rdfs:range <http://www.semanticweb.org/owl/owlapi/turtle#Editore> .
+                                                         rdfs:range :Editore .
 
 
 
@@ -416,9 +416,9 @@ xsd:date rdf:type rdfs:Datatype .
 
 <https://litetaryworktopics.com/litetaryworktopics2025##HaEdizione> rdf:type owl:ObjectProperty ;
                                                                     
-                                                                    rdfs:range <https://litetaryworktopics.com/litetaryworktopics2025##Edizione> ;
+                                                                    rdfs:range :Edizione ;
                                                                     
-                                                                    rdfs:domain <https://litetaryworktopics.com/litetaryworktopics2025##OperaLetteraria> .
+                                                                    rdfs:domain :OperaLetteraria .
 
 
 
@@ -469,7 +469,7 @@ dc:Title rdf:type owl:DatatypeProperty ;
                                                       
                                                       rdfs:range xsd:nonPositiveInteger ;
                                                       
-                                                      rdfs:domain <https://litetaryworktopics.com/litetaryworktopics2025##Edizione> .
+                                                      rdfs:domain :Edizione .
 
 
 
@@ -495,7 +495,7 @@ dc:Title rdf:type owl:DatatypeProperty ;
                                                         
                                                         rdfs:range xsd:integer ;
                                                         
-                                                        rdfs:domain <https://litetaryworktopics.com/litetaryworktopics2025##Edizione> .
+                                                        rdfs:domain :Edizione .
 
 
 
@@ -503,9 +503,9 @@ dc:Title rdf:type owl:DatatypeProperty ;
 
 <http://www.semanticweb.org/owl/owlapi/turtle#HaRuolo> rdf:type owl:DatatypeProperty ;
                                                        
-                                                       rdfs:domain <http://www.semanticweb.org/owl/owlapi/turtle#Collaboratore> ;
+                                                       rdfs:range xsd:string ;
                                                        
-                                                       rdfs:range xsd:string .
+                                                       rdfs:domain :Collaboratore .
 
 
 
@@ -529,144 +529,31 @@ dc:Title rdf:type owl:DatatypeProperty ;
 
 
 
-###  http://www.semanticweb.org/owl/owlapi/turtle#Autore
+###  http://purl.org/dc/terms/Location
 
-<http://www.semanticweb.org/owl/owlapi/turtle#Autore> rdf:type owl:Class ;
-                                                      
-                                                      rdfs:label """Autore
-"""@it ;
-                                                      
-                                                      owl:equivalentClass [ rdf:type owl:Restriction ;
-                                                                            owl:onProperty <http://www.semanticweb.org/owl/owlapi/turtle#AutoreDi> ;
-                                                                            owl:someValuesFrom <https://litetaryworktopics.com/litetaryworktopics2025##Edizione>
-                                                                          ] ;
-                                                      
-                                                      rdfs:subClassOf <http://www.semanticweb.org/owl/owlapi/turtle#Persona> ;
-                                                      
-                                                      rdfs:comment "Un autore è una persona che scrive un'opera letteraria, scientifica o artistica, ed è responsabile della creazione e dell'originalità del contenuto dell'opera."@it .
+<http://purl.org/dc/terms/Location> rdf:type owl:Class ;
+                                    
+                                    rdfs:label "LuogoFisico"@it ;
+                                    
+                                    rdfs:subClassOf <http://purl.org/vocab/frbr/core#Place> ;
+                                    
+                                    skos:closeMatch "dc:Location"@en ;
+                                    
+                                    rdfs:comment "Un Luogo Fisico rappresenta un Luogo fisicamente presente, tramite la denominazione corrente o passata."@it .
 
 
 
-###  http://www.semanticweb.org/owl/owlapi/turtle#AutoreIndipendente
+###  http://purl.org/vocab/frbr/core#Place
 
-<http://www.semanticweb.org/owl/owlapi/turtle#AutoreIndipendente> rdf:type owl:Class ;
-                                                                  
-                                                                  rdfs:label """AutoreIndipendente
-"""@it ;
-                                                                  
-                                                                  owl:equivalentClass [ rdf:type owl:Class ;
-                                                                                        owl:intersectionOf ( <http://www.semanticweb.org/owl/owlapi/turtle#Autore>
-                                                                                                             <http://www.semanticweb.org/owl/owlapi/turtle#Editore>
-                                                                                                             [ rdf:type owl:Restriction ;
-                                                                                                               owl:onProperty <http://www.semanticweb.org/owl/owlapi/turtle#AutoreDi> ;
-                                                                                                               owl:someValuesFrom <https://litetaryworktopics.com/litetaryworktopics2025##Edizione>
-                                                                                                             ]
-                                                                                                             [ rdf:type owl:Restriction ;
-                                                                                                               owl:onProperty <http://www.semanticweb.org/owl/owlapi/turtle#Pubblica> ;
-                                                                                                               owl:someValuesFrom <https://litetaryworktopics.com/litetaryworktopics2025##Edizione>
-                                                                                                             ]
-                                                                                                           )
-                                                                                      ] ;
-                                                                  
-                                                                  rdfs:subClassOf <http://www.semanticweb.org/owl/owlapi/turtle#Autore> ;
-                                                                  
-                                                                  rdfs:comment "Un autore indipendente è uno scrittore che pubblica e distribuisce le proprie opere senza l'intermediazione di una casa editrice tradizionale, gestendo autonomamente l'intero processo editoriale e promozionale. Questo approccio consente maggiore libertà creativa e guadagni diretti."@it .
+<http://purl.org/vocab/frbr/core#Place> rdf:type owl:Class ;
+                                        
+                                        rdfs:label "Luogo"@it ;
+                                        
+                                        skos:closeMatch "frbr:Place"@en ;
+                                        
+                                        rdfs:comment """(Rappresenta un'entità spaziale generica, come un luogo o una posizione.)
 
-
-
-###  http://www.semanticweb.org/owl/owlapi/turtle#Canzoniere
-
-<http://www.semanticweb.org/owl/owlapi/turtle#Canzoniere> rdf:type owl:Class ;
-                                                          
-                                                          rdfs:label "Canzoniere"@it ;
-                                                          
-                                                          owl:equivalentClass [ rdf:type owl:Restriction ;
-                                                                                owl:onProperty <http://www.semanticweb.org/owl/owlapi/turtle#Contiene> ;
-                                                                                owl:onClass <http://www.semanticweb.org/owl/owlapi/turtle#Poesia> ;
-                                                                                owl:minQualifiedCardinality "2"^^xsd:nonNegativeInteger
-                                                                              ] ;
-                                                          
-                                                          rdfs:subClassOf <http://www.semanticweb.org/owl/owlapi/turtle#CollanaEditoriale> ;
-                                                          
-                                                          rdfs:comment "Una raccolta di poesie che appartengono alla categoria \"Poesia\". Ogni elemento della collezione è un'istanza di \"Poesia\"."@it .
-
-
-
-###  http://www.semanticweb.org/owl/owlapi/turtle#CasaEditrice
-
-<http://www.semanticweb.org/owl/owlapi/turtle#CasaEditrice> rdf:type owl:Class ;
-                                                            
-                                                            rdfs:label "CasaEditrice"@it ;
-                                                            
-                                                            owl:equivalentClass [ rdf:type owl:Class ;
-                                                                                  owl:intersectionOf ( <http://www.w3.org/ns/prov#Organization>
-                                                                                                       [ rdf:type owl:Restriction ;
-                                                                                                         owl:onProperty <http://www.semanticweb.org/owl/owlapi/turtle#Pubblica> ;
-                                                                                                         owl:someValuesFrom <https://litetaryworktopics.com/litetaryworktopics2025##Edizione>
-                                                                                                       ]
-                                                                                                     )
-                                                                                ] ;
-                                                            
-                                                            rdfs:subClassOf <http://www.w3.org/ns/prov#Organization> ;
-                                                            
-                                                            rdfs:comment "Una casa editrice è un'organizzazione che si occupa della pubblicazione e distribuzione di opere letterarie, scientifiche o artistiche, curando la produzione, la stampa e la diffusione dei libri."@it .
-
-
-
-###  http://www.semanticweb.org/owl/owlapi/turtle#Collaboratore
-
-<http://www.semanticweb.org/owl/owlapi/turtle#Collaboratore> rdf:type owl:Class ;
-                                                             
-                                                             rdfs:label "Collaboratore"@it ;
-                                                             
-                                                             rdfs:subClassOf <http://www.semanticweb.org/owl/owlapi/turtle#Persona> ;
-                                                             
-                                                             rdfs:comment "Persona che ha contribuito alla Scrittura di un'Edizione non come Autore"@it .
-
-
-
-###  http://www.semanticweb.org/owl/owlapi/turtle#CollanaEditoriale
-
-<http://www.semanticweb.org/owl/owlapi/turtle#CollanaEditoriale> rdf:type owl:Class ;
-                                                                 
-                                                                 rdfs:label "CollanaEditoriale"@it ;
-                                                                 
-                                                                 rdfs:subClassOf <http://www.semanticweb.org/owl/owlapi/turtle#ListaDiOpereLetterarie> ;
-                                                                 
-                                                                 rdfs:comment "Una raccolta di testi pubblicati da un editore con criteri comuni di genere, tema o formato."@it .
-
-
-
-###  http://www.semanticweb.org/owl/owlapi/turtle#Editore
-
-<http://www.semanticweb.org/owl/owlapi/turtle#Editore> rdf:type owl:Class ;
-                                                       
-                                                       rdfs:label """Editore
-"""@it ;
-                                                       
-                                                       owl:equivalentClass [ rdf:type owl:Class ;
-                                                                             owl:intersectionOf ( <http://www.semanticweb.org/owl/owlapi/turtle#Persona>
-                                                                                                  [ rdf:type owl:Restriction ;
-                                                                                                    owl:onProperty <http://www.semanticweb.org/owl/owlapi/turtle#Pubblica> ;
-                                                                                                    owl:someValuesFrom <https://litetaryworktopics.com/litetaryworktopics2025##Edizione>
-                                                                                                  ]
-                                                                                                )
-                                                                           ] ;
-                                                       
-                                                       rdfs:subClassOf <http://www.semanticweb.org/owl/owlapi/turtle#Persona> ;
-                                                       
-                                                       rdfs:comment """Persona che ha pubblicato un Edizione
 """@it .
-
-
-
-###  http://www.semanticweb.org/owl/owlapi/turtle#Genere
-
-<http://www.semanticweb.org/owl/owlapi/turtle#Genere> rdf:type owl:Class ;
-                                                      
-                                                      rdfs:label "Genere"@it ;
-                                                      
-                                                      rdfs:comment "Il genere di un'opera letteraria è una categoria che raggruppa libri con caratteristiche tematiche o stilistiche simili, come ad esempio fantasy, giallo, romance, storia, horror, ecc. Ogni genere aiuta a identificare il tono, il contenuto e lo stile dell'opera."@it .
 
 
 
@@ -679,271 +566,13 @@ dc:Title rdf:type owl:DatatypeProperty ;
                                                           
                                                           owl:equivalentClass [ rdf:type owl:Restriction ;
                                                                                 owl:onProperty <http://www.semanticweb.org/owl/owlapi/turtle#Contiene> ;
-                                                                                owl:onClass <https://litetaryworktopics.com/litetaryworktopics2025##OperaLetteraria> ;
+                                                                                owl:onClass :OperaLetteraria ;
                                                                                 owl:minQualifiedCardinality "3"^^xsd:nonNegativeInteger
                                                                               ] ;
                                                           
-                                                          rdfs:subClassOf <http://www.semanticweb.org/owl/owlapi/turtle#Saga> ;
+                                                          rdfs:subClassOf :Saga ;
                                                           
                                                           rdfs:comment "Una grande saga è una narrazione estesa e complessa che si sviluppa su molteplici opere letterarie, spesso seguendo diversi gruppi di personaggi o intere famiglie, con una trama che si estende su generazioni o eventi di ampia portata."@it .
-
-
-
-###  http://www.semanticweb.org/owl/owlapi/turtle#ListaDiOpereLetterarie
-
-<http://www.semanticweb.org/owl/owlapi/turtle#ListaDiOpereLetterarie> rdf:type owl:Class ;
-                                                                      
-                                                                      owl:equivalentClass [ rdf:type owl:Restriction ;
-                                                                                            owl:onProperty <http://www.semanticweb.org/owl/owlapi/turtle#Contiene> ;
-                                                                                            owl:someValuesFrom <https://litetaryworktopics.com/litetaryworktopics2025##OperaLetteraria>
-                                                                                          ] ;
-                                                                      
-                                                                      rdfs:subClassOf <http://dbpedia.org/resource/List> .
-
-
-
-###  http://www.semanticweb.org/owl/owlapi/turtle#Luogo
-
-<http://www.semanticweb.org/owl/owlapi/turtle#Luogo> rdf:type owl:Class ;
-                                                     
-                                                     rdfs:label "Luogo"@it ;
-                                                     
-                                                     skos:closeMatch "frbr:Place"@en ;
-                                                     
-                                                     rdfs:comment "Un Luogo, genericamente fisico o immaginario."@it .
-
-
-
-###  http://www.semanticweb.org/owl/owlapi/turtle#LuogoFisico
-
-<http://www.semanticweb.org/owl/owlapi/turtle#LuogoFisico> rdf:type owl:Class ;
-                                                           
-                                                           rdfs:label "LuogoFisico"@it ;
-                                                           
-                                                           rdfs:subClassOf <http://www.semanticweb.org/owl/owlapi/turtle#Luogo> ;
-                                                           
-                                                           skos:closeMatch "dc:Location"@en ;
-                                                           
-                                                           rdfs:comment "Un Luogo Fisico rappresenta un Luogo fisicamente presente, tramite la denominazione corrente o passata."@it .
-
-
-
-###  http://www.semanticweb.org/owl/owlapi/turtle#Nazione
-
-<http://www.semanticweb.org/owl/owlapi/turtle#Nazione> rdf:type owl:Class ;
-                                                       
-                                                       rdfs:label "Nazione"@it ;
-                                                       
-                                                       rdfs:subClassOf <http://www.semanticweb.org/owl/owlapi/turtle#LuogoFisico> ;
-                                                       
-                                                       rdfs:comment "Un'entità nazionale nel presente o passato."@it .
-
-
-
-###  http://www.semanticweb.org/owl/owlapi/turtle#OperaTeatrale
-
-<http://www.semanticweb.org/owl/owlapi/turtle#OperaTeatrale> rdf:type owl:Class ;
-                                                             
-                                                             rdfs:label "Operateatrale"@it ;
-                                                             
-                                                             rdfs:subClassOf <https://litetaryworktopics.com/litetaryworktopics2025##OperaLetteraria> ;
-                                                             
-                                                             rdfs:comment "Un'opera teatrale è una forma di opera letteraria scritta per essere rappresentata su un palcoscenico, con personaggi che parlano e interagiscono tra loro secondo una trama."@it .
-
-
-
-###  http://www.semanticweb.org/owl/owlapi/turtle#Persona
-
-<http://www.semanticweb.org/owl/owlapi/turtle#Persona> rdf:type owl:Class ;
-                                                       
-                                                       rdfs:label "Persona"@it ;
-                                                       
-                                                       rdfs:subClassOf <http://www.w3.org/ns/prov#Agent> ;
-                                                       
-                                                       skos:exactMatch "frbr:Agent"@en ;
-                                                       
-                                                       rdfs:comment "Una persona è un individuo umano che svolge un ruolo all'interno di un contesto sociale o professionale, come autore, editore, o altro."@it .
-
-
-
-###  http://www.semanticweb.org/owl/owlapi/turtle#Personaggio
-
-<http://www.semanticweb.org/owl/owlapi/turtle#Personaggio> rdf:type owl:Class ;
-                                                           
-                                                           rdfs:label "Personaggio"@it ;
-                                                           
-                                                           rdfs:subClassOf <http://www.w3.org/ns/prov#Agent> ;
-                                                           
-                                                           rdfs:comment " Una persona, creatura magica o entità"@it .
-
-
-
-###  http://www.semanticweb.org/owl/owlapi/turtle#PersonaggioLibro
-
-<http://www.semanticweb.org/owl/owlapi/turtle#PersonaggioLibro> rdf:type owl:Class ;
-                                                                
-                                                                rdfs:label "PersonaggioLibro"@it ;
-                                                                
-                                                                owl:equivalentClass [ rdf:type owl:Restriction ;
-                                                                                      owl:onProperty <http://www.semanticweb.org/owl/owlapi/turtle#AppartieneA> ;
-                                                                                      owl:someValuesFrom [ rdf:type owl:Class ;
-                                                                                                           owl:intersectionOf ( <https://litetaryworktopics.com/litetaryworktopics2025##OperaLetteraria>
-                                                                                                                                [ rdf:type owl:Restriction ;
-                                                                                                                                  owl:onProperty <http://www.semanticweb.org/owl/owlapi/turtle#Contiene> ;
-                                                                                                                                  owl:someValuesFrom owl:Thing
-                                                                                                                                ]
-                                                                                                                              )
-                                                                                                         ]
-                                                                                    ] ;
-                                                                
-                                                                rdfs:subClassOf <http://www.semanticweb.org/owl/owlapi/turtle#Personaggio> ;
-                                                                
-                                                                rdfs:comment " Una persona, creatura magica o entità che appare specificatamente ad un opera letteraria"@it .
-
-
-
-###  http://www.semanticweb.org/owl/owlapi/turtle#Poesia
-
-<http://www.semanticweb.org/owl/owlapi/turtle#Poesia> rdf:type owl:Class ;
-                                                      
-                                                      rdfs:label """Poesia
-"""@it ;
-                                                      
-                                                      rdfs:subClassOf <https://litetaryworktopics.com/litetaryworktopics2025##OperaLetteraria> ;
-                                                      
-                                                      rdfs:comment "Forma di espressione letteraria che utilizza il linguaggio in modo artistico, spesso caratterizzata da metrica, ritmo e rime."@it .
-
-
-
-###  http://www.semanticweb.org/owl/owlapi/turtle#RaccoltaDISaggi
-
-<http://www.semanticweb.org/owl/owlapi/turtle#RaccoltaDISaggi> rdf:type owl:Class ;
-                                                               
-                                                               rdfs:label "RaccoltaDiSaggi"@it ;
-                                                               
-                                                               owl:equivalentClass [ rdf:type owl:Restriction ;
-                                                                                     owl:onProperty <http://www.semanticweb.org/owl/owlapi/turtle#Contiene> ;
-                                                                                     owl:onClass <http://www.semanticweb.org/owl/owlapi/turtle#Saggio> ;
-                                                                                     owl:minQualifiedCardinality "2"^^xsd:nonNegativeInteger
-                                                                                   ] ;
-                                                               
-                                                               rdfs:subClassOf <http://www.semanticweb.org/owl/owlapi/turtle#CollanaEditoriale> ;
-                                                               
-                                                               rdfs:comment "Una raccolta di saggi che appartengono alla categoria \"Saggio\". Ogni elemento della collezione è un'istanza di \"Saggio\"."@it .
-
-
-
-###  http://www.semanticweb.org/owl/owlapi/turtle#RaccoltaDiRacconti
-
-<http://www.semanticweb.org/owl/owlapi/turtle#RaccoltaDiRacconti> rdf:type owl:Class ;
-                                                                  
-                                                                  rdfs:label "RaccoltaDiRacconti"@it ;
-                                                                  
-                                                                  owl:equivalentClass [ rdf:type owl:Restriction ;
-                                                                                        owl:onProperty <http://www.semanticweb.org/owl/owlapi/turtle#Contiene> ;
-                                                                                        owl:onClass <http://www.semanticweb.org/owl/owlapi/turtle#Racconto> ;
-                                                                                        owl:minQualifiedCardinality "2"^^xsd:nonNegativeInteger
-                                                                                      ] ;
-                                                                  
-                                                                  rdfs:subClassOf <http://www.semanticweb.org/owl/owlapi/turtle#CollanaEditoriale> ;
-                                                                  
-                                                                  rdfs:comment """ Una raccolta di racconti che appartengono alla categoria \"Racconto\". Ogni elemento della collezione è un'istanza di \"Racconto\".
-"""@it .
-
-
-
-###  http://www.semanticweb.org/owl/owlapi/turtle#RaccoltaTeatrale
-
-<http://www.semanticweb.org/owl/owlapi/turtle#RaccoltaTeatrale> rdf:type owl:Class ;
-                                                                
-                                                                rdfs:label """RaccoltaTeatrale
-"""@it ;
-                                                                
-                                                                owl:equivalentClass [ rdf:type owl:Restriction ;
-                                                                                      owl:onProperty <http://www.semanticweb.org/owl/owlapi/turtle#Contiene> ;
-                                                                                      owl:onClass <http://www.semanticweb.org/owl/owlapi/turtle#OperaTeatrale> ;
-                                                                                      owl:minQualifiedCardinality "2"^^xsd:nonNegativeInteger
-                                                                                    ] ;
-                                                                
-                                                                rdfs:subClassOf <http://www.semanticweb.org/owl/owlapi/turtle#CollanaEditoriale> ;
-                                                                
-                                                                rdfs:comment "Una raccolta di opere teatrali che appartengono alla categoria \"OperaTeatrale\". Ogni elemento della collezione è un'istanza di \"OperaTeatrale\""@it .
-
-
-
-###  http://www.semanticweb.org/owl/owlapi/turtle#Racconto
-
-<http://www.semanticweb.org/owl/owlapi/turtle#Racconto> rdf:type owl:Class ;
-                                                        
-                                                        rdfs:label "Racconto"@it ;
-                                                        
-                                                        rdfs:subClassOf <https://litetaryworktopics.com/litetaryworktopics2025##OperaLetteraria> ;
-                                                        
-                                                        rdfs:comment "Il racconto è un'opera narrativa breve che si concentra su un singolo evento o tema, con un numero limitato di personaggi e uno sviluppo conciso della trama."@it .
-
-
-
-###  http://www.semanticweb.org/owl/owlapi/turtle#Romanzo
-
-<http://www.semanticweb.org/owl/owlapi/turtle#Romanzo> rdf:type owl:Class ;
-                                                       
-                                                       rdfs:label "Romanzo"@it ;
-                                                       
-                                                       rdfs:subClassOf <https://litetaryworktopics.com/litetaryworktopics2025##OperaLetteraria> ;
-                                                       
-                                                       rdfs:comment "Il romanzo è un'opera letteraria di narrativa lunga, che sviluppa una trama complessa e approfondisce la caratterizzazione dei personaggi attraverso eventi e situazioni."@it .
-
-
-
-###  http://www.semanticweb.org/owl/owlapi/turtle#Saga
-
-<http://www.semanticweb.org/owl/owlapi/turtle#Saga> rdf:type owl:Class ;
-                                                    
-                                                    rdfs:label "Saga"@it ;
-                                                    
-                                                    rdfs:subClassOf <http://www.semanticweb.org/owl/owlapi/turtle#ListaDiOpereLetterarie> ;
-                                                    
-                                                    rdfs:comment "Una narrazione estesa che segue personaggi o famiglie attraverso eventi o generazioni, spesso con una trama continuativa."@it .
-
-
-
-###  http://www.semanticweb.org/owl/owlapi/turtle#Saggio
-
-<http://www.semanticweb.org/owl/owlapi/turtle#Saggio> rdf:type owl:Class ;
-                                                      
-                                                      rdfs:label "Saggio"@it ;
-                                                      
-                                                      rdfs:subClassOf <https://litetaryworktopics.com/litetaryworktopics2025##OperaLetteraria> ;
-                                                      
-                                                      rdfs:comment "Il saggio è un'opera letteraria che esamina un argomento in modo critico, riflessivo e approfondito, utilizzando argomentazioni e prove per sostenere un punto di vista."@it .
-
-
-
-###  http://www.semanticweb.org/owl/owlapi/turtle#SerieDiRomanzi
-
-<http://www.semanticweb.org/owl/owlapi/turtle#SerieDiRomanzi> rdf:type owl:Class ;
-                                                              
-                                                              rdfs:label "SerieDiRomanzi"@it ;
-                                                              
-                                                              owl:equivalentClass [ rdf:type owl:Restriction ;
-                                                                                    owl:onProperty <http://www.semanticweb.org/owl/owlapi/turtle#Contiene> ;
-                                                                                    owl:onClass <http://www.semanticweb.org/owl/owlapi/turtle#Romanzo> ;
-                                                                                    owl:minQualifiedCardinality "2"^^xsd:nonNegativeInteger
-                                                                                  ] ;
-                                                              
-                                                              rdfs:subClassOf <http://www.semanticweb.org/owl/owlapi/turtle#CollanaEditoriale> ;
-                                                              
-                                                              rdfs:comment "Una raccolta di romanzi che appartengono alla categoria \"Romanzo\". Ogni elemento della collezione è un'istanza di \"Romanzo\""@it .
-
-
-
-###  http://www.semanticweb.org/owl/owlapi/turtle#Tema
-
-<http://www.semanticweb.org/owl/owlapi/turtle#Tema> rdf:type owl:Class ;
-                                                    
-                                                    rdfs:label "Tema"@it ;
-                                                    
-                                                    rdfs:comment "Materia trattata da un'Opera Letteraria."@it .
 
 
 
@@ -958,11 +587,11 @@ dc:Title rdf:type owl:DatatypeProperty ;
                                                         
                                                         owl:equivalentClass [ rdf:type owl:Restriction ;
                                                                               owl:onProperty <http://www.semanticweb.org/owl/owlapi/turtle#Contiene> ;
-                                                                              owl:onClass <https://litetaryworktopics.com/litetaryworktopics2025##OperaLetteraria> ;
+                                                                              owl:onClass :OperaLetteraria ;
                                                                               owl:qualifiedCardinality "3"^^xsd:nonNegativeInteger
                                                                             ] ;
                                                         
-                                                        rdfs:subClassOf <http://www.semanticweb.org/owl/owlapi/turtle#Saga> ;
+                                                        rdfs:subClassOf :Saga ;
                                                         
                                                         rdfs:comment """Una trilogia è una saga composta da tre opere letterarie che si sviluppano attraverso una trama continuativa, generalmente seguendo lo stesso gruppo di personaggi o un arco narrativo unico.
 
@@ -998,32 +627,405 @@ Funziona solo se sono definiti con enumerazione
 
 
 
-###  https://litetaryworktopics.com/litetaryworktopics2025##Edizione
+###  https://litetaryworktopics.com/litetaryworktopics2025#Autore
 
-<https://litetaryworktopics.com/litetaryworktopics2025##Edizione> rdf:type owl:Class ;
-                                                                  
-                                                                  rdfs:label "Edizione"@it ;
-                                                                  
-                                                                  owl:equivalentClass [ rdf:type owl:Restriction ;
-                                                                                        owl:onProperty <http://www.semanticweb.org/owl/owlapi/turtle#EdizioneDi> ;
-                                                                                        owl:someValuesFrom <https://litetaryworktopics.com/litetaryworktopics2025##OperaLetteraria>
-                                                                                      ] ;
-                                                                  
-                                                                  skos:broadMatch "frbr:Endeavour"@en ;
-                                                                  
-                                                                  rdfs:comment "Un'entità che rappresenta una specifica pubblicazione di un'opera letteraria."@it .
+:Autore rdf:type owl:Class ;
+        
+        rdfs:label """Autore
+"""@it ;
+        
+        owl:equivalentClass [ rdf:type owl:Restriction ;
+                              owl:onProperty <http://www.semanticweb.org/owl/owlapi/turtle#AutoreDi> ;
+                              owl:someValuesFrom :Edizione
+                            ] ;
+        
+        rdfs:subClassOf :Persona ;
+        
+        rdfs:comment "Un autore è una persona che scrive un'opera letteraria, scientifica o artistica, ed è responsabile della creazione e dell'originalità del contenuto dell'opera."@it .
 
 
 
-###  https://litetaryworktopics.com/litetaryworktopics2025##OperaLetteraria
+###  https://litetaryworktopics.com/litetaryworktopics2025#AutoreIndipendente
 
-<https://litetaryworktopics.com/litetaryworktopics2025##OperaLetteraria> rdf:type owl:Class ;
-                                                                         
-                                                                         rdfs:label "OperaLetteraria"@it ;
-                                                                         
-                                                                         skos:closeMatch "frbr:Work"@en ;
-                                                                         
-                                                                         rdfs:comment "L'entità concettuale di Opera Letteraria, include tutte le sue materializzazioni e Formati."@it .
+:AutoreIndipendente rdf:type owl:Class ;
+                    
+                    rdfs:label """AutoreIndipendente
+"""@it ;
+                    
+                    owl:equivalentClass [ rdf:type owl:Class ;
+                                          owl:intersectionOf ( :Autore
+                                                               :Editore
+                                                               [ rdf:type owl:Restriction ;
+                                                                 owl:onProperty <http://www.semanticweb.org/owl/owlapi/turtle#AutoreDi> ;
+                                                                 owl:someValuesFrom :Edizione
+                                                               ]
+                                                               [ rdf:type owl:Restriction ;
+                                                                 owl:onProperty <http://www.semanticweb.org/owl/owlapi/turtle#Pubblica> ;
+                                                                 owl:someValuesFrom :Edizione
+                                                               ]
+                                                             )
+                                        ] ;
+                    
+                    rdfs:subClassOf :Autore ;
+                    
+                    rdfs:comment "Un autore indipendente è uno scrittore che pubblica e distribuisce le proprie opere senza l'intermediazione di una casa editrice tradizionale, gestendo autonomamente l'intero processo editoriale e promozionale. Questo approccio consente maggiore libertà creativa e guadagni diretti."@it .
+
+
+
+###  https://litetaryworktopics.com/litetaryworktopics2025#Canzoniere
+
+:Canzoniere rdf:type owl:Class ;
+            
+            rdfs:label "Canzoniere"@it ;
+            
+            owl:equivalentClass [ rdf:type owl:Restriction ;
+                                  owl:onProperty <http://www.semanticweb.org/owl/owlapi/turtle#Contiene> ;
+                                  owl:onClass :Poesia ;
+                                  owl:minQualifiedCardinality "2"^^xsd:nonNegativeInteger
+                                ] ;
+            
+            rdfs:subClassOf :CollanaEditoriale ;
+            
+            rdfs:comment "Una raccolta di poesie che appartengono alla categoria \"Poesia\". Ogni elemento della collezione è un'istanza di \"Poesia\"."@it .
+
+
+
+###  https://litetaryworktopics.com/litetaryworktopics2025#CasaEditrice
+
+:CasaEditrice rdf:type owl:Class ;
+              
+              rdfs:label "CasaEditrice"@it ;
+              
+              owl:equivalentClass [ rdf:type owl:Class ;
+                                    owl:intersectionOf ( <http://www.w3.org/ns/prov#Organization>
+                                                         [ rdf:type owl:Restriction ;
+                                                           owl:onProperty <http://www.semanticweb.org/owl/owlapi/turtle#Pubblica> ;
+                                                           owl:someValuesFrom :Edizione
+                                                         ]
+                                                       )
+                                  ] ;
+              
+              rdfs:subClassOf <http://www.w3.org/ns/prov#Organization> ;
+              
+              rdfs:comment "Una casa editrice è un'organizzazione che si occupa della pubblicazione e distribuzione di opere letterarie, scientifiche o artistiche, curando la produzione, la stampa e la diffusione dei libri."@it .
+
+
+
+###  https://litetaryworktopics.com/litetaryworktopics2025#Collaboratore
+
+:Collaboratore rdf:type owl:Class ;
+               
+               rdfs:label "Collaboratore"@it ;
+               
+               rdfs:subClassOf :Persona ;
+               
+               rdfs:comment "Persona che ha contribuito alla Scrittura di un'Edizione non come Autore"@it .
+
+
+
+###  https://litetaryworktopics.com/litetaryworktopics2025#CollanaEditoriale
+
+:CollanaEditoriale rdf:type owl:Class ;
+                   
+                   rdfs:label "CollanaEditoriale"@it ;
+                   
+                   rdfs:subClassOf :ListaDiOpereLetterarie ;
+                   
+                   rdfs:comment "Una raccolta di testi pubblicati da un editore con criteri comuni di genere, tema o formato."@it .
+
+
+
+###  https://litetaryworktopics.com/litetaryworktopics2025#Editore
+
+:Editore rdf:type owl:Class ;
+         
+         rdfs:label """Editore
+"""@it ;
+         
+         owl:equivalentClass [ rdf:type owl:Class ;
+                               owl:intersectionOf ( :Persona
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://www.semanticweb.org/owl/owlapi/turtle#Pubblica> ;
+                                                      owl:someValuesFrom :Edizione
+                                                    ]
+                                                  )
+                             ] ;
+         
+         rdfs:subClassOf :Persona ;
+         
+         rdfs:comment """Persona che ha pubblicato un Edizione
+"""@it .
+
+
+
+###  https://litetaryworktopics.com/litetaryworktopics2025#Edizione
+
+:Edizione rdf:type owl:Class ;
+          
+          rdfs:label "Edizione"@it ;
+          
+          owl:equivalentClass [ rdf:type owl:Restriction ;
+                                owl:onProperty <http://www.semanticweb.org/owl/owlapi/turtle#EdizioneDi> ;
+                                owl:someValuesFrom :OperaLetteraria
+                              ] ;
+          
+          skos:broadMatch "frbr:Endeavour"@en ;
+          
+          rdfs:comment "Un'entità che rappresenta una specifica pubblicazione di un'opera letteraria."@it .
+
+
+
+###  https://litetaryworktopics.com/litetaryworktopics2025#Genere
+
+:Genere rdf:type owl:Class ;
+        
+        rdfs:label "Genere"@it ;
+        
+        rdfs:comment "Il genere di un'opera letteraria è una categoria che raggruppa libri con caratteristiche tematiche o stilistiche simili, come ad esempio fantasy, giallo, romance, storia, horror, ecc. Ogni genere aiuta a identificare il tono, il contenuto e lo stile dell'opera."@it .
+
+
+
+###  https://litetaryworktopics.com/litetaryworktopics2025#ListaDiOpereLetterarie
+
+:ListaDiOpereLetterarie rdf:type owl:Class ;
+                        
+                        owl:equivalentClass [ rdf:type owl:Restriction ;
+                                              owl:onProperty <http://www.semanticweb.org/owl/owlapi/turtle#Contiene> ;
+                                              owl:someValuesFrom :OperaLetteraria
+                                            ] ;
+                        
+                        rdfs:subClassOf <http://dbpedia.org/resource/List> .
+
+
+
+###  https://litetaryworktopics.com/litetaryworktopics2025#Nazione
+
+:Nazione rdf:type owl:Class ;
+         
+         rdfs:label "Nazione"@it ;
+         
+         rdfs:subClassOf <http://purl.org/dc/terms/Location> ;
+         
+         rdfs:comment "Un'entità nazionale nel presente o passato."@it .
+
+
+
+###  https://litetaryworktopics.com/litetaryworktopics2025#OperaLetteraria
+
+:OperaLetteraria rdf:type owl:Class ;
+                 
+                 rdfs:label "OperaLetteraria"@it ;
+                 
+                 skos:closeMatch "frbr:Work"@en ;
+                 
+                 rdfs:comment "L'entità concettuale di Opera Letteraria, include tutte le sue materializzazioni e Formati."@it .
+
+
+
+###  https://litetaryworktopics.com/litetaryworktopics2025#OperaTeatrale
+
+:OperaTeatrale rdf:type owl:Class ;
+               
+               rdfs:label "Operateatrale"@it ;
+               
+               rdfs:subClassOf :OperaLetteraria ;
+               
+               rdfs:comment "Un'opera teatrale è una forma di opera letteraria scritta per essere rappresentata su un palcoscenico, con personaggi che parlano e interagiscono tra loro secondo una trama."@it .
+
+
+
+###  https://litetaryworktopics.com/litetaryworktopics2025#Persona
+
+:Persona rdf:type owl:Class ;
+         
+         rdfs:label "Persona"@it ;
+         
+         rdfs:subClassOf <http://www.w3.org/ns/prov#Agent> ;
+         
+         skos:exactMatch "frbr:Agent"@en ;
+         
+         rdfs:comment "Una persona è un individuo umano che svolge un ruolo all'interno di un contesto sociale o professionale, come autore, editore, o altro."@it .
+
+
+
+###  https://litetaryworktopics.com/litetaryworktopics2025#Personaggio
+
+:Personaggio rdf:type owl:Class ;
+             
+             rdfs:label "Personaggio"@it ;
+             
+             rdfs:subClassOf <http://www.w3.org/ns/prov#Agent> ;
+             
+             rdfs:comment " Una persona, creatura magica o entità"@it .
+
+
+
+###  https://litetaryworktopics.com/litetaryworktopics2025#PersonaggioLibro
+
+:PersonaggioLibro rdf:type owl:Class ;
+                  
+                  rdfs:label "PersonaggioLibro"@it ;
+                  
+                  owl:equivalentClass [ rdf:type owl:Restriction ;
+                                        owl:onProperty <http://www.semanticweb.org/owl/owlapi/turtle#AppartieneA> ;
+                                        owl:someValuesFrom [ rdf:type owl:Class ;
+                                                             owl:intersectionOf ( :OperaLetteraria
+                                                                                  [ rdf:type owl:Restriction ;
+                                                                                    owl:onProperty <http://www.semanticweb.org/owl/owlapi/turtle#Contiene> ;
+                                                                                    owl:someValuesFrom owl:Thing
+                                                                                  ]
+                                                                                )
+                                                           ]
+                                      ] ;
+                  
+                  rdfs:subClassOf :Personaggio ;
+                  
+                  rdfs:comment " Una persona, creatura magica o entità che appare specificatamente ad un opera letteraria"@it .
+
+
+
+###  https://litetaryworktopics.com/litetaryworktopics2025#Poesia
+
+:Poesia rdf:type owl:Class ;
+        
+        rdfs:label """Poesia
+"""@it ;
+        
+        rdfs:subClassOf :OperaLetteraria ;
+        
+        rdfs:comment "Forma di espressione letteraria che utilizza il linguaggio in modo artistico, spesso caratterizzata da metrica, ritmo e rime."@it .
+
+
+
+###  https://litetaryworktopics.com/litetaryworktopics2025#RaccoltaDISaggi
+
+:RaccoltaDISaggi rdf:type owl:Class ;
+                 
+                 rdfs:label "RaccoltaDiSaggi"@it ;
+                 
+                 owl:equivalentClass [ rdf:type owl:Restriction ;
+                                       owl:onProperty <http://www.semanticweb.org/owl/owlapi/turtle#Contiene> ;
+                                       owl:onClass :Saggio ;
+                                       owl:minQualifiedCardinality "2"^^xsd:nonNegativeInteger
+                                     ] ;
+                 
+                 rdfs:subClassOf :CollanaEditoriale ;
+                 
+                 rdfs:comment "Una raccolta di saggi che appartengono alla categoria \"Saggio\". Ogni elemento della collezione è un'istanza di \"Saggio\"."@it .
+
+
+
+###  https://litetaryworktopics.com/litetaryworktopics2025#RaccoltaDiRacconti
+
+:RaccoltaDiRacconti rdf:type owl:Class ;
+                    
+                    rdfs:label "RaccoltaDiRacconti"@it ;
+                    
+                    owl:equivalentClass [ rdf:type owl:Restriction ;
+                                          owl:onProperty <http://www.semanticweb.org/owl/owlapi/turtle#Contiene> ;
+                                          owl:onClass :Racconto ;
+                                          owl:minQualifiedCardinality "2"^^xsd:nonNegativeInteger
+                                        ] ;
+                    
+                    rdfs:subClassOf :CollanaEditoriale ;
+                    
+                    rdfs:comment """ Una raccolta di racconti che appartengono alla categoria \"Racconto\". Ogni elemento della collezione è un'istanza di \"Racconto\".
+"""@it .
+
+
+
+###  https://litetaryworktopics.com/litetaryworktopics2025#RaccoltaTeatrale
+
+:RaccoltaTeatrale rdf:type owl:Class ;
+                  
+                  rdfs:label """RaccoltaTeatrale
+"""@it ;
+                  
+                  owl:equivalentClass [ rdf:type owl:Restriction ;
+                                        owl:onProperty <http://www.semanticweb.org/owl/owlapi/turtle#Contiene> ;
+                                        owl:onClass :OperaTeatrale ;
+                                        owl:minQualifiedCardinality "2"^^xsd:nonNegativeInteger
+                                      ] ;
+                  
+                  rdfs:subClassOf :CollanaEditoriale ;
+                  
+                  rdfs:comment "Una raccolta di opere teatrali che appartengono alla categoria \"OperaTeatrale\". Ogni elemento della collezione è un'istanza di \"OperaTeatrale\""@it .
+
+
+
+###  https://litetaryworktopics.com/litetaryworktopics2025#Racconto
+
+:Racconto rdf:type owl:Class ;
+          
+          rdfs:label "Racconto"@it ;
+          
+          rdfs:subClassOf :OperaLetteraria ;
+          
+          rdfs:comment "Il racconto è un'opera narrativa breve che si concentra su un singolo evento o tema, con un numero limitato di personaggi e uno sviluppo conciso della trama."@it .
+
+
+
+###  https://litetaryworktopics.com/litetaryworktopics2025#Romanzo
+
+:Romanzo rdf:type owl:Class ;
+         
+         rdfs:label "Romanzo"@it ;
+         
+         rdfs:subClassOf :OperaLetteraria ;
+         
+         rdfs:comment "Il romanzo è un'opera letteraria di narrativa lunga, che sviluppa una trama complessa e approfondisce la caratterizzazione dei personaggi attraverso eventi e situazioni."@it .
+
+
+
+###  https://litetaryworktopics.com/litetaryworktopics2025#Saga
+
+:Saga rdf:type owl:Class ;
+      
+      rdfs:label "Saga"@it ;
+      
+      rdfs:subClassOf :ListaDiOpereLetterarie ;
+      
+      rdfs:comment "Una narrazione estesa che segue personaggi o famiglie attraverso eventi o generazioni, spesso con una trama continuativa."@it .
+
+
+
+###  https://litetaryworktopics.com/litetaryworktopics2025#Saggio
+
+:Saggio rdf:type owl:Class ;
+        
+        rdfs:label "Saggio"@it ;
+        
+        rdfs:subClassOf :OperaLetteraria ;
+        
+        rdfs:comment "Il saggio è un'opera letteraria che esamina un argomento in modo critico, riflessivo e approfondito, utilizzando argomentazioni e prove per sostenere un punto di vista."@it .
+
+
+
+###  https://litetaryworktopics.com/litetaryworktopics2025#SerieDiRomanzi
+
+:SerieDiRomanzi rdf:type owl:Class ;
+                
+                rdfs:label "SerieDiRomanzi"@it ;
+                
+                owl:equivalentClass [ rdf:type owl:Restriction ;
+                                      owl:onProperty <http://www.semanticweb.org/owl/owlapi/turtle#Contiene> ;
+                                      owl:onClass :Romanzo ;
+                                      owl:minQualifiedCardinality "2"^^xsd:nonNegativeInteger
+                                    ] ;
+                
+                rdfs:subClassOf :CollanaEditoriale ;
+                
+                rdfs:comment "Una raccolta di romanzi che appartengono alla categoria \"Romanzo\". Ogni elemento della collezione è un'istanza di \"Romanzo\""@it .
+
+
+
+###  https://litetaryworktopics.com/litetaryworktopics2025#Tema
+
+:Tema rdf:type owl:Class ;
+      
+      rdfs:label "Tema"@it ;
+      
+      rdfs:comment "Materia trattata da un'Opera Letteraria."@it .
 
 
 
@@ -1053,8 +1055,8 @@ Funziona solo se sono definiti con enumerazione
 
 ###  http://www.semanticweb.org/owl/owlapi/turtle#BacchetteMagiche
 
-<http://www.semanticweb.org/owl/owlapi/turtle#BacchetteMagiche> rdf:type <http://www.semanticweb.org/owl/owlapi/turtle#Tema> ,
-                                                                         owl:NamedIndividual ;
+<http://www.semanticweb.org/owl/owlapi/turtle#BacchetteMagiche> rdf:type owl:NamedIndividual ,
+                                                                         :Tema ;
                                                                 
                                                                 <http://www.semanticweb.org/owl/owlapi/turtle#HaNome> "Bacchette Magiche"^^xsd:string ;
                                                                 
@@ -1091,8 +1093,8 @@ Funziona solo se sono definiti con enumerazione
 
 ###  http://www.semanticweb.org/owl/owlapi/turtle#Fantasy
 
-<http://www.semanticweb.org/owl/owlapi/turtle#Fantasy> rdf:type <http://www.semanticweb.org/owl/owlapi/turtle#Genere> ,
-                                                                owl:NamedIndividual ;
+<http://www.semanticweb.org/owl/owlapi/turtle#Fantasy> rdf:type owl:NamedIndividual ,
+                                                                :Genere ;
                                                        
                                                        <http://www.semanticweb.org/owl/owlapi/turtle#HaNome> "Fantasy"^^xsd:string ;
                                                        
@@ -1164,8 +1166,8 @@ Funziona solo se sono definiti con enumerazione
 
 ###  http://www.semanticweb.org/owl/owlapi/turtle#Italia
 
-<http://www.semanticweb.org/owl/owlapi/turtle#Italia> rdf:type <http://www.semanticweb.org/owl/owlapi/turtle#Nazione> ,
-                                                               owl:NamedIndividual ;
+<http://www.semanticweb.org/owl/owlapi/turtle#Italia> rdf:type owl:NamedIndividual ,
+                                                               :Nazione ;
                                                       
                                                       <http://www.semanticweb.org/owl/owlapi/turtle#HaNome> "Italia"^^xsd:string .
 
@@ -1200,8 +1202,8 @@ Funziona solo se sono definiti con enumerazione
 
 ###  http://www.semanticweb.org/owl/owlapi/turtle#Opera_Camera_dei_Segreti
 
-<http://www.semanticweb.org/owl/owlapi/turtle#Opera_Camera_dei_Segreti> rdf:type <http://www.semanticweb.org/owl/owlapi/turtle#Romanzo> ,
-                                                                                 owl:NamedIndividual ;
+<http://www.semanticweb.org/owl/owlapi/turtle#Opera_Camera_dei_Segreti> rdf:type owl:NamedIndividual ,
+                                                                                 :Romanzo ;
                                                                         
                                                                         <http://www.semanticweb.org/owl/owlapi/turtle#HaNome> "La Camera dei Segreti"^^xsd:string ;
                                                                         
@@ -1223,8 +1225,8 @@ Funziona solo se sono definiti con enumerazione
 
 ###  http://www.semanticweb.org/owl/owlapi/turtle#Opera_Fermo_e_Lucia
 
-<http://www.semanticweb.org/owl/owlapi/turtle#Opera_Fermo_e_Lucia> rdf:type <http://www.semanticweb.org/owl/owlapi/turtle#Romanzo> ,
-                                                                            owl:NamedIndividual ;
+<http://www.semanticweb.org/owl/owlapi/turtle#Opera_Fermo_e_Lucia> rdf:type owl:NamedIndividual ,
+                                                                            :Romanzo ;
                                                                    
                                                                    <http://www.semanticweb.org/owl/owlapi/turtle#HaNome> "Fermo e Lucia"^^xsd:string ;
                                                                    
@@ -1245,8 +1247,8 @@ Funziona solo se sono definiti con enumerazione
 
 ###  http://www.semanticweb.org/owl/owlapi/turtle#Opera_La_Divina_Commedia
 
-<http://www.semanticweb.org/owl/owlapi/turtle#Opera_La_Divina_Commedia> rdf:type <http://www.semanticweb.org/owl/owlapi/turtle#Poesia> ,
-                                                                                 owl:NamedIndividual ;
+<http://www.semanticweb.org/owl/owlapi/turtle#Opera_La_Divina_Commedia> rdf:type owl:NamedIndividual ,
+                                                                                 :Poesia ;
                                                                         
                                                                         <http://www.semanticweb.org/owl/owlapi/turtle#HaNome> "La Divina Commedia"^^xsd:string ;
                                                                         
@@ -1258,8 +1260,8 @@ Funziona solo se sono definiti con enumerazione
 
 ###  http://www.semanticweb.org/owl/owlapi/turtle#Opera_Pietra_Filosofale
 
-<http://www.semanticweb.org/owl/owlapi/turtle#Opera_Pietra_Filosofale> rdf:type <http://www.semanticweb.org/owl/owlapi/turtle#Romanzo> ,
-                                                                                owl:NamedIndividual ;
+<http://www.semanticweb.org/owl/owlapi/turtle#Opera_Pietra_Filosofale> rdf:type owl:NamedIndividual ,
+                                                                                :Romanzo ;
                                                                        
                                                                        <http://www.semanticweb.org/owl/owlapi/turtle#HaNome> "La Pietra Filosofale"^^xsd:string ;
                                                                        
@@ -1281,8 +1283,8 @@ Funziona solo se sono definiti con enumerazione
 
 ###  http://www.semanticweb.org/owl/owlapi/turtle#Opera_Prigioniero_di_Azkaban
 
-<http://www.semanticweb.org/owl/owlapi/turtle#Opera_Prigioniero_di_Azkaban> rdf:type <http://www.semanticweb.org/owl/owlapi/turtle#Romanzo> ,
-                                                                                     owl:NamedIndividual ;
+<http://www.semanticweb.org/owl/owlapi/turtle#Opera_Prigioniero_di_Azkaban> rdf:type owl:NamedIndividual ,
+                                                                                     :Romanzo ;
                                                                             
                                                                             <http://www.semanticweb.org/owl/owlapi/turtle#HaNome> "Il Prigioniero di Azkaban"^^xsd:string ;
                                                                             
@@ -1382,8 +1384,8 @@ Funziona solo se sono definiti con enumerazione
 
 ###  https://litetaryworktopics.com/litetaryworktopics2025#Amicizia
 
-:Amicizia rdf:type <http://www.semanticweb.org/owl/owlapi/turtle#Tema> ,
-                   owl:NamedIndividual ;
+:Amicizia rdf:type owl:NamedIndividual ,
+                   :Tema ;
           
           <http://www.semanticweb.org/owl/owlapi/turtle#HaNome> "Amicizia"^^xsd:string ;
           
@@ -1419,13 +1421,13 @@ Funziona solo se sono definiti con enumerazione
                       )
 ] .
 [ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( <http://www.semanticweb.org/owl/owlapi/turtle#The_Autobiography_of_Benjamin_Franklin>
-                        <http://www.semanticweb.org/owl/owlapi/turtle#The_Prisoner_of_Azkaban>
+  owl:distinctMembers ( <http://www.semanticweb.org/owl/owlapi/turtle#Opera_Camera_dei_Segreti>
+                        <http://www.semanticweb.org/owl/owlapi/turtle#Opera_Pietra_Filosofale>
                       )
 ] .
 [ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( <http://www.semanticweb.org/owl/owlapi/turtle#Opera_Camera_dei_Segreti>
-                        <http://www.semanticweb.org/owl/owlapi/turtle#Opera_Pietra_Filosofale>
+  owl:distinctMembers ( <http://www.semanticweb.org/owl/owlapi/turtle#The_Autobiography_of_Benjamin_Franklin>
+                        <http://www.semanticweb.org/owl/owlapi/turtle#The_Prisoner_of_Azkaban>
                       )
 ] .
 [ rdf:type owl:AllDifferent ;
@@ -1434,13 +1436,13 @@ Funziona solo se sono definiti con enumerazione
                       )
 ] .
 [ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( <http://www.semanticweb.org/owl/owlapi/turtle#The_Autobiography_of_Benjamin_Franklin>
-                        <http://www.semanticweb.org/owl/owlapi/turtle#The_Philosophers_Stone>
+  owl:distinctMembers ( <http://www.semanticweb.org/owl/owlapi/turtle#The_Philosophers_Stone>
+                        <http://www.semanticweb.org/owl/owlapi/turtle#The_Prisoner_of_Azkaban>
                       )
 ] .
 [ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( <http://www.semanticweb.org/owl/owlapi/turtle#The_Philosophers_Stone>
-                        <http://www.semanticweb.org/owl/owlapi/turtle#The_Prisoner_of_Azkaban>
+  owl:distinctMembers ( <http://www.semanticweb.org/owl/owlapi/turtle#The_Autobiography_of_Benjamin_Franklin>
+                        <http://www.semanticweb.org/owl/owlapi/turtle#The_Philosophers_Stone>
                       )
 ] .
 [ rdf:type owl:AllDifferent ;
@@ -1604,13 +1606,13 @@ Funziona solo se sono definiti con enumerazione
                       )
 ] .
 [ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( <http://www.semanticweb.org/owl/owlapi/turtle#I_Promessi_Sposi>
-                        <http://www.semanticweb.org/owl/owlapi/turtle#The_Autobiography_of_Benjamin_Franklin>
+  owl:distinctMembers ( <http://www.semanticweb.org/owl/owlapi/turtle#Harry_James_Potter>
+                        <http://www.semanticweb.org/owl/owlapi/turtle#Opera_Pietra_Filosofale>
                       )
 ] .
 [ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( <http://www.semanticweb.org/owl/owlapi/turtle#Harry_James_Potter>
-                        <http://www.semanticweb.org/owl/owlapi/turtle#Opera_Pietra_Filosofale>
+  owl:distinctMembers ( <http://www.semanticweb.org/owl/owlapi/turtle#I_Promessi_Sposi>
+                        <http://www.semanticweb.org/owl/owlapi/turtle#The_Autobiography_of_Benjamin_Franklin>
                       )
 ] .
 [ rdf:type owl:AllDifferent ;
