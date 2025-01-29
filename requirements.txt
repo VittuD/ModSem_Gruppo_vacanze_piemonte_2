@@ -2,6 +2,7 @@ aiohttp
 asyncio
 bs4
 pandas
+pylode
 pyppeteer
 pysparql_anything
 SPARQLWrapper
