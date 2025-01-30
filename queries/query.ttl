@@ -1,0 +1,170 @@
+PREFIX : <http://www.semanticweb.org/owl/owlapi/turtle#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+
+
+
+
+
+
+
+
+
+
+
+
+SELECT DISTINCT ?nomeSaga ?tema
+WHERE {
+    ?tema a :Tema .                        # Trova i temi
+    ?tema :haNome ?nomeTema .              # Collega il tema al suo nome
+    FILTER(?nomeTema = "Amicizia") .       # Filtra per il nome del tema "Amicizia"
+    ?tema :VieneUtilizzatoIn ?opera .      # Trova le opere che utilizzano il tema
+    ?opera :AppartieneA ?saga .            # Trova la saga a cui appartiene l'opera
+    ?saga :haNome ?nomeSaga
+}
+ORDER BY ?nomeSaga
+
+
+ 
+SELECT DISTINCT ?nomeSaga ?nomeTema
+WHERE {
+    ?saga :haNome ?nomeSaga .  #trova il nome della saga
+    FILTER(?nomeSaga = "Harry Potter") .       # Filtra per il nome del tema "Amicizia"
+    ?saga :Contiene ?opera .
+    ?opera :VieneClassificatoCome ?tema .
+    ?tema a :Tema .                        # non considera i generi
+    ?tema :haNome ?nomeTema .              # Collega il tema al suo nome
+}
+ORDER BY ?nomeSaga
+
+
+  
+
+
+SELECT DISTINCT ?nomeAutore ?nomeTema
+WHERE {
+    ?tema a :Tema .                        
+    # Trova i temi
+    ?tema :haNome ?nomeTema .              
+    # Collega il tema al suo nome
+    FILTER(?nomeTema = "Amicizia") .       
+    # Filtra per il nome del tema "Amicizia"
+    ?tema :VieneUtilizzatoIn ?opera .      
+    # Trova le opere che utilizzano il tema
+    ?opera :ScrittoDa ?autore .            
+    # Trova gli autori delle opere
+    ?autore :haNome ?nomeAutore .          
+    # Collega l'autore al suo nome
+}
+ORDER BY ?nomeAutore
+
+
+
+SELECT DISTINCT ?nomeAutore ?nomeTema
+WHERE {
+    ?autore :haNome ?nomeAutore .          
+    # Trova l'autore dal nome
+    FILTER(?nomeAutore = "J.K. Rowling") .
+    # Filtra per il nome dell'autore specifico
+    ?autore :AutoreDi ?opera .            
+    # Trova le opere scritte dall'autore
+    ?opera :VieneClassificatoCome ?tema .  
+    # Collega le opere ai temi
+    ?tema a :Tema .                        
+    # Assicura che siano temi
+    ?tema :haNome ?nomeTema .              
+    # Collega i temi ai loro nomi
+}
+ORDER BY ?nomeTema
+
+
+SELECT ?nomeOpera ?dataPubblicazione
+WHERE {
+    ?tema a :Tema .                        
+    # Trova i temi
+    ?tema :haNome ?nomeTema .              
+    # Collega il tema al suo nome
+    FILTER(?nomeTema = "Amicizia") .      
+    # Filtra per il tema specifico
+    ?tema :VieneUtilizzatoIn ?opera .      
+    # Trova le opere che trattano il tema
+    ?opera :HaEdizione ?edizione .
+    ?edizione :haDataPubblicazione ?dataPubblicazione . 
+    # Trova la data di pubblicazione
+    ?edizione :haNome ?nomeOpera
+}
+ORDER BY ASC(?dataPubblicazione)
+
+
+SELECT ?nomeOpera 
+WHERE {
+    ?tema1 a :Tema .
+    ?tema1 :haNome ?nomeTema1 .
+    FILTER(?nomeTema1 = "Amicizia") .      
+    # Primo argomento specifico
+    ?tema2 a :Tema .
+    ?tema2 :haNome ?nomeTema2 .
+    FILTER(?nomeTema2 = "Bacchette Magiche") .      
+    # Secondo argomento specifico
+    ?opera :VieneClassificatoCome ?tema1 .
+    ?opera :VieneClassificatoCome ?tema2 . 
+    # La stessa opera è associata a entrambi i temi
+    ?opera :haNome ?nomeOpera .
+}
+
+    
+
+SELECT DISTINCT ?DataPubblicazione ?nomeTema
+WHERE {
+    ?tema a :Tema .                          
+    # Trova i temi
+    ?tema :haNome ?nomeTema .               
+    # Collega il tema al suo nome
+    FILTER(?nomeTema = "Amicizia") .        
+    # Filtra per il tema specifico
+    ?tema :VieneUtilizzatoIn ?opera .        
+    # Trova le opere associate al tema
+    ?opera :HaEdizione ?edizione .           
+    # Trova le edizioni delle opere
+    ?edizione :haDataPubblicazione ?DataPubblicazione . 
+    # Collega l'edizione al periodo storico
+}
+ORDER BY ?DataPubblicazione
+
+
+SELECT DISTINCT ?nomeNazione ?nomeTema (COUNT(?opera) AS ?numeroOpere)
+WHERE {
+    ?paese a :Nazione .
+    ?paese :haNome ?nomeNazione .
+    FILTER(?nomeNazione = "Italia") .         
+    # Filtra la nazione specifica
+    ?autore :HaProvenienza ?paese .
+    ?autore :AutoreDi ?opera .
+    ?opera :VieneClassificatoCome ?tema .
+    ?tema a :Tema .
+    ?tema :haNome ?nomeTema .
+}
+GROUP BY ?nomeNazione ?nomeTema
+ORDER BY DESC(?numeroOpere)
+
+
+    
+    
+SELECT DISTINCT ?nomeAutore ?nomeTema (COUNT(?opera) AS ?numeroOpere)
+WHERE {
+    ?tema a :Tema .                        
+    ?tema :haNome ?nomeTema .            
+    FILTER(?nomeTema = "Amicizia") .       
+    # Filtra per il tema specifico
+    ?tema :VieneUtilizzatoIn ?opera .      
+    ?opera :ScrittoDa ?autore .           
+    ?autore :haNome ?nomeAutore .       
+}
+GROUP BY ?nomeAutore ?nomeTema
+ORDER BY DESC(?numeroOpere)
+
+
+
+
